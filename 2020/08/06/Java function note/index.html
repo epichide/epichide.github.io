@@ -1,0 +1,150 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="java function note"><meta name="keywords" content="java"><meta name="author" content="epichide"><meta name="copyright" content="epichide"><title>java function note | Eichide's Blog</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.1.1/dist/instantsearch.min.css"><script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.1.1/dist/instantsearch.min.js" defer></script><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: {"appId":"5W59328PV6","apiKey":"35f0ce2b0fab5580e74b14de630d5706","indexName":"Epichide","hits":{"per_page":10},"languages":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}.","hits_stats":"${hits} results found in ${time} ms"}},
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 5.0.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#java-method-note"><span class="toc-number">1.</span> <span class="toc-text">java method note</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Scanner-Class-dynamic-method"><span class="toc-number">1.1.</span> <span class="toc-text">Scanner Class -dynamic method</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#read-value-from-keyboard"><span class="toc-number">1.1.1.</span> <span class="toc-text">read value from keyboard</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Math-Class-static-method"><span class="toc-number">1.2.</span> <span class="toc-text">Math Class -static method</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#emsp-trigonometric-method"><span class="toc-number">1.2.1.</span> <span class="toc-text">&amp;emsp;trigonometric method</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#emsp-exponent-method"><span class="toc-number">1.2.2.</span> <span class="toc-text">&amp;emsp;exponent method</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#emsp-sevice-method"><span class="toc-number">1.2.3.</span> <span class="toc-text">&amp;emsp;sevice method</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Character-Class"><span class="toc-number">1.3.</span> <span class="toc-text">Character Class</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#String-Class-dynamic-method-instance-method"><span class="toc-number">1.4.</span> <span class="toc-text">String Class -dynamic method(instance method)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Data-Class-dynamic-method"><span class="toc-number">1.5.</span> <span class="toc-text">Data Class -dynamic method</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Random-Class-dynamix-method"><span class="toc-number">1.6.</span> <span class="toc-text">Random Class -dynamix method</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BigDecimal-Class"><span class="toc-number">1.7.</span> <span class="toc-text">BigDecimal Class</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-kinds-of-rounding-modes"><span class="toc-number">1.7.1.</span> <span class="toc-text">8 kinds of rounding modes</span></a></li></ol></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">epichide</div><div class="author-info__description text-center">nothing to remember</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">12</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">11</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">5</span></a></div></div></div><div id="content-outer"><div class="plain" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">Eichide's Blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/slides">Slides</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a></span></div></div><div class="layout" id="content-inner"><article id="post"><div class="plain" id="post-title">java function note</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-06</time><span class="post-meta__separator">|</span><i class="fa fa-inbox" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/program/"> program</a><span class="post-meta__separator">|</span><i class="fa fa-comment-o" aria-hidden="true"></i><a href="/2020/08/06/Java%20function%20note/#disqus_thread"><span class="disqus-comment-count" data-disqus-identifier="2020/08/06/Java function note/"></span></a></div><div class="article-container" id="post-content"><p>!!! garbage</p>
+<h1 id="java-method-note"><a href="#java-method-note" class="headerlink" title="java method note"></a>java method note</h1><ul>
+<li>System.currentTimeMillis() : return current time: millisecongs from GMT(Greenwich Mean Time or Universal Time) 1970.1.1 to now,millis=millisecond</li>
+<li>Integer.parseInt(intString) :intstring is numerical type string,return numerical value</li>
+<li>Double.parseDouble(doubleString);return numerical value from string</li>
+<li>input redirection : java SentineValue &lt;input.txt</li>
+<li>output redirection : java SentieValue &lt;output.txt</li>
+<li>java SentineValue &lt;input.txt &gt;output.txt</li>
+<li>import java.util.*</li>
+</ul>
+<h2 id="Scanner-Class-dynamic-method"><a href="#Scanner-Class-dynamic-method" class="headerlink" title="Scanner Class -dynamic method"></a>Scanner Class -dynamic method</h2><h3 id="read-value-from-keyboard"><a href="#read-value-from-keyboard" class="headerlink" title="read value from keyboard"></a>read value from keyboard</h3><ul>
+<li><strong>Scanner input =new Scanner(System.in);</strong></li>
+<li>input.nextByte();</li>
+<li>input.nextShort();</li>
+<li>input.nextInt();</li>
+<li>input.nextLong();</li>
+<li>input.nextFloat();</li>
+</ul>
+<h2 id="Math-Class-static-method"><a href="#Math-Class-static-method" class="headerlink" title="Math Class -static method"></a>Math Class -static method</h2><h3 id="emsp-trigonometric-method"><a href="#emsp-trigonometric-method" class="headerlink" title="&emsp;trigonometric method"></a><strong>&emsp;trigonometric method</strong></h3><ul>
+<li>radians :unit is π ; degree :unit is ° ; a: is numerical value</li>
+<li>sin(radians);cos(radians);tan(radians);</li>
+<li>asin(a);acos(a);atan(a);</li>
+<li>toRadians(degree);   — conversion from degree to radians</li>
+<li>toDegrees(randians); —conversion from radians to degree</li>
+</ul>
+<h3 id="emsp-exponent-method"><a href="#emsp-exponent-method" class="headerlink" title="&emsp;exponent method"></a><strong>&emsp;exponent method</strong></h3><ul>
+<li>exp(x); — return e^x^;</li>
+<li>log(x); — return lnx;</li>
+<li>log10(x); — return log<del>10</del>(x);</li>
+<li>pow(x,y); — return x^y^</li>
+<li>sqart(x); — return  $ \sqrt{x} (x&gt;0) $</li>
+</ul>
+<h3 id="emsp-sevice-method"><a href="#emsp-sevice-method" class="headerlink" title="&emsp;sevice method"></a><strong>&emsp;sevice method</strong></h3><ul>
+<li>ceil(x); — return double y=$\lceil x \rceil$ : $ y\in Z  \land x+1\geq y\geq x  $</li>
+<li>floor(x); — return double y=$\lfloor x \rfloor $: $y\in Z \land x-1 \geq y \geq x $</li>
+<li>rint(x): — return double y=$=(\lceil x \rceil-x \geq x-\lfloor x \rfloor ) ?  \lfloor x \rfloor :  \lceil x \rceil $</li>
+<li>round(x); — return floor(x),if x is float retun int,if x is double return float</li>
+<li>min(x); max(x); abs(x);</li>
+<li>random(); — produce a double value (0≤ ＜1)</li>
+</ul>
+<h2 id="Character-Class"><a href="#Character-Class" class="headerlink" title="Character Class"></a>Character Class</h2><ul>
+<li>value is char</li>
+<li>isDigit(ch); — judge  whether ch is digit</li>
+<li>isLetter(ch); — judge whether ch is letter</li>
+<li>isLetterOrDigit(ch);</li>
+<li>isLowerCase(ch);</li>
+<li>isUpperCase(ch);</li>
+<li>toLowerCase(ch);</li>
+<li>toUpperCase(ch);</li>
+</ul>
+<h2 id="String-Class-dynamic-method-instance-method"><a href="#String-Class-dynamic-method-instance-method" class="headerlink" title="String Class -dynamic method(instance method)"></a>String Class -dynamic method(instance method)</h2><ul>
+<li>String s=”content”;</li>
+<li>length();  — return number of string</li>
+<li>charAt(index);  — return s[index] value</li>
+<li>concat(s1);  — return s+s1 </li>
+<li>toLowerCase();  — return string with lower letters</li>
+<li>toUpperCase();  — return string with upper letters</li>
+<li>trim();  — delete the blank space on both side</li>
+<li>equals(s1);  — if s==s1 return ture</li>
+<li>equalsIgnoreCase();  — ignore case ,if s==s1 return ture</li>
+<li>compareTo(s1); —return a value =the first diffent char’distance (former-latter)</li>
+<li>compareToIgnoreCase(s1);— ignore case,-return a value =the first diffent char’distance (former-latter)</li>
+<li>startWith(prefix);— judge whethther s starts with s1</li>
+<li>endWith(prfix);— judge whethther s ends with s1</li>
+<li>contains(s1);— judge whether s contains s1</li>
+<li>indexOf(ch/s);— return the index of the <strong>first</strong> s1(index is from the fist char of s),else return -1</li>
+<li>indexOf(ch/s1,fromIndex);— return the index of the <strong>first</strong> s1 <strong>after</strong> formIndex ,else return -1</li>
+<li>lastindexOf(ch/s1);— return the index of the <strong>last</strong> s1(index is from the fist char of s1),else return -1</li>
+<li>lastindexOf(ch/s1,fromIndex);— return the index of the <strong>last</strong> s1 <strong>before</strong> formIndex ,else return -1</li>
+<li>substring(beginIndex); — return string from beginIndex to end</li>
+<li>substring(beginIndex,endIndex); — return string from beginindex to endindex</li>
+</ul>
+<h2 id="Data-Class-dynamic-method"><a href="#Data-Class-dynamic-method" class="headerlink" title="Data Class -dynamic method"></a>Data Class -dynamic method</h2><ul>
+<li>Date(); — create current date object</li>
+<li>java.util.Date = new java.util.Date();</li>
+<li>Date(elapeseTime:long); — create elapeseTime from GMT 1970.1.1  date object</li>
+<li>toString(); — return time string with pattern : Mon Dec 26 07:00:15 EST 2001</li>
+<li>getTime(); —- return elapse milliseconds from EST 1970.1.1 to “now”</li>
+<li>setTime(elapseTime:long) —set elapse time</li>
+</ul>
+<h2 id="Random-Class-dynamix-method"><a href="#Random-Class-dynamix-method" class="headerlink" title="Random Class -dynamix method"></a>Random Class -dynamix method</h2><ul>
+<li>Random(); — current time as seed create object</li>
+<li>random random = new Random();</li>
+<li>Random(seed:long); — certain value as seed create object</li>
+<li>nextInt(); — return random value</li>
+<li>nextLong();</li>
+<li>nextDouble();</li>
+<li>nextFloat();</li>
+<li>nextBoolean();</li>
+</ul>
+<h2 id="BigDecimal-Class"><a href="#BigDecimal-Class" class="headerlink" title="BigDecimal Class"></a>BigDecimal Class</h2><h3 id="8-kinds-of-rounding-modes"><a href="#8-kinds-of-rounding-modes" class="headerlink" title="8 kinds of rounding modes"></a>8 kinds of rounding modes</h3><ol>
+<li><p>Rounding down - <strong>ROUND_FLOOR</strong> <br><br>round down (or take the <strong>floor,</strong> or round towards minus infinity): y is the largest integer that does not exceed x.<br><br>${\displaystyle y=\mathrm {floor} (x)=\left\lfloor x\right\rfloor =-\left\lceil -x\right\rceil } $<br><br></p>
+</li>
+<li><p>Rounding up - <strong>ROUND_FLOOR</strong>  <br><br> round up (or take the <strong>ceiling,</strong> or round towards plus infinity): y is the smallest integer that is not less than x. <br><br> ${\displaystyle y=\mathrm {ceil} (x)=\left\lceil x\right\rceil =-\left\lfloor -x\right\rfloor } $<br><br></p>
+</li>
+<li><p>Rounding towards zero - <strong>ROUND_DOWN</strong> <br><br> round towards <strong>zero</strong> (or truncate, or round away from infinity): y is the integer part of x, without its fraction digits.<br><br>${\displaystyle y=\mathrm {truncate} (x)=\mathrm {sgn}(x)\left\lfloor \left|x\right|\right\rfloor =-\mathrm {sgn}(x)\left\lceil -\left|x\right|\right\rceil }$<br><br></p>
+</li>
+<li><p>Rounding away from zero - <strong>ROUND_UP</strong> round away from zero (or round towards infinity): if x is an integer, y is x; else y is the integer that is closest to 0 and is such that x is between 0 and y.<br><br>${\displaystyle y=\mathrm {sgn}(x)\left\lceil \left|x\right|\right\rceil =-\mathrm {sgn}(x)\left\lfloor -\left|x\right|\right\rfloor }$<br><br></p>
+</li>
+<li><p>Round half towards zero  - <strong>ROUND_HALF_DOWN 五舍六入</strong> <br><br>One may also round half towards zero (or round half away from infinity) as opposed to the conventional round half away from zero.<br><br>${\displaystyle y=\mathrm {sgn}(x)\left\lceil \left|x\right|-0.5\right\rceil =-\mathrm {sgn}(x)\left\lfloor -\left|x\right|+0.5\right\rfloor }$<br><br></p>
+</li>
+<li><p>Round half away from zero - <strong>ROUND_HALF_UP 四舍五入</strong> <br><br>The other tie-breaking method commonly taught and used is the round half away from zero (or round half towards infinity).<br><br>${\displaystyle y=\mathrm {sgn}(x)\left\lfloor \left|x\right|+0.5\right\rfloor =-\mathrm {sgn}(x)\left\lceil -\left|x\right|-0.5\right\rceil } $</p>
+</li>
+</ol>
+<p>Round half to even - <strong>ROUND_HALF_EVEN</strong> <br><br>A tie-breaking rule without positive/negative bias and without bias toward/away from zero is round half to even. By this convention, if the fractional part of x is 0.5, then y is the even integer nearest to x</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">epichide</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://yoursite.com/2020/08/06/Java%20function%20note/">http://yoursite.com/2020/08/06/Java%20function%20note/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/java/">java</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2020/08/06/java%20proper%20noun%20in%20both%20Chinese%20and%20English/"><i class="fa fa-chevron-left">  </i><span>java proper noun in both Ch-En</span></a></div><div class="next-post pull-right"><a href="/2020/08/06/The%20PAC%20learning%20Framework/"><span>CH2 :The PAC Learning Framework</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="disqus_thread"></div><script>var unused = null;
+var disqus_config = function () {
+  this.page.url = 'http://yoursite.com/2020/08/06/Java%20function%20note/';
+  this.page.identifier = '2020/08/06/Java function note/';
+  this.page.title = 'java function note';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://" + 'EH' +".disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script><script id="dsq-count-scr" src="https://EH.disqus.com/count.js" async></script></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2020 By epichide</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script src="/js/search/algolia.js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="algolia-search"><div class="search-dialog__title" id="algolia-search-title">Algolia</div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><hr><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>

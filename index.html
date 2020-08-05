@@ -1,0 +1,363 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="nothing to remember"><meta name="keywords" content=""><meta name="author" content="epichide"><meta name="copyright" content="epichide"><title>there is nothing, there are something | Eichide's Blog</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.1.1/dist/instantsearch.min.css"><script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.1.1/dist/instantsearch.min.js" defer></script><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: {"appId":"5W59328PV6","apiKey":"35f0ce2b0fab5580e74b14de630d5706","indexName":"Epichide","hits":{"per_page":10},"languages":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}.","hits_stats":"${hits} results found in ${time} ms"}},
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 5.0.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="false"><div class="author-info"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">epichide</div><div class="author-info__description text-center">nothing to remember</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">12</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">11</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">5</span></a></div></div></div><nav class="no-bg" id="nav"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">Eichide's Blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/slides">Slides</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a></span></div><div id="site-info"><div id="site-title">Eichide's Blog</div><div id="site-sub-title">there is nothing, there are something</div><div id="site-social-icons"><a class="social-icon" href="https://github.com/Epichide/Epichide.github.io" target="_blank" rel="noreferrer noopener nofollow"><i class="fa-github fa"></i></a></div></div></nav><div id="content-outer"><div class="layout" id="content-inner"><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/06/Probability%20Theory%20and%20Stochastic%20Process%20note/">概率论与随机过程笔记</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-06</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/math/">math</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/probability/">probability</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/note/">note</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/math/">math</a></span><div class="content"><h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><ol>
+<li>随机试验(试验) experiment E : <ol>
+<li>可重复性 : 在相同条件下可以重复</li>
+<li>结果可知性 : 不能知道准确的结果,但事先知道所有可能的结果</li>
+</ol>
+</li>
+<li>样本点 sample point ω :<ul>
+<li>随机试验每一个不可分割的结果</li>
+</ul>
+</li>
+<li>样本空间 sample space Ω : ω ∈ Ω<ul>
+<li>样本点全体的集合<ol>
+<li>离散样本空间<ol>
+<li>有限样本空间</li>
+<li>可列样本空间</li>
+</ol>
+</li>
+<li>连续样本空间</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>随机事件 event A : A ⊂ Ω<ul>
+<li>样本空间子集</li>
+<li>表示 : {ω | X(ω) ≤ x } = {X≤x} = X≤x ,  A  = {ω |X(ω) ∈ A } = { X(ω) ∈ A } = X ∈ A</li>
+<li>运算 : 余 A^c^ , $\bar{A}$ , 对称差 (仅其一发生) A △ B ,<ol>
+<li>互斥事件 AB=∅</li>
+<li>对立事件/逆事件</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>随机变量 random variable  X(ω) , X , ξ , ζ , η<ul>
+<li>定义在样本空间的实值函数</li>
+</ul>
+</li>
+<li>极限事件<ol>
+<li>上极限事件</li>
+</ol>
+</li>
+</ol>
+<h1 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h1><h2 id="概率公式"><a href="#概率公式" class="headerlink" title="概率公式"></a>概率公式</h2><ol>
+<li>概率加法Jordan公式<br>$$P(A_1\cup A_2…\cup A_n)=\sum_{j=1}P(A_i)-\sum_{1≤i&lt;j≤n}P(A_iA_j)+\ldots +(-1)^{n-1}\sum_{1≤j_1&lt;j_2\ldots &lt;j_n}P(A_{j_1}A_{j_2}\ldots A_{j-n})$$</li>
+<li>概率乘法公式<br>$$P(A_1A_2…A_n)=P(A_n|A_1 A_2…A_{n-1})P(A_{n-1}|A_1A_2…A_{n-2})\ldots P(A_2|A_1)P(A_1)$$</li>
+<li>全概率公式<ul>
+<li>$B_iB_j=\varnothing, i \neq j$ </li>
+<li>$A⊂B_1\cup B_2\cup…\cup B_n$<br>$P(A) = P(A|B_1)P(B_1) + P(A|B_2)P(B_2) + … + P(A|B_n)P(B_n)$$</li>
+</ul>
+</li>
+<li>Bayes贝叶斯公式<br>$$P(B_i|A) = \frac{P(A|B_i)P(B_i)}{\sum_{j=1}^{n} P(A|B_j)P(B_j)}$$</li>
+</ol>
+</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/06/java%20proper%20noun%20in%20both%20Chinese%20and%20English/">java proper noun in both Ch-En</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-06</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/program/">program</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/java/">java</a></span><div class="content"><ul>
+<li>对象 object</li>
+<li>对象成员 object member</li>
+<li>访问 access</li>
+<li>操作符 operator</li>
+<li>操作数 </li>
+<li>操作</li>
+<li>变量 variable</li>
+<li>实例 instance</li>
+<li>调用 calling</li>
+<li>默认 default</li>
+<li>引用 referrence</li>
+<li>引用变量 referrence variable</li>
+<li>静态变量 static variable</li>
+<li>类变量 class variable</li>
+<li>数据域 data field</li>
+<li>匿名对象 annonyous object</li>
+<li>直接量 literal (程序中直接出现的常量值)</li>
+<li>数值型直接量</li>
+<li>引用型直接量</li>
+<li>基本类型变量</li>
+<li>引用类型变量</li>
+<li>垃圾 garbage (没有被引用的对象)</li>
+<li>垃圾回收 garbage collection(java检测垃圾,自动回收)</li>
+<li>API 应用程序编程接口 :application program interface(是一些预定义的函数,提供应用程序或开发人员给予某软件,硬件得以访问一组例程的能力,而无需访问源码)</li>
+<li>界面: interface</li>
+<li>GMT 格林威治时间 Greenwich mean time</li>
+<li>包私有 package-private</li>
+<li>包内访问 package-access</li>
+<li>访问器 accessor</li>
+<li>修改器 mutator</li>
+<li>不可变对象 immutable object</li>
+<li>隐藏 hidden</li>
+<li>隐藏数据域 hidden data field (类中函数由于局部变量与数据域重名,导致部分数据被隐藏)</li>
+<li>重写=覆盖 override (子类修改父类定义的方法的实现)</li>
+<li>方法重写 method overriding</li>
+<li>重载 overloading (使用同样明仔用不同签名来定义多个方法)</li>
+<li>多态 polymorphism (可以使用父类对象的位置,比如参数,对象,都可以使用子对象)</li>
+<li>动态绑定 dynamic binding (声明类型调用某一方法由实际类型决定)</li>
+<li>类抽象 class abstraction(将类的实现与使用分离)</li>
+<li>类的封装 class encapsulation(对用户隐藏类法人实现)</li>
+<li>数据域封装 data field encapsulation(声明一些成员为private 以避免对数据的直接修改)</li>
+<li>ADT 抽象数据类型 abstract data type (类也可称为ADT)</li>
+<li>装箱 boxing (基本类型转换为基本类型的类对象)</li>
+<li>自动装箱：将 基本数据类型 封装为对象类型，来符合java的面向对象的思想。 </li>
+<li>自动拆箱：将对象重新转化为基本数据类型。</li>
+<li>声明类型 declear type (一个变量声明为某种类型,一个引用变量声明为某种类的引用)</li>
+<li>实际类型 actual type (被应用变量的实际类型/类)</li>
+<li>对象转换</li>
+<li>隐式转换 implict casting (子类是实例被引用给父类引用变量)</li>
+<li>向上转换 upcasting</li>
+<li>显示转换 explict casting (子类 b =(子类)父类对象,书写方式,把父类转换为子类)</li>
+<li>向下转换 downcasting</li>
+<li>可见性修饰符 visibility modifier</li>
+<li>可访问性修饰符 accessibility modifier</li>
+</ul>
+<h1 id="error-type"><a href="#error-type" class="headerlink" title="error type"></a>error type</h1><ul>
+<li>Null pointer exception : 调用值为null的引用变量</li>
+<li>Arithmetic Exception :异常的运算条件时,抛出此异常。例如,一个整数“除以零”时</li>
+<li>Class cast exception : </li>
+</ul>
+</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/06/Java%20function%20note/">java function note</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-06</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/program/">program</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/java/">java</a></span><div class="content"><p>!!! garbage</p>
+<h1 id="java-method-note"><a href="#java-method-note" class="headerlink" title="java method note"></a>java method note</h1><ul>
+<li>System.currentTimeMillis() : return current time: millisecongs from GMT(Greenwich Mean Time or Universal Time) 1970.1.1 to now,millis=millisecond</li>
+<li>Integer.parseInt(intString) :intstring is numerical type string,return numerical value</li>
+<li>Double.parseDouble(doubleString);return numerical value from string</li>
+<li>input redirection : java SentineValue &lt;input.txt</li>
+<li>output redirection : java SentieValue &lt;output.txt</li>
+<li>java SentineValue &lt;input.txt &gt;output.txt</li>
+<li>import java.util.*</li>
+</ul>
+<h2 id="Scanner-Class-dynamic-method"><a href="#Scanner-Class-dynamic-method" class="headerlink" title="Scanner Class -dynamic method"></a>Scanner Class -dynamic method</h2><h3 id="read-value-from-keyboard"><a href="#read-value-from-keyboard" class="headerlink" title="read value from keyboard"></a>read value from keyboard</h3><ul>
+<li><strong>Scanner input =new Scanner(System.in);</strong></li>
+<li>input.nextByte();</li>
+<li>input.nextShort();</li>
+<li>input.nextInt();</li>
+<li>input.nextLong();</li>
+<li>input.nextFloat();</li>
+</ul>
+<h2 id="Math-Class-static-method"><a href="#Math-Class-static-method" class="headerlink" title="Math Class -static method"></a>Math Class -static method</h2><h3 id="emsp-trigonometric-method"><a href="#emsp-trigonometric-method" class="headerlink" title="&emsp;trigonometric method"></a><strong>&emsp;trigonometric method</strong></h3><ul>
+<li>radians :unit is π ; degree :unit is ° ; a: is numerical value</li>
+<li>sin(radians);cos(radians);tan(radians);</li>
+<li>asin(a);acos(a);atan(a);</li>
+<li>toRadians(degree);   — conversion from degree to radians</li>
+<li>toDegrees(randians); —conversion from radians to degree</li>
+</ul>
+<h3 id="emsp-exponent-method"><a href="#emsp-exponent-method" class="headerlink" title="&emsp;exponent method"></a><strong>&emsp;exponent method</strong></h3><ul>
+<li>exp(x); — return e^x^;</li>
+<li>log(x); — return lnx;</li>
+<li>log10(x); — return log<del>10</del>(x);</li>
+<li>pow(x,y); — return x^y^</li>
+<li>sqart(x); — return  $ \sqrt{x} (x&gt;0) $</li>
+</ul>
+<h3 id="emsp-sevice-method"><a href="#emsp-sevice-method" class="headerlink" title="&emsp;sevice method"></a><strong>&emsp;sevice method</strong></h3><ul>
+<li>ceil(x); — return double y=$\lceil x \rceil$ : $ y\in Z  \land x+1\geq y\geq x  $</li>
+<li>floor(x); — return double y=$\lfloor x \rfloor $: $y\in Z \land x-1 \geq y \geq x $</li>
+<li>rint(x): — return double y=$=(\lceil x \rceil-x \geq x-\lfloor x \rfloor ) ?  \lfloor x \rfloor :  \lceil x \rceil $</li>
+<li>round(x); — return floor(x),if x is float retun int,if x is double return float</li>
+<li>min(x); max(x); abs(x);</li>
+<li>random(); — produce a double value (0≤ ＜1)</li>
+</ul>
+<h2 id="Character-Class"><a href="#Character-Class" class="headerlink" title="Character Class"></a>Character Class</h2><ul>
+<li>value is char</li>
+<li>isDigit(ch); — judge  whether ch is digit</li>
+<li>isLetter(ch); — judge whether ch is letter</li>
+<li>isLetterOrDigit(ch);</li>
+<li>isLowerCase(ch);</li>
+<li>isUpperCase(ch);</li>
+<li>toLowerCase(ch);</li>
+<li>toUpperCase(ch);</li>
+</ul>
+<h2 id="String-Class-dynamic-method-instance-method"><a href="#String-Class-dynamic-method-instance-method" class="headerlink" title="String Class -dynamic method(instance method)"></a>String Class -dynamic method(instance method)</h2><ul>
+<li>String s=”content”;</li>
+<li>length();  — return number of string</li>
+<li>charAt(index);  — return s[index] value</li>
+<li>concat(s1);  — return s+s1 </li>
+<li>toLowerCase();  — return string with lower letters</li>
+<li>toUpperCase();  — return string with upper letters</li>
+<li>trim();  — delete the blank space on both side</li>
+<li>equals(s1);  — if s==s1 return ture</li>
+<li>equalsIgnoreCase();  — ignore case ,if s==s1 return ture</li>
+<li>compareTo(s1); —return a value =the first diffent char’distance (former-latter)</li>
+<li>compareToIgnoreCase(s1);— ignore case,-return a value =the first diffent char’distance (former-latter)</li>
+<li>startWith(prefix);— judge whethther s starts with s1</li>
+<li>endWith(prfix);— judge whethther s ends with s1</li>
+<li>contains(s1);— judge whether s contains s1</li>
+<li>indexOf(ch/s);— return the index of the <strong>first</strong> s1(index is from the fist char of s),else return -1</li>
+<li>indexOf(ch/s1,fromIndex);— return the index of the <strong>first</strong> s1 <strong>after</strong> formIndex ,else return -1</li>
+<li>lastindexOf(ch/s1);— return the index of the <strong>last</strong> s1(index is from the fist char of s1),else return -1</li>
+<li>lastindexOf(ch/s1,fromIndex);— return the index of the <strong>last</strong> s1 <strong>before</strong> formIndex ,else return -1</li>
+<li>substring(beginIndex); — return string from beginIndex to end</li>
+<li>substring(beginIndex,endIndex); — return string from beginindex to endindex</li>
+</ul>
+<h2 id="Data-Class-dynamic-method"><a href="#Data-Class-dynamic-method" class="headerlink" title="Data Class -dynamic method"></a>Data Class -dynamic method</h2><ul>
+<li>Date(); — create current date object</li>
+<li>java.util.Date = new java.util.Date();</li>
+<li>Date(elapeseTime:long); — create elapeseTime from GMT 1970.1.1  date object</li>
+<li>toString(); — return time string with pattern : Mon Dec 26 07:00:15 EST 2001</li>
+<li>getTime(); —- return elapse milliseconds from EST 1970.1.1 to “now”</li>
+<li>setTime(elapseTime:long) —set elapse time</li>
+</ul>
+<h2 id="Random-Class-dynamix-method"><a href="#Random-Class-dynamix-method" class="headerlink" title="Random Class -dynamix method"></a>Random Class -dynamix method</h2><ul>
+<li>Random(); — current time as seed create object</li>
+<li>random random = new Random();</li>
+<li>Random(seed:long); — certain value as seed create object</li>
+<li>nextInt(); — return random value</li>
+<li>nextLong();</li>
+<li>nextDouble();</li>
+<li>nextFloat();</li>
+<li>nextBoolean();</li>
+</ul>
+<h2 id="BigDecimal-Class"><a href="#BigDecimal-Class" class="headerlink" title="BigDecimal Class"></a>BigDecimal Class</h2><h3 id="8-kinds-of-rounding-modes"><a href="#8-kinds-of-rounding-modes" class="headerlink" title="8 kinds of rounding modes"></a>8 kinds of rounding modes</h3><ol>
+<li><p>Rounding down - <strong>ROUND_FLOOR</strong> <br><br>round down (or take the <strong>floor,</strong> or round towards minus infinity): y is the largest integer that does not exceed x.<br><br>${\displaystyle y=\mathrm {floor} (x)=\left\lfloor x\right\rfloor =-\left\lceil -x\right\rceil } $<br><br></p>
+</li>
+<li><p>Rounding up - <strong>ROUND_FLOOR</strong>  <br><br> round up (or take the <strong>ceiling,</strong> or round towards plus infinity): y is the smallest integer that is not less than x. <br><br> ${\displaystyle y=\mathrm {ceil} (x)=\left\lceil x\right\rceil =-\left\lfloor -x\right\rfloor } $<br><br></p>
+</li>
+<li><p>Rounding towards zero - <strong>ROUND_DOWN</strong> <br><br> round towards <strong>zero</strong> (or truncate, or round away from infinity): y is the integer part of x, without its fraction digits.<br><br>${\displaystyle y=\mathrm {truncate} (x)=\mathrm {sgn}(x)\left\lfloor \left|x\right|\right\rfloor =-\mathrm {sgn}(x)\left\lceil -\left|x\right|\right\rceil }$<br><br></p>
+</li>
+<li><p>Rounding away from zero - <strong>ROUND_UP</strong> round away from zero (or round towards infinity): if x is an integer, y is x; else y is the integer that is closest to 0 and is such that x is between 0 and y.<br><br>${\displaystyle y=\mathrm {sgn}(x)\left\lceil \left|x\right|\right\rceil =-\mathrm {sgn}(x)\left\lfloor -\left|x\right|\right\rfloor }$<br><br></p>
+</li>
+<li><p>Round half towards zero  - <strong>ROUND_HALF_DOWN 五舍六入</strong> <br><br>One may also round half towards zero (or round half away from infinity) as opposed to the conventional round half away from zero.<br><br>${\displaystyle y=\mathrm {sgn}(x)\left\lceil \left|x\right|-0.5\right\rceil =-\mathrm {sgn}(x)\left\lfloor -\left|x\right|+0.5\right\rfloor }$<br><br></p>
+</li>
+<li><p>Round half away from zero - <strong>ROUND_HALF_UP 四舍五入</strong> <br><br>The other tie-breaking method commonly taught and used is the round half away from zero (or round half towards infinity).<br><br>${\displaystyle y=\mathrm {sgn}(x)\left\lfloor \left|x\right|+0.5\right\rfloor =-\mathrm {sgn}(x)\left\lceil -\left|x\right|-0.5\right\rceil } $</p>
+</li>
+</ol>
+<p>Round half to even - <strong>ROUND_HALF_EVEN</strong> <br><br>A tie-breaking rule without positive/negative bias and without bias toward/away from zero is round half to even. By this convention, if the fractional part of x is 0.5, then y is the even integer nearest to x</p>
+</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/06/The%20PAC%20learning%20Framework/">CH2 :The PAC Learning Framework</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-06</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/math/">math</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/machine-learning/">machine_learning</a></span><div class="content"><p>[TOC]<br>作者: Mehryar Mogri</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
+<li>PAC学习框架,PAC : probably approximately correct learning<h2 id="中英文释义"><a href="#中英文释义" class="headerlink" title="中英文释义"></a>中英文释义</h2>definition 定义<br>note 注解,强调,注意<br>denote 用什么表示什么<br>instance 实例<br>non-trivial<h3 id="符号"><a href="#符号" class="headerlink" title="符号"></a>符号</h3></li>
+</ul>
+<p>$\mathcal{X}$ : 所有可能的 examples or instances,input space<br>$\mathcal{Y}$ : 所有可能的 labels or target values,output space<br>c : target concept,类似于映射,从$\mathcal{X}$ 到 $\mathcal{Y}$ mapping,是我们想要研究的目标<br>$\mathcal{C}$ : concept class ,是一簇我们希望学习的概念.我不知道对不对,可能就是一种对concept的举一反三,扩展模型,没有绝对的边界.比如concept是一个确定角度和边长三角形,concept class就是一个三角形的大概念或者是一个多边形的概念,我们想学习可扩展的concept集合,而不是只用于目前问题的concept<br>假设assume样例是独立同分布的( independently and identically distributed (i.i.d.))服从于<br>according to 一个未知分布$\mathcal{D}$<br>$\mathcal{H}$ : 假设集, hypothesis set,是研究者考虑的可能cencept set,它可能会和$\mathcal{C}$ 一致,也可能不一致,因为我们不知道c和$\mathcal{C}$是怎样的,只能靠猜测<br>$\mathcal{S}=(x_1,…,x_m)$ : 样本集,来自于$\mathcal{D}$,同时标注了label $(c(x_1),…,c(x_m))$,标注了的样本集,叫labeled sample,其中每个可以叫做example/instance<br>$\mathcal{A}$ : 一个算法,algorithm,它依据样本集从$\mathcal{H}$中选出一个h<sub>s</sub><br>n : 表示represent任意元素x∈$\mathcal{X}$所需要的最大计算开销computation cost,比如n维空间需要n个数表示一个元素x<br>size(c) : 表示c的最大计算开销</p>
+<h2 id="PAC学习模型"><a href="#PAC学习模型" class="headerlink" title="PAC学习模型"></a>PAC学习模型</h2><ul>
+<li>泛化误差 generalization error / risk error/ ture error/ simply error<br>给定假设h∈$\mathcal{H}$,h的泛化误差定义为:注意这里x~$\mathcal{D}$<br>$R(h)=\underset{x \sim D}{\mathbb{P}}[h(x) \neq c(x)]=\underset{x \sim D}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]$</li>
+<li>经验误差 Empirical error/Empirical risk<br>给定假设h∈$\mathcal{H}$,h的经验定义为:这里的$\mathcal{S}$~$\mathcal{D^m}$<br>$\widehat{R}<em>{S}(h)=\frac{1}{m} \sum</em>{i=1}^{m} 1_{h\left(x_{i}\right) \neq c\left(x_{i}\right)}$</li>
+<li>经验误差的期望=泛化误差<br>$\underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[\widehat{R}<em>{S}(h)\right]=R(h)$<br>proof:<br> $\underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[\widehat{R}</em>{S}(h)\right]=\frac{1}{m} \sum_{i=1}^{m} \underset{S \sim \mathbb{D}^{m}}{\mathbb{E}}\left[1_{h\left(x_{i}\right) \neq c\left(x_{i}\right)}\right]=\frac{1}{m} \sum_{i=1}^{m} \underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]=\underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]=\underset{x \sim \mathcal{D}}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]=R(h)$<h3 id="PAC-learning"><a href="#PAC-learning" class="headerlink" title="PAC learning"></a>PAC learning</h3>如果一个$\mathcal{C}$,存在一个算法$\mathcal{A}$和一个多元多项式polynominal function poly(1/ε, 1/δ, n, size(c)) ,对于?ε&gt;0,δ&gt;0,$\mathcal{D}$,c,如果满足:<br>$\underset{S \sim \mathcal{D}^{m}}{\mathbb{P}}\left[R\left(h_{S}\right) \leq \epsilon\right] \geq 1-\delta$<br>那么$\mathcal{C}$就认为是PAC learnable<br>再如果?算法$\mathcal{A}$在poly(1/ε, 1/δ, n, size(c))时间内运算完,那么那么$\mathcal{C}$就认为是efficiently PAC learnable,$\mathcal{A}$则称为PAC learning 算法<ul>
+<li>approximately correct (ε)近似准确,即$h_{S}$与c之间的误差$R\left(h_{S}\right) \leq \epsilon$</li>
+<li>probability (1-δ) 误差小于epsilon的可能性,即 $\underset{S \sim \mathcal{D}^{m}}{\mathbb{P}}\left[R\left(h_{S}\right) \leq \epsilon\right] \geq 1-\delta$<h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><ul>
+<li>PAC框架framwork是distribution-free 模型,对于总体分布没有要求</li>
+<li><font color="red">可以放宽以适应domain adaptation 问题</font></li>
+<li>PAC框架处理概念集$\mathcal{C}$的可学习问题,而不是特定的c.<font color="red">注意，概念类C是算法已知的，但是目标概念c∈C当然是未知的。</font></li>
+<li>当computational representation没有讨论或比较容易得到straightforward,我们可先忽略n和size(c)<h3 id="例子2-4-学习轴对齐的矩形"><a href="#例子2-4-学习轴对齐的矩形" class="headerlink" title="例子2.4(学习轴对齐的矩形)"></a>例子2.4(学习轴对齐的矩形)</h3>考虑平面plane上点集,$\mathcal{X}=\mathbb{R^2}$,概念集$\mathcal{C}$是$\mathbb{R^2}$中与坐标轴平行的矩形,R表示目标矩形(c)，R’=$R_s$表示假设矩形($h_s$)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/06/A%20brief%20history%20of%20tomorrow/">A brief history of tommorrow</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-06</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/philosophy/">philosophy</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/book/">book</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/philosophy/">philosophy</a></span><div class="content"><ul>
+<li><p>丛林法则：丛林法则是自然界里生物学方面的物竞天择、优胜劣汰、弱肉强食的规律法则。</p>
+<pre><code>  它包括两个方面的基本属性：
+
+  * 一是它的自然属性；自然属性是受大自然的客观影响，不受人性、社会性的因素影响。自然界中的资源有限，只有强者才能获得最多
+
+  * 一是它的社会属性。</code></pre>
+</li>
+<li><p>契诃夫法则 (chekhow law)：在第一幕出现的枪，在第三幕中必然会发射</p>
+</li>
+</ul>
+<blockquote>
+<p>人类死亡的原因是因为人体运行出了点技术问题,癌症,肺结核等等都是技术问题,只要是技术问题,就能找到解决方案,按照这个理解,人是可以永生(a-moetal)的,但做不到不死(immortal)</p>
+</blockquote>
+<pre><code>我是没见过哪个杯子可以永远用不坏,只靠修</code></pre>
+<ul>
+<li><p>寿命翻倍的结果</p>
+<ol>
+<li>适婚年龄延迟</li>
+<li>亲子关系变化</li>
+<li>学习工作阶段时间延长,可能出现新阶段</li>
+<li>职权更迭变慢</li>
+</ol>
+</li>
+<li><p>现代的科技不是延长寿命,只是避免早死</p>
+</li>
+<li><p>短暂的生命,让人觉得人生短暂的苦难不算什么;长寿的生命让人考虑如何享乐漫长的人生</p>
+</li>
+<li><p>如果掌控愉悦只是人类的生化系统,那么GDP,政治革命,经济增长有什么意义</p>
+</li>
+</ul>
+<blockquote>
+</blockquote>
+<pre><code>经济增长此类只是愉悦系统的一部分</code></pre>
+<blockquote>
+<p>刹车! 我们正在以未知的速度(我们所知的只是速度比以前快)冲向未知.却不知道刹车在哪里.顶尖的人只知道这个庞大系统的一角,没有人能真正串联这些点,因此没有人了解整个系统,也就没人能阻止,减缓速度.同时,如果我们不知怎么的踩了刹车,我们也无法知道,是平缓的减速,还是轰然崩塌.</p>
+</blockquote>
+<pre><code>总之就是我们不知道什么时候采取什么行动,我们一股脑走向的只是一层又一层的未知.</code></pre>
+<ul>
+<li>治愈和进化没有明确的界限,当为了治愈处在下限的人时,必然也让上限提高<blockquote>
+<p>人文主义(对人的崇拜)来说,让人类进化成神是一个合乎逻辑的目的,但是发展至今,”何为神圣”我们仍然不知</p>
+</blockquote>
+</li>
+</ul>
+</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/05/%E8%96%9B%E5%85%86%E4%B8%B0%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%8E%9F%E7%90%86%E8%AE%B2%E4%B9%89/">薛兆丰经济学讲义</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-05</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/economy/">economy</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/jottings/">jottings</a></span><div class="content"><p>此为私人使用的笔记，有关言论只是自己看法，因为还未加密，不承担任何责任。</p></div><a class="more" href="/2020/08/05/%E8%96%9B%E5%85%86%E4%B8%B0%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%8E%9F%E7%90%86%E8%AE%B2%E4%B9%89/#more">Read more</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/05/%E8%8B%8F%E8%8F%B2%E7%9A%84%E4%B8%96%E7%95%8C-key_words/">苏菲的世界3</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-05</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/philosophy/">philosophy</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/philosophy/">philosophy</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/novel/">novel</a></span><div class="content"><ol>
+<li>现实主义</li>
+<li>唯物主义</li>
+<li>物质主义</li>
+<li>理性主义</li>
+<li>经验主义</li>
+<li>理想主义</li>
+<li>不可知论</li>
+<li>诡辩学派</li>
+<li>宗教质疑</li>
+<li>悲观主义</li>
+<li>历史唯物主义</li>
+<li>机械唯物主义</li>
+<li>泛神论</li>
+<li>无神论</li>
+<li>多神论</li>
+<li>神秘主义</li>
+<li></li>
+<li></li>
+</ol>
+<ol>
+<li>思维 reflection</li>
+<li>感觉 sensation</li>
+<li>感受</li>
+<li>印象</li>
+<li>观念</li>
+</ol>
+</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/05/%E8%8B%8F%E8%8F%B2%E7%9A%84%E4%B8%96%E7%95%8C2/">苏菲的世界2</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-05</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/philosophy/">philosophy</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/philosophy/">philosophy</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/novel/">novel</a></span><div class="content"><h1 id="苏菲的世界"><a href="#苏菲的世界" class="headerlink" title="苏菲的世界"></a>苏菲的世界</h1><h2 id="JOSTEIN-GAARDER"><a href="#JOSTEIN-GAARDER" class="headerlink" title="JOSTEIN GAARDER"></a>JOSTEIN GAARDER</h2><h2 id="两种文化"><a href="#两种文化" class="headerlink" title="两种文化"></a>两种文化</h2><ul>
+<li>印欧文化<ol>
+<li>希腊人，罗马人</li>
+<li>印度，希腊，古代北欧神话是以一种哲学或思索的观点看时间的倾向</li>
+<li>历史是循环的，历史既没有开始，也没有结束，只不过在无尽的生生死死中不同文明兴亡消长罢了</li>
+<li>有灵魂转生，生死轮回的概念(柏拉图也相信灵魂可以转生)</li>
+<li>最重要的感官是视觉，“洞察”。因而有大量图画与雕刻描绘神的形象</li>
+<li>多神论</li>
+<li>印度教，佛教，北欧希腊神话</li>
+</ol>
+</li>
+<li>闪族文化<ol>
+<li>犹太人，阿拉伯</li>
+<li>历史是直线式发展，神在鸿蒙太初时创造了世界，但终有一天它会结束，“最后的审判日”，对生者死者审判</li>
+<li>生命目的不在轮回，在于救赎</li>
+<li>最重要的感官是听觉，“听从”神的话语。旧约曾训诫人不要制作任何神像(现在教堂到处是画像是受了希腊罗马文化的影响，但希腊与俄罗斯等地的希腊正教仍不允许信徒制作)</li>
+<li>一神论</li>
+<li>基督教(天主教，东正教，英国圣东会，新教)，犹太教，伊斯兰教</li></ol></li></ul></div><a class="more" href="/2020/08/05/%E8%8B%8F%E8%8F%B2%E7%9A%84%E4%B8%96%E7%95%8C2/#more">Read more</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/05/%E8%8B%8F%E8%8F%B2%E7%9A%84%E4%B8%96%E7%95%8C1/">苏菲的世界1</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-05</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/philosophy/">philosophy</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/philosophy/">philosophy</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/novel/">novel</a></span><div class="content"><h1 id="苏菲的世界"><a href="#苏菲的世界" class="headerlink" title="苏菲的世界"></a>苏菲的世界</h1><h3 id="jostein-gaarder"><a href="#jostein-gaarder" class="headerlink" title="jostein gaarder"></a>jostein gaarder</h3><p>哲学把具象的 “物”，“事” 进行总结，让我们可以名状，或许这就是哲学最大的贡献。</p></div><a class="more" href="/2020/08/05/%E8%8B%8F%E8%8F%B2%E7%9A%84%E4%B8%96%E7%95%8C1/#more">Read more</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/05/PuMuMingnote_ch10/">PuMUming neuron note -- ch10 time keep</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-05</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/neuron/">neuron</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/note/">note</a></span><div class="content"><h1 id="Title-neural-basic-of-neuron"><a href="#Title-neural-basic-of-neuron" class="headerlink" title="Title neural basic of neuron"></a>Title neural basic of neuron</h1><p>Francis Crick : in memory 1907-2004</p>
+<h1 id="consciousness-psdt"><a href="#consciousness-psdt" class="headerlink" title="consciousness(psdt)"></a>consciousness(psdt)</h1><p>the having of perception,thoughts and feelings;awareness. the term is impossible to define except in teerms that are unintelligible without a grasp of what consciosness means ———— Stuart1996</p>
+<p>a grasp of sth 了解掌握某事</p></div><a class="more" href="/2020/08/05/PuMuMingnote_ch10/#more">Read more</a><hr></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2020 By epichide</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span><span></span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script src="/js/search/algolia.js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="algolia-search"><div class="search-dialog__title" id="algolia-search-title">Algolia</div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><hr><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
