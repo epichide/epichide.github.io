@@ -1,13 +1,1331 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="nothing to remember"><meta name="keywords" content=""><meta name="author" content="epichide"><meta name="copyright" content="epichide"><title>there is nothing, there are something | Eichide's Blog</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.1.1/dist/instantsearch.min.css"><script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.1.1/dist/instantsearch.min.js" defer></script><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: {"appId":"5W59328PV6","apiKey":"35f0ce2b0fab5580e74b14de630d5706","indexName":"Epichide","hits":{"per_page":10},"languages":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}.","hits_stats":"${hits} results found in ${time} ms"}},
-  localSearch: undefined,
-  copy: {
-    success: 'Copy successfully',
-    error: 'Copy error',
-    noSupport: 'The browser does not support'
-  }
-} </script><meta name="generator" content="Hexo 5.0.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="false"><div class="author-info"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">epichide</div><div class="author-info__description text-center">nothing to remember</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">12</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">11</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">5</span></a></div></div></div><nav class="no-bg" id="nav"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">Eichide's Blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/slides">Slides</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a></span></div><div id="site-info"><div id="site-title">Eichide's Blog</div><div id="site-sub-title">there is nothing, there are something</div><div id="site-social-icons"><a class="social-icon" href="https://github.com/Epichide/Epichide.github.io" target="_blank" rel="noreferrer noopener nofollow"><i class="fa-github fa"></i></a></div></div></nav><div id="content-outer"><div class="layout" id="content-inner"><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/06/Probability%20Theory%20and%20Stochastic%20Process%20note/">概率论与随机过程笔记</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-06</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/math/">math</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/probability/">probability</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/note/">note</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/math/">math</a></span><div class="content"><h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><ol>
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo,HALOHA" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="nothing to remember">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Eichide&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Eichide&#39;s Blog">
+<meta property="og:description" content="nothing to remember">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="epichide">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '5W59328PV6',
+      apiKey: '35f0ce2b0fab5580e74b14de630d5706',
+      indexName: 'Epichide',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/"/>
+
+
+
+
+
+  <title>Eichide's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Eichide's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">there is nothing, there are something</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/06/Static%20Site/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="epichide">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/user.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eichide's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/08/06/Static%20Site/" itemprop="url">Static Site</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-06T13:55:14+08:00">
+                2020-08-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE html><html><head>
+      <title>build a bolg or create a document using markdown</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\www_0\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.5.12\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview.markdown-preview {
+  @charset "utf-8";
+  /* 全局属性 */
+  /* 全局属性 */
+  /*段落*/
+  /*标题*/
+  /*列表*/
+  /*引用*/
+  /*链接*/
+  /*行内代码*/
+  /*图片*/
+  /*表格*/
+  /* 行内代码 */
+  /* 脚注上标 */
+  /* 脚注 */
+  /* 代码块主题 */
+}
+.markdown-preview.markdown-preview #write {
+  max-width: 860px;
+  font-size: 16px;
+  color: black;
+  padding: 0 10px;
+  line-height: 1.6;
+  word-spacing: 0px;
+  letter-spacing: 0px;
+  word-break: break-word;
+  word-wrap: break-word;
+  text-align: left;
+  font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.markdown-preview.markdown-preview #write p {
+  font-size: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin: 0;
+  line-height: 26px;
+  color: black;
+}
+.markdown-preview.markdown-preview #write h1,
+.markdown-preview.markdown-preview #write h2,
+.markdown-preview.markdown-preview #write h3,
+.markdown-preview.markdown-preview #write h4,
+.markdown-preview.markdown-preview #write h5,
+.markdown-preview.markdown-preview #write h6 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding: 0px;
+  font-weight: bold;
+  color: black;
+}
+.markdown-preview.markdown-preview #write h1 {
+  font-size: 1.5rem;
+}
+.markdown-preview.markdown-preview #write h2 {
+  font-size: 1.3rem;
+  border-bottom: 2px solid #60ceef;
+}
+.markdown-preview.markdown-preview #write h2 span {
+  display: inline-block;
+  font-weight: bold;
+  background: #ef7060;
+  color: #ffffff;
+  padding: 3px 10px 1px;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  margin-right: 3px;
+}
+.markdown-preview.markdown-preview #write h2:after {
+  display: inline-block;
+  content: "";
+  vertical-align: bottom;
+  border-bottom: 36px solid #efebe9;
+  border-right: 20px solid transparent;
+}
+.markdown-preview.markdown-preview #write h3 {
+  font-size: 1.2rem;
+}
+.markdown-preview.markdown-preview #write h4 {
+  font-size: 1.1rem;
+}
+.markdown-preview.markdown-preview #write h5 {
+  font-size: 1rem;
+}
+.markdown-preview.markdown-preview #write h6 {
+  font-size: 1rem;
+}
+.markdown-preview.markdown-preview #write ul,
+.markdown-preview.markdown-preview #write ol {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding-left: 25px;
+  color: black;
+}
+.markdown-preview.markdown-preview #write ul {
+  list-style-type: disc;
+}
+.markdown-preview.markdown-preview #write ul ul {
+  list-style-type: square;
+}
+.markdown-preview.markdown-preview #write ol {
+  list-style-type: decimal;
+}
+.markdown-preview.markdown-preview #write li section {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 26px;
+  text-align: left;
+  color: #010101;
+  /* 只要是纯黑色微信编辑器就会把color这个属性吞掉。。。*/
+  font-weight: 500;
+}
+.markdown-preview.markdown-preview #write blockquote {
+  display: block;
+  font-size: 0.9em;
+  overflow: auto;
+  border-left: 3px solid #ef7060;
+  color: #6a737d;
+  padding: 10px 10px 10px 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background: #fff9f9;
+}
+.markdown-preview.markdown-preview #write blockquote p {
+  margin: 0px;
+  color: black;
+  line-height: 26px;
+}
+.markdown-preview.markdown-preview #write a {
+  text-decoration: none;
+  word-wrap: break-word;
+  font-weight: bold;
+  border-bottom: 1px solid #1e6bb8;
+  color: #ef7060;
+  border-bottom: 1px solid #ef7060;
+}
+.markdown-preview.markdown-preview #write p code,
+.markdown-preview.markdown-preview #write li code {
+  font-size: 14px;
+  word-wrap: break-word;
+  padding: 2px 4px;
+  border-radius: 4px;
+  margin: 0 2px;
+  color: #ef7060;
+  background-color: rgba(27, 31, 35, 0.05);
+  font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+  word-break: break-all;
+}
+.markdown-preview.markdown-preview #write img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.markdown-preview.markdown-preview #write table {
+  display: table;
+  text-align: left;
+}
+.markdown-preview.markdown-preview #write tbody {
+  border: 0;
+}
+.markdown-preview.markdown-preview #write table tr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  background-color: white;
+}
+.markdown-preview.markdown-preview #write table tr:nth-child(2n) {
+  background-color: #F8F8F8;
+}
+.markdown-preview.markdown-preview #write table tr th,
+.markdown-preview.markdown-preview #write table tr td {
+  font-size: 16px;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  text-align: left;
+}
+.markdown-preview.markdown-preview #write table tr th {
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
+.markdown-preview.markdown-preview #write span code,
+.markdown-preview.markdown-preview #write li code {
+  color: #ef7060;
+}
+.markdown-preview.markdown-preview #write .md-footnote {
+  font-weight: bold;
+  color: #ef7060;
+}
+.markdown-preview.markdown-preview #write .md-footnote > .md-text:before {
+  content: '[';
+}
+.markdown-preview.markdown-preview #write .md-footnote > .md-text:after {
+  content: ']';
+}
+.markdown-preview.markdown-preview #write .md-def-name {
+  padding-right: 1.8ch;
+}
+.markdown-preview.markdown-preview #write .md-def-name:before {
+  content: '[';
+  color: #000;
+}
+.markdown-preview.markdown-preview #write .md-def-name:after {
+  color: #000;
+}
+.markdown-preview.markdown-preview .md-fences:before {
+  content: ' ';
+  display: block;
+  width: 100%;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-color: #282c34;
+  margin-bottom: -7px;
+  border-radius: 5px;
+  background-position: 10px 10px;
+}
+.markdown-preview.markdown-preview .cm-s-inner.CodeMirror {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: #292d3e;
+  color: #a6accd;
+  font-family: Consolas;
+  border-radius: 4px;
+}
+.markdown-preview.markdown-preview .CodeMirror-lines {
+  padding-left: 4px;
+}
+.markdown-preview.markdown-preview .cm-s-inner .cm-keyword {
+  color: #c792ea;
+}
+.markdown-preview.markdown-preview .cm-s-inner .cm-operator {
+  color: #89ddff;
+}
+.markdown-preview.markdown-preview .cm-s-inner .cm-variable-2 {
+  color: #eeffff;
+}
+.markdown-preview.markdown-preview .cm-s-inner .cm-variable-3,
+.markdown-preview.markdown-preview .cm-s-inner .cm-type {
+  color: #f07178;
+}
+.markdown-preview.markdown-preview .cm-s-inner .cm-builtin {
+  color: #ffcb6b;
+}
+.markdown-preview.markdown-preview .cm-s-inner .cm-atom {
+  color: #f78c6c;
+}
+.markdown-preview.markdown-preview .cm-s-inner .cm-number {
+  color: #ff5370;
+}
+.markdown-preview.markdown-preview .cm-s-inner .cm-def {
+  color: #82aaff;
+}
+.markdown-preview.markdown-preview .cm-s-inner .cm-string {
+  color: #c3e88d;
+}
+.markdown-preview.markdown-preview .cm-s-inner .cm-string-2 {
+  color: #f07178;
+}
+.markdown-preview.markdown-preview .cm-s-inner .cm-comment {
+  color: #676e95;
+}
+.markdown-preview.markdown-preview .cm-s-inner .cm-variable {
+  color: #f07178;
+}
+.markdown-preview.markdown-preview .cm-s-inner .cm-tag {
+  color: #ff5370;
+}
+.markdown-preview.markdown-preview .cm-s-inner .cm-meta {
+  color: #ffcb6b;
+}
+.markdown-preview.markdown-preview .cm-s-inner .cm-attribute {
+  color: #c792ea;
+}
+.markdown-preview.markdown-preview .cm-s-inner .cm-property {
+  color: #c792ea;
+}
+.markdown-preview.markdown-preview .cm-s-inner .cm-qualifier {
+  color: #decb6b;
+}
+.markdown-preview.markdown-preview .cm-s-inner .cm-variable-3,
+.markdown-preview.markdown-preview .cm-s-inner .cm-type {
+  color: #decb6b;
+}
+.markdown-preview.markdown-preview .cm-s-inner .cm-error {
+  color: #ffffff;
+  background-color: #ff5370;
+}
+.markdown-preview.markdown-preview .cm-s-inner .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
+}
+.markdown-preview.markdown-preview .CodeMirror div.CodeMirror-cursor {
+  border-left: 1px solid #ef7060;
+  z-index: 3;
+}
+
+      </style>
+    <meta name="generator" content="Hexo 4.2.1"></head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h2 class="mume-header" id="%E9%A6%96%E5%85%88%E5%85%B3%E4%BA%8Emarkdown-%E8%BD%AC%E4%B8%BAhtml%E7%9A%84%E7%94%A8%E9%80%94">&#x9996;&#x5148;&#x5173;&#x4E8E;markdown &#x8F6C;&#x4E3A;html&#x7684;&#x7528;&#x9014;</h2>
+
+<ol>
+<li>&#x642D;&#x5EFA;&#x535A;&#x5BA2;, &#x4E3B;&#x8981;&#x662F;&#x6587;&#x7AE0;\&#x8BB0;&#x4E8B;\&#x7C7B;&#x7684;, &#x5B83;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x597D;&#x770B;&#x7B80;&#x6D01;&#x6E05;&#x723D;&#x7684;&#x754C;&#x9762;. &#x535A;&#x5BA2;&#x9F84;&#x6BD4;&#x8F83;&#x4E0A;&#x7684;&#x4EBA;&#x6765;&#x8BF4;, &#x4F1A;&#x6709;&#x5927;&#x91CF;&#x7684;&#x6587;&#x4EF6;&#x9700;&#x8981;&#x7BA1;&#x7406;, &#x6240;&#x4EE5;&#x4F1A;&#x6BD4;&#x8F83;&#x9700;&#x8981;&#x4E00;&#x4E9B;&#x5F52;&#x6863;\&#x5206;&#x7C7B;\&#x6807;&#x7B7E;\&#x65F6;&#x95F4;&#x7684;&#x9700;&#x8981;, &#x800C;&#x5BF9;&#x590D;&#x6742;&#x6587;&#x672C;&#x8981;&#x6C42;&#x4E0D;&#x9AD8;.</li>
+<li>&#x7F16;&#x5199;&#x8BF4;&#x660E;&#x624B;&#x518C;, &#x53EF;&#x80FD;&#x4E00;&#x4E2A;&#x5F00;&#x53D1;&#x7684;&#x7A0B;&#x5E8F;, &#x9700;&#x8981;&#x8BF4;&#x660E;&#x5982;&#x4F55;&#x64CD;&#x4F5C;, &#x6BCF;&#x4E2A;&#x64CD;&#x4F5C;&#x7684;&#x7C7B;&#x522B;(&#x547D;&#x4EE4;&#x884C;\&#x7A97;&#x53E3;\&#x83DC;&#x5355;\&#x7F16;&#x7A0B;), &#x8FD8;&#x6709;&#x591A;&#x79CD;&#x6CE8;&#x610F;&#x4E8B;&#x9879;, &#x6240;&#x4EE5;&#x6587;&#x672C;&#x590D;&#x6742;&#x6027;, &#x9AD8;&#x7EA7;&#x8BED;&#x8A00;&#x6BD4;&#x8F83;&#x9AD8;, &#x5C31;&#x50CF;&#x4E00;&#x672C;&#x53EF;&#x4E92;&#x52A8;&#x53EF;&#x590D;&#x5236;&#x7684;&#x7F51;&#x9875;&#x7248;pdf</li>
+</ol>
+<p>&#x5173;&#x4E8E;&#x9759;&#x6001;&#x7F51;&#x9875;&#x6240;&#x7528;&#x7684;&#x4E0D;&#x540C;&#x5DE5;&#x5177;,&#x53EF;&#x4EE5;&#x67E5;&#x770B;<a href="https://www.staticgen.com/" target="_blank" rel="noopener">staticgen.xom</a></p>
+<p>&#x6BD4;&#x5982;&#x51E0;&#x4E2A;&#x5E38;&#x89C1;&#x7684;:(<a href="https://blog.csdn.net/mouday/article/details/83865749" target="_blank" rel="noopener">&#x53C2;&#x8003;&#x89C1;</a>)</p>
+<table>
+<thead>
+<tr>
+<th>&#x6846;&#x67B6;</th>
+<th>&#x8BED;&#x8A00;&#x73AF;&#x5883;</th>
+<th>&#x53C2;&#x8003;&#x6587;&#x7AE0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jekyll</td>
+<td>Ruby</td>
+<td>&#x6587;&#x6863; &#x3001;&#x535A;&#x6587;</td>
+</tr>
+<tr>
+<td>Sphinx</td>
+<td>Python</td>
+<td>&#x6587;&#x6863; &#x3001;&#x535A;&#x6587;</td>
+</tr>
+<tr>
+<td>Hexo</td>
+<td>Node.js</td>
+<td>&#x6587;&#x6863; &#x3001;&#x535A;&#x6587;</td>
+</tr>
+<tr>
+<td>mkdocs</td>
+<td>Python</td>
+<td>&#x6587;&#x6863;&#x3001;&#x535A;&#x6587;</td>
+</tr>
+<tr>
+<td>docsify</td>
+<td>Node.js</td>
+<td>&#x6587;&#x6863;&#x3001;&#x535A;&#x6587;</td>
+</tr>
+</tbody>
+</table>
+<h2 class="mume-header" id="%E4%BB%A5-hexo-%E5%92%8C-mkdocs-%E4%B8%BA%E4%BE%8B">&#x4EE5; hexo &#x548C; mkdocs &#x4E3A;&#x4F8B;</h2>
+
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
+          
+        
+      
+    </div>
+    
+    
+    
+
+
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/06/Static%20Site/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="epichide">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/user.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eichide's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/08/06/Static%20Site/" itemprop="url">build a bolg or create a document using markdown</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-06T13:38:15+08:00">
+                2020-08-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/environment/" itemprop="url" rel="index">
+                    <span itemprop="name">environment</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="首先关于markdown-转为html的用途"><a href="#首先关于markdown-转为html的用途" class="headerlink" title="首先关于markdown 转为html的用途"></a>首先关于markdown 转为html的用途</h2><ol>
+<li>搭建博客, 主要是文章\记事\类的, 它可能需要好看简洁清爽的界面. 博客龄比较上的人来说, 会有大量的文件需要管理, 所以会比较需要一些归档\分类\标签\时间的需要, 而对复杂文本要求不高.</li>
+<li>编写说明手册, 可能一个开发的程序, 需要说明如何操作, 每个操作的类别(命令行\窗口\菜单\编程), 还有多种注意事项, 所以文本复杂性, 高级语言比较高, 就像一本可互动可复制的网页版pdf</li>
+</ol>
+<p>关于静态网页所用的不同工具,可以查看<a href="https://www.staticgen.com/" target="_blank" rel="noopener">staticgen.xom</a></p>
+<p>比如几个常见的:(<a href="https://blog.csdn.net/mouday/article/details/83865749" target="_blank" rel="noopener">参考见</a>)<br>| 框架    | 语言环境 | 参考文章    |<br>| ——- | ——– | ———– |<br>| Jekyll  | Ruby     | <a href="https://www.jekyll.com.cn/" target="_blank" rel="noopener">文档</a> 、<a href="https://blog.csdn.net/mouday/article/details/79300135" target="_blank" rel="noopener">博文</a> |<br>| Sphinx  | Python   | <a href="https://zh-sphinx-doc.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">文档</a> 、<a href="https://blog.csdn.net/mouday/article/details/79388919" target="_blank" rel="noopener">博文</a> |<br>| Hexo    | Node.js  | <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">文档</a> 、<a href="https://pengshiyu.blog.csdn.net/article/details/83895553" target="_blank" rel="noopener">博文</a> |<br>| mkdocs  | Python   | <a href="https://www.mkdocs.org/" target="_blank" rel="noopener">文档</a>、<a href="https://pengshiyu.blog.csdn.net/article/details/103669218" target="_blank" rel="noopener">博文</a>  |<br>| docsify | Node.js  | <a href="https://docsify.js.org/#/zh-cn/" target="_blank" rel="noopener">文档</a>、<a href="https://pengshiyu.blog.csdn.net/article/details/107488533" target="_blank" rel="noopener">博文</a>  |</p>
+<h2 id="以-hexo-和-mkdocs-为例"><a href="#以-hexo-和-mkdocs-为例" class="headerlink" title="以 hexo 和 mkdocs 为例"></a>以 hexo 和 mkdocs 为例</h2><ol>
+<li>首先可以看这两个的例子<ol>
+<li>hexo: <a href="https://notes.iissnan.com/" target="_blank" rel="noopener">https://notes.iissnan.com/</a> ,<a href="https://haojen.github.io/Claudia-theme-blog/" target="_blank" rel="noopener">https://haojen.github.io/Claudia-theme-blog/</a></li>
+<li>mkdocs: <a href="https://squidfunk.github.io/mkdocs-material/getting-started/" target="_blank" rel="noopener">https://squidfunk.github.io/mkdocs-material/getting-started/</a> , <a href="https://mkdocs.zimoapps.com/" target="_blank" rel="noopener">https://mkdocs.zimoapps.com/</a></li>
+</ol>
+</li>
+</ol>
+<p>但不是说mkdoc就只能做document,也可以写blog: <a href="https://cyent.github.io/markdown-with-mkdocs-material/view/statement/" target="_blank" rel="noopener">https://cyent.github.io/markdown-with-mkdocs-material/view/statement/</a>.  Hexo 同理, 它们只是ui专注的点不大相同</p>
+<ol start="2">
+<li>mkdocs 的优势是它的扩展语法,mkdocs-material支持几十种markdown语法: <a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/" target="_blank" rel="noopener">https://squidfunk.github.io/mkdocs-material/reference/admonitions/</a> ,有高级的标注语言</li>
+<li></li>
+</ol>
+<h2 id="参考连接"><a href="#参考连接" class="headerlink" title="参考连接:"></a>参考连接:</h2><ul>
+<li><p><a href="https://www.crifan.com/document_build_tool_mkdocs_gitbook_other/" target="_blank" rel="noopener">文档制作工具相关：MkDocs Gitbook Hexo等</a></p>
+</li>
+<li><p>Hexo theme 参考: <a href="https://www.zhihu.com/question/24422335" target="_blank" rel="noopener">有关Hexo的主题推荐</a></p>
+</li>
+<li><p>mkdocs上手教程: <a href="https://pengshiyu.blog.csdn.net/article/details/103669218" target="_blank" rel="noopener">mkdocs生成项目文档</a></p>
+</li>
+<li><p>mkdocs 官方教程: <a href="https://www.mkdocs.org/" target="_blank" rel="noopener">MkDocs</a></p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/06/Probability%20Theory%20and%20Stochastic%20Process%20note/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="epichide">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/user.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eichide's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/08/06/Probability%20Theory%20and%20Stochastic%20Process%20note/" itemprop="url">概率论与随机过程笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-06T01:21:05+08:00">
+                2020-08-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/math/" itemprop="url" rel="index">
+                    <span itemprop="name">math</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><ol>
 <li>随机试验(试验) experiment E : <ol>
 <li>可重复性 : 在相同条件下可以重复</li>
 <li>结果可知性 : 不能知道准确的结果,但事先知道所有可能的结果</li>
@@ -58,7 +1376,153 @@
 </li>
 <li>Bayes贝叶斯公式<br>$$P(B_i|A) = \frac{P(A|B_i)P(B_i)}{\sum_{j=1}^{n} P(A|B_j)P(B_j)}$$</li>
 </ol>
-</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/06/java%20proper%20noun%20in%20both%20Chinese%20and%20English/">java proper noun in both Ch-En</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-06</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/program/">program</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/java/">java</a></span><div class="content"><ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/06/java%20proper%20noun%20in%20both%20Chinese%20and%20English/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="epichide">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/user.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eichide's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/08/06/java%20proper%20noun%20in%20both%20Chinese%20and%20English/" itemprop="url">java proper noun in both Ch-En</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-06T01:21:05+08:00">
+                2020-08-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/program/" itemprop="url" rel="index">
+                    <span itemprop="name">program</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
 <li>对象 object</li>
 <li>对象成员 object member</li>
 <li>访问 access</li>
@@ -119,7 +1583,153 @@
 <li>Arithmetic Exception :异常的运算条件时,抛出此异常。例如,一个整数“除以零”时</li>
 <li>Class cast exception : </li>
 </ul>
-</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/06/Java%20function%20note/">java function note</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-06</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/program/">program</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/java/">java</a></span><div class="content"><p>!!! garbage</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/06/Java%20function%20note/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="epichide">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/user.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eichide's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/08/06/Java%20function%20note/" itemprop="url">java function note</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-06T01:21:05+08:00">
+                2020-08-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/program/" itemprop="url" rel="index">
+                    <span itemprop="name">program</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>!!! garbage</p>
 <h1 id="java-method-note"><a href="#java-method-note" class="headerlink" title="java method note"></a>java method note</h1><ul>
 <li>System.currentTimeMillis() : return current time: millisecongs from GMT(Greenwich Mean Time or Universal Time) 1970.1.1 to now,millis=millisecond</li>
 <li>Integer.parseInt(intString) :intstring is numerical type string,return numerical value</li>
@@ -224,7 +1834,153 @@
 </li>
 </ol>
 <p>Round half to even - <strong>ROUND_HALF_EVEN</strong> <br><br>A tie-breaking rule without positive/negative bias and without bias toward/away from zero is round half to even. By this convention, if the fractional part of x is 0.5, then y is the even integer nearest to x</p>
-</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/06/The%20PAC%20learning%20Framework/">CH2 :The PAC Learning Framework</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-06</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/math/">math</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/machine-learning/">machine_learning</a></span><div class="content"><p>[TOC]<br>作者: Mehryar Mogri</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/06/The%20PAC%20learning%20Framework/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="epichide">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/user.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eichide's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/08/06/The%20PAC%20learning%20Framework/" itemprop="url">CH2 :The PAC Learning Framework</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-06T01:21:05+08:00">
+                2020-08-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/math/" itemprop="url" rel="index">
+                    <span itemprop="name">math</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>[TOC]<br>作者: Mehryar Mogri</p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
 <li>PAC学习框架,PAC : probably approximately correct learning<h2 id="中英文释义"><a href="#中英文释义" class="headerlink" title="中英文释义"></a>中英文释义</h2>definition 定义<br>note 注解,强调,注意<br>denote 用什么表示什么<br>instance 实例<br>non-trivial<h3 id="符号"><a href="#符号" class="headerlink" title="符号"></a>符号</h3></li>
 </ul>
@@ -244,7 +2000,153 @@
 </ul>
 </li>
 </ul>
-</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/06/A%20brief%20history%20of%20tomorrow/">A brief history of tommorrow</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-06</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/philosophy/">philosophy</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/book/">book</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/philosophy/">philosophy</a></span><div class="content"><ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/06/A%20brief%20history%20of%20tomorrow/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="epichide">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/user.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eichide's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/08/06/A%20brief%20history%20of%20tomorrow/" itemprop="url">A brief history of tommorrow</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-06T00:00:00+08:00">
+                2020-08-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/philosophy/" itemprop="url" rel="index">
+                    <span itemprop="name">philosophy</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
 <li><p>丛林法则：丛林法则是自然界里生物学方面的物竞天择、优胜劣汰、弱肉强食的规律法则。</p>
 <pre><code>  它包括两个方面的基本属性：
 
@@ -288,7 +2190,304 @@
 </blockquote>
 </li>
 </ul>
-</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/05/%E8%96%9B%E5%85%86%E4%B8%B0%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%8E%9F%E7%90%86%E8%AE%B2%E4%B9%89/">薛兆丰经济学讲义</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-05</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/economy/">economy</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/jottings/">jottings</a></span><div class="content"><p>此为私人使用的笔记，有关言论只是自己看法，因为还未加密，不承担任何责任。</p></div><a class="more" href="/2020/08/05/%E8%96%9B%E5%85%86%E4%B8%B0%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%8E%9F%E7%90%86%E8%AE%B2%E4%B9%89/#more">Read more</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/05/%E8%8B%8F%E8%8F%B2%E7%9A%84%E4%B8%96%E7%95%8C-key_words/">苏菲的世界3</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-05</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/philosophy/">philosophy</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/philosophy/">philosophy</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/novel/">novel</a></span><div class="content"><ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/05/%E8%96%9B%E5%85%86%E4%B8%B0%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%8E%9F%E7%90%86%E8%AE%B2%E4%B9%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="epichide">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/user.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eichide's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/08/05/%E8%96%9B%E5%85%86%E4%B8%B0%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%8E%9F%E7%90%86%E8%AE%B2%E4%B9%89/" itemprop="url">薛兆丰经济学讲义</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-05T23:59:40+08:00">
+                2020-08-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/economy/" itemprop="url" rel="index">
+                    <span itemprop="name">economy</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>此为私人使用的笔记，有关言论只是自己看法，因为还未加密，不承担任何责任。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/08/05/%E8%96%9B%E5%85%86%E4%B8%B0%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%8E%9F%E7%90%86%E8%AE%B2%E4%B9%89/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/05/%E8%8B%8F%E8%8F%B2%E7%9A%84%E4%B8%96%E7%95%8C-key_words/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="epichide">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/user.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eichide's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/08/05/%E8%8B%8F%E8%8F%B2%E7%9A%84%E4%B8%96%E7%95%8C-key_words/" itemprop="url">苏菲的世界3</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-05T23:59:40+08:00">
+                2020-08-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/philosophy/" itemprop="url" rel="index">
+                    <span itemprop="name">philosophy</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
 <li>现实主义</li>
 <li>唯物主义</li>
 <li>物质主义</li>
@@ -315,7 +2514,152 @@
 <li>印象</li>
 <li>观念</li>
 </ol>
-</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/05/%E8%8B%8F%E8%8F%B2%E7%9A%84%E4%B8%96%E7%95%8C2/">苏菲的世界2</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-05</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/philosophy/">philosophy</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/philosophy/">philosophy</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/novel/">novel</a></span><div class="content"><h1 id="苏菲的世界"><a href="#苏菲的世界" class="headerlink" title="苏菲的世界"></a>苏菲的世界</h1><h2 id="JOSTEIN-GAARDER"><a href="#JOSTEIN-GAARDER" class="headerlink" title="JOSTEIN GAARDER"></a>JOSTEIN GAARDER</h2><h2 id="两种文化"><a href="#两种文化" class="headerlink" title="两种文化"></a>两种文化</h2><ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/05/%E8%8B%8F%E8%8F%B2%E7%9A%84%E4%B8%96%E7%95%8C2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="epichide">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/user.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eichide's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/08/05/%E8%8B%8F%E8%8F%B2%E7%9A%84%E4%B8%96%E7%95%8C2/" itemprop="url">苏菲的世界2</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-05T23:59:40+08:00">
+                2020-08-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/philosophy/" itemprop="url" rel="index">
+                    <span itemprop="name">philosophy</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="苏菲的世界"><a href="#苏菲的世界" class="headerlink" title="苏菲的世界"></a>苏菲的世界</h1><h2 id="JOSTEIN-GAARDER"><a href="#JOSTEIN-GAARDER" class="headerlink" title="JOSTEIN GAARDER"></a>JOSTEIN GAARDER</h2><h2 id="两种文化"><a href="#两种文化" class="headerlink" title="两种文化"></a>两种文化</h2><ul>
 <li>印欧文化<ol>
 <li>希腊人，罗马人</li>
 <li>印度，希腊，古代北欧神话是以一种哲学或思索的观点看时间的倾向</li>
@@ -332,32 +2676,346 @@
 <li>生命目的不在轮回，在于救赎</li>
 <li>最重要的感官是听觉，“听从”神的话语。旧约曾训诫人不要制作任何神像(现在教堂到处是画像是受了希腊罗马文化的影响，但希腊与俄罗斯等地的希腊正教仍不允许信徒制作)</li>
 <li>一神论</li>
-<li>基督教(天主教，东正教，英国圣东会，新教)，犹太教，伊斯兰教</li></ol></li></ul></div><a class="more" href="/2020/08/05/%E8%8B%8F%E8%8F%B2%E7%9A%84%E4%B8%96%E7%95%8C2/#more">Read more</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/05/%E8%8B%8F%E8%8F%B2%E7%9A%84%E4%B8%96%E7%95%8C1/">苏菲的世界1</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-05</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/philosophy/">philosophy</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/philosophy/">philosophy</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/novel/">novel</a></span><div class="content"><h1 id="苏菲的世界"><a href="#苏菲的世界" class="headerlink" title="苏菲的世界"></a>苏菲的世界</h1><h3 id="jostein-gaarder"><a href="#jostein-gaarder" class="headerlink" title="jostein gaarder"></a>jostein gaarder</h3><p>哲学把具象的 “物”，“事” 进行总结，让我们可以名状，或许这就是哲学最大的贡献。</p></div><a class="more" href="/2020/08/05/%E8%8B%8F%E8%8F%B2%E7%9A%84%E4%B8%96%E7%95%8C1/#more">Read more</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/05/PuMuMingnote_ch10/">PuMUming neuron note -- ch10 time keep</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-05</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/neuron/">neuron</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/note/">note</a></span><div class="content"><h1 id="Title-neural-basic-of-neuron"><a href="#Title-neural-basic-of-neuron" class="headerlink" title="Title neural basic of neuron"></a>Title neural basic of neuron</h1><p>Francis Crick : in memory 1907-2004</p>
-<h1 id="consciousness-psdt"><a href="#consciousness-psdt" class="headerlink" title="consciousness(psdt)"></a>consciousness(psdt)</h1><p>the having of perception,thoughts and feelings;awareness. the term is impossible to define except in teerms that are unintelligible without a grasp of what consciosness means ———— Stuart1996</p>
-<p>a grasp of sth 了解掌握某事</p></div><a class="more" href="/2020/08/05/PuMuMingnote_ch10/#more">Read more</a><hr></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2020 By epichide</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span><span></span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script src="/js/search/algolia.js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-    processEscapes: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-  },
-  CommonHTML: {
-    linebreaks: { automatic: true, width: "90% container" }
-  },
-  "HTML-CSS": { 
-    linebreaks: { automatic: true, width: "90% container" }
-  },
-  "SVG": { 
-    linebreaks: { automatic: true, width: "90% container" }
+<li>基督教(天主教，东正教，英国圣东会，新教)，犹太教，伊斯兰教</li></ol></li></ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/08/05/%E8%8B%8F%E8%8F%B2%E7%9A%84%E4%B8%96%E7%95%8C2/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/user.gif"
+               alt="epichide" />
+          <p class="site-author-name" itemprop="name">epichide</p>
+           
+              <p class="site-description motion-element" itemprop="description">nothing to remember</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">epichide</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
   }
-});
-</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
-  var all = MathJax.Hub.getAllJax(), i;
-  for (i=0; i < all.length; i += 1) {
-    all[i].SourceElement().parentNode.className += ' has-jax';
-  }
-});
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
-  $('#nav').addClass('is-mobile')
-  $('footer').addClass('is-mobile')
-  $('#top-container').addClass('is-mobile')
-}</script><div class="search-dialog" id="algolia-search"><div class="search-dialog__title" id="algolia-search-title">Algolia</div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><hr><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.2"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+</body>
+</html>
