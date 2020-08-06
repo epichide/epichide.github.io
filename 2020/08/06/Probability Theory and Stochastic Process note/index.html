@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="probability,note,math," />
+  <meta name="keywords" content="note,probability,math," />
 
 
 
@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="基本概念 随机试验(试验) experiment E :  可重复性 : 在相同条件下可以重复 结果可知性 : 不能知道准确的结果,但事先知道所有可能的结果   样本点 sample point ω : 随机试验每一个不可分割的结果   样本空间 sample space Ω : ω ∈ Ω 样本点全体的集合 离散样本空间 有限样本空间 可列样本空间   连续样本空间     随机事件 event">
+<meta name="description" content="基本概念  随机试验(试验) experiment E :  可重复性 : 在相同条件下可以重复 结果可知性 : 不能知道准确的结果,但事先知道所有可能的结果  样本点 sample point ω :  随机试验每一个不可分割的结果  样本空间 sample space Ω : ω ∈ Ω  样本点全体的集合   离散样本空间  有限样本空间 可列样本空间">
 <meta property="og:type" content="article">
 <meta property="og:title" content="概率论与随机过程笔记">
 <meta property="og:url" content="http://yoursite.com/2020/08/06/Probability%20Theory%20and%20Stochastic%20Process%20note/index.html">
 <meta property="og:site_name" content="Eichide&#39;s Blog">
-<meta property="og:description" content="基本概念 随机试验(试验) experiment E :  可重复性 : 在相同条件下可以重复 结果可知性 : 不能知道准确的结果,但事先知道所有可能的结果   样本点 sample point ω : 随机试验每一个不可分割的结果   样本空间 sample space Ω : ω ∈ Ω 样本点全体的集合 离散样本空间 有限样本空间 可列样本空间   连续样本空间     随机事件 event">
+<meta property="og:description" content="基本概念  随机试验(试验) experiment E :  可重复性 : 在相同条件下可以重复 结果可知性 : 不能知道准确的结果,但事先知道所有可能的结果  样本点 sample point ω :  随机试验每一个不可分割的结果  样本空间 sample space Ω : ω ∈ Ω  样本点全体的集合   离散样本空间  有限样本空间 可列样本空间">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-08-05T17:21:05.464Z">
 <meta property="article:modified_time" content="2020-08-05T19:01:38.871Z">
 <meta property="article:author" content="epichide">
-<meta property="article:tag" content="probability">
 <meta property="article:tag" content="note">
+<meta property="article:tag" content="probability">
 <meta property="article:tag" content="math">
 <meta name="twitter:card" content="summary">
 
@@ -412,56 +412,59 @@
       
 
       
-        <h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><ol>
-<li>随机试验(试验) experiment E : <ol>
+        <h1 id="基本概念">基本概念</h1>
+<ol type="1">
+<li>随机试验(试验) experiment E :
+<ol type="1">
 <li>可重复性 : 在相同条件下可以重复</li>
 <li>结果可知性 : 不能知道准确的结果,但事先知道所有可能的结果</li>
-</ol>
-</li>
-<li>样本点 sample point ω :<ul>
+</ol></li>
+<li>样本点 sample point ω :
+<ul>
 <li>随机试验每一个不可分割的结果</li>
+</ul></li>
+<li>样本空间 sample space Ω : ω ∈ Ω
+<ul>
+<li>样本点全体的集合</li>
 </ul>
-</li>
-<li>样本空间 sample space Ω : ω ∈ Ω<ul>
-<li>样本点全体的集合<ol>
-<li>离散样本空间<ol>
+<ol type="1">
+<li>离散样本空间
+<ol type="1">
 <li>有限样本空间</li>
 <li>可列样本空间</li>
-</ol>
-</li>
+</ol></li>
 <li>连续样本空间</li>
-</ol>
-</li>
-</ul>
-</li>
-<li>随机事件 event A : A ⊂ Ω<ul>
+</ol></li>
+<li>随机事件 event A : A ⊂ Ω
+<ul>
 <li>样本空间子集</li>
-<li>表示 : {ω | X(ω) ≤ x } = {X≤x} = X≤x ,  A  = {ω |X(ω) ∈ A } = { X(ω) ∈ A } = X ∈ A</li>
-<li>运算 : 余 A^c^ , $\bar{A}$ , 对称差 (仅其一发生) A △ B ,<ol>
+<li>表示 : {ω | X(ω) ≤ x } = {X≤x} = X≤x , A = {ω |X(ω) ∈ A } = { X(ω) ∈ A } = X ∈ A</li>
+<li>运算 : 余 A<sup>c</sup> , <span class="math inline">\(\bar{A}\)</span> , 对称差 (仅其一发生) A △ B ,</li>
+</ul>
+<ol type="1">
 <li>互斥事件 AB=∅</li>
 <li>对立事件/逆事件</li>
-</ol>
-</li>
-</ul>
-</li>
-<li>随机变量 random variable  X(ω) , X , ξ , ζ , η<ul>
+</ol></li>
+<li>随机变量 random variable X(ω) , X , ξ , ζ , η
+<ul>
 <li>定义在样本空间的实值函数</li>
-</ul>
-</li>
-<li>极限事件<ol>
+</ul></li>
+<li>极限事件
+<ol type="1">
 <li>上极限事件</li>
+</ol></li>
 </ol>
-</li>
-</ol>
-<h1 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h1><h2 id="概率公式"><a href="#概率公式" class="headerlink" title="概率公式"></a>概率公式</h2><ol>
-<li>概率加法Jordan公式<br>$$P(A_1\cup A_2…\cup A_n)=\sum_{j=1}P(A_i)-\sum_{1≤i&lt;j≤n}P(A_iA_j)+\ldots +(-1)^{n-1}\sum_{1≤j_1&lt;j_2\ldots &lt;j_n}P(A_{j_1}A_{j_2}\ldots A_{j-n})$$</li>
-<li>概率乘法公式<br>$$P(A_1A_2…A_n)=P(A_n|A_1 A_2…A_{n-1})P(A_{n-1}|A_1A_2…A_{n-2})\ldots P(A_2|A_1)P(A_1)$$</li>
-<li>全概率公式<ul>
-<li>$B_iB_j=\varnothing, i \neq j$ </li>
-<li>$A⊂B_1\cup B_2\cup…\cup B_n$<br>$P(A) = P(A|B_1)P(B_1) + P(A|B_2)P(B_2) + … + P(A|B_n)P(B_n)$$</li>
-</ul>
-</li>
-<li>Bayes贝叶斯公式<br>$$P(B_i|A) = \frac{P(A|B_i)P(B_i)}{\sum_{j=1}^{n} P(A|B_j)P(B_j)}$$</li>
+<h1 id="公式">公式</h1>
+<h2 id="概率公式">概率公式</h2>
+<ol type="1">
+<li>概率加法Jordan公式 <span class="math display">\[P(A_1\cup A_2...\cup A_n)=\sum_{j=1}P(A_i)-\sum_{1≤i&lt;j≤n}P(A_iA_j)+\ldots +(-1)^{n-1}\sum_{1≤j_1&lt;j_2\ldots &lt;j_n}P(A_{j_1}A_{j_2}\ldots A_{j-n})\]</span></li>
+<li>概率乘法公式 <span class="math display">\[P(A_1A_2...A_n)=P(A_n|A_1 A_2...A_{n-1})P(A_{n-1}|A_1A_2...A_{n-2})\ldots P(A_2|A_1)P(A_1)\]</span></li>
+<li>全概率公式
+<ul>
+<li><span class="math inline">\(B_iB_j=\varnothing, i \neq j\)</span></li>
+<li><span class="math inline">\(A⊂B_1\cup B_2\cup...\cup B_n\)</span> <span class="math inline">\(P(A) = P(A|B_1)P(B_1) + P(A|B_2)P(B_2) + ... + P(A|B_n)P(B_n)\)</span>$</li>
+</ul></li>
+<li>Bayes贝叶斯公式 <span class="math display">\[P(B_i|A) = \frac{P(A|B_i)P(B_i)}{\sum_{j=1}^{n} P(A|B_j)P(B_j)}\]</span></li>
 </ol>
 
       
@@ -491,9 +494,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/probability/" rel="tag"># probability</a>
-          
             <a href="/tags/note/" rel="tag"># note</a>
+          
+            <a href="/tags/probability/" rel="tag"># probability</a>
           
             <a href="/tags/math/" rel="tag"># math</a>
           
@@ -597,7 +600,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

@@ -94,12 +94,12 @@
 
 
 
-<meta name="description" content="[TOC]作者: Mehryar Mogri 前言 PAC学习框架,PAC : probably approximately correct learning中英文释义definition 定义note 注解,强调,注意denote 用什么表示什么instance 实例non-trivial符号  $\mathcal{X}$ : 所有可能的 examples or instances,input">
+<meta name="description" content="[TOC] 作者: Mehryar Mogri ## 前言 * PAC学习框架,PAC : probably approximately correct learning ## 中英文释义 definition 定义 note 注解,强调,注意 denote 用什么表示什么 instance 实例 non-trivial ### 符号 \(\mathcal{X}\) : 所有可能的 exampl">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CH2 :The PAC Learning Framework">
 <meta property="og:url" content="http://yoursite.com/2020/08/06/The%20PAC%20learning%20Framework/index.html">
 <meta property="og:site_name" content="Eichide&#39;s Blog">
-<meta property="og:description" content="[TOC]作者: Mehryar Mogri 前言 PAC学习框架,PAC : probably approximately correct learning中英文释义definition 定义note 注解,强调,注意denote 用什么表示什么instance 实例non-trivial符号  $\mathcal{X}$ : 所有可能的 examples or instances,input">
+<meta property="og:description" content="[TOC] 作者: Mehryar Mogri ## 前言 * PAC学习框架,PAC : probably approximately correct learning ## 中英文释义 definition 定义 note 注解,强调,注意 denote 用什么表示什么 instance 实例 non-trivial ### 符号 \(\mathcal{X}\) : 所有可能的 exampl">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-08-05T17:21:05.428Z">
 <meta property="article:modified_time" content="2020-08-05T19:04:44.198Z">
@@ -410,25 +410,20 @@
       
 
       
-        <p>[TOC]<br>作者: Mehryar Mogri</p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
-<li>PAC学习框架,PAC : probably approximately correct learning<h2 id="中英文释义"><a href="#中英文释义" class="headerlink" title="中英文释义"></a>中英文释义</h2>definition 定义<br>note 注解,强调,注意<br>denote 用什么表示什么<br>instance 实例<br>non-trivial<h3 id="符号"><a href="#符号" class="headerlink" title="符号"></a>符号</h3></li>
-</ul>
-<p>$\mathcal{X}$ : 所有可能的 examples or instances,input space<br>$\mathcal{Y}$ : 所有可能的 labels or target values,output space<br>c : target concept,类似于映射,从$\mathcal{X}$ 到 $\mathcal{Y}$ mapping,是我们想要研究的目标<br>$\mathcal{C}$ : concept class ,是一簇我们希望学习的概念.我不知道对不对,可能就是一种对concept的举一反三,扩展模型,没有绝对的边界.比如concept是一个确定角度和边长三角形,concept class就是一个三角形的大概念或者是一个多边形的概念,我们想学习可扩展的concept集合,而不是只用于目前问题的concept<br>假设assume样例是独立同分布的( independently and identically distributed (i.i.d.))服从于<br>according to 一个未知分布$\mathcal{D}$<br>$\mathcal{H}$ : 假设集, hypothesis set,是研究者考虑的可能cencept set,它可能会和$\mathcal{C}$ 一致,也可能不一致,因为我们不知道c和$\mathcal{C}$是怎样的,只能靠猜测<br>$\mathcal{S}=(x_1,…,x_m)$ : 样本集,来自于$\mathcal{D}$,同时标注了label $(c(x_1),…,c(x_m))$,标注了的样本集,叫labeled sample,其中每个可以叫做example/instance<br>$\mathcal{A}$ : 一个算法,algorithm,它依据样本集从$\mathcal{H}$中选出一个h<sub>s</sub><br>n : 表示represent任意元素x∈$\mathcal{X}$所需要的最大计算开销computation cost,比如n维空间需要n个数表示一个元素x<br>size(c) : 表示c的最大计算开销</p>
-<h2 id="PAC学习模型"><a href="#PAC学习模型" class="headerlink" title="PAC学习模型"></a>PAC学习模型</h2><ul>
-<li>泛化误差 generalization error / risk error/ ture error/ simply error<br>给定假设h∈$\mathcal{H}$,h的泛化误差定义为:注意这里x~$\mathcal{D}$<br>$R(h)=\underset{x \sim D}{\mathbb{P}}[h(x) \neq c(x)]=\underset{x \sim D}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]$</li>
-<li>经验误差 Empirical error/Empirical risk<br>给定假设h∈$\mathcal{H}$,h的经验定义为:这里的$\mathcal{S}$~$\mathcal{D^m}$<br>$\widehat{R}<em>{S}(h)=\frac{1}{m} \sum</em>{i=1}^{m} 1_{h\left(x_{i}\right) \neq c\left(x_{i}\right)}$</li>
-<li>经验误差的期望=泛化误差<br>$\underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[\widehat{R}<em>{S}(h)\right]=R(h)$<br>proof:<br> $\underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[\widehat{R}</em>{S}(h)\right]=\frac{1}{m} \sum_{i=1}^{m} \underset{S \sim \mathbb{D}^{m}}{\mathbb{E}}\left[1_{h\left(x_{i}\right) \neq c\left(x_{i}\right)}\right]=\frac{1}{m} \sum_{i=1}^{m} \underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]=\underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]=\underset{x \sim \mathcal{D}}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]=R(h)$<h3 id="PAC-learning"><a href="#PAC-learning" class="headerlink" title="PAC learning"></a>PAC learning</h3>如果一个$\mathcal{C}$,存在一个算法$\mathcal{A}$和一个多元多项式polynominal function poly(1/ε, 1/δ, n, size(c)) ,对于?ε&gt;0,δ&gt;0,$\mathcal{D}$,c,如果满足:<br>$\underset{S \sim \mathcal{D}^{m}}{\mathbb{P}}\left[R\left(h_{S}\right) \leq \epsilon\right] \geq 1-\delta$<br>那么$\mathcal{C}$就认为是PAC learnable<br>再如果?算法$\mathcal{A}$在poly(1/ε, 1/δ, n, size(c))时间内运算完,那么那么$\mathcal{C}$就认为是efficiently PAC learnable,$\mathcal{A}$则称为PAC learning 算法<ul>
-<li>approximately correct (ε)近似准确,即$h_{S}$与c之间的误差$R\left(h_{S}\right) \leq \epsilon$</li>
-<li>probability (1-δ) 误差小于epsilon的可能性,即 $\underset{S \sim \mathcal{D}^{m}}{\mathbb{P}}\left[R\left(h_{S}\right) \leq \epsilon\right] \geq 1-\delta$<h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><ul>
+        <p>[TOC] 作者: Mehryar Mogri ## 前言 * PAC学习框架,PAC : probably approximately correct learning ## 中英文释义 definition 定义 note 注解,强调,注意 denote 用什么表示什么 instance 实例 non-trivial ### 符号</p>
+<p><span class="math inline">\(\mathcal{X}\)</span> : 所有可能的 examples or instances,input space <span class="math inline">\(\mathcal{Y}\)</span> : 所有可能的 labels or target values,output space c : target concept,类似于映射,从<span class="math inline">\(\mathcal{X}\)</span> 到 <span class="math inline">\(\mathcal{Y}\)</span> mapping,是我们想要研究的目标 <span class="math inline">\(\mathcal{C}\)</span> : concept class ,是一簇我们希望学习的概念.我不知道对不对,可能就是一种对concept的举一反三,扩展模型,没有绝对的边界.比如concept是一个确定角度和边长三角形,concept class就是一个三角形的大概念或者是一个多边形的概念,我们想学习可扩展的concept集合,而不是只用于目前问题的concept 假设assume样例是独立同分布的( independently and identically distributed (i.i.d.))服从于 according to 一个未知分布<span class="math inline">\(\mathcal{D}\)</span> <span class="math inline">\(\mathcal{H}\)</span> : 假设集, hypothesis set,是研究者考虑的可能cencept set,它可能会和<span class="math inline">\(\mathcal{C}\)</span> 一致,也可能不一致,因为我们不知道c和<span class="math inline">\(\mathcal{C}\)</span>是怎样的,只能靠猜测 <span class="math inline">\(\mathcal{S}=(x_1,...,x_m)\)</span> : 样本集,来自于<span class="math inline">\(\mathcal{D}\)</span>,同时标注了label <span class="math inline">\((c(x_1),...,c(x_m))\)</span>,标注了的样本集,叫labeled sample,其中每个可以叫做example/instance <span class="math inline">\(\mathcal{A}\)</span> : 一个算法,algorithm,它依据样本集从<span class="math inline">\(\mathcal{H}\)</span>中选出一个h<sub>s</sub> n : 表示represent任意元素x∈<span class="math inline">\(\mathcal{X}\)</span>所需要的最大计算开销computation cost,比如n维空间需要n个数表示一个元素x size(c) : 表示c的最大计算开销 ## PAC学习模型</p>
+<ul>
+<li>泛化误差 generalization error / risk error/ ture error/ simply error 给定假设h∈<span class="math inline">\(\mathcal{H}\)</span>,h的泛化误差定义为:注意这里x~<span class="math inline">\(\mathcal{D}\)</span> <span class="math inline">\(R(h)=\underset{x \sim D}{\mathbb{P}}[h(x) \neq c(x)]=\underset{x \sim D}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]\)</span></li>
+<li>经验误差 Empirical error/Empirical risk 给定假设h∈<span class="math inline">\(\mathcal{H}\)</span>,h的经验定义为:这里的<span class="math inline">\(\mathcal{S}\)</span>~<span class="math inline">\(\mathcal{D^m}\)</span> <span class="math inline">\(\widehat{R}_{S}(h)=\frac{1}{m} \sum_{i=1}^{m} 1_{h\left(x_{i}\right) \neq c\left(x_{i}\right)}\)</span></li>
+<li>经验误差的期望=泛化误差 <span class="math inline">\(\underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[\widehat{R}_{S}(h)\right]=R(h)\)</span> proof: <span class="math inline">\(\underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[\widehat{R}_{S}(h)\right]=\frac{1}{m} \sum_{i=1}^{m} \underset{S \sim \mathbb{D}^{m}}{\mathbb{E}}\left[1_{h\left(x_{i}\right) \neq c\left(x_{i}\right)}\right]=\frac{1}{m} \sum_{i=1}^{m} \underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]=\underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]=\underset{x \sim \mathcal{D}}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]=R(h)\)</span> ### PAC learning 如果一个<span class="math inline">\(\mathcal{C}\)</span>,存在一个算法<span class="math inline">\(\mathcal{A}\)</span>和一个多元多项式polynominal function poly(1/ε, 1/δ, n, size(c)) ,对于?ε&gt;0,δ&gt;0,<span class="math inline">\(\mathcal{D}\)</span>,c,如果满足: <span class="math inline">\(\underset{S \sim \mathcal{D}^{m}}{\mathbb{P}}\left[R\left(h_{S}\right) \leq \epsilon\right] \geq 1-\delta\)</span> 那么<span class="math inline">\(\mathcal{C}\)</span>就认为是PAC learnable 再如果?算法<span class="math inline">\(\mathcal{A}\)</span>在poly(1/ε, 1/δ, n, size(c))时间内运算完,那么那么<span class="math inline">\(\mathcal{C}\)</span>就认为是efficiently PAC learnable,<span class="math inline">\(\mathcal{A}\)</span>则称为PAC learning 算法
+<ul>
+<li>approximately correct (ε)近似准确,即<span class="math inline">\(h_{S}\)</span>与c之间的误差<span class="math inline">\(R\left(h_{S}\right) \leq \epsilon\)</span></li>
+<li>probability (1-δ) 误差小于epsilon的可能性,即 <span class="math inline">\(\underset{S \sim \mathcal{D}^{m}}{\mathbb{P}}\left[R\left(h_{S}\right) \leq \epsilon\right] \geq 1-\delta\)</span> #### 说明</li>
 <li>PAC框架framwork是distribution-free 模型,对于总体分布没有要求</li>
 <li><font color="red">可以放宽以适应domain adaptation 问题</font></li>
-<li>PAC框架处理概念集$\mathcal{C}$的可学习问题,而不是特定的c.<font color="red">注意，概念类C是算法已知的，但是目标概念c∈C当然是未知的。</font></li>
-<li>当computational representation没有讨论或比较容易得到straightforward,我们可先忽略n和size(c)<h3 id="例子2-4-学习轴对齐的矩形"><a href="#例子2-4-学习轴对齐的矩形" class="headerlink" title="例子2.4(学习轴对齐的矩形)"></a>例子2.4(学习轴对齐的矩形)</h3>考虑平面plane上点集,$\mathcal{X}=\mathbb{R^2}$,概念集$\mathcal{C}$是$\mathbb{R^2}$中与坐标轴平行的矩形,R表示目标矩形(c)，R’=$R_s$表示假设矩形($h_s$)</li>
-</ul>
-</li>
-</ul>
-</li>
+<li>PAC框架处理概念集<span class="math inline">\(\mathcal{C}\)</span>的可学习问题,而不是特定的c.<font color="red">注意，概念类C是算法已知的，但是目标概念c∈C当然是未知的。</font></li>
+<li>当computational representation没有讨论或比较容易得到straightforward,我们可先忽略n和size(c) ### 例子2.4(学习轴对齐的矩形) 考虑平面plane上点集,<span class="math inline">\(\mathcal{X}=\mathbb{R^2}\)</span>,概念集<span class="math inline">\(\mathcal{C}\)</span>是<span class="math inline">\(\mathbb{R^2}\)</span>中与坐标轴平行的矩形,R表示目标矩形(c)，R'=<span class="math inline">\(R_s\)</span>表示假设矩形(<span class="math inline">\(h_s\)</span>)</li>
+</ul></li>
 </ul>
 
       
@@ -535,17 +530,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/user.gif"
@@ -560,7 +546,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -607,22 +593,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中英文释义"><span class="nav-number">2.</span> <span class="nav-text">中英文释义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#符号"><span class="nav-number">2.1.</span> <span class="nav-text">符号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PAC学习模型"><span class="nav-number">3.</span> <span class="nav-text">PAC学习模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PAC-learning"><span class="nav-number">3.1.</span> <span class="nav-text">PAC learning</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#说明"><span class="nav-number">3.1.1.</span> <span class="nav-text">说明</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例子2-4-学习轴对齐的矩形"><span class="nav-number">3.2.</span> <span class="nav-text">例子2.4(学习轴对齐的矩形)</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

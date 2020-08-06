@@ -153,7 +153,7 @@
 
 
 
-</head>
+<meta name="generator" content="Hexo 4.2.1"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
 
@@ -339,744 +339,6 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/08/06/Static%20Site/" itemprop="url">Static Site</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-06T13:55:14+08:00">
-                2020-08-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <!DOCTYPE html><html><head>
-      <title>build a bolg or create a document using markdown</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
-      <link rel="stylesheet" href="file:///c:\Users\www_0\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.5.12\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      <style>
-      /**
- * prism.js Github theme based on GitHub's theme.
- * @author Sam Clarke
- */
-code[class*="language-"],
-pre[class*="language-"] {
-  color: #333;
-  background: none;
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.4;
-
-  -moz-tab-size: 8;
-  -o-tab-size: 8;
-  tab-size: 8;
-
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-}
-
-/* Code blocks */
-pre[class*="language-"] {
-  padding: .8em;
-  overflow: auto;
-  /* border: 1px solid #ddd; */
-  border-radius: 3px;
-  /* background: #fff; */
-  background: #f5f5f5;
-}
-
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-  padding: .1em;
-  border-radius: .3em;
-  white-space: normal;
-  background: #f5f5f5;
-}
-
-.token.comment,
-.token.blockquote {
-  color: #969896;
-}
-
-.token.cdata {
-  color: #183691;
-}
-
-.token.doctype,
-.token.punctuation,
-.token.variable,
-.token.macro.property {
-  color: #333;
-}
-
-.token.operator,
-.token.important,
-.token.keyword,
-.token.rule,
-.token.builtin {
-  color: #a71d5d;
-}
-
-.token.string,
-.token.url,
-.token.regex,
-.token.attr-value {
-  color: #183691;
-}
-
-.token.property,
-.token.number,
-.token.boolean,
-.token.entity,
-.token.atrule,
-.token.constant,
-.token.symbol,
-.token.command,
-.token.code {
-  color: #0086b3;
-}
-
-.token.tag,
-.token.selector,
-.token.prolog {
-  color: #63a35c;
-}
-
-.token.function,
-.token.namespace,
-.token.pseudo-element,
-.token.class,
-.token.class-name,
-.token.pseudo-class,
-.token.id,
-.token.url-reference .token.variable,
-.token.attr-name {
-  color: #795da3;
-}
-
-.token.entity {
-  cursor: help;
-}
-
-.token.title,
-.token.title .token.punctuation {
-  font-weight: bold;
-  color: #1d3e81;
-}
-
-.token.list {
-  color: #ed6a43;
-}
-
-.token.inserted {
-  background-color: #eaffea;
-  color: #55a532;
-}
-
-.token.deleted {
-  background-color: #ffecec;
-  color: #bd2c00;
-}
-
-.token.bold {
-  font-weight: bold;
-}
-
-.token.italic {
-  font-style: italic;
-}
-
-
-/* JSON */
-.language-json .token.property {
-  color: #183691;
-}
-
-.language-markup .token.tag .token.punctuation {
-  color: #333;
-}
-
-/* CSS */
-code.language-css,
-.language-css .token.function {
-  color: #0086b3;
-}
-
-/* YAML */
-.language-yaml .token.atrule {
-  color: #63a35c;
-}
-
-code.language-yaml {
-  color: #183691;
-}
-
-/* Ruby */
-.language-ruby .token.function {
-  color: #333;
-}
-
-/* Markdown */
-.language-markdown .token.url {
-  color: #795da3;
-}
-
-/* Makefile */
-.language-makefile .token.symbol {
-  color: #795da3;
-}
-
-.language-makefile .token.variable {
-  color: #183691;
-}
-
-.language-makefile .token.builtin {
-  color: #0086b3;
-}
-
-/* Bash */
-.language-bash .token.keyword {
-  color: #0086b3;
-}
-
-/* highlight */
-pre[data-line] {
-  position: relative;
-  padding: 1em 0 1em 3em;
-}
-pre[data-line] .line-highlight-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: transparent;
-  display: block;
-  width: 100%;
-}
-
-pre[data-line] .line-highlight {
-  position: absolute;
-  left: 0;
-  right: 0;
-  padding: inherit 0;
-  margin-top: 1em;
-  background: hsla(24, 20%, 50%,.08);
-  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
-  pointer-events: none;
-  line-height: inherit;
-  white-space: pre;
-}
-
-pre[data-line] .line-highlight:before, 
-pre[data-line] .line-highlight[data-end]:after {
-  content: attr(data-start);
-  position: absolute;
-  top: .4em;
-  left: .6em;
-  min-width: 1em;
-  padding: 0 .5em;
-  background-color: hsla(24, 20%, 50%,.4);
-  color: hsl(24, 20%, 95%);
-  font: bold 65%/1.5 sans-serif;
-  text-align: center;
-  vertical-align: .3em;
-  border-radius: 999px;
-  text-shadow: none;
-  box-shadow: 0 1px white;
-}
-
-pre[data-line] .line-highlight[data-end]:after {
-  content: attr(data-end);
-  top: auto;
-  bottom: .4em;
-}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
-/* Please visit the URL below for more information: */
-/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
-.markdown-preview.markdown-preview {
-  @charset "utf-8";
-  /* 全局属性 */
-  /* 全局属性 */
-  /*段落*/
-  /*标题*/
-  /*列表*/
-  /*引用*/
-  /*链接*/
-  /*行内代码*/
-  /*图片*/
-  /*表格*/
-  /* 行内代码 */
-  /* 脚注上标 */
-  /* 脚注 */
-  /* 代码块主题 */
-}
-.markdown-preview.markdown-preview #write {
-  max-width: 860px;
-  font-size: 16px;
-  color: black;
-  padding: 0 10px;
-  line-height: 1.6;
-  word-spacing: 0px;
-  letter-spacing: 0px;
-  word-break: break-word;
-  word-wrap: break-word;
-  text-align: left;
-  font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-.markdown-preview.markdown-preview #write p {
-  font-size: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  margin: 0;
-  line-height: 26px;
-  color: black;
-}
-.markdown-preview.markdown-preview #write h1,
-.markdown-preview.markdown-preview #write h2,
-.markdown-preview.markdown-preview #write h3,
-.markdown-preview.markdown-preview #write h4,
-.markdown-preview.markdown-preview #write h5,
-.markdown-preview.markdown-preview #write h6 {
-  margin-top: 30px;
-  margin-bottom: 15px;
-  padding: 0px;
-  font-weight: bold;
-  color: black;
-}
-.markdown-preview.markdown-preview #write h1 {
-  font-size: 1.5rem;
-}
-.markdown-preview.markdown-preview #write h2 {
-  font-size: 1.3rem;
-  border-bottom: 2px solid #60ceef;
-}
-.markdown-preview.markdown-preview #write h2 span {
-  display: inline-block;
-  font-weight: bold;
-  background: #ef7060;
-  color: #ffffff;
-  padding: 3px 10px 1px;
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
-  margin-right: 3px;
-}
-.markdown-preview.markdown-preview #write h2:after {
-  display: inline-block;
-  content: "";
-  vertical-align: bottom;
-  border-bottom: 36px solid #efebe9;
-  border-right: 20px solid transparent;
-}
-.markdown-preview.markdown-preview #write h3 {
-  font-size: 1.2rem;
-}
-.markdown-preview.markdown-preview #write h4 {
-  font-size: 1.1rem;
-}
-.markdown-preview.markdown-preview #write h5 {
-  font-size: 1rem;
-}
-.markdown-preview.markdown-preview #write h6 {
-  font-size: 1rem;
-}
-.markdown-preview.markdown-preview #write ul,
-.markdown-preview.markdown-preview #write ol {
-  margin-top: 8px;
-  margin-bottom: 8px;
-  padding-left: 25px;
-  color: black;
-}
-.markdown-preview.markdown-preview #write ul {
-  list-style-type: disc;
-}
-.markdown-preview.markdown-preview #write ul ul {
-  list-style-type: square;
-}
-.markdown-preview.markdown-preview #write ol {
-  list-style-type: decimal;
-}
-.markdown-preview.markdown-preview #write li section {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  line-height: 26px;
-  text-align: left;
-  color: #010101;
-  /* 只要是纯黑色微信编辑器就会把color这个属性吞掉。。。*/
-  font-weight: 500;
-}
-.markdown-preview.markdown-preview #write blockquote {
-  display: block;
-  font-size: 0.9em;
-  overflow: auto;
-  border-left: 3px solid #ef7060;
-  color: #6a737d;
-  padding: 10px 10px 10px 20px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  background: #fff9f9;
-}
-.markdown-preview.markdown-preview #write blockquote p {
-  margin: 0px;
-  color: black;
-  line-height: 26px;
-}
-.markdown-preview.markdown-preview #write a {
-  text-decoration: none;
-  word-wrap: break-word;
-  font-weight: bold;
-  border-bottom: 1px solid #1e6bb8;
-  color: #ef7060;
-  border-bottom: 1px solid #ef7060;
-}
-.markdown-preview.markdown-preview #write p code,
-.markdown-preview.markdown-preview #write li code {
-  font-size: 14px;
-  word-wrap: break-word;
-  padding: 2px 4px;
-  border-radius: 4px;
-  margin: 0 2px;
-  color: #ef7060;
-  background-color: rgba(27, 31, 35, 0.05);
-  font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
-  word-break: break-all;
-}
-.markdown-preview.markdown-preview #write img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-}
-.markdown-preview.markdown-preview #write table {
-  display: table;
-  text-align: left;
-}
-.markdown-preview.markdown-preview #write tbody {
-  border: 0;
-}
-.markdown-preview.markdown-preview #write table tr {
-  border: 0;
-  border-top: 1px solid #ccc;
-  background-color: white;
-}
-.markdown-preview.markdown-preview #write table tr:nth-child(2n) {
-  background-color: #F8F8F8;
-}
-.markdown-preview.markdown-preview #write table tr th,
-.markdown-preview.markdown-preview #write table tr td {
-  font-size: 16px;
-  border: 1px solid #ccc;
-  padding: 5px 10px;
-  text-align: left;
-}
-.markdown-preview.markdown-preview #write table tr th {
-  font-weight: bold;
-  background-color: #f0f0f0;
-}
-.markdown-preview.markdown-preview #write span code,
-.markdown-preview.markdown-preview #write li code {
-  color: #ef7060;
-}
-.markdown-preview.markdown-preview #write .md-footnote {
-  font-weight: bold;
-  color: #ef7060;
-}
-.markdown-preview.markdown-preview #write .md-footnote > .md-text:before {
-  content: '[';
-}
-.markdown-preview.markdown-preview #write .md-footnote > .md-text:after {
-  content: ']';
-}
-.markdown-preview.markdown-preview #write .md-def-name {
-  padding-right: 1.8ch;
-}
-.markdown-preview.markdown-preview #write .md-def-name:before {
-  content: '[';
-  color: #000;
-}
-.markdown-preview.markdown-preview #write .md-def-name:after {
-  color: #000;
-}
-.markdown-preview.markdown-preview .md-fences:before {
-  content: ' ';
-  display: block;
-  width: 100%;
-  background-size: 40px;
-  background-repeat: no-repeat;
-  background-color: #282c34;
-  margin-bottom: -7px;
-  border-radius: 5px;
-  background-position: 10px 10px;
-}
-.markdown-preview.markdown-preview .cm-s-inner.CodeMirror {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  background-color: #292d3e;
-  color: #a6accd;
-  font-family: Consolas;
-  border-radius: 4px;
-}
-.markdown-preview.markdown-preview .CodeMirror-lines {
-  padding-left: 4px;
-}
-.markdown-preview.markdown-preview .cm-s-inner .cm-keyword {
-  color: #c792ea;
-}
-.markdown-preview.markdown-preview .cm-s-inner .cm-operator {
-  color: #89ddff;
-}
-.markdown-preview.markdown-preview .cm-s-inner .cm-variable-2 {
-  color: #eeffff;
-}
-.markdown-preview.markdown-preview .cm-s-inner .cm-variable-3,
-.markdown-preview.markdown-preview .cm-s-inner .cm-type {
-  color: #f07178;
-}
-.markdown-preview.markdown-preview .cm-s-inner .cm-builtin {
-  color: #ffcb6b;
-}
-.markdown-preview.markdown-preview .cm-s-inner .cm-atom {
-  color: #f78c6c;
-}
-.markdown-preview.markdown-preview .cm-s-inner .cm-number {
-  color: #ff5370;
-}
-.markdown-preview.markdown-preview .cm-s-inner .cm-def {
-  color: #82aaff;
-}
-.markdown-preview.markdown-preview .cm-s-inner .cm-string {
-  color: #c3e88d;
-}
-.markdown-preview.markdown-preview .cm-s-inner .cm-string-2 {
-  color: #f07178;
-}
-.markdown-preview.markdown-preview .cm-s-inner .cm-comment {
-  color: #676e95;
-}
-.markdown-preview.markdown-preview .cm-s-inner .cm-variable {
-  color: #f07178;
-}
-.markdown-preview.markdown-preview .cm-s-inner .cm-tag {
-  color: #ff5370;
-}
-.markdown-preview.markdown-preview .cm-s-inner .cm-meta {
-  color: #ffcb6b;
-}
-.markdown-preview.markdown-preview .cm-s-inner .cm-attribute {
-  color: #c792ea;
-}
-.markdown-preview.markdown-preview .cm-s-inner .cm-property {
-  color: #c792ea;
-}
-.markdown-preview.markdown-preview .cm-s-inner .cm-qualifier {
-  color: #decb6b;
-}
-.markdown-preview.markdown-preview .cm-s-inner .cm-variable-3,
-.markdown-preview.markdown-preview .cm-s-inner .cm-type {
-  color: #decb6b;
-}
-.markdown-preview.markdown-preview .cm-s-inner .cm-error {
-  color: #ffffff;
-  background-color: #ff5370;
-}
-.markdown-preview.markdown-preview .cm-s-inner .CodeMirror-matchingbracket {
-  text-decoration: underline;
-  color: white !important;
-}
-.markdown-preview.markdown-preview .CodeMirror div.CodeMirror-cursor {
-  border-left: 1px solid #ef7060;
-  z-index: 3;
-}
-
-      </style>
-    <meta name="generator" content="Hexo 4.2.1"></head>
-    <body for="html-export">
-      <div class="mume markdown-preview  ">
-      <h2 class="mume-header" id="%E9%A6%96%E5%85%88%E5%85%B3%E4%BA%8Emarkdown-%E8%BD%AC%E4%B8%BAhtml%E7%9A%84%E7%94%A8%E9%80%94">&#x9996;&#x5148;&#x5173;&#x4E8E;markdown &#x8F6C;&#x4E3A;html&#x7684;&#x7528;&#x9014;</h2>
-
-<ol>
-<li>&#x642D;&#x5EFA;&#x535A;&#x5BA2;, &#x4E3B;&#x8981;&#x662F;&#x6587;&#x7AE0;\&#x8BB0;&#x4E8B;\&#x7C7B;&#x7684;, &#x5B83;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x597D;&#x770B;&#x7B80;&#x6D01;&#x6E05;&#x723D;&#x7684;&#x754C;&#x9762;. &#x535A;&#x5BA2;&#x9F84;&#x6BD4;&#x8F83;&#x4E0A;&#x7684;&#x4EBA;&#x6765;&#x8BF4;, &#x4F1A;&#x6709;&#x5927;&#x91CF;&#x7684;&#x6587;&#x4EF6;&#x9700;&#x8981;&#x7BA1;&#x7406;, &#x6240;&#x4EE5;&#x4F1A;&#x6BD4;&#x8F83;&#x9700;&#x8981;&#x4E00;&#x4E9B;&#x5F52;&#x6863;\&#x5206;&#x7C7B;\&#x6807;&#x7B7E;\&#x65F6;&#x95F4;&#x7684;&#x9700;&#x8981;, &#x800C;&#x5BF9;&#x590D;&#x6742;&#x6587;&#x672C;&#x8981;&#x6C42;&#x4E0D;&#x9AD8;.</li>
-<li>&#x7F16;&#x5199;&#x8BF4;&#x660E;&#x624B;&#x518C;, &#x53EF;&#x80FD;&#x4E00;&#x4E2A;&#x5F00;&#x53D1;&#x7684;&#x7A0B;&#x5E8F;, &#x9700;&#x8981;&#x8BF4;&#x660E;&#x5982;&#x4F55;&#x64CD;&#x4F5C;, &#x6BCF;&#x4E2A;&#x64CD;&#x4F5C;&#x7684;&#x7C7B;&#x522B;(&#x547D;&#x4EE4;&#x884C;\&#x7A97;&#x53E3;\&#x83DC;&#x5355;\&#x7F16;&#x7A0B;), &#x8FD8;&#x6709;&#x591A;&#x79CD;&#x6CE8;&#x610F;&#x4E8B;&#x9879;, &#x6240;&#x4EE5;&#x6587;&#x672C;&#x590D;&#x6742;&#x6027;, &#x9AD8;&#x7EA7;&#x8BED;&#x8A00;&#x6BD4;&#x8F83;&#x9AD8;, &#x5C31;&#x50CF;&#x4E00;&#x672C;&#x53EF;&#x4E92;&#x52A8;&#x53EF;&#x590D;&#x5236;&#x7684;&#x7F51;&#x9875;&#x7248;pdf</li>
-</ol>
-<p>&#x5173;&#x4E8E;&#x9759;&#x6001;&#x7F51;&#x9875;&#x6240;&#x7528;&#x7684;&#x4E0D;&#x540C;&#x5DE5;&#x5177;,&#x53EF;&#x4EE5;&#x67E5;&#x770B;<a href="https://www.staticgen.com/" target="_blank" rel="noopener">staticgen.xom</a></p>
-<p>&#x6BD4;&#x5982;&#x51E0;&#x4E2A;&#x5E38;&#x89C1;&#x7684;:(<a href="https://blog.csdn.net/mouday/article/details/83865749" target="_blank" rel="noopener">&#x53C2;&#x8003;&#x89C1;</a>)</p>
-<table>
-<thead>
-<tr>
-<th>&#x6846;&#x67B6;</th>
-<th>&#x8BED;&#x8A00;&#x73AF;&#x5883;</th>
-<th>&#x53C2;&#x8003;&#x6587;&#x7AE0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Jekyll</td>
-<td>Ruby</td>
-<td>&#x6587;&#x6863; &#x3001;&#x535A;&#x6587;</td>
-</tr>
-<tr>
-<td>Sphinx</td>
-<td>Python</td>
-<td>&#x6587;&#x6863; &#x3001;&#x535A;&#x6587;</td>
-</tr>
-<tr>
-<td>Hexo</td>
-<td>Node.js</td>
-<td>&#x6587;&#x6863; &#x3001;&#x535A;&#x6587;</td>
-</tr>
-<tr>
-<td>mkdocs</td>
-<td>Python</td>
-<td>&#x6587;&#x6863;&#x3001;&#x535A;&#x6587;</td>
-</tr>
-<tr>
-<td>docsify</td>
-<td>Node.js</td>
-<td>&#x6587;&#x6863;&#x3001;&#x535A;&#x6587;</td>
-</tr>
-</tbody>
-</table>
-<h2 class="mume-header" id="%E4%BB%A5-hexo-%E5%92%8C-mkdocs-%E4%B8%BA%E4%BE%8B">&#x4EE5; hexo &#x548C; mkdocs &#x4E3A;&#x4F8B;</h2>
-
-
-      </div>
-      
-      
-    
-    
-    
-    
-    
-    
-    
-    
-  
-    </body></html>
-          
-        
-      
-    </div>
-    
-    
-    
-
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/06/Static%20Site/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="epichide">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/user.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eichide's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
                 <a class="post-title-link" href="/2020/08/06/Static%20Site/" itemprop="url">build a bolg or create a document using markdown</a></h1>
         
 
@@ -1151,33 +413,73 @@ pre[data-line] .line-highlight[data-end]:after {
       
         
           
-            <h2 id="首先关于markdown-转为html的用途"><a href="#首先关于markdown-转为html的用途" class="headerlink" title="首先关于markdown 转为html的用途"></a>首先关于markdown 转为html的用途</h2><ol>
-<li>搭建博客, 主要是文章\记事\类的, 它可能需要好看简洁清爽的界面. 博客龄比较上的人来说, 会有大量的文件需要管理, 所以会比较需要一些归档\分类\标签\时间的需要, 而对复杂文本要求不高.</li>
-<li>编写说明手册, 可能一个开发的程序, 需要说明如何操作, 每个操作的类别(命令行\窗口\菜单\编程), 还有多种注意事项, 所以文本复杂性, 高级语言比较高, 就像一本可互动可复制的网页版pdf</li>
+            <h2 id="首先关于markdown-转为html的用途">首先关于markdown 转为html的用途</h2>
+<ol type="1">
+<li>搭建博客, 主要是文章, 它可能需要好看简洁清爽的界面. 博客龄比较上的人来说, 会有大量的文件需要管理, 所以会比较需要一些归档, 而对复杂文本要求不高.</li>
+<li>编写说明手册, 可能一个开发的程序, 需要说明如何操作, 每个操作的类别(命令行), 还有多种注意事项, 所以文本复杂性, 高级语言比较高, 就像一本可互动可复制的网页版pdf</li>
 </ol>
 <p>关于静态网页所用的不同工具,可以查看<a href="https://www.staticgen.com/" target="_blank" rel="noopener">staticgen.xom</a></p>
-<p>比如几个常见的:(<a href="https://blog.csdn.net/mouday/article/details/83865749" target="_blank" rel="noopener">参考见</a>)<br>| 框架    | 语言环境 | 参考文章    |<br>| ——- | ——– | ———– |<br>| Jekyll  | Ruby     | <a href="https://www.jekyll.com.cn/" target="_blank" rel="noopener">文档</a> 、<a href="https://blog.csdn.net/mouday/article/details/79300135" target="_blank" rel="noopener">博文</a> |<br>| Sphinx  | Python   | <a href="https://zh-sphinx-doc.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">文档</a> 、<a href="https://blog.csdn.net/mouday/article/details/79388919" target="_blank" rel="noopener">博文</a> |<br>| Hexo    | Node.js  | <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">文档</a> 、<a href="https://pengshiyu.blog.csdn.net/article/details/83895553" target="_blank" rel="noopener">博文</a> |<br>| mkdocs  | Python   | <a href="https://www.mkdocs.org/" target="_blank" rel="noopener">文档</a>、<a href="https://pengshiyu.blog.csdn.net/article/details/103669218" target="_blank" rel="noopener">博文</a>  |<br>| docsify | Node.js  | <a href="https://docsify.js.org/#/zh-cn/" target="_blank" rel="noopener">文档</a>、<a href="https://pengshiyu.blog.csdn.net/article/details/107488533" target="_blank" rel="noopener">博文</a>  |</p>
-<h2 id="以-hexo-和-mkdocs-为例"><a href="#以-hexo-和-mkdocs-为例" class="headerlink" title="以 hexo 和 mkdocs 为例"></a>以 hexo 和 mkdocs 为例</h2><ol>
-<li>首先可以看这两个的例子<ol>
-<li>hexo: <a href="https://notes.iissnan.com/" target="_blank" rel="noopener">https://notes.iissnan.com/</a> ,<a href="https://haojen.github.io/Claudia-theme-blog/" target="_blank" rel="noopener">https://haojen.github.io/Claudia-theme-blog/</a></li>
-<li>mkdocs: <a href="https://squidfunk.github.io/mkdocs-material/getting-started/" target="_blank" rel="noopener">https://squidfunk.github.io/mkdocs-material/getting-started/</a> , <a href="https://mkdocs.zimoapps.com/" target="_blank" rel="noopener">https://mkdocs.zimoapps.com/</a></li>
-</ol>
-</li>
-</ol>
-<p>但不是说mkdoc就只能做document,也可以写blog: <a href="https://cyent.github.io/markdown-with-mkdocs-material/view/statement/" target="_blank" rel="noopener">https://cyent.github.io/markdown-with-mkdocs-material/view/statement/</a>.  Hexo 同理, 它们只是ui专注的点不大相同</p>
-<ol start="2">
-<li>mkdocs 的优势是它的扩展语法,mkdocs-material支持几十种markdown语法: <a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/" target="_blank" rel="noopener">https://squidfunk.github.io/mkdocs-material/reference/admonitions/</a> ,有高级的标注语言</li>
-<li></li>
-</ol>
-<h2 id="参考连接"><a href="#参考连接" class="headerlink" title="参考连接:"></a>参考连接:</h2><ul>
-<li><p><a href="https://www.crifan.com/document_build_tool_mkdocs_gitbook_other/" target="_blank" rel="noopener">文档制作工具相关：MkDocs Gitbook Hexo等</a></p>
-</li>
-<li><p>Hexo theme 参考: <a href="https://www.zhihu.com/question/24422335" target="_blank" rel="noopener">有关Hexo的主题推荐</a></p>
-</li>
-<li><p>mkdocs上手教程: <a href="https://pengshiyu.blog.csdn.net/article/details/103669218" target="_blank" rel="noopener">mkdocs生成项目文档</a></p>
-</li>
-<li><p>mkdocs 官方教程: <a href="https://www.mkdocs.org/" target="_blank" rel="noopener">MkDocs</a></p>
-</li>
+<p>比如几个常见的:(<a href="https://blog.csdn.net/mouday/article/details/83865749" target="_blank" rel="noopener">参考见</a>)</p>
+<table>
+<thead>
+<tr class="header">
+<th>框架</th>
+<th>语言环境</th>
+<th>参考文章</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Jekyll</td>
+<td>Ruby</td>
+<td><a href="https://www.jekyll.com.cn/" target="_blank" rel="noopener">文档</a> 、<a href="https://blog.csdn.net/mouday/article/details/79300135" target="_blank" rel="noopener">博文</a></td>
+</tr>
+<tr class="even">
+<td>Sphinx</td>
+<td>Python</td>
+<td><a href="https://zh-sphinx-doc.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">文档</a> 、<a href="https://blog.csdn.net/mouday/article/details/79388919" target="_blank" rel="noopener">博文</a></td>
+</tr>
+<tr class="odd">
+<td>Hexo</td>
+<td>Node.js</td>
+<td><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">文档</a> 、<a href="https://pengshiyu.blog.csdn.net/article/details/83895553" target="_blank" rel="noopener">博文</a></td>
+</tr>
+<tr class="even">
+<td>mkdocs</td>
+<td>Python</td>
+<td><a href="https://www.mkdocs.org/" target="_blank" rel="noopener">文档</a>、<a href="https://pengshiyu.blog.csdn.net/article/details/103669218" target="_blank" rel="noopener">博文</a></td>
+</tr>
+<tr class="odd">
+<td>docsify</td>
+<td>Node.js</td>
+<td><a href="https://docsify.js.org/#/zh-cn/" target="_blank" rel="noopener">文档</a>、<a href="https://pengshiyu.blog.csdn.net/article/details/107488533" target="_blank" rel="noopener">博文</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="以-hexo-和-mkdocs-为例">以 hexo 和 mkdocs 为例</h2>
+<ul>
+<li><p>首先可以看这两个的例子</p>
+<ol type="1">
+<li>hexo:
+<ul>
+<li>https://notes.iissnan.com/</li>
+<li>https://haojen.github.io/Claudia-theme-blog/</li>
+</ul></li>
+<li>mkdocs:
+<ul>
+<li>https://squidfunk.github.io/mkdocs-material/getting-started/</li>
+<li>https://mkdocs.zimoapps.com/</li>
+</ul></li>
+</ol></li>
+<li><p>但不是说mkdoc就只能做document,也可以写blog: https://cyent.github.io/markdown-with-mkdocs-material/view/statement/. Hexo 同理, 它们只是ui专注的点不大相同</p></li>
+<li><p>mkdocs 的优势是它的扩展语法,mkdocs-material支持几十种markdown语法: https://squidfunk.github.io/mkdocs-material/reference/admonitions/ ,有高级的标注语言</p></li>
+</ul>
+<h2 id="参考连接">参考连接:</h2>
+<ul>
+<li><p><a href="https://www.crifan.com/document_build_tool_mkdocs_gitbook_other/" target="_blank" rel="noopener">文档制作工具相关：MkDocs Gitbook Hexo等</a></p></li>
+<li><p>Hexo theme 参考: <a href="https://www.zhihu.com/question/24422335" target="_blank" rel="noopener">有关Hexo的主题推荐</a></p></li>
+<li><p>mkdocs上手教程: <a href="https://pengshiyu.blog.csdn.net/article/details/103669218" target="_blank" rel="noopener">mkdocs生成项目文档</a></p></li>
+<li><p>mkdocs 官方教程: <a href="https://www.mkdocs.org/" target="_blank" rel="noopener">MkDocs</a></p></li>
 </ul>
 
           
@@ -1325,56 +627,59 @@ pre[data-line] .line-highlight[data-end]:after {
       
         
           
-            <h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><ol>
-<li>随机试验(试验) experiment E : <ol>
+            <h1 id="基本概念">基本概念</h1>
+<ol type="1">
+<li>随机试验(试验) experiment E :
+<ol type="1">
 <li>可重复性 : 在相同条件下可以重复</li>
 <li>结果可知性 : 不能知道准确的结果,但事先知道所有可能的结果</li>
-</ol>
-</li>
-<li>样本点 sample point ω :<ul>
+</ol></li>
+<li>样本点 sample point ω :
+<ul>
 <li>随机试验每一个不可分割的结果</li>
+</ul></li>
+<li>样本空间 sample space Ω : ω ∈ Ω
+<ul>
+<li>样本点全体的集合</li>
 </ul>
-</li>
-<li>样本空间 sample space Ω : ω ∈ Ω<ul>
-<li>样本点全体的集合<ol>
-<li>离散样本空间<ol>
+<ol type="1">
+<li>离散样本空间
+<ol type="1">
 <li>有限样本空间</li>
 <li>可列样本空间</li>
-</ol>
-</li>
+</ol></li>
 <li>连续样本空间</li>
-</ol>
-</li>
-</ul>
-</li>
-<li>随机事件 event A : A ⊂ Ω<ul>
+</ol></li>
+<li>随机事件 event A : A ⊂ Ω
+<ul>
 <li>样本空间子集</li>
-<li>表示 : {ω | X(ω) ≤ x } = {X≤x} = X≤x ,  A  = {ω |X(ω) ∈ A } = { X(ω) ∈ A } = X ∈ A</li>
-<li>运算 : 余 A^c^ , $\bar{A}$ , 对称差 (仅其一发生) A △ B ,<ol>
+<li>表示 : {ω | X(ω) ≤ x } = {X≤x} = X≤x , A = {ω |X(ω) ∈ A } = { X(ω) ∈ A } = X ∈ A</li>
+<li>运算 : 余 A<sup>c</sup> , <span class="math inline">\(\bar{A}\)</span> , 对称差 (仅其一发生) A △ B ,</li>
+</ul>
+<ol type="1">
 <li>互斥事件 AB=∅</li>
 <li>对立事件/逆事件</li>
-</ol>
-</li>
-</ul>
-</li>
-<li>随机变量 random variable  X(ω) , X , ξ , ζ , η<ul>
+</ol></li>
+<li>随机变量 random variable X(ω) , X , ξ , ζ , η
+<ul>
 <li>定义在样本空间的实值函数</li>
-</ul>
-</li>
-<li>极限事件<ol>
+</ul></li>
+<li>极限事件
+<ol type="1">
 <li>上极限事件</li>
+</ol></li>
 </ol>
-</li>
-</ol>
-<h1 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h1><h2 id="概率公式"><a href="#概率公式" class="headerlink" title="概率公式"></a>概率公式</h2><ol>
-<li>概率加法Jordan公式<br>$$P(A_1\cup A_2…\cup A_n)=\sum_{j=1}P(A_i)-\sum_{1≤i&lt;j≤n}P(A_iA_j)+\ldots +(-1)^{n-1}\sum_{1≤j_1&lt;j_2\ldots &lt;j_n}P(A_{j_1}A_{j_2}\ldots A_{j-n})$$</li>
-<li>概率乘法公式<br>$$P(A_1A_2…A_n)=P(A_n|A_1 A_2…A_{n-1})P(A_{n-1}|A_1A_2…A_{n-2})\ldots P(A_2|A_1)P(A_1)$$</li>
-<li>全概率公式<ul>
-<li>$B_iB_j=\varnothing, i \neq j$ </li>
-<li>$A⊂B_1\cup B_2\cup…\cup B_n$<br>$P(A) = P(A|B_1)P(B_1) + P(A|B_2)P(B_2) + … + P(A|B_n)P(B_n)$$</li>
-</ul>
-</li>
-<li>Bayes贝叶斯公式<br>$$P(B_i|A) = \frac{P(A|B_i)P(B_i)}{\sum_{j=1}^{n} P(A|B_j)P(B_j)}$$</li>
+<h1 id="公式">公式</h1>
+<h2 id="概率公式">概率公式</h2>
+<ol type="1">
+<li>概率加法Jordan公式 <span class="math display">\[P(A_1\cup A_2...\cup A_n)=\sum_{j=1}P(A_i)-\sum_{1≤i&lt;j≤n}P(A_iA_j)+\ldots +(-1)^{n-1}\sum_{1≤j_1&lt;j_2\ldots &lt;j_n}P(A_{j_1}A_{j_2}\ldots A_{j-n})\]</span></li>
+<li>概率乘法公式 <span class="math display">\[P(A_1A_2...A_n)=P(A_n|A_1 A_2...A_{n-1})P(A_{n-1}|A_1A_2...A_{n-2})\ldots P(A_2|A_1)P(A_1)\]</span></li>
+<li>全概率公式
+<ul>
+<li><span class="math inline">\(B_iB_j=\varnothing, i \neq j\)</span></li>
+<li><span class="math inline">\(A⊂B_1\cup B_2\cup...\cup B_n\)</span> <span class="math inline">\(P(A) = P(A|B_1)P(B_1) + P(A|B_2)P(B_2) + ... + P(A|B_n)P(B_n)\)</span>$</li>
+</ul></li>
+<li>Bayes贝叶斯公式 <span class="math display">\[P(B_i|A) = \frac{P(A|B_i)P(B_i)}{\sum_{j=1}^{n} P(A|B_j)P(B_j)}\]</span></li>
 </ol>
 
           
@@ -1527,7 +832,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <li>对象成员 object member</li>
 <li>访问 access</li>
 <li>操作符 operator</li>
-<li>操作数 </li>
+<li>操作数</li>
 <li>操作</li>
 <li>变量 variable</li>
 <li>实例 instance</li>
@@ -1566,7 +871,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <li>数据域封装 data field encapsulation(声明一些成员为private 以避免对数据的直接修改)</li>
 <li>ADT 抽象数据类型 abstract data type (类也可称为ADT)</li>
 <li>装箱 boxing (基本类型转换为基本类型的类对象)</li>
-<li>自动装箱：将 基本数据类型 封装为对象类型，来符合java的面向对象的思想。 </li>
+<li>自动装箱：将 基本数据类型 封装为对象类型，来符合java的面向对象的思想。</li>
 <li>自动拆箱：将对象重新转化为基本数据类型。</li>
 <li>声明类型 declear type (一个变量声明为某种类型,一个引用变量声明为某种类的引用)</li>
 <li>实际类型 actual type (被应用变量的实际类型/类)</li>
@@ -1578,10 +883,11 @@ pre[data-line] .line-highlight[data-end]:after {
 <li>可见性修饰符 visibility modifier</li>
 <li>可访问性修饰符 accessibility modifier</li>
 </ul>
-<h1 id="error-type"><a href="#error-type" class="headerlink" title="error type"></a>error type</h1><ul>
+<h1 id="error-type">error type</h1>
+<ul>
 <li>Null pointer exception : 调用值为null的引用变量</li>
 <li>Arithmetic Exception :异常的运算条件时,抛出此异常。例如,一个整数“除以零”时</li>
-<li>Class cast exception : </li>
+<li>Class cast exception :</li>
 </ul>
 
           
@@ -1730,7 +1036,8 @@ pre[data-line] .line-highlight[data-end]:after {
         
           
             <p>!!! garbage</p>
-<h1 id="java-method-note"><a href="#java-method-note" class="headerlink" title="java method note"></a>java method note</h1><ul>
+<h1 id="java-method-note">java method note</h1>
+<ul>
 <li>System.currentTimeMillis() : return current time: millisecongs from GMT(Greenwich Mean Time or Universal Time) 1970.1.1 to now,millis=millisecond</li>
 <li>Integer.parseInt(intString) :intstring is numerical type string,return numerical value</li>
 <li>Double.parseDouble(doubleString);return numerical value from string</li>
@@ -1739,7 +1046,9 @@ pre[data-line] .line-highlight[data-end]:after {
 <li>java SentineValue &lt;input.txt &gt;output.txt</li>
 <li>import java.util.*</li>
 </ul>
-<h2 id="Scanner-Class-dynamic-method"><a href="#Scanner-Class-dynamic-method" class="headerlink" title="Scanner Class -dynamic method"></a>Scanner Class -dynamic method</h2><h3 id="read-value-from-keyboard"><a href="#read-value-from-keyboard" class="headerlink" title="read value from keyboard"></a>read value from keyboard</h3><ul>
+<h2 id="scanner-class--dynamic-method">Scanner Class -dynamic method</h2>
+<h3 id="read-value-from-keyboard">read value from keyboard</h3>
+<ul>
 <li><strong>Scanner input =new Scanner(System.in);</strong></li>
 <li>input.nextByte();</li>
 <li>input.nextShort();</li>
@@ -1747,91 +1056,95 @@ pre[data-line] .line-highlight[data-end]:after {
 <li>input.nextLong();</li>
 <li>input.nextFloat();</li>
 </ul>
-<h2 id="Math-Class-static-method"><a href="#Math-Class-static-method" class="headerlink" title="Math Class -static method"></a>Math Class -static method</h2><h3 id="emsp-trigonometric-method"><a href="#emsp-trigonometric-method" class="headerlink" title="&emsp;trigonometric method"></a><strong>&emsp;trigonometric method</strong></h3><ul>
+<h2 id="math-class--static-method">Math Class -static method</h2>
+<h3 id="trigonometric-method"><strong> trigonometric method</strong></h3>
+<ul>
 <li>radians :unit is π ; degree :unit is ° ; a: is numerical value</li>
 <li>sin(radians);cos(radians);tan(radians);</li>
 <li>asin(a);acos(a);atan(a);</li>
-<li>toRadians(degree);   — conversion from degree to radians</li>
-<li>toDegrees(randians); —conversion from radians to degree</li>
+<li>toRadians(degree); --- conversion from degree to radians</li>
+<li>toDegrees(randians); ---conversion from radians to degree</li>
 </ul>
-<h3 id="emsp-exponent-method"><a href="#emsp-exponent-method" class="headerlink" title="&emsp;exponent method"></a><strong>&emsp;exponent method</strong></h3><ul>
-<li>exp(x); — return e^x^;</li>
-<li>log(x); — return lnx;</li>
-<li>log10(x); — return log<del>10</del>(x);</li>
-<li>pow(x,y); — return x^y^</li>
-<li>sqart(x); — return  $ \sqrt{x} (x&gt;0) $</li>
+<h3 id="exponent-method"><strong> exponent method</strong></h3>
+<ul>
+<li>exp(x); --- return e<sup>x</sup>;</li>
+<li>log(x); --- return lnx;</li>
+<li>log10(x); --- return log<sub>10</sub>(x);</li>
+<li>pow(x,y); --- return x<sup>y</sup></li>
+<li>sqart(x); --- return $  (x&gt;0) $</li>
 </ul>
-<h3 id="emsp-sevice-method"><a href="#emsp-sevice-method" class="headerlink" title="&emsp;sevice method"></a><strong>&emsp;sevice method</strong></h3><ul>
-<li>ceil(x); — return double y=$\lceil x \rceil$ : $ y\in Z  \land x+1\geq y\geq x  $</li>
-<li>floor(x); — return double y=$\lfloor x \rfloor $: $y\in Z \land x-1 \geq y \geq x $</li>
-<li>rint(x): — return double y=$=(\lceil x \rceil-x \geq x-\lfloor x \rfloor ) ?  \lfloor x \rfloor :  \lceil x \rceil $</li>
-<li>round(x); — return floor(x),if x is float retun int,if x is double return float</li>
+<h3 id="sevice-method"><strong> sevice method</strong></h3>
+<ul>
+<li>ceil(x); --- return double y=<span class="math inline">\(\lceil x \rceil\)</span> : $ yZ x+1yx $</li>
+<li>floor(x); --- return double y=$x $: $yZ x-1 y x $</li>
+<li>rint(x): --- return double y=$=(x -x x-x ) ? x : x $</li>
+<li>round(x); --- return floor(x),if x is float retun int,if x is double return float</li>
 <li>min(x); max(x); abs(x);</li>
-<li>random(); — produce a double value (0≤ ＜1)</li>
+<li>random(); --- produce a double value (0≤ ＜1)</li>
 </ul>
-<h2 id="Character-Class"><a href="#Character-Class" class="headerlink" title="Character Class"></a>Character Class</h2><ul>
+<h2 id="character-class">Character Class</h2>
+<ul>
 <li>value is char</li>
-<li>isDigit(ch); — judge  whether ch is digit</li>
-<li>isLetter(ch); — judge whether ch is letter</li>
+<li>isDigit(ch); --- judge whether ch is digit</li>
+<li>isLetter(ch); --- judge whether ch is letter</li>
 <li>isLetterOrDigit(ch);</li>
 <li>isLowerCase(ch);</li>
 <li>isUpperCase(ch);</li>
 <li>toLowerCase(ch);</li>
 <li>toUpperCase(ch);</li>
 </ul>
-<h2 id="String-Class-dynamic-method-instance-method"><a href="#String-Class-dynamic-method-instance-method" class="headerlink" title="String Class -dynamic method(instance method)"></a>String Class -dynamic method(instance method)</h2><ul>
-<li>String s=”content”;</li>
-<li>length();  — return number of string</li>
-<li>charAt(index);  — return s[index] value</li>
-<li>concat(s1);  — return s+s1 </li>
-<li>toLowerCase();  — return string with lower letters</li>
-<li>toUpperCase();  — return string with upper letters</li>
-<li>trim();  — delete the blank space on both side</li>
-<li>equals(s1);  — if s==s1 return ture</li>
-<li>equalsIgnoreCase();  — ignore case ,if s==s1 return ture</li>
-<li>compareTo(s1); —return a value =the first diffent char’distance (former-latter)</li>
-<li>compareToIgnoreCase(s1);— ignore case,-return a value =the first diffent char’distance (former-latter)</li>
-<li>startWith(prefix);— judge whethther s starts with s1</li>
-<li>endWith(prfix);— judge whethther s ends with s1</li>
-<li>contains(s1);— judge whether s contains s1</li>
-<li>indexOf(ch/s);— return the index of the <strong>first</strong> s1(index is from the fist char of s),else return -1</li>
-<li>indexOf(ch/s1,fromIndex);— return the index of the <strong>first</strong> s1 <strong>after</strong> formIndex ,else return -1</li>
-<li>lastindexOf(ch/s1);— return the index of the <strong>last</strong> s1(index is from the fist char of s1),else return -1</li>
-<li>lastindexOf(ch/s1,fromIndex);— return the index of the <strong>last</strong> s1 <strong>before</strong> formIndex ,else return -1</li>
-<li>substring(beginIndex); — return string from beginIndex to end</li>
-<li>substring(beginIndex,endIndex); — return string from beginindex to endindex</li>
+<h2 id="string-class--dynamic-methodinstance-method">String Class -dynamic method(instance method)</h2>
+<ul>
+<li>String s="content";</li>
+<li>length(); --- return number of string</li>
+<li>charAt(index); --- return s[index] value</li>
+<li>concat(s1); --- return s+s1</li>
+<li>toLowerCase(); --- return string with lower letters</li>
+<li>toUpperCase(); --- return string with upper letters</li>
+<li>trim(); --- delete the blank space on both side</li>
+<li>equals(s1); --- if s==s1 return ture</li>
+<li>equalsIgnoreCase(); --- ignore case ,if s==s1 return ture</li>
+<li>compareTo(s1); ---return a value =the first diffent char'distance (former-latter)</li>
+<li>compareToIgnoreCase(s1);--- ignore case,-return a value =the first diffent char'distance (former-latter)</li>
+<li>startWith(prefix);--- judge whethther s starts with s1</li>
+<li>endWith(prfix);--- judge whethther s ends with s1</li>
+<li>contains(s1);--- judge whether s contains s1</li>
+<li>indexOf(ch/s);--- return the index of the <strong>first</strong> s1(index is from the fist char of s),else return -1</li>
+<li>indexOf(ch/s1,fromIndex);--- return the index of the <strong>first</strong> s1 <strong>after</strong> formIndex ,else return -1</li>
+<li>lastindexOf(ch/s1);--- return the index of the <strong>last</strong> s1(index is from the fist char of s1),else return -1</li>
+<li>lastindexOf(ch/s1,fromIndex);--- return the index of the <strong>last</strong> s1 <strong>before</strong> formIndex ,else return -1</li>
+<li>substring(beginIndex); --- return string from beginIndex to end</li>
+<li>substring(beginIndex,endIndex); --- return string from beginindex to endindex</li>
 </ul>
-<h2 id="Data-Class-dynamic-method"><a href="#Data-Class-dynamic-method" class="headerlink" title="Data Class -dynamic method"></a>Data Class -dynamic method</h2><ul>
-<li>Date(); — create current date object</li>
+<h2 id="data-class--dynamic-method">Data Class -dynamic method</h2>
+<ul>
+<li>Date(); --- create current date object</li>
 <li>java.util.Date = new java.util.Date();</li>
-<li>Date(elapeseTime:long); — create elapeseTime from GMT 1970.1.1  date object</li>
-<li>toString(); — return time string with pattern : Mon Dec 26 07:00:15 EST 2001</li>
-<li>getTime(); —- return elapse milliseconds from EST 1970.1.1 to “now”</li>
-<li>setTime(elapseTime:long) —set elapse time</li>
+<li>Date(elapeseTime:long); --- create elapeseTime from GMT 1970.1.1 date object</li>
+<li>toString(); --- return time string with pattern : Mon Dec 26 07:00:15 EST 2001</li>
+<li>getTime(); ---- return elapse milliseconds from EST 1970.1.1 to "now"</li>
+<li>setTime(elapseTime:long) ---set elapse time</li>
 </ul>
-<h2 id="Random-Class-dynamix-method"><a href="#Random-Class-dynamix-method" class="headerlink" title="Random Class -dynamix method"></a>Random Class -dynamix method</h2><ul>
-<li>Random(); — current time as seed create object</li>
+<h2 id="random-class--dynamix-method">Random Class -dynamix method</h2>
+<ul>
+<li>Random(); --- current time as seed create object</li>
 <li>random random = new Random();</li>
-<li>Random(seed:long); — certain value as seed create object</li>
-<li>nextInt(); — return random value</li>
+<li>Random(seed:long); --- certain value as seed create object</li>
+<li>nextInt(); --- return random value</li>
 <li>nextLong();</li>
 <li>nextDouble();</li>
 <li>nextFloat();</li>
 <li>nextBoolean();</li>
 </ul>
-<h2 id="BigDecimal-Class"><a href="#BigDecimal-Class" class="headerlink" title="BigDecimal Class"></a>BigDecimal Class</h2><h3 id="8-kinds-of-rounding-modes"><a href="#8-kinds-of-rounding-modes" class="headerlink" title="8 kinds of rounding modes"></a>8 kinds of rounding modes</h3><ol>
-<li><p>Rounding down - <strong>ROUND_FLOOR</strong> <br><br>round down (or take the <strong>floor,</strong> or round towards minus infinity): y is the largest integer that does not exceed x.<br><br>${\displaystyle y=\mathrm {floor} (x)=\left\lfloor x\right\rfloor =-\left\lceil -x\right\rceil } $<br><br></p>
-</li>
-<li><p>Rounding up - <strong>ROUND_FLOOR</strong>  <br><br> round up (or take the <strong>ceiling,</strong> or round towards plus infinity): y is the smallest integer that is not less than x. <br><br> ${\displaystyle y=\mathrm {ceil} (x)=\left\lceil x\right\rceil =-\left\lfloor -x\right\rfloor } $<br><br></p>
-</li>
-<li><p>Rounding towards zero - <strong>ROUND_DOWN</strong> <br><br> round towards <strong>zero</strong> (or truncate, or round away from infinity): y is the integer part of x, without its fraction digits.<br><br>${\displaystyle y=\mathrm {truncate} (x)=\mathrm {sgn}(x)\left\lfloor \left|x\right|\right\rfloor =-\mathrm {sgn}(x)\left\lceil -\left|x\right|\right\rceil }$<br><br></p>
-</li>
-<li><p>Rounding away from zero - <strong>ROUND_UP</strong> round away from zero (or round towards infinity): if x is an integer, y is x; else y is the integer that is closest to 0 and is such that x is between 0 and y.<br><br>${\displaystyle y=\mathrm {sgn}(x)\left\lceil \left|x\right|\right\rceil =-\mathrm {sgn}(x)\left\lfloor -\left|x\right|\right\rfloor }$<br><br></p>
-</li>
-<li><p>Round half towards zero  - <strong>ROUND_HALF_DOWN 五舍六入</strong> <br><br>One may also round half towards zero (or round half away from infinity) as opposed to the conventional round half away from zero.<br><br>${\displaystyle y=\mathrm {sgn}(x)\left\lceil \left|x\right|-0.5\right\rceil =-\mathrm {sgn}(x)\left\lfloor -\left|x\right|+0.5\right\rfloor }$<br><br></p>
-</li>
-<li><p>Round half away from zero - <strong>ROUND_HALF_UP 四舍五入</strong> <br><br>The other tie-breaking method commonly taught and used is the round half away from zero (or round half towards infinity).<br><br>${\displaystyle y=\mathrm {sgn}(x)\left\lfloor \left|x\right|+0.5\right\rfloor =-\mathrm {sgn}(x)\left\lceil -\left|x\right|-0.5\right\rceil } $</p>
-</li>
+<h2 id="bigdecimal-class">BigDecimal Class</h2>
+<h3 id="kinds-of-rounding-modes">8 kinds of rounding modes</h3>
+<ol type="1">
+<li><p>Rounding down - <strong>ROUND_FLOOR</strong> <br><br>round down (or take the <strong>floor,</strong> or round towards minus infinity): y is the largest integer that does not exceed x.<br><br>${y= (x)=x=--x} $<br><br></p></li>
+<li><p>Rounding up - <strong>ROUND_FLOOR</strong> <br><br> round up (or take the <strong>ceiling,</strong> or round towards plus infinity): y is the smallest integer that is not less than x. <br><br> ${y= (x)=x=--x} $<br><br></p></li>
+<li><p>Rounding towards zero - <strong>ROUND_DOWN</strong> <br><br> round towards <strong>zero</strong> (or truncate, or round away from infinity): y is the integer part of x, without its fraction digits.<br><br><span class="math inline">\({\displaystyle y=\mathrm {truncate} (x)=\mathrm {sgn}(x)\left\lfloor \left|x\right|\right\rfloor =-\mathrm {sgn}(x)\left\lceil -\left|x\right|\right\rceil }\)</span><br><br></p></li>
+<li><p>Rounding away from zero - <strong>ROUND_UP</strong> round away from zero (or round towards infinity): if x is an integer, y is x; else y is the integer that is closest to 0 and is such that x is between 0 and y.<br><br><span class="math inline">\({\displaystyle y=\mathrm {sgn}(x)\left\lceil \left|x\right|\right\rceil =-\mathrm {sgn}(x)\left\lfloor -\left|x\right|\right\rfloor }\)</span><br><br></p></li>
+<li><p>Round half towards zero - <strong>ROUND_HALF_DOWN 五舍六入</strong> <br><br>One may also round half towards zero (or round half away from infinity) as opposed to the conventional round half away from zero.<br><br><span class="math inline">\({\displaystyle y=\mathrm {sgn}(x)\left\lceil \left|x\right|-0.5\right\rceil =-\mathrm {sgn}(x)\left\lfloor -\left|x\right|+0.5\right\rfloor }\)</span><br><br></p></li>
+<li><p>Round half away from zero - <strong>ROUND_HALF_UP 四舍五入</strong> <br><br>The other tie-breaking method commonly taught and used is the round half away from zero (or round half towards infinity).<br><br>${y=(x)|x|+0.5=-(x)-|x|-0.5} $</p></li>
 </ol>
 <p>Round half to even - <strong>ROUND_HALF_EVEN</strong> <br><br>A tie-breaking rule without positive/negative bias and without bias toward/away from zero is round half to even. By this convention, if the fractional part of x is 0.5, then y is the even integer nearest to x</p>
 
@@ -1980,25 +1293,20 @@ pre[data-line] .line-highlight[data-end]:after {
       
         
           
-            <p>[TOC]<br>作者: Mehryar Mogri</p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
-<li>PAC学习框架,PAC : probably approximately correct learning<h2 id="中英文释义"><a href="#中英文释义" class="headerlink" title="中英文释义"></a>中英文释义</h2>definition 定义<br>note 注解,强调,注意<br>denote 用什么表示什么<br>instance 实例<br>non-trivial<h3 id="符号"><a href="#符号" class="headerlink" title="符号"></a>符号</h3></li>
-</ul>
-<p>$\mathcal{X}$ : 所有可能的 examples or instances,input space<br>$\mathcal{Y}$ : 所有可能的 labels or target values,output space<br>c : target concept,类似于映射,从$\mathcal{X}$ 到 $\mathcal{Y}$ mapping,是我们想要研究的目标<br>$\mathcal{C}$ : concept class ,是一簇我们希望学习的概念.我不知道对不对,可能就是一种对concept的举一反三,扩展模型,没有绝对的边界.比如concept是一个确定角度和边长三角形,concept class就是一个三角形的大概念或者是一个多边形的概念,我们想学习可扩展的concept集合,而不是只用于目前问题的concept<br>假设assume样例是独立同分布的( independently and identically distributed (i.i.d.))服从于<br>according to 一个未知分布$\mathcal{D}$<br>$\mathcal{H}$ : 假设集, hypothesis set,是研究者考虑的可能cencept set,它可能会和$\mathcal{C}$ 一致,也可能不一致,因为我们不知道c和$\mathcal{C}$是怎样的,只能靠猜测<br>$\mathcal{S}=(x_1,…,x_m)$ : 样本集,来自于$\mathcal{D}$,同时标注了label $(c(x_1),…,c(x_m))$,标注了的样本集,叫labeled sample,其中每个可以叫做example/instance<br>$\mathcal{A}$ : 一个算法,algorithm,它依据样本集从$\mathcal{H}$中选出一个h<sub>s</sub><br>n : 表示represent任意元素x∈$\mathcal{X}$所需要的最大计算开销computation cost,比如n维空间需要n个数表示一个元素x<br>size(c) : 表示c的最大计算开销</p>
-<h2 id="PAC学习模型"><a href="#PAC学习模型" class="headerlink" title="PAC学习模型"></a>PAC学习模型</h2><ul>
-<li>泛化误差 generalization error / risk error/ ture error/ simply error<br>给定假设h∈$\mathcal{H}$,h的泛化误差定义为:注意这里x~$\mathcal{D}$<br>$R(h)=\underset{x \sim D}{\mathbb{P}}[h(x) \neq c(x)]=\underset{x \sim D}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]$</li>
-<li>经验误差 Empirical error/Empirical risk<br>给定假设h∈$\mathcal{H}$,h的经验定义为:这里的$\mathcal{S}$~$\mathcal{D^m}$<br>$\widehat{R}<em>{S}(h)=\frac{1}{m} \sum</em>{i=1}^{m} 1_{h\left(x_{i}\right) \neq c\left(x_{i}\right)}$</li>
-<li>经验误差的期望=泛化误差<br>$\underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[\widehat{R}<em>{S}(h)\right]=R(h)$<br>proof:<br> $\underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[\widehat{R}</em>{S}(h)\right]=\frac{1}{m} \sum_{i=1}^{m} \underset{S \sim \mathbb{D}^{m}}{\mathbb{E}}\left[1_{h\left(x_{i}\right) \neq c\left(x_{i}\right)}\right]=\frac{1}{m} \sum_{i=1}^{m} \underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]=\underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]=\underset{x \sim \mathcal{D}}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]=R(h)$<h3 id="PAC-learning"><a href="#PAC-learning" class="headerlink" title="PAC learning"></a>PAC learning</h3>如果一个$\mathcal{C}$,存在一个算法$\mathcal{A}$和一个多元多项式polynominal function poly(1/ε, 1/δ, n, size(c)) ,对于?ε&gt;0,δ&gt;0,$\mathcal{D}$,c,如果满足:<br>$\underset{S \sim \mathcal{D}^{m}}{\mathbb{P}}\left[R\left(h_{S}\right) \leq \epsilon\right] \geq 1-\delta$<br>那么$\mathcal{C}$就认为是PAC learnable<br>再如果?算法$\mathcal{A}$在poly(1/ε, 1/δ, n, size(c))时间内运算完,那么那么$\mathcal{C}$就认为是efficiently PAC learnable,$\mathcal{A}$则称为PAC learning 算法<ul>
-<li>approximately correct (ε)近似准确,即$h_{S}$与c之间的误差$R\left(h_{S}\right) \leq \epsilon$</li>
-<li>probability (1-δ) 误差小于epsilon的可能性,即 $\underset{S \sim \mathcal{D}^{m}}{\mathbb{P}}\left[R\left(h_{S}\right) \leq \epsilon\right] \geq 1-\delta$<h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><ul>
+            <p>[TOC] 作者: Mehryar Mogri ## 前言 * PAC学习框架,PAC : probably approximately correct learning ## 中英文释义 definition 定义 note 注解,强调,注意 denote 用什么表示什么 instance 实例 non-trivial ### 符号</p>
+<p><span class="math inline">\(\mathcal{X}\)</span> : 所有可能的 examples or instances,input space <span class="math inline">\(\mathcal{Y}\)</span> : 所有可能的 labels or target values,output space c : target concept,类似于映射,从<span class="math inline">\(\mathcal{X}\)</span> 到 <span class="math inline">\(\mathcal{Y}\)</span> mapping,是我们想要研究的目标 <span class="math inline">\(\mathcal{C}\)</span> : concept class ,是一簇我们希望学习的概念.我不知道对不对,可能就是一种对concept的举一反三,扩展模型,没有绝对的边界.比如concept是一个确定角度和边长三角形,concept class就是一个三角形的大概念或者是一个多边形的概念,我们想学习可扩展的concept集合,而不是只用于目前问题的concept 假设assume样例是独立同分布的( independently and identically distributed (i.i.d.))服从于 according to 一个未知分布<span class="math inline">\(\mathcal{D}\)</span> <span class="math inline">\(\mathcal{H}\)</span> : 假设集, hypothesis set,是研究者考虑的可能cencept set,它可能会和<span class="math inline">\(\mathcal{C}\)</span> 一致,也可能不一致,因为我们不知道c和<span class="math inline">\(\mathcal{C}\)</span>是怎样的,只能靠猜测 <span class="math inline">\(\mathcal{S}=(x_1,...,x_m)\)</span> : 样本集,来自于<span class="math inline">\(\mathcal{D}\)</span>,同时标注了label <span class="math inline">\((c(x_1),...,c(x_m))\)</span>,标注了的样本集,叫labeled sample,其中每个可以叫做example/instance <span class="math inline">\(\mathcal{A}\)</span> : 一个算法,algorithm,它依据样本集从<span class="math inline">\(\mathcal{H}\)</span>中选出一个h<sub>s</sub> n : 表示represent任意元素x∈<span class="math inline">\(\mathcal{X}\)</span>所需要的最大计算开销computation cost,比如n维空间需要n个数表示一个元素x size(c) : 表示c的最大计算开销 ## PAC学习模型</p>
+<ul>
+<li>泛化误差 generalization error / risk error/ ture error/ simply error 给定假设h∈<span class="math inline">\(\mathcal{H}\)</span>,h的泛化误差定义为:注意这里x~<span class="math inline">\(\mathcal{D}\)</span> <span class="math inline">\(R(h)=\underset{x \sim D}{\mathbb{P}}[h(x) \neq c(x)]=\underset{x \sim D}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]\)</span></li>
+<li>经验误差 Empirical error/Empirical risk 给定假设h∈<span class="math inline">\(\mathcal{H}\)</span>,h的经验定义为:这里的<span class="math inline">\(\mathcal{S}\)</span>~<span class="math inline">\(\mathcal{D^m}\)</span> <span class="math inline">\(\widehat{R}_{S}(h)=\frac{1}{m} \sum_{i=1}^{m} 1_{h\left(x_{i}\right) \neq c\left(x_{i}\right)}\)</span></li>
+<li>经验误差的期望=泛化误差 <span class="math inline">\(\underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[\widehat{R}_{S}(h)\right]=R(h)\)</span> proof: <span class="math inline">\(\underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[\widehat{R}_{S}(h)\right]=\frac{1}{m} \sum_{i=1}^{m} \underset{S \sim \mathbb{D}^{m}}{\mathbb{E}}\left[1_{h\left(x_{i}\right) \neq c\left(x_{i}\right)}\right]=\frac{1}{m} \sum_{i=1}^{m} \underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]=\underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]=\underset{x \sim \mathcal{D}}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]=R(h)\)</span> ### PAC learning 如果一个<span class="math inline">\(\mathcal{C}\)</span>,存在一个算法<span class="math inline">\(\mathcal{A}\)</span>和一个多元多项式polynominal function poly(1/ε, 1/δ, n, size(c)) ,对于?ε&gt;0,δ&gt;0,<span class="math inline">\(\mathcal{D}\)</span>,c,如果满足: <span class="math inline">\(\underset{S \sim \mathcal{D}^{m}}{\mathbb{P}}\left[R\left(h_{S}\right) \leq \epsilon\right] \geq 1-\delta\)</span> 那么<span class="math inline">\(\mathcal{C}\)</span>就认为是PAC learnable 再如果?算法<span class="math inline">\(\mathcal{A}\)</span>在poly(1/ε, 1/δ, n, size(c))时间内运算完,那么那么<span class="math inline">\(\mathcal{C}\)</span>就认为是efficiently PAC learnable,<span class="math inline">\(\mathcal{A}\)</span>则称为PAC learning 算法
+<ul>
+<li>approximately correct (ε)近似准确,即<span class="math inline">\(h_{S}\)</span>与c之间的误差<span class="math inline">\(R\left(h_{S}\right) \leq \epsilon\)</span></li>
+<li>probability (1-δ) 误差小于epsilon的可能性,即 <span class="math inline">\(\underset{S \sim \mathcal{D}^{m}}{\mathbb{P}}\left[R\left(h_{S}\right) \leq \epsilon\right] \geq 1-\delta\)</span> #### 说明</li>
 <li>PAC框架framwork是distribution-free 模型,对于总体分布没有要求</li>
 <li><font color="red">可以放宽以适应domain adaptation 问题</font></li>
-<li>PAC框架处理概念集$\mathcal{C}$的可学习问题,而不是特定的c.<font color="red">注意，概念类C是算法已知的，但是目标概念c∈C当然是未知的。</font></li>
-<li>当computational representation没有讨论或比较容易得到straightforward,我们可先忽略n和size(c)<h3 id="例子2-4-学习轴对齐的矩形"><a href="#例子2-4-学习轴对齐的矩形" class="headerlink" title="例子2.4(学习轴对齐的矩形)"></a>例子2.4(学习轴对齐的矩形)</h3>考虑平面plane上点集,$\mathcal{X}=\mathbb{R^2}$,概念集$\mathcal{C}$是$\mathbb{R^2}$中与坐标轴平行的矩形,R表示目标矩形(c)，R’=$R_s$表示假设矩形($h_s$)</li>
-</ul>
-</li>
-</ul>
-</li>
+<li>PAC框架处理概念集<span class="math inline">\(\mathcal{C}\)</span>的可学习问题,而不是特定的c.<font color="red">注意，概念类C是算法已知的，但是目标概念c∈C当然是未知的。</font></li>
+<li>当computational representation没有讨论或比较容易得到straightforward,我们可先忽略n和size(c) ### 例子2.4(学习轴对齐的矩形) 考虑平面plane上点集,<span class="math inline">\(\mathcal{X}=\mathbb{R^2}\)</span>,概念集<span class="math inline">\(\mathcal{C}\)</span>是<span class="math inline">\(\mathbb{R^2}\)</span>中与坐标轴平行的矩形,R表示目标矩形(c)，R'=<span class="math inline">\(R_s\)</span>表示假设矩形(<span class="math inline">\(h_s\)</span>)</li>
+</ul></li>
 </ul>
 
           
@@ -2152,43 +1460,34 @@ pre[data-line] .line-highlight[data-end]:after {
 
   * 一是它的自然属性；自然属性是受大自然的客观影响，不受人性、社会性的因素影响。自然界中的资源有限，只有强者才能获得最多
 
-  * 一是它的社会属性。</code></pre>
-</li>
-<li><p>契诃夫法则 (chekhow law)：在第一幕出现的枪，在第三幕中必然会发射</p>
-</li>
+  * 一是它的社会属性。</code></pre></li>
+<li><p>契诃夫法则 (chekhow law)：在第一幕出现的枪，在第三幕中必然会发射</p></li>
 </ul>
 <blockquote>
 <p>人类死亡的原因是因为人体运行出了点技术问题,癌症,肺结核等等都是技术问题,只要是技术问题,就能找到解决方案,按照这个理解,人是可以永生(a-moetal)的,但做不到不死(immortal)</p>
 </blockquote>
 <pre><code>我是没见过哪个杯子可以永远用不坏,只靠修</code></pre>
 <ul>
-<li><p>寿命翻倍的结果</p>
-<ol>
+<li>寿命翻倍的结果
+<ol type="1">
 <li>适婚年龄延迟</li>
 <li>亲子关系变化</li>
 <li>学习工作阶段时间延长,可能出现新阶段</li>
 <li>职权更迭变慢</li>
-</ol>
-</li>
-<li><p>现代的科技不是延长寿命,只是避免早死</p>
-</li>
-<li><p>短暂的生命,让人觉得人生短暂的苦难不算什么;长寿的生命让人考虑如何享乐漫长的人生</p>
-</li>
-<li><p>如果掌控愉悦只是人类的生化系统,那么GDP,政治革命,经济增长有什么意义</p>
-</li>
+</ol></li>
+<li>现代的科技不是延长寿命,只是避免早死</li>
+<li>短暂的生命,让人觉得人生短暂的苦难不算什么;长寿的生命让人考虑如何享乐漫长的人生</li>
+<li>如果掌控愉悦只是人类的生化系统,那么GDP,政治革命,经济增长有什么意义</li>
 </ul>
 <blockquote>
+<p>经济增长此类只是愉悦系统的一部分</p>
 </blockquote>
-<pre><code>经济增长此类只是愉悦系统的一部分</code></pre>
 <blockquote>
 <p>刹车! 我们正在以未知的速度(我们所知的只是速度比以前快)冲向未知.却不知道刹车在哪里.顶尖的人只知道这个庞大系统的一角,没有人能真正串联这些点,因此没有人了解整个系统,也就没人能阻止,减缓速度.同时,如果我们不知怎么的踩了刹车,我们也无法知道,是平缓的减速,还是轰然崩塌.</p>
 </blockquote>
 <pre><code>总之就是我们不知道什么时候采取什么行动,我们一股脑走向的只是一层又一层的未知.</code></pre>
 <ul>
-<li>治愈和进化没有明确的界限,当为了治愈处在下限的人时,必然也让上限提高<blockquote>
-<p>人文主义(对人的崇拜)来说,让人类进化成神是一个合乎逻辑的目的,但是发展至今,”何为神圣”我们仍然不知</p>
-</blockquote>
-</li>
+<li>治愈和进化没有明确的界限,当为了治愈处在下限的人时,必然也让上限提高 &gt; 人文主义(对人的崇拜)来说,让人类进化成神是一个合乎逻辑的目的,但是发展至今,"何为神圣"我们仍然不知</li>
 </ul>
 
           
@@ -2487,7 +1786,7 @@ pre[data-line] .line-highlight[data-end]:after {
       
         
           
-            <ol>
+            <ol type="1">
 <li>现实主义</li>
 <li>唯物主义</li>
 <li>物质主义</li>
@@ -2506,8 +1805,6 @@ pre[data-line] .line-highlight[data-end]:after {
 <li>神秘主义</li>
 <li></li>
 <li></li>
-</ol>
-<ol>
 <li>思维 reflection</li>
 <li>感觉 sensation</li>
 <li>感受</li>
@@ -2659,8 +1956,12 @@ pre[data-line] .line-highlight[data-end]:after {
 
       
         
-          <h1 id="苏菲的世界"><a href="#苏菲的世界" class="headerlink" title="苏菲的世界"></a>苏菲的世界</h1><h2 id="JOSTEIN-GAARDER"><a href="#JOSTEIN-GAARDER" class="headerlink" title="JOSTEIN GAARDER"></a>JOSTEIN GAARDER</h2><h2 id="两种文化"><a href="#两种文化" class="headerlink" title="两种文化"></a>两种文化</h2><ul>
-<li>印欧文化<ol>
+          <h1 id="苏菲的世界">苏菲的世界</h1>
+<h2 id="jostein-gaarder">JOSTEIN GAARDER</h2>
+<h2 id="两种文化">两种文化</h2>
+<ul>
+<li><p>印欧文化</p>
+<ol type="1">
 <li>希腊人，罗马人</li>
 <li>印度，希腊，古代北欧神话是以一种哲学或思索的观点看时间的倾向</li>
 <li>历史是循环的，历史既没有开始，也没有结束，只不过在无尽的生生死死中不同文明兴亡消长罢了</li>
@@ -2668,9 +1969,9 @@ pre[data-line] .line-highlight[data-end]:after {
 <li>最重要的感官是视觉，“洞察”。因而有大量图画与雕刻描绘神的形象</li>
 <li>多神论</li>
 <li>印度教，佛教，北欧希腊神话</li>
-</ol>
-</li>
-<li>闪族文化<ol>
+</ol></li>
+<li><p>闪族文化</p>
+<ol type="1">
 <li>犹太人，阿拉伯</li>
 <li>历史是直线式发展，神在鸿蒙太初时创造了世界，但终有一天它会结束，“最后的审判日”，对生者死者审判</li>
 <li>生命目的不在轮回，在于救赎</li>
@@ -2680,6 +1981,159 @@ pre[data-line] .line-highlight[data-end]:after {
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/08/05/%E8%8B%8F%E8%8F%B2%E7%9A%84%E4%B8%96%E7%95%8C2/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/05/%E8%8B%8F%E8%8F%B2%E7%9A%84%E4%B8%96%E7%95%8C1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="epichide">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/user.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eichide's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/08/05/%E8%8B%8F%E8%8F%B2%E7%9A%84%E4%B8%96%E7%95%8C1/" itemprop="url">苏菲的世界1</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-05T23:59:40+08:00">
+                2020-08-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/philosophy/" itemprop="url" rel="index">
+                    <span itemprop="name">philosophy</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="苏菲的世界">苏菲的世界</h1>
+<h3 id="jostein-gaarder">jostein gaarder</h3>
+<p>哲学把具象的 “物”，“事” 进行总结，让我们可以名状，或许这就是哲学最大的贡献。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/08/05/%E8%8B%8F%E8%8F%B2%E7%9A%84%E4%B8%96%E7%95%8C1/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -2772,7 +2226,7 @@ pre[data-line] .line-highlight[data-end]:after {
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
