@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo,HALOHA" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="Analog Input  fDAQmx_ReadChan DAQmx_AI_SetupReader fDAQmx_AI_GetReader DAQmx_Scan fDAQmx_ScanStart fDAQmx_ScanWait fDAQmx_ScanGetAvailable fDAQmx_ScanStop fDAQmx_NumAnalogInputs  Analog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NIDAQ 工具集 MX 函数和操作参考">
+<meta property="og:url" content="http://yoursite.com/2020/08/10/NIDAQ%20%E5%B7%A5%E5%85%B7%E9%9B%86%20MX%20%E5%87%BD%E6%95%B0%E5%92%8C%E6%93%8D%E4%BD%9C%E5%8F%82%E8%80%83/index.html">
+<meta property="og:site_name" content="Eichide&#39;s Blog">
+<meta property="og:description" content="Analog Input  fDAQmx_ReadChan DAQmx_AI_SetupReader fDAQmx_AI_GetReader DAQmx_Scan fDAQmx_ScanStart fDAQmx_ScanWait fDAQmx_ScanGetAvailable fDAQmx_ScanStop fDAQmx_NumAnalogInputs  Analog">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-08-10T13:41:39.156Z">
+<meta property="article:modified_time" content="2020-08-11T15:42:03.100Z">
+<meta property="article:author" content="epichide">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '5W59328PV6',
+      apiKey: '35f0ce2b0fab5580e74b14de630d5706',
+      indexName: 'Epichide',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/08/10/NIDAQ 工具集 MX 函数和操作参考/"/>
+
+
+
+
+
+  <title>NIDAQ 工具集 MX 函数和操作参考 | Eichide's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Eichide's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">there is nothing, there are something</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/10/NIDAQ%20%E5%B7%A5%E5%85%B7%E9%9B%86%20MX%20%E5%87%BD%E6%95%B0%E5%92%8C%E6%93%8D%E4%BD%9C%E5%8F%82%E8%80%83/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="epichide">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/user.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eichide's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h0 class="post-title" itemprop="name headline">NIDAQ 工具集 MX 函数和操作参考</h0>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-10T21:41:39+08:00">
+                2020-08-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <ul>
+<li>Analog Input
+<ul>
+<li><p>fDAQmx_ReadChan</p></li>
+<li><p>DAQmx_AI_SetupReader</p></li>
+<li><p>fDAQmx_AI_GetReader</p></li>
+<li><p>DAQmx_Scan</p></li>
+<li><p>fDAQmx_ScanStart</p></li>
+<li><p>fDAQmx_ScanWait</p></li>
+<li><p>fDAQmx_ScanGetAvailable</p></li>
+<li><p>fDAQmx_ScanStop</p></li>
+<li><p>fDAQmx_NumAnalogInputs</p></li>
+</ul></li>
+<li>Analog Output
+<ul>
+<li><p>fDAQmx_NumAnalogOutputs</p></li>
+<li><p>fDAQmx_WriteChan</p></li>
+<li><p>fDAQmx_AO_UpdateOutputs</p></li>
+<li><p>DAQmx_AO_SetOutputs</p></li>
+<li><p>DAQmx_WaveformGen</p></li>
+<li><p>fDAQmx_WaveformStart</p></li>
+<li><p>fDAQmx_WaveformStop</p></li>
+</ul></li>
+<li>Counter/Timer
+<ul>
+<li>DAQmx_CTR_CountEdges</li>
+<li>DAQmx_CTR_OutputPulse</li>
+<li>DAQmx_CTR_Period</li>
+<li>DAQmx_CTR_PulseWidth</li>
+<li>fDAQmx_CTR_Start</li>
+<li>fDAQmx_CTR_ReadCounter</li>
+<li>fDAQmx_CTR_ReadWithOptions</li>
+<li>fDAQmx_CTR_SetPulseFrequency</li>
+<li>fDAQmx_CTR_Finished</li>
+<li>fDAQmx_NumCounters</li>
+</ul></li>
+<li>Digital I/O
+<ul>
+<li>DAQmx_DIO_Config</li>
+<li>fDAQmx_DIO_PortWidth</li>
+<li>fDAQmx_DIO_Read</li>
+<li>fDAQmx_DIO_Write</li>
+<li>DAQmx_DIO_WriteNewData</li>
+<li>fDAQmx_DIO_Finished</li>
+<li>fDAQmx_NumDIOPorts</li>
+</ul></li>
+<li>Error Handling
+<ul>
+<li><p>fDAQmx_ErrorString</p></li>
+<li><p>System Information</p></li>
+<li><p>fDAQmx_DeviceNames</p></li>
+<li><p>fDAQmx_NumAnalogInputs</p></li>
+<li><p>fDAQmx_NumAnalogOutputs</p></li>
+<li><p>fDAQmx_NumCounters</p></li>
+<li><p>fDAQmx_DIO_PortWidth</p></li>
+</ul></li>
+<li>System Control
+<ul>
+<li>fDAQmx_ResetDevice</li>
+</ul></li>
+<li>Calibration
+<ul>
+<li>fDAQmx_SelfCalibration</li>
+<li>fDAQmx_SelfCalDate</li>
+<li>fDAQmx_ExternalCalDate</li>
+</ul></li>
+</ul>
+<h1 id="符号说明">符号说明</h1>
+<ol type="1">
+<li>operation : 在命令的最前面是NIDAQ 工具箱MX XOP(我不清楚XOP是什么的缩写)的操作. <font style="color:red">和函数的区别不清楚</font></li>
+<li>function : 是普遍的函数形式,会有返回值</li>
+<li>Flags : 以 <code>/sign</code> 的形式, 有时候需要您输入具体的参数值,则为<code>/sign=value</code>的形式</li>
+<li>channel : 设备通常有多个输入/输出通道</li>
+<li>parameter : 通常是必要参数,是需要完成操作必须指定的内容,通常也有可选部分.相同parameter 之间用<code>;</code>作为分割</li>
+</ol>
+<h1 id="默认参数">默认参数</h1>
+<ol type="1">
+<li>min_V,max_V: 如果min_V, max_V未指定 默认-10,+10</li>
+<li>/EDGE = edge : edge=1,上升向(0为下降相)</li>
+</ol>
+<h1 id="函数">函数</h1>
+<div class="note info no-icon"><h2 id="daqmx_ai_setupreader">DAQmx_AI_SetupReader</h2>
+<p>设置模拟信号的输入通道,用于接下来读取.</p></div>
+<p><strong>DAQmx_AI_SetupReader /DEV=DeviceNameStr parameterString1 [;parameterString2;parameterString3]</strong></p>
+<ul>
+<li><p><strong>flags</strong> /DEV=DeviceNameStr : DAQ 设备的名字,例如"dev1"<br>
+</p></li>
+<li><p><strong>Parameters</strong> parameterString : 指定通道号(channel number),同时可以添加通道的配置信息(configuration information),形式为<br>
+parameterString [/type , min_V , max_V];</p>
+<ul>
+<li><p><strong>type</strong> : 设置信号模式 Diff: 差分,differential<br>
+RSE: 参考单端,reference single ended<br>
+NRSE: 非参考单端, non-reference single ended<br>
+PDIFF: 伪差分, pseudo-differential</p>
+<p>如果没有设置,默认按照设备出厂的默认设置.有关不同设备的默认设置，您需要查阅NI-DAQmx驱动程序随附的NI-DAQmx帮助。并非所有设备都支持所有类型。</p>
+<p>关于信号模式的解释和选择,请参考<a href="DIFF,RSE,NRSE,PDIFF信号模式">DIFF,RSE,NRSE,PDIFF信号模式</a></p></li>
+<li><p><strong>min_V,max_V</strong></p>
+<p><label style="color:red">控制输出值的范围。如控制输出值在输出范围外，该节点强制转换该值到范围内，并返回强制转换值作为控制输出值。 控制器在指定最小值或最大值饱和时，该节点实现积分抗饱和。</label>(我不确定,<a href="https://www.ni.com/documentation/zhs/labview-comms/latest/analysis-control-node-ref/pid-pid-parallel/" target="_blank" rel="noopener">参考</a>)</p></li>
+</ul></li>
+<li><p><strong>example</strong></p>
+<p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DAQmx_AI_SetupReader /DEV=<span class="string">"dev1"</span> <span class="number">1</span>/DIFF, <span class="number">0</span>, <span class="number">1</span>; <span class="number">3</span>/NRSE, <span class="number">-1</span>, <span class="number">1</span>;</span><br><span class="line"><span class="comment">// 设定dev1设备,通道1为差分模式,范围是[0,1],通道2为非单端参考,范围是[-1,1]</span></span><br></pre></td></tr></table></figure></p></li>
+<li><p><strong>detail</strong></p>
+<p>缺点是DAQmx_AI_SetupReader创建了一个模拟输入任务，该任务占用了模拟输入，因此不能以任何其他方式使用它们。如果通过此操作使用模拟输入的子集，则无法对其他输出执行任何操作，直到使用fDAQmx_ScanStop销毁任务为止</p></li>
+</ul>
+<div class="note info no-icon"><h2 id="daqmx_ao_setoutputs">DAQmx_AO_SetOutputs</h2>
+<p>配置模拟信号的输出通道,并指定输出的电压或电流(如果您的DAQ设备支持的话).<font style="color:red">一次调用设置所有输出</font>.</p></div>
+<p><strong>DAQmx_AO_SetOutputs /DEV=DeviceNameStr [/CRNT=[currentMode]] [/KEEP=[keepTask]] parameterString[;parameterString2;parameterString3]</strong></p>
+<ul>
+<li><p><strong>flag</strong></p>
+<p>/DEV=DeviceNameStr : DAQ 设备的名字,例如"dev1"<br>
+/CRNT[=currentMode] : 如果您的设备支持电流输出,可以使用该flag, 之后指定的min_V和max_V 单位都是安培(A,Amps)<br>
+/KEEP=[=keepTask] : 与任务是否需要destroy相关. 当该flag存在,且keepTask不为0,或者未指定(absent),或者不存在,则操作完成返回igor后,创建的任务会持续存在,不被destroy.</p></li>
+<li><p><strong>parameter</strong></p>
+<p>parameterString : 指定channel,范围从0~您设备的最大通道数.加上额外的最大/最小值信息,是电min_V压还是电流取决于/CRNT的设置.形式为:<br>
+outputSetting, chnnel[,min_V,max_V]</p></li>
+<li><p><strong>example</strong></p>
+<p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">DAQmx_AO_Setoutputs /Dev=<span class="string">"dev1"</span> /CRNT <span class="string">"5.5,0;3.2,1;"</span></span><br><span class="line">DAQmx_AO_Setoutputs /Dev=<span class="string">"dev1"</span> /CRNT <span class="string">"0.005,0,0,0.04;0.035,3,0,0.04;"</span></span><br><span class="line"><span class="comment">// dev1设备输出,电流模式,5mA输出到channel 1, 0.035mA输出到 channel 3</span></span><br></pre></td></tr></table></figure></p></li>
+<li><p><strong>detail</strong></p>
+<p>任务创建和销毁是很耗费时间点的.如果您使/KEEP=1,持久不关闭,与每次输出创建又销毁相比会快500倍.如果您在初始调用DAQmx_AO_SetOutputs 后,使用 fDAQmx_AO_UpdateOutputs(#fDAQmx_AO_UpdateOutputs) 设定模拟信号输出则会更快.<label style="color:red">(但具体延迟是多少还有待查证)</label></p>
+<p>/KEEP=1的坏处是它会占用模拟信号的输出 <label style="color:red">(不确定是否占用其它通道的输出或输入)</label>, 以至于在占用期间不能以其它方式使用.在您使用该函数期间,您不能使用其它任何输出. <label style="color:red">(从字面理解上来讲似乎影响不大</label></p>
+<p>当您要销毁它,有两种方式:</p>
+<ol type="1">
+<li>再次调用该函数,但令/KEEP=0,或不使用/KEEP flag. 这个函数可以让您对DAQ输出最后一次信息后关闭(使得您可以设定一些状态信息)</li>
+<li>调用 fDAQmx_WaveformStop.</li>
+</ol></li>
+</ul>
+<div class="note info no-icon"><h2 id="fdaqmx_writechan">fDAQmx_WriteChan()</h2>
+<p>写入电压一次,到指定的模拟输出通道。指定的电压应立即出现在指定的模拟输出上。</p></div>
+<p><strong>fDAQmx_WriteChan(Device, Channel, Volts, Min_V, Max_V )</strong></p>
+<ul>
+<li><p><strong>parame</strong></p>
+<p>device : 字符串,设备名<br>
+channel : 数值,要读取的模拟输出通道号( <font style="color:red">不清楚为什么一定要读取</font>)。范围是0到n-1，其中n是设备上模拟输入通道的数量。<br>
+Volts : 要输出的电压<br>
+Min_V : 数值,最小输出范围<br>
+Max_V : 数值,最大输出值<br>
+</p></li>
+<li><p><strong>return</strong> : 0为成功</p></li>
+<li><p><strong>detail</strong> NI-DAQmx驱动程序将不接受Min_V = Max_V，也不会接受设备可实现范围之外的Min_V或Max_V。 fDAQmx_ErrorString（）返回的错误消息将告诉您可接受的限制。</p>
+<p>任务的执行过程: 通过创建任务，向任务添加指定的通道，向任务写入值，最后停止并清除任务</p>
+<p><font style="color:red">是否表明它很慢</font></p></li>
+</ul>
+<div class="note info no-icon"><h2 id="fdaqmx_waveformstop">fDAQmx_WaveformStop()</h2>
+<p>使用该函数停止waveform产生(generate,是output). 您必须使用此功能来停止设置为无限期继续的波形生成。</p></div>
+<p><strong>fDAQmx_WaveformStop(Device)</strong></p>
+<ul>
+<li><p><strong>parameter</strong></p>
+<p>device : 设备名,字符串</p></li>
+<li><p><strong>return</strong></p>
+<p>0 为 succeed, non zero 为 error</p></li>
+</ul>
+<div class="note info no-icon"><h2 id="daqmx_ctr_countedges">DAQmx_CTR_CountEdges</h2>
+<p>使用板载计数器/计时器(onboard counter/timer)设置并可选地开始边沿计数操作。 使用fDAQmx_CTR_ReadCounter（）或fDAQmx_CTR_ReadWithOptions（）检索当前计数。</p></div>
+<p><strong>DAQmx_CTR_CountEdges /DEV=DeviceNameStr [/EDGE=edge] [/INIT=initialCount] [/DIR=direction] [/CLK=clkSource [/FIFO=fifoName] [/WAVE=waveName /RPT]] /ERRH=ErrorHookStr /EOSH=EndOfScanHookStr /RPTH=RepeatHookStr [/STRT[=startSpec]] [/SRC=sourceTerminal] [/TRIG={trigspec}] [/PAUS={pauseTriggerSpec}] [/OUT=outputTerminal] counter</strong></p>
+<ul>
+<li><p><strong>flag</strong></p>
+<p>/DEV=DeviceNameStr : DAQ 设备名<br>
+/EDGE=edge : 决定计数那种类型的边,0:下降,1:上升<br>
+/INIT=initialCount : 预设计数器内容初始值,默认为0<br>
+/DIR=direction : 设定计数方向,direction是+1,还是-1;如果为0,则方向由外部信号控制,如下表. <text style="color:red">我不知道这里的pin引脚要怎么弄</text>. 这些是通道或者位bit的符号,<a href="NIDAQ%20设备的基本介绍#NI数据采集卡的物理通道">详见</a></p>
+<table>
+<thead>
+<tr class="header">
+<th>DAQ device</th>
+<th>counter 0</th>
+<th>counter 1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>M-series</td>
+<td>PFI 10</td>
+<td>PFI 11</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>pin 45</td>
+<td>pin 46</td>
+</tr>
+<tr class="odd">
+<td>E- and S-series</td>
+<td>port0/line6</td>
+<td>port0/line7</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>pin 16</td>
+<td>pin 48</td>
+</tr>
+</tbody>
+</table>
+<p>/ERRH = ErrorHookStr : 后台计数到wave或FIFO(first in first out 先进先出)期间发生错误时要执行的命令,字符串形式<br>
+/EOSH= EndOfScanHookStr : 在后台计数完成后要执行的命令,字符串形式.因为FIFO操作永远不会停止,所以仅适用于/WAVE flag.<br>
+/FIFO=fifoName : 用于接收多个读数的Igor FIFO的名称。如果使用/ FIFO，则还必须使用/ CLK指定时钟脉冲源. 该操作不使用板载时基：您必须使用/ CLK标志提供时钟脉冲源。因为使用了外部时钟源，所以由FIFO的deltat设置设置的周期不会设置采样率。但是，采样率仍会传递给NI-DAQmx驱动程序，该驱动程序可使用该信息来优化计数器设置。您应该将deltat设置为期望的最大速率。使用FIFO意味着可以无限期地获取计数器读数<br>
+/RPTH = RepeatHookStr :</p>
+<p>......</p></li>
+</ul>
+<div class="note info no-icon"><h2 id="fdaqmx_scanstop">fDAQmx_ScanStop()</h2>
+<p>使用此功能可在完成背景扫描操作之前将其停止。这将释放扫描通道以进行其他操作。调用此函数时不会传输任何数据</p></div>
+<p><strong>fDAQmx_ScanStop(Device)</strong></p>
+<ul>
+<li><strong>parameter</strong> device : 字符串,DAQ设备名</li>
+</ul>
+<div class="note info no-icon"><h2 id="fdaqmx_resetdevice">fDAQmx_ResetDevice()</h2>
+<p>对DAQ设备进行硬件复位。结果，该设备上的所有操作将停止(cease)。 参数Device给出DAQ设备名称的字符串。</p></div>
+<p><strong>fDAQmx_ResetDevice（Device)</strong> * <strong>parameter</strong></p>
+<pre><code>device  :   字符串,设备名</code></pre>
+<ul>
+<li><strong>return</strong> : 0 成功</li>
+</ul>
+<div class="note info no-icon"><h2 id="fdaqmx_errorstring">fDAQmx_ErrorString()</h2>
+<p>在执行NIDAQ Tools MX操作或函数期间或在操作的后台处理期间发生错误时，错误信息将存储在堆栈中。此函数以字符串形式返回最近错误的信息。然后，它将信息从堆栈中删除。 后续调用将返回来自先前任何错误的信息，依此类推。堆栈仅限于保留有关最后五个错误的信息。返回的信息将包括错误号和描述性消息。如果发生NI-DAQmx驱动程序错误，该消息可能会很长。这些很长的消息包含非常有用的信息。</p></div>
+<p><strong>fDAQmx_ErrorString()</strong></p>
+<ul>
+<li><strong>return</strong> : 字符串,错误信息。如果没有错误信息可用，则返回一个空字符串。</li>
+</ul>
+<h2 id="fdaqmx_errorstring">fDAQmx_ErrorString()</h2>
+<p>我需要知道通道都分别与哪个设备对应</p>
+<p>/CLK={srcStr,edge} : 设定时钟源(计时器,clock source).如果您不想用通常的内部的时钟源,而要为指定波形发生配置相应时钟源,可以选择.</p>
+
+      
+    </div>
+    
+    
+    
+
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------&emsp;本文结束&emsp;<i class="fa fa-tree"></i>&emsp;感谢阅读&emsp;-------------</div>
+    
+</div>
+      
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/08/09/various%20psp%20and%20psc/" rel="next" title="varous abbreviation type of electrophysiology wave">
+                <i class="fa fa-chevron-left"></i> varous abbreviation type of electrophysiology wave
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/" rel="prev" title="NIDAQ 设备的基本介绍">
+                NIDAQ 设备的基本介绍 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/user.gif"
+               alt="epichide" />
+          <p class="site-author-name" itemprop="name">epichide</p>
+           
+              <p class="site-description motion-element" itemprop="description">nothing to remember</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#符号说明"><span class="nav-number">1.</span> <span class="nav-text">符号说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#默认参数"><span class="nav-number">2.</span> <span class="nav-text">默认参数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">3.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#daqmx_ai_setupreader"><span class="nav-number">3.1.</span> <span class="nav-text">DAQmx_AI_SetupReader</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#daqmx_ao_setoutputs"><span class="nav-number">3.2.</span> <span class="nav-text">DAQmx_AO_SetOutputs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fdaqmx_writechan"><span class="nav-number">3.3.</span> <span class="nav-text">fDAQmx_WriteChan()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fdaqmx_waveformstop"><span class="nav-number">3.4.</span> <span class="nav-text">fDAQmx_WaveformStop()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#daqmx_ctr_countedges"><span class="nav-number">3.5.</span> <span class="nav-text">DAQmx_CTR_CountEdges</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fdaqmx_scanstop"><span class="nav-number">3.6.</span> <span class="nav-text">fDAQmx_ScanStop()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fdaqmx_resetdevice"><span class="nav-number">3.7.</span> <span class="nav-text">fDAQmx_ResetDevice()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fdaqmx_errorstring"><span class="nav-number">3.8.</span> <span class="nav-text">fDAQmx_ErrorString()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fdaqmx_errorstring"><span class="nav-number">3.9.</span> <span class="nav-text">fDAQmx_ErrorString()</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">epichide</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
+    NexT.Gemini
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.2"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+</body>
+</html>
