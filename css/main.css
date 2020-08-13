@@ -86,6 +86,8 @@ svg:not(:root) {
 }
 figure {
   margin: 1em 40px;
+  text-align: center;
+  color: #999;
 }
 hr {
   -moz-box-sizing: content-box;
@@ -520,6 +522,7 @@ pre code {
   color: #4d4d4c;
   line-height: 1em;
   margin-bottom: 1em;
+  text-align: center;
 }
 .highlight figcaption:before,
 .highlight figcaption:after {
@@ -1247,6 +1250,7 @@ pre .javascript .function {
   cursor: pointer;
   cursor: zoom-in;
   cursor: -webkit-zoom-in;
+  text-align: center;
 }
 .post-body .image-caption,
 .post-body .figure .caption {
@@ -1843,7 +1847,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffff20;
+  background: #709eff;
 }
 .links-of-blogroll {
   font-size: 13px;
