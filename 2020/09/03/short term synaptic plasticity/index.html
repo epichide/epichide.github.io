@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.0.0-rc.2'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+  <title>Short-Term Synaptic Plasticity - Eichide&#39;s Blog</title>
+  
+    <meta name="keywords" content="paper">
+  
+
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  <!-- import link -->
+  
+
+  
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  <!-- 脚本懒加载函数 -->
+  <script>
+  function loadScript(src, cb) {
+    var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+    var script = document.createElement('script');
+    script.setAttribute('type','text/javascript');
+    if (cb) script.onload = cb;
+    script.setAttribute('src', src);
+    HEAD.appendChild(script);
+  }
+  //https://github.com/filamentgroup/loadCSS
+  !function(c){"use strict";var e=function(e,t,n,r){var o,i=c.document,a=i.createElement("link");if(t)o=t;else{var d=(i.body||i.getElementsByTagName("head")[0]).childNodes;o=d[d.length-1]}var f=i.styleSheets;if(r)for(var l in r)r.hasOwnProperty(l)&&a.setAttribute(l,r[l]);a.rel="stylesheet",a.href=e,a.media="only x",function e(t){if(i.body)return t();setTimeout(function(){e(t)})}(function(){o.parentNode.insertBefore(a,t?o:o.nextSibling)});var s=function(e){for(var t=a.href,n=f.length;n--;)if(f[n].href===t)return e();setTimeout(function(){s(e)})};function u(){a.addEventListener&&a.removeEventListener("load",u),a.media=n||"all"}return a.addEventListener&&a.addEventListener("load",u),(a.onloadcssdefined=s)(u),a};"undefined"!=typeof exports?exports.loadCSS=e:c.loadCSS=e}("undefined"!=typeof global?global:this);
+  </script>
+  <script id="loadcss"></script>
+</head>
+
+<body>
+  <header class="l_header auto shadow blur" style='opacity: 0' >
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+  <div class="l_body">
+    <div class="l_cover">
+
+  
+  
+      <div class='cover-wrapper post dock' style="display: none;">
+        
+          <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg"></div>
+        
+        <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">Volantis</p>
+    
+    
+  </div>
+  <div class='bottom'>
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/v4/getting-started/"
+              
+              
+              id="v4getting-started">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c3.svg'><p>文档</p>
+            </a>
+          
+            <a href="/faqs/"
+              
+              
+              id="faqs">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f516.svg'><p>帮助</p>
+            </a>
+          
+            <a href="/examples/"
+              
+              
+              id="examples">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f396.svg'><p>示例</p>
+            </a>
+          
+            <a href="/contributors/"
+              
+              
+              id="contributors">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f389.svg'><p>社区</p>
+            </a>
+          
+            <a href="/archives/"
+              
+              
+              id="archives">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg'><p>博客</p>
+            </a>
+          
+            <a href="https://github.com/volantis-x/hexo-theme-volantis/"
+              
+              
+              id="https:githubcomvolantis-xhexo-theme-volantis">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f9ec.svg'><p>源码</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+      </div>
+  
+
+</div>
+
+    <div class='safearea'>
+      <div class='body-wrapper' id="pjax-container">
+        
+          <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+
+
+<div id="pjax-data" style="display: none">
+  <div id="pjax-ispage">true</div>
+  <div id="pjax-pageTitle">Short-Term Synaptic Plasticity</div>
+  <div id="pjax-enable-cover">true</div>
+  <div id="pjax-comment-path"></div>
+  <div id="pjax-comment-placeholder"></div>
+</div>
+
+
+<script>
+  // 处理封面 此时 jquery 还没加载
+  if ("none" == "none") { // 移除封面
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "none";
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
+  } else {
+    if ("none" == "half") { // 半屏
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half');
+      document.getElementsByClassName('scroll-down')[0].style.display = "none";
+    } else if ("none" == "full") { // 全屏
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full');
+      document.getElementsByClassName('scroll-down')[0].style.display = "";
+    }
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "";
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.remove("show");
+  }
+</script>
+
+
+        
+        
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        Short-Term Synaptic Plasticity
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="https://github.com/volantis-x/" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/apple-touch-icon.png">
+    <p>Volantis Team</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/nruron/">nruron</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Sep 3, 2020</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Short-Term Synaptic Plasticity" data-path="/2020/09/03/short%20term%20synaptic%20plasticity/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <h1 id="short--term-synaptic-plasticity">SHORT -TERM SYNAPTIC PLASTICITY</h1>
+<ul>
+<li><p>Robert S. Zucker</p>
+<p>Department of Molecular and Cell Biology, University of California, Berkeley,California 94720; e-mail: zucker@socrates.berkeley.edu</p></li>
+<li><p>Wade G. Regehr</p>
+<p>Department of Neurobiology, Harvard Medical School, Boston, Massachusetts 02115;e-mail: wregehr@hms.harvard.edu</p></li>
+<li><p>Key Words</p>
+<p>synapse, facilitation, post-tetanic potentiation, depression,augmentation, calcium</p></li>
+</ul>
+<h1 id="简介">简介</h1>
+<p>突触传递是一个动态的过程.突触后的响应随突触前的活动而变化.化学突触传递是突触响应特性的决定因素. 反过来,这些响应的特性又决定了神经网络对刺激的选择性和活动响应模式.本篇综述关注于在短时程下(数十毫秒到几分钟)突触改变.</p>
+<ol type="1">
+<li>突触enhancement形式,主要源于Ca2+:
+<ol type="1">
+<li>facilitation</li>
+<li>augmentation</li>
+<li>post-tetanic potentiation</li>
+</ol></li>
+<li>突触depression原因(占大多数)
+<ol type="1">
+<li>主要源于递质短时间耗竭,而来不及及时补充</li>
+<li>突触前受体反馈激活</li>
+<li>突触后受体脱敏</li>
+</ol></li>
+<li>胶质细胞作用短时程可塑性</li>
+</ol>
+<p>几乎所有类型的突触都具有短时程/长时程的可塑性. (经历多长事件后会发生改变). 或增强或抑制. 突触的可塑性方向很依赖刺激pattern的细节,大多数刺激模式可能既包含抑制性pattern或促进性pattern.</p>
+<h1 id="术语">术语</h1>
+<ul>
+<li><p>use-dependent plasticity :</p>
+<p>行为不仅受当前的传感信号影响，而且受近期经验的历史影响。例如，朝向特定目标的重复运动会使随后的朝向该目标方向的运动产生偏差。这个过程称为使用依赖可塑性（UDP）((Mawase et al. 2017))</p></li>
+<li><p>plasticity 的一些测量形术</p>
+<ol type="1">
+<li>相同刺激,AP 成功诱发出的个数 (可能增长几十倍)</li>
+<li>PSP的衰减时间常数 (可能会达到~100ms)</li>
+<li>slope</li>
+<li>amplitude</li>
+</ol></li>
+<li><p>phase component(相的组分)</p>
+<ol type="1">
+<li>rapid : 数十ms</li>
+<li>slowe : 数百ms</li>
+</ol></li>
+<li><p>tetanic stimulation强直刺激 :</p>
+<p>包含一系列高频独立的刺激序列( <font style="color:red">可能&gt;10Hz</font>).High-frequency stimulation causes an increase in release called <strong>post-tetanic potentiation</strong></p></li>
+<li><p>EPPS End-plate potentials 终板电位:</p>
+<p>是指 <strong>运动神经末梢与骨骼肌细胞</strong> 之间的接头后膜上产生的一种电位。是一种负的局部电位变化，但可通过电紧张性地扩展到邻近区域，形成一个空间分布。终板处的电位最高，离终板愈远，电位愈小。当Ach分子通过接头间隙到达终板膜表面时，立即与终板膜上的N2型乙酰胆碱受体结合，使通道开放，允许Na+、K+等通过，以Na+的内流为主，引起终板膜膜电位减小，向零值靠近，产生终板膜的去极化，这一电位变化称为终板电位。</p></li>
+<li><p>PSP postsynaptic potential 突触后电位:</p>
+<p>突触后电位是经典的化学突触，突触后膜上的局部反应，发生在神经元之间</p></li>
+<li><p>局部反应（也叫局部电位或电流）:</p>
+<p>PSP和EPP都是局部电位/局部电流/局部反应 ,局部电位 <strong>不具有“全或无”的特性</strong> ，是电紧张性电位，电位幅度随刺激强度增大而增大，传导有衰减性，没有不应期，可以发生时间和空间总和，不需阈或阈上刺激就可产生</p></li>
+<li><p>动作电位</p>
+<p>动作电位 <strong>具有“全或无”的特性</strong> ， <strong>电位幅度不随刺激强度改变</strong> ，同一细胞上传到 <strong>不衰减</strong> ，具有不应期，不具有时间和空间总和，要阈或者阈上刺激才能产生；</p></li>
+<li><p>静息电位</p></li>
+</ul>
+<h1 id="传递增强-enhancement-of-transmission">传递增强 Enhancement of transmission</h1>
+<p>许多化学突触在重复刺激后,显示出</p>
+<ol type="1">
+<li>与突触效能相关的多种组件增加 component (decay time)</li>
+<li>或单个突触后电位（PSP）幅度 amplitude</li>
+<li>或突触后电流（PSC）幅度的增加。amplitude</li>
+</ol>
+<p><strong>传输的增强来自几个方面，它们的增强持续时间截然不同（7）</strong></p>
+<h2 id="enhance-component-增强组件">enhance component 增强组件</h2>
+<p>在不同的刺激方案后,突触会增强,然后衰减,有的快,有的慢. 根据衰减的时间常数,可以将增强的成分(组件,component)分为以下4个部分.(数据来源: frog neuromuscular junction at 20℃ were found in the ganglion at 34℃ 似乎和EPP相关 )</p>
+<p>大部分的研究在外周神经系统,但也在CNS中证实</p>
+<ol type="1">
+<li>facilitation first component : dacay time constant(以下都是衰减时间常数) dozens millisecond<font style="color:gray">~ 59 ±14ms</font></li>
+<li>facilitation second compenent : (hundred millisecond) <font style="color:gray">~388 ±97ms</font></li>
+<li>augmentation : (several seconds) <font style="color:gray">7.2±1s</font></li>
+<li>potentiation : (dozens second to minutes) <font style="color:gray">88±25s</font></li>
+</ol>
+<figure>
+<img src="/2020/09/03/short%20term%20synaptic%20plasticity/time%20constants2.jpg" class="lazyload" data-srcset="/2020/09/03/short%20term%20synaptic%20plasticity/time%20constants2.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>time constants of enhence</figcaption>
+</figure>
+<figure>
+<img src="/2020/09/03/short%20term%20synaptic%20plasticity/time%20constants3.jpg" class="lazyload" data-srcset="/2020/09/03/short%20term%20synaptic%20plasticity/time%20constants3.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>time constans of enhence</figcaption>
+</figure>
+<p>参考:</p>
+<h3 id="促进-facilitate">促进 facilitate</h3>
+<ul>
+<li>一些PSP增强可能会在1s内就发生, 可以增强数倍甚至数十倍</li>
+<li>增强发生后,撤去刺激,其衰减指数的时间常数~100ms,</li>
+<li>促进的细节可以进一步分为快速相位(fast phase tens ms)和慢速相位(slow phase hundreds ms)</li>
+<li>strategy : paired-pulse stimulus, 给予成对刺激,调整成对刺激的间隔时间, 时间间隔越短,促进越大. 但很显然,它偏向于细胞连接的本身特性,比如第一次刺激使得一些囊泡更靠近AZ,使得第二次释放得更多,所以与可塑性没有太大关系,很快就衰减了</li>
+</ul>
+<p>理论上，当在下一个动作电位到达之前突触前按钮上的Ca 2+内流尚未完全清除时，就会出现配对脉冲促进，这导致第二次刺激后突触前Ca 2+的峰值浓度高于第一个刺激时的峰值</p>
+<figure>
+<img src="/2020/09/03/short%20term%20synaptic%20plasticity/paired%20stimuli.jpg" class="lazyload" data-srcset="/2020/09/03/short%20term%20synaptic%20plasticity/paired%20stimuli.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>paired pulse</figcaption>
+</figure>
+<h3 id="强直增强-post-tetanic-potentiation-ptp">强直增强 post-tetanic potentiation PTP</h3>
+<p>随着在一个train(训练)中,刺激数目的增加,很多突触过程也显示为增加的方向.一个AP的增强可能在1-15%左右,但是因为持续了数秒到数分钟,增强就被叠加,产生数倍增强.</p>
+<ul>
+<li>PTP 诱发出后可以维持30s~ several min</li>
+<li>strategy : &gt;10HZ,&gt;10s , return to 0.5HZ to test Enhancement</li>
+</ul>
+<figure>
+<img src="/2020/09/03/short%20term%20synaptic%20plasticity/enhenca.jpg" class="lazyload" data-srcset="/2020/09/03/short%20term%20synaptic%20plasticity/enhenca.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>enhence</figcaption>
+</figure>
+<h3 id="augmentation-增强">augmentation 增强</h3>
+<p>还存在一种enhancement 介于 potentiatio 和 facilitation 之间,</p>
+<h2 id="增强的机制">增强的机制</h2>
+<h3 id="quantal-theory">Quantal theory</h3>
+<p>通过隔离对单个递质的神经递质的突触后反应，通常可以通过用河豚毒素（TTX）阻断动作电位激发并等待自发的，非动作电位引发的囊泡释放发生在记录的细胞上，来最直接地进行量子分析 神经元。</p>
+<ol type="1">
+<li><strong>n</strong> : the number of release sites. 靠近AZ(active zone)得囊泡数 ,通常docked在突触前膜上,随时准备释放. ((n is probably equivalent to the number of synapses, because most central synapses contain only one release site each.)</li>
+<li><strong>p</strong> : 囊泡从突触前膜释放得可能性. 与 ca2+相关</li>
+<li><strong>q</strong> : 突触后膜对囊泡释放得响应, 量子性, 与受体,间隙,激动剂,拮抗剂相关</li>
+<li>Quantal content : np, should represent the total presynaptic output.</li>
+</ol>
+<p>在CA1处，突触的传输非常不可靠，p约为0.3；这意味着大多数动作电位不会导致谷氨酸释放（它们是“‘synaptic failures”），而成功的电位很少会导致释放多个囊泡。</p>
+<p>silence synapse 由LTP后 unsilence ,涉及到 npq的变化</p>
+<figure>
+<img src="/2020/09/03/short%20term%20synaptic%20plasticity/factor%20of%20transmission%20amplitude.jpg" class="lazyload" data-srcset="/2020/09/03/short%20term%20synaptic%20plasticity/factor%20of%20transmission%20amplitude.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>quantal theory</figcaption>
+</figure>
+<p>参考:</p>
+<h3 id="the-残留residual-ca-2-hypothesis">The 残留Residual Ca 2+ Hypothesis</h3>
+<p>facilitation 是由条件刺激后神经末梢中残留的Ca 2+作用引起的</p>
+<h3 id="single-site-hypothesis">single site hypothesis</h3>
+<p>现在已经认识到，神经递质的释放是由开放的电压门控Ca 2+通道（ local）附近的Ca 2+水平增加触发的。</p>
+<p>然后在几十毫秒内，Ca 2+会在整个突触前按钮中扩散并平衡，从而产生残留的Ca 2+信号（res）。</p>
+<ul>
+<li>AP 引起的Ca2+ level:   <span class="math inline">\({\mathrm{Ca}_{\text {local }}}\)</span> ~100 nM,</li>
+<li>静息水平的Ca2+本底level:   <span class="math inline">\({\mathrm{Ca}_{\text {rest }}}\)</span> ~100 nM,</li>
+<li>前一次刺激残留的Ca2+ level:   <span class="math inline">\({\mathrm{Ca}_{\text {res }}}\)</span></li>
+</ul>
+<p>所以</p>
+<ul>
+<li>第一个pulse evoke ca2+ : <span class="math inline">\(\left(\mathrm{Ca}_{\text {rest }}+\mathrm{Ca}_{\text {local }}\right)\)</span></li>
+<li>第二个pulse evoke ca2+ : <span class="math inline">\(\left(\mathrm{Ca}_{\text {rest }}+\mathrm{Ca}_{\text {local }}+\mathrm{Ca}_{\text {res }}\right)\)</span></li>
+</ul>
+<p>之后就看不懂了,好多字</p>
+<h3 id="multiple-site-hypothesis">multiple site hypothesis</h3>
+<p>没看....</p>
+<h1 id="use-dependent-changes-in-ca-2-entry">USE-DEPENDENT CHANGES IN Ca 2+ ENTRY</h1>
+<ul>
+<li>the calyces of Held and postsynaptic cells, the principal cells of the medial nucleus of the trapezoid body (MNTB), in slices of the rat auditory brainstem.</li>
+<li>Held 是一个在听觉很大的突触synapse结构,可能就比hippocampus的细胞soma小一些,对patch比较友好</li>
+</ul>
+<figure>
+<img src="/2020/09/03/short%20term%20synaptic%20plasticity/held%20synapse.gif" class="lazyload" data-srcset="/2020/09/03/short%20term%20synaptic%20plasticity/held%20synapse.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>held synapse</figcaption>
+</figure>
+<p>实验发现,短（100 ms）的后突触去极化0 mV.，在去极化后以10ms为单位测量,EPSC的振幅降低35±5%（n = 7）。恢复发生在0.5 s内</p>
+<p>我们知道突触前后都多少依赖Ca2+,因此,它们是竞争使用Ca2+,当一方过于兴奋,过度消耗Ca2+,都会抑制增强. 只有二者平衡且最大限度使用Ca2+,会促进增强</p>
+<p>在重复刺激期间，前突触机制会导致PSC振幅下降，刺激后需要几秒钟到几分钟才能恢复。虽然这种突触抑郁症在近60年前被描述过，但造成这种突触抑郁症的机制仍然知之甚少。</p>
+<p>似乎不是一个主导型机制</p>
+<h2 id="depletion-models-of-depression-耗竭模型">Depletion Models of Depression 耗竭模型</h2>
+<h1 id="传递抑制">传递抑制</h1>
+<h2 id="通过激活代谢性受体进行突触性抑制">通过激活代谢性受体进行突触性抑制</h2>
+<h3 id="homosynaptic-inhibition">Homosynaptic Inhibition</h3>
+<p>囊泡的内含物除了作用突触后,也可作用突触前膜. 这称为homosynaptic modulation,通常是抑制性的.当神经递质建立到足以激活前突触受体时，最终结果是负反馈,将使神经递质未来释放的减少</p>
+<p>囊泡在相对较高的PN(椎体神经元)中含有 ATP，当囊泡融合时，ATP 被释放。在细胞外空间中，ATP 被分解为腺苷，可以激活前合成腺苷受体,lead to homosynaptic inhibition.</p>
+<p>神经肌肉街头，这机制有助于反向抑制长期刺激的增强，但它不是突触抑制机制的主要部分</p>
+<p>在某些 GABAergic 突触 , 抑制部分源于 GABA 逆行作用在 GABA<sub>B</sub> 受体上， 大概减少了 Ca 2+ 流入到后续的 APs.</p>
+<h3 id="heterosynaptic-inhibition">heterosynaptic inhibition</h3>
+<p>突触输入(synapse input)通常是指突触前的到间隙的过程.</p>
+<p>激活突触输入也会影响相邻的突触。例如，激活区域的的兴奋输入可以激活 GABAergic 神经元，导致细胞外 GABA 水平的广泛增加。这可以激活前突触GABAB受体，并抑制突触强度几秒钟。前突触的bouton含有多种类型的受体，这些受体能感知各种细胞外化学信使，所有这些受体都可能与heterosynaptic inhibition 相关</p>
+<h3 id="retrograde-control-of-neurotransmitter-release-神经递质释放的逆行控制">Retrograde Control of Neurotransmitter Release 神经递质释放的逆行控制</h3>
+<p>突触后细胞也可能影响从突触前的释放.不同类型的树突(不是轴突)可以释放各种信使，这些信使可以通过位于前突触终端上的G蛋白耦合受体来影响神经递质释放。</p>
+<p><strong>Neuromodulators</strong> such as dopamine, dynorphin, glutamate, GABA, and oxytocin are released by fusion of vesicles that are located within the <strong>dendrites and cell bodies</strong></p>
+<p><strong>Retrograde messengers</strong> are also released by non-vesicular mechanisms(非运载体机制,就是不通过外泌体方式释放).</p>
+<p>内源性大麻素 Endogenous cannabinoids（如anandimide and 2-AG ）由phospholipids 磷脂裂解产生，由突触前末梢的CB1受体感知. 内源性大麻素的non-vehicle释放的逆行信号已被证明可以抑制海马的抑制性突触和小脑中的兴奋和抑制性突触</p>
+<figure>
+<img src="/2020/09/03/short%20term%20synaptic%20plasticity/Health%20Professionals%20Receptor%20Activation%20Diagram.jpg" class="lazyload" data-srcset="/2020/09/03/short%20term%20synaptic%20plasticity/Health%20Professionals%20Receptor%20Activation%20Diagram.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>Retrograde</figcaption>
+</figure>
+<figure>
+<img src="/2020/09/03/short%20term%20synaptic%20plasticity/Regulation-of-the-presynaptic-function-by-sumoylation-Consistent-with-the-emerging.png" class="lazyload" data-srcset="/2020/09/03/short%20term%20synaptic%20plasticity/Regulation-of-the-presynaptic-function-by-sumoylation-Consistent-with-the-emerging.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>presynapse structual</figcaption>
+</figure>
+<h2 id="突触前离子型受体">突触前离子型受体</h2>
+<p>突触前各种离子受体可以存在，虽然这些受体对突触塑料的贡献程度尚不清楚。</p>
+<ul>
+<li>Ca 2+ permeable receptors : NMDA receptors and α7 icotinic receptors, as well as</li>
+<li>Ca 2+ impermeable receptors , Cl<sup>-</sup> permeable channels : GABA<sub>A</sub> and glycine receptors</li>
+<li></li>
+</ul>
+<h2 id="胶质参与短期可塑性">胶质参与短期可塑性</h2>
+<h2 id="突触后突触抑制机制">突触后突触抑制机制</h2>
+<h3 id="desensitization-脱敏">Desensitization 脱敏</h3>
+<p>另一种可能导致 use-dependent decreases in synaptic strength 的机制是通过对突触后受体的脱敏desensitization。配体门控通道经历一种称为脱敏的过程，类似于电压门控通道的失活。将配体门通道暴露在激动器中会导致通道打开，还可以使部分通道置于无响应状态。通道从这种脱敏状态中恢复可能需要 <strong>几十毫秒甚至几分钟</strong> 的时间。</p>
+<ul>
+<li><p>受体脱敏，</p>
+<p>又称受体向下调节，指长时期使用一种激动药后，组织或细胞对激动药的敏感性和反应性下降的现象。</p>
+<p>当受体长时间的暴露于配体时，大多数受体会失去反应性，即产生脱敏现象。脱敏现象有两种类型：同源脱敏和异源脱敏。同源脱敏是指细胞与其特异配体结合后仅对其配体失去反应性，而仍保持对其他配体的反应性。异源脱敏是指细胞因与其特异配体结合后，对其他配体也失去了反应性</p></li>
+</ul>
+<p>早期工作揭示了胆碱性兴奋和抑制性突触，其中后突触受体脱敏是导致后突触电位抑制的主要过程</p>
+<p><strong>AMPA受体的脱敏已被证明在一些突触的突触转任务中发挥作用。</strong> : <font style="color:red">为什么似乎在讲过的文献中似乎没有讨论这一脱敏,好像都是增强,刺激的pattern什么时候促进什么时候抑制,促进的时候没有发生脱敏是吗</font></p>
+<p>脱敏有助于在听觉神经和小鸡核磁细胞之间的钙化突触的可塑性</p>
+<p>网膜锥体和双极细胞之间的突触,巨大的耳蜗核突触,视网膜突触，也发生脱敏</p>
+<p>脱敏也可能在海马谷性突触推断的量子振幅明显降低中发挥作用</p>
+<ul>
+<li>glutamate 与 脱敏</li>
+<li>inhibitor of desensitization</li>
+<li>AMPA受体脱敏有助于减少在现实活动模式期间的AMPA受体ePSCs</li>
+<li>海马培养物中导致NMDA受体反应抑制与脱敏相关, 由突触后电位调控脱敏程度</li>
+<li>对于乙酰胆碱受体，虽然它们也可以脱敏，在神经肌肉结脱敏对活动列车期间的突触反应幅度影响很小</li>
+</ul>
+<p>AMPA受体对短期可塑性脱敏的程度可能取决于突触的结构、释放概率和传递过程。受体脱敏在短期可塑性中的并非扮演广泛作用</p>
+<p>在chick calycal synapse 和 retinogeniculate synapse , 突触之间挨得很近,导致彼此的连接不是完全一一对应,加之gila包围好几个突触, <font style="color:red">使得包含突触聚合到原生神经元的胶质护套可能允许谷氨酸聚集，并可能有助于发生 AMPA 受体脱敏(没懂) </font></p>
+<p>相比之下，即使攀爬纤维与Purkinje细胞进行数百次突触接触，因为每个突触都由胶质组成，释放位点彼此分离，并且从一个位点释放的谷氨酸没有机会在附近的释放地点去脱敏AMPA受体</p>
+<p><font style="color:red">没有搞懂为什么会脱敏</font></p>
+<h3 id="relief-of-polyamine-block-多肽阻滞的接触">Relief of Polyamine Block 多肽阻滞的接触</h3>
+<p>在大鼠新皮质=第2/3层中，PN与后突触多极中间神经元之间的突触连接揭示了导致短期突触可塑性的另一种后突触机制。此突触电流由 AMPA 受体介导，这些受体被内源多胺(几乎存在于所有细胞中的)阻断(block)。在离体patch中，这种多胺block通过去极化得到缓解。在layer2/3， 多胺block的这种缓解增强 AMPA 受体的反应， 并帮助抵消由另一种机制产生的突触抑制.</p>
+<figure>
+<img src="/2020/09/03/short%20term%20synaptic%20plasticity/site%20of%20regulation%20of%20short%20term%20synaptic%20plasticity.jpg" class="lazyload" data-srcset="/2020/09/03/short%20term%20synaptic%20plasticity/site%20of%20regulation%20of%20short%20term%20synaptic%20plasticity.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>Sites of regulation of short-term synaptic plasticity.</figcaption>
+</figure>
+<h1 id="突触增强中的分子靶点">突触增强中的分子靶点</h1>
+<p>没有看...</p>
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://yoursite.com/2020/09/03/short%20term%20synaptic%20plasticity/>http://yoursite.com/2020/09/03/short%20term%20synaptic%20plasticity/</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-03T23:14:57+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Sep 3, 2020</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/paper/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>paper</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/09/03/short%20term%20synaptic%20plasticity/&title=Short-Term Synaptic Plasticity - Eichide's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2020/09/03/short%20term%20synaptic%20plasticity/&title=Short-Term Synaptic Plasticity - Eichide's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/09/03/short%20term%20synaptic%20plasticity/&title=Short-Term Synaptic Plasticity - Eichide's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/2020/09/03/Igor%20NIDAQ%20tools%20MX%20%E5%87%BD%E6%95%B0%E5%92%8C%E6%93%8D%E4%BD%9C%20(%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91)/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Igor NIDAQ tools MX 函数和操作 (中文翻译)</p>
+          <p class='content'>符号说明
+
+operation : 在命令的最前面是NIDAQ 工具箱MX XOP(我不清楚XOP是什么的缩写)的操作. 和函数的区别不清楚
+function : 是普遍的函数形式,会有返...</p>
+        </a>
+      
+      
+        <a class='next' href='/2020/09/03/using%20scipy%20signal/'>
+          <p class='title'>using scipy singal<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>5
+
+
+
+
+
+
+
+$("#ipynb").load( function() {
+console.log($("#ipynb").contents().find("body")....</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#enhance-component-增强组件"><span class="toc-text">enhance component 增强组件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#促进-facilitate"><span class="toc-text">促进 facilitate</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#强直增强-post-tetanic-potentiation-ptp"><span class="toc-text">强直增强 post-tetanic potentiation PTP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#augmentation-增强"><span class="toc-text">augmentation 增强</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#增强的机制"><span class="toc-text">增强的机制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#quantal-theory"><span class="toc-text">Quantal theory</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#the-残留residual-ca-2-hypothesis"><span class="toc-text">The 残留Residual Ca 2+ Hypothesis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#single-site-hypothesis"><span class="toc-text">single site hypothesis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#multiple-site-hypothesis"><span class="toc-text">multiple site hypothesis</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#depletion-models-of-depression-耗竭模型"><span class="toc-text">Depletion Models of Depression 耗竭模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通过激活代谢性受体进行突触性抑制"><span class="toc-text">通过激活代谢性受体进行突触性抑制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#homosynaptic-inhibition"><span class="toc-text">Homosynaptic Inhibition</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#heterosynaptic-inhibition"><span class="toc-text">heterosynaptic inhibition</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#retrograde-control-of-neurotransmitter-release-神经递质释放的逆行控制"><span class="toc-text">Retrograde Control of Neurotransmitter Release 神经递质释放的逆行控制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#突触前离子型受体"><span class="toc-text">突触前离子型受体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#胶质参与短期可塑性"><span class="toc-text">胶质参与短期可塑性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#突触后突触抑制机制"><span class="toc-text">突触后突触抑制机制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#desensitization-脱敏"><span class="toc-text">Desensitization 脱敏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#relief-of-polyamine-block-多肽阻滞的接触"><span class="toc-text">Relief of Polyamine Block 多肽阻滞的接触</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+      </div>
+      
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="/atom.xml"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+          
+            
+              <a href="https://github.com/volantis-x/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+              <a href="/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/010-facebook.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/010-facebook.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+              <a href="/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/018-twitter.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/018-twitter.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+              <a href="/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/045-telegram.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/045-telegram.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+              <a href="/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/006-youtube.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/006-youtube.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </div>
+      
+    
+      
+        <div><p>Blog content follows the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+</div>
+      
+    
+      
+        
+          <div><p><span id="lc-sv">本站总访问量为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+</div>
+        
+      
+    
+      
+        Use
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.0.0-rc.2" target="_blank" class="codename">Volantis</a>
+        as theme
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="/">Copyright © 2017-2020 XXX</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+      <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+    </div>
+  </div>
+  <div>
+    <!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      // 背景层
+      var bgDiv = document.createElement("div");
+      $(bgDiv).addClass("bg");
+      if ($(this).attr('bg')) {
+        $(bgDiv).css('background', $(this).attr('bg'));
+      }
+      $(this).wrap(bgDiv); // 背景层
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if($(".md").find("img").not('.inline').not('a img').length+$(".article-entry").find("img").length==0)return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    setTimeout(function() {
+      loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+    }, 1);
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+</script>
+
+
+<!-- internal -->
+
+
+
+
+<!-- optional -->
+
+  <script>
+  
+  var SEARCH_SERVICE = "hexo" || "hexo";
+  var ROOT = "/" || "/";
+  if (!ROOT.endsWith('/')) ROOT += '/';
+</script>
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+  
+    <script>
+      window.FPConfig = {
+        delay: 0,
+        ignoreKeywords: [],
+        maxRPS: 5,
+        hoverDelay: 25
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+<script src="/js/valine.js"></script>
+
+
+<script>
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link'.split(',').filter(function (item) {
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick', 'mail', 'link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function (item) {
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
+
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+
+    let pagePlaceholder = $.trim($('#pjax-comment-placeholder').text()) || "快来评论吧~";
+
+    let path = $.trim($('#pjax-comment-path').text());
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+
+    var valine = new Valine();
+    valine.init({
+      el: '#valine_container',
+      meta: meta,
+      placeholder: pagePlaceholder,
+      path: path,
+      appId: "",
+      appKey: "",
+      pageSize: '10',
+      avatar: 'robohash',
+      lang: 'zh-cn',
+      visitor: 'true',
+      highlight: 'true',
+      mathJax: 'false',
+      enableQQ: 'true',
+      requiredFields: requiredFields,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps
+    })
+  }
+
+  $(function () {
+    pjax_valine();
+  });
+</script>
+
+
+
+
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+
+  
+    
+<script src="/js/search.js"></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'u9j57bwJod4EDmXWdxrwuqQT-MdYXbMMI',
+    app_key: 'jfHtEKVE24j0IVCGHbvuFClp',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://yoursite.com' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://yoursite.com' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://yoursite.com' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              if (pv.getAttribute('data-path') == window.location.pathname) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == window.location.pathname) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+<!-- more -->
+
+
+    
+      
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+<!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+    <div id="loading-bar-wrapper"><script>NProgress.configure({parent:"#loading-bar-wrapper",trickleSpeed: 100})</script></div>
+    <script>
+      window.ShowLoading = function() {
+        NProgress.start();
+      };
+      window.HideLoading = function() {
+        NProgress.done();
+      }
+    </script>
+  
+</div>
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      $.fancybox.close();    // 关闭弹窗
+      $('.l_header .switcher .s-search').removeClass('active'); // 关闭移动端激活的搜索框
+      $('.l_header').removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      $('.wrapper').removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      $('.s-top').unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      window.ShowLoading();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+      // 
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+          if (typeof $.fancybox == "undefined") {
+            SCload_fancybox();
+          } else {
+            pjax_fancybox();
+          }
+        
+        
+        
+        
+        
+          pjax_valine();
+        
+        
+        
+        
+        
+      } catch (e) {
+        console.log(e);
+      }
+      window.HideLoading();
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.HideLoading();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+
+    
+  </div>
+</body>
+</html>

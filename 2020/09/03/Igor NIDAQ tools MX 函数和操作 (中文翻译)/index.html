@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.0.0-rc.2'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+  <title>Igor NIDAQ tools MX 函数和操作 (中文翻译) - Eichide&#39;s Blog</title>
+  
+
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  <!-- import link -->
+  
+
+  
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  <!-- 脚本懒加载函数 -->
+  <script>
+  function loadScript(src, cb) {
+    var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+    var script = document.createElement('script');
+    script.setAttribute('type','text/javascript');
+    if (cb) script.onload = cb;
+    script.setAttribute('src', src);
+    HEAD.appendChild(script);
+  }
+  //https://github.com/filamentgroup/loadCSS
+  !function(c){"use strict";var e=function(e,t,n,r){var o,i=c.document,a=i.createElement("link");if(t)o=t;else{var d=(i.body||i.getElementsByTagName("head")[0]).childNodes;o=d[d.length-1]}var f=i.styleSheets;if(r)for(var l in r)r.hasOwnProperty(l)&&a.setAttribute(l,r[l]);a.rel="stylesheet",a.href=e,a.media="only x",function e(t){if(i.body)return t();setTimeout(function(){e(t)})}(function(){o.parentNode.insertBefore(a,t?o:o.nextSibling)});var s=function(e){for(var t=a.href,n=f.length;n--;)if(f[n].href===t)return e();setTimeout(function(){s(e)})};function u(){a.addEventListener&&a.removeEventListener("load",u),a.media=n||"all"}return a.addEventListener&&a.addEventListener("load",u),(a.onloadcssdefined=s)(u),a};"undefined"!=typeof exports?exports.loadCSS=e:c.loadCSS=e}("undefined"!=typeof global?global:this);
+  </script>
+  <script id="loadcss"></script>
+</head>
+
+<body>
+  <header class="l_header auto shadow blur" style='opacity: 0' >
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+  <div class="l_body">
+    <div class="l_cover">
+
+  
+  
+      <div class='cover-wrapper post dock' style="display: none;">
+        
+          <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg"></div>
+        
+        <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">Volantis</p>
+    
+    
+  </div>
+  <div class='bottom'>
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/v4/getting-started/"
+              
+              
+              id="v4getting-started">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c3.svg'><p>文档</p>
+            </a>
+          
+            <a href="/faqs/"
+              
+              
+              id="faqs">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f516.svg'><p>帮助</p>
+            </a>
+          
+            <a href="/examples/"
+              
+              
+              id="examples">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f396.svg'><p>示例</p>
+            </a>
+          
+            <a href="/contributors/"
+              
+              
+              id="contributors">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f389.svg'><p>社区</p>
+            </a>
+          
+            <a href="/archives/"
+              
+              
+              id="archives">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg'><p>博客</p>
+            </a>
+          
+            <a href="https://github.com/volantis-x/hexo-theme-volantis/"
+              
+              
+              id="https:githubcomvolantis-xhexo-theme-volantis">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f9ec.svg'><p>源码</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+      </div>
+  
+
+</div>
+
+    <div class='safearea'>
+      <div class='body-wrapper' id="pjax-container">
+        
+          <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+
+
+<div id="pjax-data" style="display: none">
+  <div id="pjax-ispage">true</div>
+  <div id="pjax-pageTitle">Igor NIDAQ tools MX 函数和操作 (中文翻译)</div>
+  <div id="pjax-enable-cover">true</div>
+  <div id="pjax-comment-path"></div>
+  <div id="pjax-comment-placeholder"></div>
+</div>
+
+
+<script>
+  // 处理封面 此时 jquery 还没加载
+  if ("none" == "none") { // 移除封面
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "none";
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
+  } else {
+    if ("none" == "half") { // 半屏
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half');
+      document.getElementsByClassName('scroll-down')[0].style.display = "none";
+    } else if ("none" == "full") { // 全屏
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full');
+      document.getElementsByClassName('scroll-down')[0].style.display = "";
+    }
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "";
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.remove("show");
+  }
+</script>
+
+
+        
+        
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        Igor NIDAQ tools MX 函数和操作 (中文翻译)
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="https://github.com/volantis-x/" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/apple-touch-icon.png">
+    <p>Volantis Team</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Sep 3, 2020</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Igor NIDAQ tools MX 函数和操作 (中文翻译)" data-path="/2020/09/03/Igor%20NIDAQ%20tools%20MX%20%E5%87%BD%E6%95%B0%E5%92%8C%E6%93%8D%E4%BD%9C%20(%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91)/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <h1 id="符号说明">符号说明</h1>
+<ol type="1">
+<li>operation : 在命令的最前面是NIDAQ 工具箱MX XOP(我不清楚XOP是什么的缩写)的操作. <font style="color:red">和函数的区别不清楚</font></li>
+<li>function : 是普遍的函数形式,会有返回值</li>
+<li>Flags : 以 <code>/sign</code> 的形式, 有时候需要您输入具体的参数值,则为<code>/sign=value</code>的形式</li>
+<li>channel : 设备通常有多个输入/输出通道</li>
+<li>parameter : 通常是必要参数,是需要完成操作必须指定的内容,通常也有可选部分.相同parameter 之间用<code>;</code>作为分割</li>
+</ol>
+<h1 id="英文词汇含义">英文词汇含义</h1>
+<ol type="1">
+<li>generate : 产生一段输出信息,输出</li>
+<li>scan : 扫描一段输入信息,输入</li>
+<li></li>
+</ol>
+<h1 id="默认参数">默认参数</h1>
+<ol type="1">
+<li>min_V,max_V: 如果min_V, max_V未指定 默认-10,+10</li>
+<li>/EDGE = edge : edge=1,上升向(0为下降相)</li>
+</ol>
+<h1 id="analog-input">Analog Input</h1>
+<div class="note info no-icon"><h2 id="fdaqmx_readchan">fDAQmx_ReadChan</h2></div>
+<div class="note info no-icon"><h2 id="daqmx_ai_setupreader">DAQmx_AI_SetupReader</h2>
+<p>设置模拟信号的输入通道,用于接下来读取.</p></div>
+<p><strong>DAQmx_AI_SetupReader /DEV=DeviceNameStr parameterString1 [;parameterString2;parameterString3]</strong></p>
+<ul>
+<li><p><strong>flags</strong> /DEV=DeviceNameStr : DAQ 设备的名字,例如"dev1"<br>
+</p></li>
+<li><p><strong>Parameters</strong> parameterString : 指定通道号(channel number),同时可以添加通道的配置信息(configuration information),形式为<br>
+parameterString [/type , min_V , max_V];</p>
+<ul>
+<li><p><strong>type</strong> : 设置信号模式 Diff: 差分,differential<br>
+RSE: 参考单端,reference single ended<br>
+NRSE: 非参考单端, non-reference single ended<br>
+PDIFF: 伪差分, pseudo-differential</p>
+<p>如果没有设置,默认按照设备出厂的默认设置.有关不同设备的默认设置，您需要查阅NI-DAQmx驱动程序随附的NI-DAQmx帮助。并非所有设备都支持所有类型。</p>
+<p>关于信号模式的解释和选择,请参考<a href="DIFF,RSE,NRSE,PDIFF信号模式">DIFF,RSE,NRSE,PDIFF信号模式</a></p></li>
+<li><p><strong>min_V,max_V</strong></p>
+<p><label style="color:red">控制输出值的范围。如控制输出值在输出范围外，该节点强制转换该值到范围内，并返回强制转换值作为控制输出值。 控制器在指定最小值或最大值饱和时，该节点实现积分抗饱和。</label>(我不确定,<a href="https://www.ni.com/documentation/zhs/labview-comms/latest/analysis-control-node-ref/pid-pid-parallel/">参考</a>)</p></li>
+</ul></li>
+<li><p><strong>example</strong></p>
+<p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DAQmx_AI_SetupReader /DEV=<span class="string">"dev1"</span> <span class="number">1</span>/DIFF, <span class="number">0</span>, <span class="number">1</span>; <span class="number">3</span>/NRSE, <span class="number">-1</span>, <span class="number">1</span>;</span><br><span class="line"><span class="comment">// 设定dev1设备,通道1为差分模式,范围是[0,1],通道2为非单端参考,范围是[-1,1]</span></span><br></pre></td></tr></table></figure></p></li>
+<li><p><strong>detail</strong></p>
+<p>缺点是DAQmx_AI_SetupReader创建了一个模拟输入任务，该任务占用了模拟输入，因此不能以任何其他方式使用它们。如果通过此操作使用模拟输入的子集，则无法对其他输出执行任何操作，直到使用fDAQmx_ScanStop销毁任务为止</p></li>
+</ul>
+<div class="note info no-icon"><h2 id="fdaqmx_ai_getreader">fDAQmx_AI_GetReader</h2></div>
+<div class="note info no-icon"><h2 id="daqmx_scan">DAQmx_Scan</h2>
+<p>执行输入扫描操作(scan operation),获取数据,存到igor wave 或者 igor FIFO中,您必须WAVES和FIFO选其一,异或选择关系.</p>
+<p>Wave和FIFO通道可以是不超过8bit的任何signed的数字类型。不允许unsigned，也不允许复数的。所有波形或FIFO通道必须具有相同的数字类型。</p>
+<p>如果使用整数的波或FIFO通道，则以原始模式(raw mode)读取数据。也就是说，数据是unscaled的 A / D 转换器计数。</p>
+<p>如果使用浮点的波或FIFO通道，则数据将采用scaled电压的形式。</p>
+<p>对于12位DAQ设备，该值的范围是-4096至+4095； 16位设备将产生从-32768到+32767的值。 (<font style="color:red">不确定和前面的8bit什么关系</font>)</p>
+<p>不允许使用/ AVE标志对整数求平均</p></div>
+<p><strong>DAQmx_Scan /DEV=DeviceNameStr [/AVE=nAverage /BKG[=doBackground] /CLK={clockSpec} /ERRH=ErrorHookStr /EOSH=EndOfScanHookStr /PAUS={pauseTriggerSpec} /RPT[=repeatSpec] /RPTC[=repeatSpec] /RPTH=RepeatHookStr /RTRG={refTrigSpec} /SINT=sampleInterval /STRT[=startSpec] /TRIG={trigspec} [WAVES=WaveParameterString] [FIFO=FIFOParameterString]</strong></p>
+<ul>
+<li><p><strong>waves</strong> 对于长度有限的扫描读取操作(scanning operation)<br>
+使用 WAVES = WaveParameterString , 获取的数据将存储在您命名(WaveParameterString)的waves中. 数的大小由waves 设定的长度决定; 您必须确定号要获取多少数据<br>
+如果多个通道被采集,您必须提供多个波名,以供存储.所有波是统一的长度.采样周期由WaveParameterString中第一个波的wave scaling的dX因子设置. 详见: Analog Input: Waves and Wave Scaling.(<font style="color:red">没有找到链接</font>)</p></li>
+<li><p><strong>FIFO</strong></p>
+<p>对于不确定长度的扫描操作，可以选择将数据流传输到硬盘。<br>
+使用FIFO = FIFOParameterString会使获取的数据存储在参数字符串中命名的Igor FIFO中。连续获取数据，直到使用fDAQmx_ScanStop（）取消操作为止。<br>
+开始采集后，控制权立即返回Igor Pro。 / BKG标志被忽略。原始数据的实际采集是通过后台处理进行的。其他Igor操作，包括将获取的数据的一部分传输到wave，可以在获取数据时进行。 FIFO抯还可以在采集过程中自动将数据存储在磁盘文件中<br>
+扫描速率由您提供的用于接收数据的FIFO的delta T参数控制。请参见《 NIDAQ工具MX指导》 [连续模拟输入到FIFO中]和《 NIDAQ XOP：程序员介绍》 [模拟输入：使用FIFO中]。</p></li>
+<li><p><strong>flag</strong></p>
+<p>/DEV = DeviceNameStr : 字符串,DAQ设备名</p>
+<p>/AVG = nAverage : 使扫描操作获取nAverage连续读数，并对返回的每个数据点取平均值。请注意，这会将实际扫描速率提高了nAverage倍。比如我要获取n个点,实际采集了n*nAverage个点.</p>
+<p>/BKG = doBackground : 如果doBackground为1，则在后台进行传输。如果doBackground为0，则DAQmx_Scan在获取所有数据之前不返回（/ STRT = 0除外，请参见下文）。如果/ BKG标志不存在，则默认/ BKG = 0。</p>
+<p>/CLK = {srcStr,edge} : 1)指定默认时钟以外的采样时钟。您可以将自己的时钟连接到外部引脚，也可以从内部信号（例如计数器的输出）中获取采样时钟。字符串 <strong>srcStr</strong> 命名时钟信号的源端子。通常，这类似于/ devname / pfi0或/ devname / ctr0 内部输出，其中“ devname”与DeviceNameStr的字符串相同。2)时钟脉冲触发扫描的部分由 <strong>edge</strong> 设置。0：下降沿; 1：上升沿. 如果您使用自己的时钟源，则由波形缩放或FIFO设置的扫描速率将被忽略，但NI-DAQmx驱动程序可以使用它来优化扫描操作。</p>
+<p>/ERRH = ErrorHookStr : 如果扫描操作期间发生错误，则包含要执行的命令的字符串。仅在后台扫描期间使用（请参阅/ BKG标志）。</p>
+<p>/EOSH = EndOfScanHookStr : 扫描完成时要执行的命令的字符串。仅在后台扫描期间使用（请参阅/ BKG标志）。</p>
+<p>/PAUS={source, pretrigSamples [, type, edgeslopewhen, level1, level2]} : 设置一个暂停触发器，允许硬件控制扫描操作。就是说，在asserte暂停触发器时暂停扫描，并在未assert暂停触发器时继续从上次中断的地方继续扫描。<br>
+称它为触发器有点误导人. 因为按照数字逻辑来讲,触发器通常与延边(edge)变化有关.在这里的暂停触发器是由电平(level)控制的,而不是边(edge).门(gate)或许是一个更合适的描述.</p>
+<ul>
+<li><p><strong>souce</strong> : 字符串,指定终端源,通常是PFI 输入端.类似于/ devname / pfi1，其中“ devname”与DeviceNameStr使用的字符串相同。没有默认源.</p></li>
+<li><p><strong>type</strong> : 数字，指定要使用的触发器类型: 0: Disable (不设置暂停触发器 pause trigger)<br>
+1: Digital 数字<br>
+2: Analog level 模拟信号电平<br>
+3: Analog window<br>
+Default is type 1.<br>
+</p></li>
+<li><p><strong>edgeslopewhen</strong> : 控制何时暂停扫描操作. 值有: 0: low level (digital), below level1 (analog level) or outside the window (analog window)<br>
+1: high level, above level1, or inside window.<br>
+Default is 1.</p></li>
+<li><p><strong>level1</strong> : 模拟电平触发的电压阈值，或模拟窗口底部的电压。忽略数字触发。默认为0</p></li>
+<li><p><strong>level2</strong> : 在模拟窗口的顶部设置电压。忽略数字触发或模拟电平触发。默认值为0.。<font style="color:red">什么是模拟窗口 analog window</font></p></li>
+</ul>
+<p>/RPT : (仅适用于WAVES关键字）导致在获取所有数据时重新启动扫描操作。再次使用相同的波形，覆盖先前获取的数据。这将导致示波器类型的模式。一次扫描的结束与下一次扫描的开始之间可能会有一些延迟，因为仅在Igor的主偶数循环或调用DoXOPIdle时才检测到扫描的结束。如果扫描操作使用触发器，则每次扫描都使用相同的触发器。注意：这与以前的NIDAQ Tools版本不同。<font style="color:red">不太清楚偶数循环时什么意思</font>.该标志不适用于获取FIFO。</p>
+<p>/RPTC : （仅适用于WAVES关键字）样本将连续采集到波形中。当波被填充时，下一个样本进入波的第零行。如果扫描操作使用触发器，则仅触发第一次扫描。随后的扫描与第一次扫描连续进行。此模式消除了使用/ RPT时两次扫描之间存在的等待时间，但代价是第一次扫描时不使用触发器。此行为与旧版NIDAQ Tools软件包中的fNIDAQ_ScanWavesRepeat相同。该标志不适用于获取FIFO。</p>
+<p>/RPT<br>
+/PRTC = repeatSpec : 如果repeatSpec为1，就像/ RPT或/ RPTC一样。如果repeatSpec为0，就像省略/ RPT一样。</p>
+<p>/RPTH = RepeatHookStr : 字符串命令，重复扫描（请参阅/ RPT标志）完成一次扫描时要执行的命令。请注意，hook命令将在一次扫描完成之后且在下一次扫描开始之前执行。因此，该命令将延迟下一次重复扫描的开始。</p>
+<p>/RTRG={source, pretrigSamples [, type, edgeslopewhen, level1, level2]} : 设置参考或停止触发，以进行预触发采集(pre-trigger acquisition).就是说，扫描持续进行直到触发被assert为止。在那一点上，从已经获取的样本中传输pretrigSamples数据点，并继续扫描直到获取（totalSamples-pretrigSamples）个样本.在采集所有样本之前，NI-DAQmx将不允许任何数据传输。后台扫描仍然有效，但是在扫描期间您不会看到wave更新新数据。不能与连续获取到FIFO一起使用。 source是给出触发信号源端子的字符串。通常，这将是/ devname / pfi1，其中“ devname”是与DeviceNameStr相同的字符串。如果将“”用作信号源，则将使用默认的停止触发输入，通常是PFI1或DAQ设备的I / O连接器上的引脚10。pretrigSamples是从参考触发器到达之前从获取的数据中保存的样本数。</p>
+<ul>
+<li><strong>type</strong> 是一个数字，指定要使用的触发器类型。值有:: 0: Disable triggers (use software start)<br>
+1: Digital<br>
+2: Analog level<br>
+3: Analog window<br>
+Default is type 1.</li>
+<li><strong>edgeslopewhen</strong> 触发用于数字触发的触发脉冲部分，或模拟电平的斜率，或模拟窗口的窗口感。值是：0：下降沿（数字），下降斜率（模拟水平）或离开窗口（模拟窗口）.1：上升沿，上升斜率或进入窗口。</li>
+<li><strong>level1</strong> : 模拟电平触发的电压阈值，或模拟窗口底部的电压。忽略数字触发。默认为0</li>
+<li><strong>level2</strong> : 在模拟窗口的顶部设置电压。忽略数字触发或模拟电平触发。默认值为0.。<font style="color:red">什么是模拟窗口 analog window</font></li>
+</ul>
+<p>/SINT=sampleInterval : 设置一次扫描中连续通道之间的时间间隔，而与一个通道上样本之间的时间间隔（扫描间隔）无关。即，扫描间隔可以是0.01秒，并且采样间隔可以是0.0001秒以近似同时采样。例如：<br>
+DAQmx_Scan /SINT=.0001 wave =“ input1，1; input2，2”<br>
+将采样通道1和2，将数据存储在wave input1和input2中。采样通道1和通道2之间的时间段将设置为0.0001秒。<br>
+将sampleInterval设置为零将选择默认值，通常是扫描间隔除以通道数。<br>
+注意：“采样间隔”和“扫描间隔”是NI在其NI-DAQ Traditional文档中使用的短语。他们现在使用术语“ AI转换率”和“采样率”。</p>
+<p>/STRT = startSpec : 控制是否立即开始扫描操作。如果指定了触发器，则启动与触发器不同。在开始操作之前，即使施加了触发信号也没有任何反应。操作开始后，如果使用/ TRIG或/ RTRG指定了触发，则扫描将一直等到施加触发信号。如果startSpec为零，则不会自动开始扫描操作。在这种情况下，请使用fDAQmx_ScanStart（）函数开始扫描。如果startSpec不为零，则在AQmx_Scan将控制权返回给Igor之前开始扫描操作。如果未使用/ STRT标志，则它类似于/ STRT = 1。</p>
+<p>/ STRT : 在没有startSpec的情况下，/ STRT标志的行为类似于/ STRT = 1。</p>
+<p>/TRIG={source [, type, edgeslopewhen, level1, level2]} : 设置启动触发器。扫描在开始任何扫描之前等待指定的信号。请参阅/ RTRG标志以获取有关source, type, edgeslopewhen, level1 and level2.</p></li>
+<li><p><strong>detail</strong></p>
+<p>什么时候应该使用/ RPT或/ RPTC？</p>
+<p>这些标志要求使用示波器类型的模式，在该模式下，波形会重复填充数据。使用图形来监视某些过程或重复波形非常有用。</p>
+<p>使用/ RPT时，每一次扫描都在最后一次扫描结束后立即开始。它通过停止采集任务，执行重复挂接（/ RPTH，如果有）然后重新启动任务来完成此任务。因为对于每个新的扫描都会重新启动任务，所以如果配置了触发器，则每次扫描都会等待触发信号。如果您有合适的触发信号，这将使扫描与您正在监视的过程保持同步。如果尚未配置触发器，则下一次扫描相对于上一次扫描的结束以未知的延迟开始。此延迟将取决于计算机的速度，执行重复挂接所花费的时间，计算机上可能有多少其他活动以及其他许多因素。</p>
+<p>使用/ RPTC时，每次扫描只是连续采集中的下N个点。采集任务是连续的，该任务不会停止并重新启动。因此，在扫描之间不存在与/ RPT相同的时序问题。但是，如果已配置触发器，则该触发器仅用于启动操作。第一次扫描之后，仅以指定的扫描速率继续扫描</p>
+<p>当您要监视连续过程时，请使用/ RPTC，在该过程中波形以可预测的方式连续不断地重复，并且没有合适的触发信号可用于将扫描与要监视的信号的开始同步。</p></li>
+</ul>
+<div class="note info no-icon"><h2 id="fdaqmx_scanstart">fDAQmx_ScanStart</h2></div>
+<div class="note info no-icon"><h2 id="fdaqmx_scanwait">fDAQmx_ScanWait</h2></div>
+<div class="note info no-icon"><h2 id="fdaqmx_scangetavailable">fDAQmx_ScanGetAvailable</h2></div>
+<div class="note info no-icon"><h2 id="fdaqmx_scanstop">fDAQmx_ScanStop</h2>
+<p>使用此功能可在完成背景扫描操作之前将其停止。这将释放扫描通道以进行其他操作。调用此函数时不会传输任何数据</p></div>
+<p><strong>fDAQmx_ScanStop(Device)</strong></p>
+<ul>
+<li><strong>parameter</strong> device : 字符串,DAQ设备名</li>
+</ul>
+<div class="note info no-icon"><h2 id="fdaqmx_numanaloginputs">fDAQmx_NumAnalogInputs</h2></div>
+<h1 id="analog-output">Analog Output</h1>
+<div class="note info no-icon"><h2 id="fdaqmx_writechan">fDAQmx_WriteChan</h2>
+<p>写入电压一次,到指定的模拟输出通道。指定的电压应立即出现在指定的模拟输出上。</p></div>
+<p><strong>fDAQmx_WriteChan(Device, Channel, Volts, Min_V, Max_V )</strong></p>
+<ul>
+<li><p><strong>parame</strong></p>
+<p>device : 字符串,设备名<br>
+channel : 数值,要读取的模拟输出通道号( <font style="color:red">不清楚为什么一定要读取</font>)。范围是0到n-1，其中n是设备上模拟输入通道的数量。<br>
+Volts : 要输出的电压<br>
+Min_V : 数值,最小输出范围<br>
+Max_V : 数值,最大输出值<br>
+</p></li>
+<li><p><strong>return</strong> : 0为成功</p></li>
+<li><p><strong>detail</strong> NI-DAQmx驱动程序将不接受Min_V = Max_V，也不会接受设备可实现范围之外的Min_V或Max_V。 fDAQmx_ErrorString（）返回的错误消息将告诉您可接受的限制。</p>
+<p>任务的执行过程: 通过创建任务，向任务添加指定的通道，向任务写入值，最后停止并清除任务</p>
+<p><font style="color:red">是否表明它很慢</font></p></li>
+</ul>
+<div class="note info no-icon"><h2 id="fdaqmx_ao_updateoutputs">fDAQmx_AO_UpdateOutputs</h2></div>
+<div class="note info no-icon"><h2 id="daqmx_ao_setoutputs">DAQmx_AO_SetOutputs</h2>
+<p>配置模拟信号的输出通道,并指定输出的电压或电流(如果您的DAQ设备支持的话).<font style="color:red">一次调用设置所有输出</font>.</p></div>
+<p><strong>DAQmx_AO_SetOutputs /DEV=DeviceNameStr [/CRNT=[currentMode]] [/KEEP=[keepTask]] parameterString[;parameterString2;parameterString3]</strong></p>
+<ul>
+<li><p><strong>flag</strong></p>
+<p>/DEV=DeviceNameStr : DAQ 设备的名字,例如"dev1"<br>
+/CRNT[=currentMode] : 如果您的设备支持电流输出,可以使用该flag, 之后指定的min_V和max_V 单位都是安培(A,Amps)<br>
+/KEEP=[=keepTask] : 与任务是否需要destroy相关. 当该flag存在,且keepTask不为0,或者未指定(absent),或者不存在,则操作完成返回igor后,创建的任务会持续存在,不被destroy.</p></li>
+<li><p><strong>parameter</strong></p>
+<p>parameterString : 指定channel,范围从0~您设备的最大通道数.加上额外的最大/最小值信息,是电min_V压还是电流取决于/CRNT的设置.形式为:<br>
+outputSetting, chnnel[,min_V,max_V]</p></li>
+<li><p><strong>example</strong></p>
+<p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">DAQmx_AO_Setoutputs /Dev=<span class="string">"dev1"</span> /CRNT <span class="string">"5.5,0;3.2,1;"</span></span><br><span class="line">DAQmx_AO_Setoutputs /Dev=<span class="string">"dev1"</span> /CRNT <span class="string">"0.005,0,0,0.04;0.035,3,0,0.04;"</span></span><br><span class="line"><span class="comment">// dev1设备输出,电流模式,5mA输出到channel 1, 0.035mA输出到 channel 3</span></span><br></pre></td></tr></table></figure></p></li>
+<li><p><strong>detail</strong></p>
+<p>任务创建和销毁是很耗费时间点的.如果您使/KEEP=1,持久不关闭,与每次输出创建又销毁相比会快500倍.如果您在初始调用DAQmx_AO_SetOutputs 后,使用 fDAQmx_AO_UpdateOutputs(#fDAQmx_AO_UpdateOutputs) 设定模拟信号输出则会更快.<label style="color:red">(但具体延迟是多少还有待查证)</label></p>
+<p>/KEEP=1的坏处是它会占用模拟信号的输出 <label style="color:red">(不确定是否占用其它通道的输出或输入)</label>, 以至于在占用期间不能以其它方式使用.在您使用该函数期间,您不能使用其它任何输出. <label style="color:red">(从字面理解上来讲似乎影响不大</label></p>
+<p>当您要销毁它,有两种方式:</p>
+<ol type="1">
+<li>再次调用该函数,但令/KEEP=0,或不使用/KEEP flag. 这个函数可以让您对DAQ输出最后一次信息后关闭(使得您可以设定一些状态信息)</li>
+<li>调用 fDAQmx_WaveformStop.</li>
+</ol></li>
+</ul>
+<div class="note info no-icon"><h2 id="daqmx_waveformgen">DAQmx_WaveformGen</h2>
+<p>设置并可选地启动任意波形生成操作。波形的形状由您提供的波形数据控制。采样率和采样数由波形缩放比例和波形中数据点的数量设置。您必须为每个通道提供一个波形，但是如果您愿意，可以将相同的波形用于两个通道（但是为什么？）。所有波必须具有相同的长度。波浪中的数据以伏特为单位。</p></div>
+<p><strong>DAQmx_WaveformGen /DEV=DeviceNameStr /CRNT[=currentMode] /CLK={clockSpec} /NPRD=numPeriods /PAUS={pauseTrigSpec} /STRT[=startSpec] /TRIG={trigspec} ParameterString</strong></p>
+<div class="note info no-icon"><h2 id="fdaqmx_waveformstart">fDAQmx_WaveformStart</h2></div>
+<div class="note info no-icon"><h2 id="fdaqmx_waveformstop">fDAQmx_WaveformStop</h2>
+<p>使用该函数停止waveform产生(generate,是output). 您必须使用此功能来停止设置为无限期继续的波形生成。</p></div>
+<p><strong>fDAQmx_WaveformStop(Device)</strong></p>
+<ul>
+<li><p><strong>parameter</strong></p>
+<p>device : 设备名,字符串</p></li>
+<li><p><strong>return</strong></p>
+<p>0 为 succeed, non zero 为 error</p></li>
+</ul>
+<div class="note info no-icon"><h2 id="fdaqmx_numanalogoutputs">fDAQmx_NumAnalogOutputs</h2></div>
+<h1 id="countertimer">Counter/Timer</h1>
+<div class="note info no-icon"><h2 id="daqmx_ctr_countedges">DAQmx_CTR_CountEdges</h2>
+<p>使用板载计数器/计时器(onboard counter/timer)设置并可选地开始边沿计数操作。 使用fDAQmx_CTR_ReadCounter（）或fDAQmx_CTR_ReadWithOptions（）检索当前计数。</p></div>
+<p><strong>DAQmx_CTR_CountEdges /DEV=DeviceNameStr [/EDGE=edge] [/INIT=initialCount] [/DIR=direction] [/CLK=clkSource [/FIFO=fifoName] [/WAVE=waveName /RPT]] /ERRH=ErrorHookStr /EOSH=EndOfScanHookStr /RPTH=RepeatHookStr [/STRT[=startSpec]] [/SRC=sourceTerminal] [/TRIG={trigspec}] [/PAUS={pauseTriggerSpec}] [/OUT=outputTerminal] counter</strong></p>
+<ul>
+<li><p><strong>flag</strong></p>
+<p>/DEV=DeviceNameStr : DAQ 设备名<br>
+/EDGE=edge : 决定计数那种类型的边,0:下降,1:上升<br>
+/INIT=initialCount : 预设计数器内容初始值,默认为0<br>
+/DIR=direction : 设定计数方向,direction是+1,还是-1;如果为0,则方向由外部信号控制,如下表. <text style="color:red">我不知道这里的pin引脚要怎么弄</text>. 这些是通道或者位bit的符号,<a href="NIDAQ%20设备的基本介绍#NI数据采集卡的物理通道">详见</a></p>
+<table>
+<thead>
+<tr class="header">
+<th>DAQ device</th>
+<th>counter 0</th>
+<th>counter 1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>M-series</td>
+<td>PFI 10</td>
+<td>PFI 11</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>pin 45</td>
+<td>pin 46</td>
+</tr>
+<tr class="odd">
+<td>E- and S-series</td>
+<td>port0/line6</td>
+<td>port0/line7</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>pin 16</td>
+<td>pin 48</td>
+</tr>
+</tbody>
+</table>
+<p>/ERRH = ErrorHookStr : 后台计数到wave或FIFO(first in first out 先进先出)期间发生错误时要执行的命令,字符串形式<br>
+/EOSH= EndOfScanHookStr : 在后台计数完成后要执行的命令,字符串形式.因为FIFO操作永远不会停止,所以仅适用于/WAVE flag.<br>
+/FIFO=fifoName : 用于接收多个读数的Igor FIFO的名称。如果使用/ FIFO，则还必须使用/ CLK指定时钟脉冲源. 该操作不使用板载时基：您必须使用/ CLK标志提供时钟脉冲源。因为使用了外部时钟源，所以由FIFO的deltat设置设置的周期不会设置采样率。但是，采样率仍会传递给NI-DAQmx驱动程序，该驱动程序可使用该信息来优化计数器设置。您应该将deltat设置为期望的最大速率。使用FIFO意味着可以无限期地获取计数器读数<br>
+/RPTH = RepeatHookStr :</p>
+<p>......</p></li>
+</ul>
+<div class="note info no-icon"><h2 id="daqmx_ctr_outputpulse">DAQmx_CTR_OutputPulse</h2></div>
+<div class="note info no-icon"><h2 id="daqmx_ctr_period">DAQmx_CTR_Period</h2></div>
+<div class="note info no-icon"><h2 id="daqmx_ctr_pulsewidth">DAQmx_CTR_PulseWidth</h2></div>
+<div class="note info no-icon"><h2 id="fdaqmx_ctr_start">fDAQmx_CTR_Start</h2></div>
+<div class="note info no-icon"><h2 id="fdaqmx_ctr_readcounter">fDAQmx_CTR_ReadCounter</h2></div>
+<div class="note info no-icon"><h2 id="fdaqmx_ctr_readwithoptions">fDAQmx_CTR_ReadWithOptions</h2></div>
+<div class="note info no-icon"><h2 id="fdaqmx_ctr_setpulsefrequency">fDAQmx_CTR_SetPulseFrequency</h2></div>
+<div class="note info no-icon"><h2 id="fdaqmx_ctr_finished">fDAQmx_CTR_Finished</h2></div>
+<div class="note info no-icon"><h2 id="fdaqmx_numcounters">fDAQmx_NumCounters</h2></div>
+<h1 id="digital-io">Digital I/O</h1>
+<div class="note info no-icon"><h2 id="daqmx_dio_config">DAQmx_DIO_Config</h2></div>
+<div class="note info no-icon"><h2 id="fdaqmx_dio_portwidth">fDAQmx_DIO_PortWidth</h2></div>
+<div class="note info no-icon"><h2 id="fdaqmx_dio_read">fDAQmx_DIO_Read</h2></div>
+<div class="note info no-icon"><h2 id="fdaqmx_dio_write">fDAQmx_DIO_Write</h2></div>
+<div class="note info no-icon"><h2 id="daqmx_dio_writenewdata">DAQmx_DIO_WriteNewData</h2></div>
+<div class="note info no-icon"><h2 id="fdaqmx_dio_finished">fDAQmx_DIO_Finished</h2></div>
+<div class="note info no-icon"><h2 id="fdaqmx_numdioports">fDAQmx_NumDIOPorts</h2></div>
+<h1 id="error-handling">Error Handling</h1>
+<div class="note info no-icon"><h2 id="fdaqmx_errorstring">fDAQmx_ErrorString</h2>
+<p>在执行NIDAQ Tools MX操作或函数期间或在操作的后台处理期间发生错误时，错误信息将存储在堆栈中。此函数以字符串形式返回最近错误的信息。然后，它将信息从堆栈中删除。 后续调用将返回来自先前任何错误的信息，依此类推。堆栈仅限于保留有关最后五个错误的信息。返回的信息将包括错误号和描述性消息。如果发生NI-DAQmx驱动程序错误，该消息可能会很长。这些很长的消息包含非常有用的信息。</p></div>
+<p><strong>fDAQmx_ErrorString()</strong></p>
+<ul>
+<li><strong>return</strong> : 字符串,错误信息。如果没有错误信息可用，则返回一个空字符串。</li>
+</ul>
+<div class="note info no-icon"><h2 id="system-information">System Information</h2></div>
+<div class="note info no-icon"><h2 id="fdaqmx_devicenames">fDAQmx_DeviceNames</h2></div>
+<div class="note info no-icon"><h2 id="fdaqmx_numanaloginputs">fDAQmx_NumAnalogInputs</h2></div>
+<div class="note info no-icon"><h2 id="fdaqmx_numanalogoutputs">fDAQmx_NumAnalogOutputs</h2></div>
+<div class="note info no-icon"><h2 id="fdaqmx_numcounters">fDAQmx_NumCounters</h2></div>
+<div class="note info no-icon"><h2 id="fdaqmx_dio_portwidth">fDAQmx_DIO_PortWidth</h2></div>
+<div class="note info no-icon"><h1 id="system-control">System Control</h1>
+<h2 id="fdaqmx_resetdevice">fDAQmx_ResetDevice</h2>
+<p>对DAQ设备进行硬件复位。结果，该设备上的所有操作将停止(cease)。 参数Device给出DAQ设备名称的字符串。</p></div>
+<p><strong>fDAQmx_ResetDevice（Device)</strong> * <strong>parameter</strong></p>
+<pre><code>device  :   字符串,设备名</code></pre>
+<ul>
+<li><strong>return</strong> : 0 成功</li>
+</ul>
+<h1 id="calibration">Calibration</h1>
+<div class="note info no-icon"><h2 id="fdaqmx_selfcalibration">fDAQmx_SelfCalibration</h2></div>
+<div class="note info no-icon"><h2 id="fdaqmx_selfcaldate">fDAQmx_SelfCalDate</h2></div>
+<div class="note info no-icon"><h2 id="fdaqmx_externalcaldate">fDAQmx_ExternalCalDate</h2></div>
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://yoursite.com/2020/09/03/Igor%20NIDAQ%20tools%20MX%20%E5%87%BD%E6%95%B0%E5%92%8C%E6%93%8D%E4%BD%9C%20(%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91)/>http://yoursite.com/2020/09/03/Igor%20NIDAQ%20tools%20MX%20%E5%87%BD%E6%95%B0%E5%92%8C%E6%93%8D%E4%BD%9C%20(%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91)/</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-03T23:14:57+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Sep 3, 2020</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/09/03/Igor%20NIDAQ%20tools%20MX%20%E5%87%BD%E6%95%B0%E5%92%8C%E6%93%8D%E4%BD%9C%20(%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91)/&title=Igor NIDAQ tools MX 函数和操作 (中文翻译) - Eichide's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2020/09/03/Igor%20NIDAQ%20tools%20MX%20%E5%87%BD%E6%95%B0%E5%92%8C%E6%93%8D%E4%BD%9C%20(%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91)/&title=Igor NIDAQ tools MX 函数和操作 (中文翻译) - Eichide's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/09/03/Igor%20NIDAQ%20tools%20MX%20%E5%87%BD%E6%95%B0%E5%92%8C%E6%93%8D%E4%BD%9C%20(%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91)/&title=Igor NIDAQ tools MX 函数和操作 (中文翻译) - Eichide's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/2020/09/04/Orchestrating%20Opiate-Associated%20Memories%20in%20Thalamic%20Circuits/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Orchestrating Opiate-Associated Memories in Thalamic Circuits</p>
+          <p class='content'>Orchestrating Opiate-Associated Memories in Thalamic Circuits
+
+author : Piper C. Keyes, Eliza L...</p>
+        </a>
+      
+      
+        <a class='next' href='/2020/09/03/short%20term%20synaptic%20plasticity/'>
+          <p class='title'>Short-Term Synaptic Plasticity<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>SHORT -TERM SYNAPTIC PLASTICITY
+
+Robert S. Zucker
+Department of Molecular and Cell Biology, Un...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_readchan"><span class="toc-text">fDAQmx_ReadChan</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#daqmx_ai_setupreader"><span class="toc-text">DAQmx_AI_SetupReader</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_ai_getreader"><span class="toc-text">fDAQmx_AI_GetReader</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#daqmx_scan"><span class="toc-text">DAQmx_Scan</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_scanstart"><span class="toc-text">fDAQmx_ScanStart</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_scanwait"><span class="toc-text">fDAQmx_ScanWait</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_scangetavailable"><span class="toc-text">fDAQmx_ScanGetAvailable</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_scanstop"><span class="toc-text">fDAQmx_ScanStop</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_numanaloginputs"><span class="toc-text">fDAQmx_NumAnalogInputs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_writechan"><span class="toc-text">fDAQmx_WriteChan</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_ao_updateoutputs"><span class="toc-text">fDAQmx_AO_UpdateOutputs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#daqmx_ao_setoutputs"><span class="toc-text">DAQmx_AO_SetOutputs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#daqmx_waveformgen"><span class="toc-text">DAQmx_WaveformGen</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_waveformstart"><span class="toc-text">fDAQmx_WaveformStart</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_waveformstop"><span class="toc-text">fDAQmx_WaveformStop</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_numanalogoutputs"><span class="toc-text">fDAQmx_NumAnalogOutputs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#daqmx_ctr_countedges"><span class="toc-text">DAQmx_CTR_CountEdges</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#daqmx_ctr_outputpulse"><span class="toc-text">DAQmx_CTR_OutputPulse</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#daqmx_ctr_period"><span class="toc-text">DAQmx_CTR_Period</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#daqmx_ctr_pulsewidth"><span class="toc-text">DAQmx_CTR_PulseWidth</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_ctr_start"><span class="toc-text">fDAQmx_CTR_Start</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_ctr_readcounter"><span class="toc-text">fDAQmx_CTR_ReadCounter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_ctr_readwithoptions"><span class="toc-text">fDAQmx_CTR_ReadWithOptions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_ctr_setpulsefrequency"><span class="toc-text">fDAQmx_CTR_SetPulseFrequency</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_ctr_finished"><span class="toc-text">fDAQmx_CTR_Finished</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_numcounters"><span class="toc-text">fDAQmx_NumCounters</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#daqmx_dio_config"><span class="toc-text">DAQmx_DIO_Config</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_dio_portwidth"><span class="toc-text">fDAQmx_DIO_PortWidth</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_dio_read"><span class="toc-text">fDAQmx_DIO_Read</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_dio_write"><span class="toc-text">fDAQmx_DIO_Write</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#daqmx_dio_writenewdata"><span class="toc-text">DAQmx_DIO_WriteNewData</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_dio_finished"><span class="toc-text">fDAQmx_DIO_Finished</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_numdioports"><span class="toc-text">fDAQmx_NumDIOPorts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_errorstring"><span class="toc-text">fDAQmx_ErrorString</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#system-information"><span class="toc-text">System Information</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_devicenames"><span class="toc-text">fDAQmx_DeviceNames</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_numanaloginputs"><span class="toc-text">fDAQmx_NumAnalogInputs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_numanalogoutputs"><span class="toc-text">fDAQmx_NumAnalogOutputs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_numcounters"><span class="toc-text">fDAQmx_NumCounters</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_dio_portwidth"><span class="toc-text">fDAQmx_DIO_PortWidth</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_resetdevice"><span class="toc-text">fDAQmx_ResetDevice</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_selfcalibration"><span class="toc-text">fDAQmx_SelfCalibration</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_selfcaldate"><span class="toc-text">fDAQmx_SelfCalDate</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fdaqmx_externalcaldate"><span class="toc-text">fDAQmx_ExternalCalDate</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+      </div>
+      
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="/atom.xml"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+          
+            
+              <a href="https://github.com/volantis-x/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+              <a href="/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/010-facebook.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/010-facebook.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+              <a href="/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/018-twitter.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/018-twitter.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+              <a href="/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/045-telegram.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/045-telegram.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+              <a href="/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/006-youtube.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/006-youtube.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </div>
+      
+    
+      
+        <div><p>Blog content follows the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+</div>
+      
+    
+      
+        
+          <div><p><span id="lc-sv">本站总访问量为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+</div>
+        
+      
+    
+      
+        Use
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.0.0-rc.2" target="_blank" class="codename">Volantis</a>
+        as theme
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="/">Copyright © 2017-2020 XXX</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+      <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+    </div>
+  </div>
+  <div>
+    <!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      // 背景层
+      var bgDiv = document.createElement("div");
+      $(bgDiv).addClass("bg");
+      if ($(this).attr('bg')) {
+        $(bgDiv).css('background', $(this).attr('bg'));
+      }
+      $(this).wrap(bgDiv); // 背景层
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if($(".md").find("img").not('.inline').not('a img').length+$(".article-entry").find("img").length==0)return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    setTimeout(function() {
+      loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+    }, 1);
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+</script>
+
+
+<!-- internal -->
+
+
+
+
+<!-- optional -->
+
+  <script>
+  
+  var SEARCH_SERVICE = "hexo" || "hexo";
+  var ROOT = "/" || "/";
+  if (!ROOT.endsWith('/')) ROOT += '/';
+</script>
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+  
+    <script>
+      window.FPConfig = {
+        delay: 0,
+        ignoreKeywords: [],
+        maxRPS: 5,
+        hoverDelay: 25
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+<script src="/js/valine.js"></script>
+
+
+<script>
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link'.split(',').filter(function (item) {
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick', 'mail', 'link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function (item) {
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
+
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+
+    let pagePlaceholder = $.trim($('#pjax-comment-placeholder').text()) || "快来评论吧~";
+
+    let path = $.trim($('#pjax-comment-path').text());
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+
+    var valine = new Valine();
+    valine.init({
+      el: '#valine_container',
+      meta: meta,
+      placeholder: pagePlaceholder,
+      path: path,
+      appId: "",
+      appKey: "",
+      pageSize: '10',
+      avatar: 'robohash',
+      lang: 'zh-cn',
+      visitor: 'true',
+      highlight: 'true',
+      mathJax: 'false',
+      enableQQ: 'true',
+      requiredFields: requiredFields,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps
+    })
+  }
+
+  $(function () {
+    pjax_valine();
+  });
+</script>
+
+
+
+
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+
+  
+    
+<script src="/js/search.js"></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'u9j57bwJod4EDmXWdxrwuqQT-MdYXbMMI',
+    app_key: 'jfHtEKVE24j0IVCGHbvuFClp',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://yoursite.com' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://yoursite.com' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://yoursite.com' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              if (pv.getAttribute('data-path') == window.location.pathname) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == window.location.pathname) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+<!-- more -->
+
+
+    
+      
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+<!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+    <div id="loading-bar-wrapper"><script>NProgress.configure({parent:"#loading-bar-wrapper",trickleSpeed: 100})</script></div>
+    <script>
+      window.ShowLoading = function() {
+        NProgress.start();
+      };
+      window.HideLoading = function() {
+        NProgress.done();
+      }
+    </script>
+  
+</div>
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      $.fancybox.close();    // 关闭弹窗
+      $('.l_header .switcher .s-search').removeClass('active'); // 关闭移动端激活的搜索框
+      $('.l_header').removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      $('.wrapper').removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      $('.s-top').unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      window.ShowLoading();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+      // 
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+          if (typeof $.fancybox == "undefined") {
+            SCload_fancybox();
+          } else {
+            pjax_fancybox();
+          }
+        
+        
+        
+        
+        
+          pjax_valine();
+        
+        
+        
+        
+        
+      } catch (e) {
+        console.log(e);
+      }
+      window.HideLoading();
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.HideLoading();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+
+    
+  </div>
+</body>
+</html>

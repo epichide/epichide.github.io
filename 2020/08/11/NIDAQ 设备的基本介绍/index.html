@@ -1,57 +1,40 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next gemini use-motion" lang="en">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
+<html>
+<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.0.0-rc.2'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
   
     
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+  <title>NIDAQ 设备的基本介绍 - Eichide&#39;s Blog</title>
+  
+    <meta name="keywords" content="signal">
+  
+
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+
+  
   
 
   
@@ -62,386 +45,484 @@
 
   
 
+  <!-- import link -->
   
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="signal," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
-
-
-
-
-
-
-<meta name="description" content="相关设备 BNC connector BNC 连接器 BNC连接器（英语：Bayonet Neill-Concelman，直译为“尼尔-康塞曼卡口”）是一种很常见的RF端子同轴电缆终结器。BNC电缆连接器由一根中心针、一个外套和卡座组成。它包括BNC连接器基座、外套和探针三部分。BNC连接器得名于其锁定方式和其发明者贝尔实验室的保罗·尼尔（发明了N端子）和安费诺公司的工程师卡尔·康塞曼（发明了">
-<meta property="og:type" content="article">
-<meta property="og:title" content="NIDAQ 设备的基本介绍">
-<meta property="og:url" content="http://yoursite.com/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/index.html">
-<meta property="og:site_name" content="Eichide&#39;s Blog">
-<meta property="og:description" content="相关设备 BNC connector BNC 连接器 BNC连接器（英语：Bayonet Neill-Concelman，直译为“尼尔-康塞曼卡口”）是一种很常见的RF端子同轴电缆终结器。BNC电缆连接器由一根中心针、一个外套和卡座组成。它包括BNC连接器基座、外套和探针三部分。BNC连接器得名于其锁定方式和其发明者贝尔实验室的保罗·尼尔（发明了N端子）和安费诺公司的工程师卡尔·康塞曼（发明了">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/BNC%20connector.jpg">
-<meta property="og:image" content="http://yoursite.com/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/%E5%BC%B9%E7%B0%A7%E6%8E%A5%E7%BA%BF%E7%AB%AF.jpg">
-<meta property="og:image" content="http://yoursite.com/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/BNC_2090A.jpg">
-<meta property="og:image" content="http://yoursite.com/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/BNC_2090A_Front_Panel_and_Back_of_Enclosure.jpg">
-<meta property="og:image" content="http://yoursite.com/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/PCI-6229.png">
-<meta property="og:image" content="http://yoursite.com/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/Connecting%20the%20bnc2090a%20to%20your%20device.jpg">
-<meta property="og:image" content="http://yoursite.com/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/device.jpg">
-<meta property="og:image" content="http://yoursite.com/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/DIDAQ.jpg">
-<meta property="og:image" content="http://yoursite.com/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/%E6%8E%A5%E5%9C%B0%E7%B1%BB%E5%9E%8B.jpg">
-<meta property="og:image" content="http://yoursite.com/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/%E6%8E%A5%E5%9C%B0%E7%AC%A6%E5%8F%B7.jpg">
-<meta property="og:image" content="http://yoursite.com/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/%E7%94%B5%E8%B7%AF1.jpg">
-<meta property="og:image" content="http://yoursite.com/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/%E7%94%B5%E8%B7%AF2.jpg">
-<meta property="og:image" content="http://yoursite.com/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/%E7%94%B5%E8%B7%AF3.jpg">
-<meta property="og:image" content="http://yoursite.com/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/%E7%94%B5%E8%B7%AF4.png">
-<meta property="article:published_time" content="2020-08-11T14:32:54.196Z">
-<meta property="article:modified_time" content="2020-08-13T16:31:01.431Z">
-<meta property="article:author" content="epichide">
-<meta property="article:tag" content="signal">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/BNC%20connector.jpg">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Gemini',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '5W59328PV6',
-      apiKey: '35f0ce2b0fab5580e74b14de630d5706',
-      indexName: 'Epichide',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/2020/08/11/NIDAQ 设备的基本介绍/"/>
-
-
-
-
-
-  <title>NIDAQ 设备的基本介绍 | Eichide's Blog</title>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<meta name="generator" content="Hexo 4.2.1"></head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
 
   
   
     
+<link rel="stylesheet" href="/css/style.css">
+
   
+  
+  
+  <!-- 脚本懒加载函数 -->
+  <script>
+  function loadScript(src, cb) {
+    var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+    var script = document.createElement('script');
+    script.setAttribute('type','text/javascript');
+    if (cb) script.onload = cb;
+    script.setAttribute('src', src);
+    HEAD.appendChild(script);
+  }
+  //https://github.com/filamentgroup/loadCSS
+  !function(c){"use strict";var e=function(e,t,n,r){var o,i=c.document,a=i.createElement("link");if(t)o=t;else{var d=(i.body||i.getElementsByTagName("head")[0]).childNodes;o=d[d.length-1]}var f=i.styleSheets;if(r)for(var l in r)r.hasOwnProperty(l)&&a.setAttribute(l,r[l]);a.rel="stylesheet",a.href=e,a.media="only x",function e(t){if(i.body)return t();setTimeout(function(){e(t)})}(function(){o.parentNode.insertBefore(a,t?o:o.nextSibling)});var s=function(e){for(var t=a.href,n=f.length;n--;)if(f[n].href===t)return e();setTimeout(function(){s(e)})};function u(){a.addEventListener&&a.removeEventListener("load",u),a.media=n||"all"}return a.addEventListener&&a.addEventListener("load",u),(a.onloadcssdefined=s)(u),a};"undefined"!=typeof exports?exports.loadCSS=e:c.loadCSS=e}("undefined"!=typeof global?global:this);
+  </script>
+  <script id="loadcss"></script>
+</head>
 
-  <div class="container sidebar-position-left page-post-detail ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Eichide's Blog</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+<body>
+  <header class="l_header auto shadow blur" style='opacity: 0' >
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
     </div>
+		<div class="nav-main">
       
-        <p class="site-subtitle">there is nothing, there are something</p>
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
+          
+          
+          
+        </a>
       
-  </div>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+  <div class="l_body">
+    <div class="l_cover">
+
+  
+  
+      <div class='cover-wrapper post dock' style="display: none;">
+        
+          <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg"></div>
+        
+        <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">Volantis</p>
+    
+    
+  </div>
+  <div class='bottom'>
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/v4/getting-started/"
+              
+              
+              id="v4getting-started">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c3.svg'><p>文档</p>
+            </a>
+          
+            <a href="/faqs/"
+              
+              
+              id="faqs">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f516.svg'><p>帮助</p>
+            </a>
+          
+            <a href="/examples/"
+              
+              
+              id="examples">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f396.svg'><p>示例</p>
+            </a>
+          
+            <a href="/contributors/"
+              
+              
+              id="contributors">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f389.svg'><p>社区</p>
+            </a>
+          
+            <a href="/archives/"
+              
+              
+              id="archives">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg'><p>博客</p>
+            </a>
+          
+            <a href="https://github.com/volantis-x/hexo-theme-volantis/"
+              
+              
+              id="https:githubcomvolantis-xhexo-theme-volantis">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f9ec.svg'><p>源码</p>
+            </a>
+          
+        
+      </div>
+    </div>
   </div>
 </div>
 
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            Home
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            Categories
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            About
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Archives
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            Tags
-          </a>
-        </li>
-      
-
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            Search
-          </a>
-        </li>
-      
-    </ul>
-  
-
-  
-    <div class="site-search">
-      
-  
-  <div class="algolia-popup popup search-popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
+        <div class="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
       </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
+  
 
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
+</div>
 
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
+    <div class='safearea'>
+      <div class='body-wrapper' id="pjax-container">
+        
+          <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+
+
+<div id="pjax-data" style="display: none">
+  <div id="pjax-ispage">true</div>
+  <div id="pjax-pageTitle">NIDAQ 设备的基本介绍</div>
+  <div id="pjax-enable-cover">true</div>
+  <div id="pjax-comment-path"></div>
+  <div id="pjax-comment-placeholder"></div>
+</div>
+
+
+<script>
+  // 处理封面 此时 jquery 还没加载
+  if ("none" == "none") { // 移除封面
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "none";
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
+  } else {
+    if ("none" == "half") { // 半屏
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half');
+      document.getElementsByClassName('scroll-down')[0].style.display = "none";
+    } else if ("none" == "full") { // 全屏
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full');
+      document.getElementsByClassName('scroll-down')[0].style.display = "";
+    }
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "";
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.remove("show");
+  }
+</script>
+
+
+        
+        
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        NIDAQ 设备的基本介绍
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="https://github.com/volantis-x/" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/apple-touch-icon.png">
+    <p>Volantis Team</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/electronic/">electronic</a>
+    </a>
   </div>
 
 
-
-
-    </div>
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="epichide">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/user.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eichide's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
+          
         
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Aug 11, 2020</p>
+  </a>
+</div>
+
+          
         
-          <h0 class="post-title" itemprop="name headline">NIDAQ 设备的基本介绍</h0>
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="NIDAQ 设备的基本介绍" data-path="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
         
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-11T22:32:54+08:00">
-                2020-08-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/electronic/" itemprop="url" rel="index">
-                    <span itemprop="name">electronic</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
+      </div>
     
+  </div>
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
 
-      
-      
-
-      
-        <h1 id="相关设备">相关设备</h1>
+  
+  
+  <h1 id="相关设备">相关设备</h1>
 <h2 id="bnc-connector-bnc-连接器">BNC connector BNC 连接器</h2>
 <p>BNC连接器（英语：Bayonet Neill-Concelman，直译为“尼尔-康塞曼卡口”）是一种很常见的RF端子同轴电缆终结器。BNC电缆连接器由一根中心针、一个外套和卡座组成。它包括BNC连接器基座、外套和探针三部分。BNC连接器得名于其锁定方式和其发明者贝尔实验室的保罗·尼尔（发明了N端子）和安费诺公司的工程师卡尔·康塞曼（发明了C端子）。BNC电缆连接器必须连接到每段电缆的两端</p>
 <p><font style="color:red">用于模拟信号</font></p>
 <figure>
-<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/BNC%20connector.jpg" alt><figcaption>英语：Bayonet Neill-Concelman，直译为“尼尔-康塞曼卡口”</figcaption>
+<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/BNC%20connector.jpg" class="lazyload" data-srcset="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/BNC%20connector.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>英语：Bayonet Neill-Concelman，直译为“尼尔-康塞曼卡口”</figcaption>
 </figure>
 <h2 id="spring-terminal-block-弹簧式接线端子">Spring terminal block 弹簧式接线端子</h2>
 <p>弹簧式接线端子是弹簧性装置的新型接线端子.</p>
 <p><font style="color:red">用于数字信号</font></p>
 <figure>
-<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/弹簧接线端.jpg" alt><figcaption>spring terminal block</figcaption>
+<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/弹簧接线端.jpg" class="lazyload" data-srcset="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/弹簧接线端.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>spring terminal block</figcaption>
 </figure>
 <h2 id="ni-bnc-2090a-屏蔽机架式bnc连接器">NI BNC-2090A 屏蔽机架式BNC连接器</h2>
 <p>NI BNC-2090A是一款屏蔽、1U、19英寸机架式接线盒，配有22个标有信号标签的BNC连接器，以简化NI数据采集(DAQ)设备上I/O信号的连接。NI BNC-2090A与68针NI X系列的各款DAQ设备兼容。</p>
 <figure>
-<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/BNC_2090A.jpg" alt><figcaption>BNC-2090A</figcaption>
+<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/BNC_2090A.jpg" class="lazyload" data-srcset="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/BNC_2090A.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>BNC-2090A</figcaption>
 </figure>
 <ol type="1">
 <li><p>BNC connector(20个)(模拟信号使用)如图①</p>
@@ -462,23 +543,23 @@
 <p>作为遵守RoHS指令并能替代BNC-2090的设备，BNC-2090A前后两端的68针SCSI连接器，提供了与数据采集设备的连接。</p></li>
 </ol>
 <figure>
-<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/BNC_2090A_Front_Panel_and_Back_of_Enclosure.jpg" alt><figcaption>BNC_2090A_Front_Panel_and_Back_of_Enclosure</figcaption>
+<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/BNC_2090A_Front_Panel_and_Back_of_Enclosure.jpg" class="lazyload" data-srcset="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/BNC_2090A_Front_Panel_and_Back_of_Enclosure.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>BNC_2090A_Front_Panel_and_Back_of_Enclosure</figcaption>
 </figure>
 <h2 id="shielded-cable-屏蔽线">Shielded Cable 屏蔽线</h2>
 <p>连接 屏蔽机架式BNC连接器 和 电脑主机中数据采集卡(NIDAQ)的 传输线</p>
 <h2 id="daq-device-daq-设备">DAQ Device DAQ 设备</h2>
 <figure>
-<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/PCI-6229.png" alt><figcaption>PCI-6299 DAQ device</figcaption>
+<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/PCI-6229.png" class="lazyload" data-srcset="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/PCI-6229.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>PCI-6299 DAQ device</figcaption>
 </figure>
 <h2 id="设备连接关系">设备连接关系</h2>
 <figure>
-<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/Connecting%20the%20bnc2090a%20to%20your%20device.jpg" alt><figcaption>connect BNC_2090A to your PC</figcaption>
+<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/Connecting%20the%20bnc2090a%20to%20your%20device.jpg" class="lazyload" data-srcset="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/Connecting%20the%20bnc2090a%20to%20your%20device.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>connect BNC_2090A to your PC</figcaption>
 </figure>
 <h1 id="ni-数据采集卡的物理通道">NI 数据采集卡的物理通道</h1>
 <h2 id="设备板卡dev">设备,板卡,dev</h2>
 <p>通常是数据采集卡,使用NII MAX 软件可以检查NIDAQ各种信息,包括设备,channel,引脚等等</p>
 <figure>
-<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/device.jpg" alt><figcaption>device</figcaption>
+<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/device.jpg" class="lazyload" data-srcset="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/device.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>device</figcaption>
 </figure>
 <h2 id="channel路通道">channel,路,通道</h2>
 <p>一般数据采集卡的物理通道表示方法由两部分组成:板卡号+通道号 这样,根据物理通道的名称,我们就很容易判断该通道属于哪个板卡(因为可能同时存在多个板卡),该通道是AD,DA,COUNTER 或者IO.</p>
@@ -487,7 +568,7 @@
 <p>在设备中观察,就是各种接口,如图,由<code>通道形式+通道号</code>表示,由AI(analog input),AO(analog output),USER(我不知道是干嘛的),APFI,PFI(我也不知道是干嘛的).通常从0开始编号.图中没有数字信号</p>
 <p>旁边的DIFF,SE,RSE,NRSE应该和<a href="#DIFF,RSE,NRSE,PDIFF信号模式">信号模式相关</a>,但具体如何控制我也不懂.</p>
 <figure>
-<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/DIDAQ.jpg" alt><figcaption>channel</figcaption>
+<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/DIDAQ.jpg" class="lazyload" data-srcset="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/DIDAQ.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>channel</figcaption>
 </figure>
 <h2 id="port-端口-和-lineposition-bit-线">port 端口 和 line(position ,bit) 线</h2>
 <h3 id="dido">DI/DO</h3>
@@ -518,7 +599,7 @@
 <p>（6）屏蔽地：也叫机壳地，为防止静电感应和磁场感应而设。</p>
 <h3 id="根据接地方式分">根据接地方式分</h3>
 <figure>
-<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/接地类型.jpg" alt><figcaption>接地类型</figcaption>
+<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/接地类型.jpg" class="lazyload" data-srcset="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/接地类型.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>接地类型</figcaption>
 </figure>
 <h2 id="接地符号--常见的接地符号">接地符号--常见的接地符号 </h2>
 <p>PE,PGND,FG－保护地或机壳；<br>
@@ -530,7 +611,7 @@ LGND－防雷保护地 <br>
 GND在电路里常被定为电压参考基点。 从电气意义上说，GND分为电源地和信号地。PG是 Power Ground（电源地）的缩写。另一个是 Signal Ground（信号地）。实际上它们可能是连在一起的（不一定是混在一起哦！）。两个名称，主要是便于对电路进行分析。 <br>
 进一步说，还有因电路形式不同而必须区分的两种“地”：数字地，模拟地</p>
 <h3 id="几种接地符号">几种接地符号 </h3>
-<p>  <img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/接地符号.jpg" alt="接地符号"></p>
+<p>  <img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/接地符号.jpg" class="lazyload" data-srcset="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/接地符号.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="接地符号"></p>
 <p>第1个我用做电源正或数字电路VCC,不用作地.</p>
 <p>第2个我用作数字地或数字模拟公共地.      </p>
 <p>第3个用作模拟地.      </p>
@@ -586,7 +667,7 @@ GND在电路里常被定为电压参考基点。 从电气意义上说，GND�
 <p>iii 任何一个输入信号要求单独的参考点。</p>
 <p>仪器放大器输入端相对与仪器接地端之间的电压叫共模电压。理想的差分测试系统只读取信号的两极势差，而完全不会测量共模电压。在实际中板卡却限制了差分测量系统抵抗共模电压的能力，数据采集卡的共模电压的范围限制了相对于测量系统地的输入电压的波动范围，而共模电压的范围关系到一个数据采集卡的性能，可以用不同的方式来消除共模电压的影响。如果系统共模电压超过允许范围，需要限制信号地与数据采集卡的地之间的浮地电压，以避免测量数据错误</p>
 <figure>
-<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/电路1.jpg" alt><figcaption>电路</figcaption>
+<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/电路1.jpg" class="lazyload" data-srcset="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/电路1.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>电路</figcaption>
 </figure>
 <h3 id="参考单端测试系统rse">2)参考单端测试系统（RSE）</h3>
 <p>尽管差分测试系统是比较理想的选择，但是单端测试系统可以使用两倍的测试通道.（如图 2-3 所示）。单端测试系统所有信号都参考一个公共参考点即仪器放大极的负极。当输入信号符合以下条件时可以使用单端测试系统。</p>
@@ -594,10 +675,10 @@ GND在电路里常被定为电压参考基点。 从电气意义上说，GND�
 <p>ii 距离比较短（通常小于 5m）或有合适屏蔽的电缆，环境无噪声。</p>
 <p>iii 所有信号共享一个公共参考点。</p>
 <figure>
-<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/电路2.jpg" alt><figcaption>电路</figcaption>
+<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/电路2.jpg" class="lazyload" data-srcset="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/电路2.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>电路</figcaption>
 </figure>
 <h3 id="非参考单端测试系统nrse">3）非参考单端测试系统（NRSE）</h3>
-<p>非参考单端测试系统用于测试接地信号。与参考单端测试系统不同的是因为所有输 入信号都已经接地了，所有信号参考点不需要再接地。图 2-4 所示是一个非参考单端测 试系统。 <img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/电路3.jpg" alt="电路"></p>
+<p>非参考单端测试系统用于测试接地信号。与参考单端测试系统不同的是因为所有输 入信号都已经接地了，所有信号参考点不需要再接地。图 2-4 所示是一个非参考单端测 试系统。 <img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/电路3.jpg" class="lazyload" data-srcset="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/电路3.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="电路"></p>
 <h3 id="伪差分输入">4)伪差分输入：</h3>
 <p>ADC伪差分输入.为了既有差分输入的优点又有单端输入简单的优点，还有一种伪差分输入，通过把信号地连到ADCIN-端实现一种类似差分的连接。</p>
 <p>伪差分（Pseudo-differential）信号连接方式减小了噪声，并允许在仪器放大器的共模电压范围内与浮动信号连接.在伪差分模式下，信号与输入的正端连接，信号的参考地与输入的负端连接。伪差分输入减小了信号源与设备的参考地电位(地环流)不同所造成的影响，这提高了测量的精度。</p>
@@ -611,7 +692,7 @@ GND在电路里常被定为电压参考基点。 从电气意义上说，GND�
 </ul>
 <p>既然是“伪装”的，原则上没有优点只有缺点。其缺点就是两线不对称，共模抑制效果有限。硬要凑一个优点的话，就是可以勉强将单端输出信号伪装成差分，效果比完全单端连接效果稍好一点（解决两端地的小范围浮动）</p>
 <figure>
-<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/电路4.png" alt><figcaption>电路4</figcaption>
+<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/电路4.png" class="lazyload" data-srcset="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/电路4.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>电路4</figcaption>
 </figure>
 <h2 id="选择合适的测试系统">选择合适的测试系统</h2>
 <p>两种信号源和三种测量系统一共可以组成六种连接方式，如表 2-1 所示（表中带* 为推荐使用的方式，一般来说选择浮动信号和差动连接方式可能较好，但具体选择哪种 方式还应该视具体情况所定）。</p>
@@ -644,256 +725,527 @@ GND在电路里常被定为电压参考基点。 从电气意义上说，GND�
 </table>
 <h2 id="reference">reference</h2>
 
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://yoursite.com/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/>http://yoursite.com/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
       
     </div>
-    
-    
+  
+  
     
 
 
-    <div>
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
       
-        <div>
-    
-        <div style="text-align:center;color: #ccc;font-size:14px;">-------------&emsp;本文结束&emsp;<i class="fa fa-tree"></i>&emsp;感谢阅读&emsp;-------------</div>
-    
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-14T00:31:01+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Aug 14, 2020</p>
+  </a>
 </div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/signal/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>signal</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/&title=NIDAQ 设备的基本介绍 - Eichide's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/&title=NIDAQ 设备的基本介绍 - Eichide's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/&title=NIDAQ 设备的基本介绍 - Eichide's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
       
     </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/signal/" rel="tag"># signal</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2020/08/09/various%20psp%20and%20psc/" rel="next" title="varous abbreviation type of electrophysiology wave">
-                <i class="fa fa-chevron-left"></i> varous abbreviation type of electrophysiology wave
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/08/12/Igor%20NIDAQ%20tools%20MX%20%E5%87%BD%E6%95%B0%E5%92%8C%E6%93%8D%E4%BD%9C%20(%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91)/" rel="prev" title="Igor NIDAQ tools MX 函数和操作 (中文翻译)">
-                Igor NIDAQ tools MX 函数和操作 (中文翻译) <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
   </div>
+
+
   
   
+
   
+    <div class="prev-next">
+      
+        <a class='prev' href='/2020/08/24/reverberatory/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>reverberatory</p>
+          <p class='content'>reverberation
+cell assemblies
+a interconnected neuronal circuits which recurrent sequential act...</p>
+        </a>
+      
+      
+        <a class='next' href='/2020/08/09/various%20psp%20and%20psc/'>
+          <p class='title'>varous abbreviation type of electrophysiology wave<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>PSC: postsynaptic currents
+Because current is being recorded here, the experimenter must be in v...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
   </article>
 
 
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
 
 
-          </div>
-          
 
-
-          
-  <div class="comments" id="comments">
-    
-  </div>
-
-
-        </div>
-        
-          
+</div>
+<aside class='l_side'>
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
-          </li>
-        </ul>
-      
-
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/user.gif"
-               alt="epichide" />
-          <p class="site-author-name" itemprop="name">epichide</p>
-           
-              <p class="site-description motion-element" itemprop="description">nothing to remember</p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives/">
-                <span class="site-state-item-count">18</span>
-                <span class="site-state-item-name">posts</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">8</span>
-                <span class="site-state-item-name">categories</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">17</span>
-                <span class="site-state-item-name">tags</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#相关设备"><span class="nav-number">1.</span> <span class="nav-text">相关设备</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#bnc-connector-bnc-连接器"><span class="nav-number">1.1.</span> <span class="nav-text">BNC connector BNC 连接器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#spring-terminal-block-弹簧式接线端子"><span class="nav-number">1.2.</span> <span class="nav-text">Spring terminal block 弹簧式接线端子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ni-bnc-2090a-屏蔽机架式bnc连接器"><span class="nav-number">1.3.</span> <span class="nav-text">NI BNC-2090A 屏蔽机架式BNC连接器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shielded-cable-屏蔽线"><span class="nav-number">1.4.</span> <span class="nav-text">Shielded Cable 屏蔽线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#daq-device-daq-设备"><span class="nav-number">1.5.</span> <span class="nav-text">DAQ Device DAQ 设备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设备连接关系"><span class="nav-number">1.6.</span> <span class="nav-text">设备连接关系</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ni-数据采集卡的物理通道"><span class="nav-number">2.</span> <span class="nav-text">NI 数据采集卡的物理通道</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#设备板卡dev"><span class="nav-number">2.1.</span> <span class="nav-text">设备,板卡,dev</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#channel路通道"><span class="nav-number">2.2.</span> <span class="nav-text">channel,路,通道</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#port-端口-和-lineposition-bit-线"><span class="nav-number">2.3.</span> <span class="nav-text">port 端口 和 line(position ,bit) 线</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#dido"><span class="nav-number">2.3.1.</span> <span class="nav-text">DI&#x2F;DO</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多通道的表示方法"><span class="nav-number">2.4.</span> <span class="nav-text">多通道的表示方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关于pfiapfi"><span class="nav-number">2.4.1.</span> <span class="nav-text">关于PFI，APFI</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#信号接地"><span class="nav-number">3.</span> <span class="nav-text">信号接地</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#信号的参考点"><span class="nav-number">3.1.</span> <span class="nav-text">信号的参考点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接地类型"><span class="nav-number">3.2.</span> <span class="nav-text">接地类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#根据信号类型分"><span class="nav-number">3.2.1.</span> <span class="nav-text">根据信号类型分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#根据接地方式分"><span class="nav-number">3.2.2.</span> <span class="nav-text">根据接地方式分</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接地符号--常见的接地符号"><span class="nav-number">3.3.</span> <span class="nav-text">接地符号--常见的接地符号 </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#几种接地符号"><span class="nav-number">3.3.1.</span> <span class="nav-text">几种接地符号 </span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建议"><span class="nav-number">3.4.</span> <span class="nav-text">建议</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#电源"><span class="nav-number">4.</span> <span class="nav-text">电源</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#电源符号"><span class="nav-number">4.1.</span> <span class="nav-text">电源符号</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#diffrsenrsepdiff信号模式"><span class="nav-number">5.</span> <span class="nav-text">DIFF,RSE,NRSE,PDIFF信号模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#信号的连接方式"><span class="nav-number">5.1.</span> <span class="nav-text">信号的连接方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#差分测试系统diff"><span class="nav-number">5.1.1.</span> <span class="nav-text">1) 差分测试系统（DIFF）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考单端测试系统rse"><span class="nav-number">5.1.2.</span> <span class="nav-text">2)参考单端测试系统（RSE）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非参考单端测试系统nrse"><span class="nav-number">5.1.3.</span> <span class="nav-text">3）非参考单端测试系统（NRSE）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#伪差分输入"><span class="nav-number">5.1.4.</span> <span class="nav-text">4)伪差分输入：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择合适的测试系统"><span class="nav-number">5.2.</span> <span class="nav-text">选择合适的测试系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reference"><span class="nav-number">5.3.</span> <span class="nav-text">reference</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">epichide</span>
-</div>
-
-
-<div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
-</div>
-
-<div class="theme-info">
-  Theme -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
-    NexT.Gemini
-  </a>
-</div>
-
-
-        
-
-        
-      </div>
-    </footer>
-
     
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
-  </div>
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#bnc-connector-bnc-连接器"><span class="toc-text">BNC connector BNC 连接器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#spring-terminal-block-弹簧式接线端子"><span class="toc-text">Spring terminal block 弹簧式接线端子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ni-bnc-2090a-屏蔽机架式bnc连接器"><span class="toc-text">NI BNC-2090A 屏蔽机架式BNC连接器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#shielded-cable-屏蔽线"><span class="toc-text">Shielded Cable 屏蔽线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#daq-device-daq-设备"><span class="toc-text">DAQ Device DAQ 设备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设备连接关系"><span class="toc-text">设备连接关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设备板卡dev"><span class="toc-text">设备,板卡,dev</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#channel路通道"><span class="toc-text">channel,路,通道</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#port-端口-和-lineposition-bit-线"><span class="toc-text">port 端口 和 line(position ,bit) 线</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#dido"><span class="toc-text">DI&#x2F;DO</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多通道的表示方法"><span class="toc-text">多通道的表示方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#关于pfiapfi"><span class="toc-text">关于PFI，APFI</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#信号的参考点"><span class="toc-text">信号的参考点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#接地类型"><span class="toc-text">接地类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#根据信号类型分"><span class="toc-text">根据信号类型分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#根据接地方式分"><span class="toc-text">根据接地方式分</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#接地符号--常见的接地符号"><span class="toc-text">接地符号--常见的接地符号 </span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#几种接地符号"><span class="toc-text">几种接地符号 </span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#建议"><span class="toc-text">建议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#电源符号"><span class="toc-text">电源符号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#信号的连接方式"><span class="toc-text">信号的连接方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#差分测试系统diff"><span class="toc-text">1) 差分测试系统（DIFF）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考单端测试系统rse"><span class="toc-text">2)参考单端测试系统（RSE）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#非参考单端测试系统nrse"><span class="toc-text">3）非参考单端测试系统（NRSE）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#伪差分输入"><span class="toc-text">4)伪差分输入：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#选择合适的测试系统"><span class="toc-text">选择合适的测试系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#reference"><span class="toc-text">reference</span></a></li></ol>
+    </div>
+  </section>
+
 
   
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
+
+</aside>
+
+
+
+      </div>
+      
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="/atom.xml"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+          
+            
+              <a href="https://github.com/volantis-x/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+              <a href="/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/010-facebook.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/010-facebook.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+              <a href="/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/018-twitter.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/018-twitter.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+              <a href="/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/045-telegram.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/045-telegram.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+              <a href="/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/006-youtube.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/006-youtube.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </div>
+      
+    
+      
+        <div><p>Blog content follows the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+</div>
+      
+    
+      
+        
+          <div><p><span id="lc-sv">本站总访问量为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+</div>
+        
+      
+    
+      
+        Use
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.0.0-rc.2" target="_blank" class="codename">Volantis</a>
+        as theme
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="/">Copyright © 2017-2020 XXX</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+      <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+    </div>
+  </div>
+  <div>
+    <!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      // 背景层
+      var bgDiv = document.createElement("div");
+      $(bgDiv).addClass("bg");
+      if ($(this).attr('bg')) {
+        $(bgDiv).css('background', $(this).attr('bg'));
+      }
+      $(this).wrap(bgDiv); // 背景层
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if($(".md").find("img").not('.inline').not('a img').length+$(".article-entry").find("img").length==0)return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    setTimeout(function() {
+      loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+    }, 1);
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+</script>
+
+
+<!-- internal -->
+
+
+
+
+<!-- optional -->
+
+  <script>
+  
+  var SEARCH_SERVICE = "hexo" || "hexo";
+  var ROOT = "/" || "/";
+  if (!ROOT.endsWith('/')) ROOT += '/';
+</script>
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+  
+    <script>
+      window.FPConfig = {
+        delay: 0,
+        ignoreKeywords: [],
+        maxRPS: 5,
+        hoverDelay: 25
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+<script src="/js/valine.js"></script>
+
+
+<script>
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link'.split(',').filter(function (item) {
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick', 'mail', 'link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function (item) {
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
+
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
   }
+
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+
+    let pagePlaceholder = $.trim($('#pjax-comment-placeholder').text()) || "快来评论吧~";
+
+    let path = $.trim($('#pjax-comment-path').text());
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+
+    var valine = new Valine();
+    valine.init({
+      el: '#valine_container',
+      meta: meta,
+      placeholder: pagePlaceholder,
+      path: path,
+      appId: "",
+      appKey: "",
+      pageSize: '10',
+      avatar: 'robohash',
+      lang: 'zh-cn',
+      visitor: 'true',
+      highlight: 'true',
+      mathJax: 'false',
+      enableQQ: 'true',
+      requiredFields: requiredFields,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps
+    })
+  }
+
+  $(function () {
+    pjax_valine();
+  });
 </script>
 
 
@@ -902,96 +1254,15 @@ GND在电路里常被定为电压参考基点。 从电气意义上说，GND�
 
 
 
-
-
   
-
-
-  
-
-
-
-
-
-
-
+<script src="/js/app.js"></script>
 
 
 
 
   
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-  
-  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
+    
+<script src="/js/search.js"></script>
 
   
 
@@ -1000,39 +1271,336 @@ GND在电路里常被定为电压参考基点。 从电气意义上说，GND�
 
 
 
-  
 
 
 
 
-  
-  
-  
-  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+  <script defer>
 
-  
-  
-  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
-  
+  const LCCounter = {
+    app_id: 'u9j57bwJod4EDmXWdxrwuqQT-MdYXbMMI',
+    app_key: 'jfHtEKVE24j0IVCGHbvuFClp',
+    custom_api_server: '',
 
-  <script src="/js/src/algolia-search.js?v=5.1.2"></script>
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://yoursite.com' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://yoursite.com' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://yoursite.com' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              if (pv.getAttribute('data-path') == window.location.pathname) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == window.location.pathname) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
 
 
 
+<!-- more -->
+
+
+    
+      
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+<!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
   
+    <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+    <div id="loading-bar-wrapper"><script>NProgress.configure({parent:"#loading-bar-wrapper",trickleSpeed: 100})</script></div>
+    <script>
+      window.ShowLoading = function() {
+        NProgress.start();
+      };
+      window.HideLoading = function() {
+        NProgress.done();
+      }
+    </script>
+  
+</div>
 
-  
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
 
-  
+    document.addEventListener('pjax:send', function (e) {
+      window.stop(); // 相当于点击了浏览器的停止按钮
 
-  
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
 
-  
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      $.fancybox.close();    // 关闭弹窗
+      $('.l_header .switcher .s-search').removeClass('active'); // 关闭移动端激活的搜索框
+      $('.l_header').removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      $('.wrapper').removeClass('sub'); // 跳转页面时关闭二级导航
 
-  
+      // 解绑事件 避免重复监听
+      $('.s-top').unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      window.ShowLoading();
+    });
 
-  
-  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
-  
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+      // 
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+          if (typeof $.fancybox == "undefined") {
+            SCload_fancybox();
+          } else {
+            pjax_fancybox();
+          }
+        
+        
+        
+        
+        
+          pjax_valine();
+        
+        
+        
+        
+        
+      } catch (e) {
+        console.log(e);
+      }
+      window.HideLoading();
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.HideLoading();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+
+    
+  </div>
 </body>
 </html>

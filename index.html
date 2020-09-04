@@ -1,3072 +1,1473 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next gemini use-motion" lang="en">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
+<html>
+<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.0.0-rc.2'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
   
     
+      
+        <meta name="robots" content="index,follow">
+      
     
   
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+  <!-- 页面元数据 -->
+  
+  <title>Eichide&#39;s Blog</title>
   
 
   
-
+    <meta name="description" content="nothing to remember">
   
 
+  <!-- feed -->
   
 
+  <!-- import meta -->
+  
+
+  <!-- link -->
   
     
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+
+  
   
 
+  
+
+  
+
+  
+
+  
+
+  <!-- import link -->
+  
+
+  
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  <!-- 脚本懒加载函数 -->
+  <script>
+  function loadScript(src, cb) {
+    var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+    var script = document.createElement('script');
+    script.setAttribute('type','text/javascript');
+    if (cb) script.onload = cb;
+    script.setAttribute('src', src);
+    HEAD.appendChild(script);
+  }
+  //https://github.com/filamentgroup/loadCSS
+  !function(c){"use strict";var e=function(e,t,n,r){var o,i=c.document,a=i.createElement("link");if(t)o=t;else{var d=(i.body||i.getElementsByTagName("head")[0]).childNodes;o=d[d.length-1]}var f=i.styleSheets;if(r)for(var l in r)r.hasOwnProperty(l)&&a.setAttribute(l,r[l]);a.rel="stylesheet",a.href=e,a.media="only x",function e(t){if(i.body)return t();setTimeout(function(){e(t)})}(function(){o.parentNode.insertBefore(a,t?o:o.nextSibling)});var s=function(e){for(var t=a.href,n=f.length;n--;)if(f[n].href===t)return e();setTimeout(function(){s(e)})};function u(){a.addEventListener&&a.removeEventListener("load",u),a.media=n||"all"}return a.addEventListener&&a.addEventListener("load",u),(a.onloadcssdefined=s)(u),a};"undefined"!=typeof exports?exports.loadCSS=e:c.loadCSS=e}("undefined"!=typeof global?global:this);
+  </script>
+  <script id="loadcss"></script>
+</head>
+
+<body>
+  <header class="l_header auto shadow blur" style='opacity: 0' >
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+  <div class="l_body">
+    <div class="l_cover">
+
+  
+  
+      <div class='cover-wrapper  dock' style="display: none;">
+        
+          <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg"></div>
+        
+        <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">Volantis</p>
+    
+    
+  </div>
+  <div class='bottom'>
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/v4/getting-started/"
+              
+              
+              id="v4getting-started">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c3.svg'><p>文档</p>
+            </a>
+          
+            <a href="/faqs/"
+              
+              
+              id="faqs">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f516.svg'><p>帮助</p>
+            </a>
+          
+            <a href="/examples/"
+              
+              
+              id="examples">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f396.svg'><p>示例</p>
+            </a>
+          
+            <a href="/contributors/"
+              
+              
+              id="contributors">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f389.svg'><p>社区</p>
+            </a>
+          
+            <a href="/archives/"
+              
+              
+              id="archives">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg'><p>博客</p>
+            </a>
+          
+            <a href="https://github.com/volantis-x/hexo-theme-volantis/"
+              
+              
+              id="https:githubcomvolantis-xhexo-theme-volantis">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f9ec.svg'><p>源码</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+      </div>
+  
+
+</div>
+
+    <div class='safearea'>
+      <div class='body-wrapper' id="pjax-container">
+        
+          <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
 
 
 
+<div id="pjax-data" style="display: none">
+  <div id="pjax-ispage">false</div>
+  <div id="pjax-pageTitle"></div>
+  <div id="pjax-enable-cover">true</div>
+  <div id="pjax-comment-path"></div>
+  <div id="pjax-comment-placeholder"></div>
+</div>
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo,HALOHA" />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
-
-
-
-
-
-
-<meta name="description" content="nothing to remember">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Eichide&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Eichide&#39;s Blog">
-<meta property="og:description" content="nothing to remember">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="epichide">
-<meta name="twitter:card" content="summary">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Gemini',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '5W59328PV6',
-      apiKey: '35f0ce2b0fab5580e74b14de630d5706',
-      indexName: 'Epichide',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+<script>
+  // 处理封面 此时 jquery 还没加载
+  if ("half" == "none") { // 移除封面
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "none";
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
+  } else {
+    if ("half" == "half") { // 半屏
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half');
+      document.getElementsByClassName('scroll-down')[0].style.display = "none";
+    } else if ("half" == "full") { // 全屏
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full');
+      document.getElementsByClassName('scroll-down')[0].style.display = "";
     }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/"/>
-
-
-
-
-
-  <title>Eichide's Blog</title>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<meta name="generator" content="Hexo 4.2.1"></head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-   page-home 
- ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Eichide's Blog</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-      
-        <p class="site-subtitle">there is nothing, there are something</p>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            Home
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            Categories
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            About
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Archives
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            Tags
-          </a>
-        </li>
-      
-
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            Search
-          </a>
-        </li>
-      
-    </ul>
-  
-
-  
-    <div class="site-search">
-      
-  
-  <div class="algolia-popup popup search-popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-  </div>
-
-
-
-
-    </div>
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/31/short%20term%20synaptic%20plasticity/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="epichide">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/user.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eichide's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h0 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/08/31/short%20term%20synaptic%20plasticity/" itemprop="url">Short-Term Synaptic Plasticity</a></h0>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-31T18:13:48+08:00">
-                2020-08-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/nruron/" itemprop="url" rel="index">
-                    <span itemprop="name">nruron</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="short--term-synaptic-plasticity">SHORT -TERM SYNAPTIC PLASTICITY</h1>
-<ul>
-<li><p>Robert S. Zucker</p>
-<p>Department of Molecular and Cell Biology, University of California, Berkeley,California 94720; e-mail: zucker@socrates.berkeley.edu</p></li>
-<li><p>Wade G. Regehr</p>
-<p>Department of Neurobiology, Harvard Medical School, Boston, Massachusetts 02115;e-mail: wregehr@hms.harvard.edu</p></li>
-<li><p>Key Words</p>
-<p>synapse, facilitation, post-tetanic potentiation, depression,augmentation, calcium</p></li>
-</ul>
-<h1 id="简介">简介</h1>
-<p>突触传递是一个动态的过程.突触后的响应随突触前的活动而变化.化学突触传递是突触响应特性的决定因素. 反过来,这些响应的特性又决定了神经网络对刺激的选择性和活动响应模式.本篇综述关注于在短时程下(数十毫秒到几分钟)突触改变.</p>
-<ol type="1">
-<li>突触enhancement形式,主要源于Ca2+:
-<ol type="1">
-<li>facilitation</li>
-<li>augmentation</li>
-<li>post-tetanic potentiation</li>
-</ol></li>
-<li>突触depression原因(占大多数)
-<ol type="1">
-<li>主要源于递质短时间耗竭,而来不及及时补充</li>
-<li>突触前受体反馈激活</li>
-<li>突触后受体脱敏</li>
-</ol></li>
-<li>胶质细胞作用短时程可塑性</li>
-</ol>
-<p>几乎所有类型的突触都具有短时程/长时程的可塑性. (经历多长事件后会发生改变). 或增强或抑制. 突触的可塑性方向很依赖刺激pattern的细节,大多数刺激模式可能既包含抑制性pattern或促进性pattern.</p>
-<h1 id="术语">术语</h1>
-<ul>
-<li><p>use-dependent plasticity :</p>
-<p>行为不仅受当前的传感信号影响，而且受近期经验的历史影响。例如，朝向特定目标的重复运动会使随后的朝向该目标方向的运动产生偏差。这个过程称为使用依赖可塑性（UDP）((Mawase et al. 2017))</p></li>
-<li><p>plasticity 的一些测量形术</p>
-<ol type="1">
-<li>相同刺激,AP 成功诱发出的个数 (可能增长几十倍)</li>
-<li>PSP的衰减时间常数 (可能会达到~100ms)</li>
-<li>slope</li>
-<li>amplitude</li>
-</ol></li>
-<li><p>phase component(相的组分)</p>
-<ol type="1">
-<li>rapid : 数十ms</li>
-<li>slowe : 数百ms</li>
-</ol></li>
-<li><p>tetanic stimulation强直刺激 :</p>
-<p>包含一系列高频独立的刺激序列( <font style="color:red">可能&gt;10Hz</font>).High-frequency stimulation causes an increase in release called <strong>post-tetanic potentiation</strong></p></li>
-<li><p>EPPS End-plate potentials 终板电位:</p>
-<p>是指 <strong>运动神经末梢与骨骼肌细胞</strong> 之间的接头后膜上产生的一种电位。是一种负的局部电位变化，但可通过电紧张性地扩展到邻近区域，形成一个空间分布。终板处的电位最高，离终板愈远，电位愈小。当Ach分子通过接头间隙到达终板膜表面时，立即与终板膜上的N2型乙酰胆碱受体结合，使通道开放，允许Na+、K+等通过，以Na+的内流为主，引起终板膜膜电位减小，向零值靠近，产生终板膜的去极化，这一电位变化称为终板电位。</p></li>
-<li><p>PSP postsynaptic potential 突触后电位:</p>
-<p>突触后电位是经典的化学突触，突触后膜上的局部反应，发生在神经元之间</p></li>
-<li><p>局部反应（也叫局部电位或电流）:</p>
-<p>PSP和EPP都是局部电位/局部电流/局部反应 ,局部电位 <strong>不具有“全或无”的特性</strong> ，是电紧张性电位，电位幅度随刺激强度增大而增大，传导有衰减性，没有不应期，可以发生时间和空间总和，不需阈或阈上刺激就可产生</p></li>
-<li><p>动作电位</p>
-<p>动作电位 <strong>具有“全或无”的特性</strong> ， <strong>电位幅度不随刺激强度改变</strong> ，同一细胞上传到 <strong>不衰减</strong> ，具有不应期，不具有时间和空间总和，要阈或者阈上刺激才能产生；</p></li>
-<li><p>静息电位</p></li>
-</ul>
-<h1 id="传递增强-enhancement-of-transmission">传递增强 Enhancement of transmission</h1>
-<p>许多化学突触在重复刺激后,显示出</p>
-<ol type="1">
-<li>与突触效能相关的多种组件增加 component (decay time)</li>
-<li>或单个突触后电位（PSP）幅度 amplitude</li>
-<li>或突触后电流（PSC）幅度的增加。amplitude</li>
-</ol>
-<p><strong>传输的增强来自几个方面，它们的增强持续时间截然不同（7）</strong></p>
-<h2 id="enhance-component-增强组件">enhance component 增强组件</h2>
-<p>在不同的刺激方案后,突触会增强,然后衰减,有的快,有的慢. 根据衰减的时间常数,可以将增强的成分(组件,component)分为以下4个部分.(数据来源: frog neuromuscular junction at 20℃ were found in the ganglion at 34℃ 似乎和EPP相关 )</p>
-<p>大部分的研究在外周神经系统,但也在CNS中证实</p>
-<ol type="1">
-<li>facilitation first component : dacay time constant(以下都是衰减时间常数) dozens millisecond<font style="color:gray">~ 59 ±14ms</font></li>
-<li>facilitation second compenent : (hundred millisecond) <font style="color:gray">~388 ±97ms</font></li>
-<li>augmentation : (several seconds) <font style="color:gray">7.2±1s</font></li>
-<li>potentiation : (dozens second to minutes) <font style="color:gray">88±25s</font></li>
-</ol>
-<figure>
-<img src="/2020/08/31/short%20term%20synaptic%20plasticity/time%20constants2.jpg" alt><figcaption>time constants of enhence</figcaption>
-</figure>
-<figure>
-<img src="/2020/08/31/short%20term%20synaptic%20plasticity/time%20constants3.jpg" alt><figcaption>time constans of enhence</figcaption>
-</figure>
-<p>参考:</p>
-<h3 id="促进-facilitate">促进 facilitate</h3>
-<ul>
-<li>一些PSP增强可能会在1s内就发生, 可以增强数倍甚至数十倍</li>
-<li>增强发生后,撤去刺激,其衰减指数的时间常数~100ms,</li>
-<li>促进的细节可以进一步分为快速相位(fast phase tens ms)和慢速相位(slow phase hundreds ms)</li>
-<li>strategy : paired-pulse stimulus, 给予成对刺激,调整成对刺激的间隔时间, 时间间隔越短,促进越大. 但很显然,它偏向于细胞连接的本身特性,比如第一次刺激使得一些囊泡更靠近AZ,使得第二次释放得更多,所以与可塑性没有太大关系,很快就衰减了</li>
-</ul>
-<p>理论上，当在下一个动作电位到达之前突触前按钮上的Ca 2+内流尚未完全清除时，就会出现配对脉冲促进，这导致第二次刺激后突触前Ca 2+的峰值浓度高于第一个刺激时的峰值</p>
-<figure>
-<img src="/2020/08/31/short%20term%20synaptic%20plasticity/paired%20stimuli.jpg" alt><figcaption>paired pulse</figcaption>
-</figure>
-<h3 id="强直增强-post-tetanic-potentiation-ptp">强直增强 post-tetanic potentiation PTP</h3>
-<p>随着在一个train(训练)中,刺激数目的增加,很多突触过程也显示为增加的方向.一个AP的增强可能在1-15%左右,但是因为持续了数秒到数分钟,增强就被叠加,产生数倍增强.</p>
-<ul>
-<li>PTP 诱发出后可以维持30s~ several min</li>
-<li>strategy : &gt;10HZ,&gt;10s , return to 0.5HZ to test Enhancement</li>
-</ul>
-<figure>
-<img src="/2020/08/31/short%20term%20synaptic%20plasticity/enhenca.jpg" alt><figcaption>enhence</figcaption>
-</figure>
-<h3 id="augmentation-增强">augmentation 增强</h3>
-<p>还存在一种enhancement 介于 potentiatio 和 facilitation 之间,</p>
-<h2 id="增强的机制">增强的机制</h2>
-<h3 id="quantal-theory">Quantal theory</h3>
-<p>通过隔离对单个递质的神经递质的突触后反应，通常可以通过用河豚毒素（TTX）阻断动作电位激发并等待自发的，非动作电位引发的囊泡释放发生在记录的细胞上，来最直接地进行量子分析 神经元。</p>
-<ol type="1">
-<li><strong>n</strong> : the number of release sites. 靠近AZ(active zone)得囊泡数 ,通常docked在突触前膜上,随时准备释放. ((n is probably equivalent to the number of synapses, because most central synapses contain only one release site each.)</li>
-<li><strong>p</strong> : 囊泡从突触前膜释放得可能性. 与 ca2+相关</li>
-<li><strong>q</strong> : 突触后膜对囊泡释放得响应, 量子性, 与受体,间隙,激动剂,拮抗剂相关</li>
-<li>Quantal content : np, should represent the total presynaptic output.</li>
-</ol>
-<p>在CA1处，突触的传输非常不可靠，p约为0.3；这意味着大多数动作电位不会导致谷氨酸释放（它们是“‘synaptic failures”），而成功的电位很少会导致释放多个囊泡。</p>
-<p>silence synapse 由LTP后 unsilence ,涉及到 npq的变化</p>
-<figure>
-<img src="/2020/08/31/short%20term%20synaptic%20plasticity/factor%20of%20transmission%20amplitude.jpg" alt><figcaption>quantal theory</figcaption>
-</figure>
-<p>参考:</p>
-<h3 id="the-残留residual-ca-2-hypothesis">The 残留Residual Ca 2+ Hypothesis</h3>
-<p>facilitation 是由条件刺激后神经末梢中残留的Ca 2+作用引起的</p>
-<h3 id="single-site-hypothesis">single site hypothesis</h3>
-<p>现在已经认识到，神经递质的释放是由开放的电压门控Ca 2+通道（ local）附近的Ca 2+水平增加触发的。</p>
-<p>然后在几十毫秒内，Ca 2+会在整个突触前按钮中扩散并平衡，从而产生残留的Ca 2+信号（res）。</p>
-<ul>
-<li>AP 引起的Ca2+ level:   <span class="math inline">\({\mathrm{Ca}_{\text {local }}}\)</span> ~100 nM,</li>
-<li>静息水平的Ca2+本底level:   <span class="math inline">\({\mathrm{Ca}_{\text {rest }}}\)</span> ~100 nM,</li>
-<li>前一次刺激残留的Ca2+ level:   <span class="math inline">\({\mathrm{Ca}_{\text {res }}}\)</span></li>
-</ul>
-<p>所以</p>
-<ul>
-<li>第一个pulse evoke ca2+ : <span class="math inline">\(\left(\mathrm{Ca}_{\text {rest }}+\mathrm{Ca}_{\text {local }}\right)\)</span></li>
-<li>第二个pulse evoke ca2+ : <span class="math inline">\(\left(\mathrm{Ca}_{\text {rest }}+\mathrm{Ca}_{\text {local }}+\mathrm{Ca}_{\text {res }}\right)\)</span></li>
-</ul>
-<p>之后就看不懂了,好多字</p>
-<h3 id="multiple-site-hypothesis">multiple site hypothesis</h3>
-<p>没看....</p>
-<h1 id="use-dependent-changes-in-ca-2-entry">USE-DEPENDENT CHANGES IN Ca 2+ ENTRY</h1>
-<ul>
-<li>the calyces of Held and postsynaptic cells, the principal cells of the medial nucleus of the trapezoid body (MNTB), in slices of the rat auditory brainstem.</li>
-<li>Held 是一个在听觉很大的突触synapse结构,可能就比hippocampus的细胞soma小一些,对patch比较友好</li>
-</ul>
-<figure>
-<img src="/2020/08/31/short%20term%20synaptic%20plasticity/held%20synapse.gif" alt><figcaption>held synapse</figcaption>
-</figure>
-<p>实验发现,短（100 ms）的后突触去极化0 mV.，在去极化后以10ms为单位测量,EPSC的振幅降低35±5%（n = 7）。恢复发生在0.5 s内</p>
-<p>我们知道突触前后都多少依赖Ca2+,因此,它们是竞争使用Ca2+,当一方过于兴奋,过度消耗Ca2+,都会抑制增强. 只有二者平衡且最大限度使用Ca2+,会促进增强</p>
-<p>在重复刺激期间，前突触机制会导致PSC振幅下降，刺激后需要几秒钟到几分钟才能恢复。虽然这种突触抑郁症在近60年前被描述过，但造成这种突触抑郁症的机制仍然知之甚少。</p>
-<p>似乎不是一个主导型机制</p>
-<h2 id="depletion-models-of-depression-耗竭模型">Depletion Models of Depression 耗竭模型</h2>
-<h1 id="传递抑制">传递抑制</h1>
-<h2 id="通过激活代谢性受体进行突触性抑制">通过激活代谢性受体进行突触性抑制</h2>
-<h3 id="homosynaptic-inhibition">Homosynaptic Inhibition</h3>
-<p>囊泡的内含物除了作用突触后,也可作用突触前膜. 这称为homosynaptic modulation,通常是抑制性的.当神经递质建立到足以激活前突触受体时，最终结果是负反馈,将使神经递质未来释放的减少</p>
-<p>囊泡在相对较高的PN(椎体神经元)中含有 ATP，当囊泡融合时，ATP 被释放。在细胞外空间中，ATP 被分解为腺苷，可以激活前合成腺苷受体,lead to homosynaptic inhibition.</p>
-<p>神经肌肉街头，这机制有助于反向抑制长期刺激的增强，但它不是突触抑制机制的主要部分</p>
-<p>在某些 GABAergic 突触 , 抑制部分源于 GABA 逆行作用在 GABA<sub>B</sub> 受体上， 大概减少了 Ca 2+ 流入到后续的 APs.</p>
-<h3 id="heterosynaptic-inhibition">heterosynaptic inhibition</h3>
-<p>突触输入(synapse input)通常是指突触前的到间隙的过程.</p>
-<p>激活突触输入也会影响相邻的突触。例如，激活区域的的兴奋输入可以激活 GABAergic 神经元，导致细胞外 GABA 水平的广泛增加。这可以激活前突触GABAB受体，并抑制突触强度几秒钟。前突触的bouton含有多种类型的受体，这些受体能感知各种细胞外化学信使，所有这些受体都可能与heterosynaptic inhibition 相关</p>
-<h3 id="retrograde-control-of-neurotransmitter-release-神经递质释放的逆行控制">Retrograde Control of Neurotransmitter Release 神经递质释放的逆行控制</h3>
-<p>突触后细胞也可能影响从突触前的释放.不同类型的树突(不是轴突)可以释放各种信使，这些信使可以通过位于前突触终端上的G蛋白耦合受体来影响神经递质释放。</p>
-<p><strong>Neuromodulators</strong> such as dopamine, dynorphin, glutamate, GABA, and oxytocin are released by fusion of vesicles that are located within the <strong>dendrites and cell bodies</strong></p>
-<p><strong>Retrograde messengers</strong> are also released by non-vesicular mechanisms(非运载体机制,就是不通过外泌体方式释放).</p>
-<p>内源性大麻素 Endogenous cannabinoids（如anandimide and 2-AG ）由phospholipids 磷脂裂解产生，由突触前末梢的CB1受体感知. 内源性大麻素的non-vehicle释放的逆行信号已被证明可以抑制海马的抑制性突触和小脑中的兴奋和抑制性突触</p>
-<figure>
-<img src="/2020/08/31/short%20term%20synaptic%20plasticity/Health%20Professionals%20Receptor%20Activation%20Diagram.jpg" alt><figcaption>Retrograde</figcaption>
-</figure>
-<figure>
-<img src="/2020/08/31/short%20term%20synaptic%20plasticity/Regulation-of-the-presynaptic-function-by-sumoylation-Consistent-with-the-emerging.png" alt><figcaption>presynapse structual</figcaption>
-</figure>
-<h2 id="突触前离子型受体">突触前离子型受体</h2>
-<p>突触前各种离子受体可以存在，虽然这些受体对突触塑料的贡献程度尚不清楚。</p>
-<ul>
-<li>Ca 2+ permeable receptors : NMDA receptors and α7 icotinic receptors, as well as</li>
-<li>Ca 2+ impermeable receptors , Cl<sup>-</sup> permeable channels : GABA<sub>A</sub> and glycine receptors</li>
-<li></li>
-</ul>
-<h2 id="胶质参与短期可塑性">胶质参与短期可塑性</h2>
-<h2 id="突触后突触抑制机制">突触后突触抑制机制</h2>
-<h3 id="desensitization-脱敏">Desensitization 脱敏</h3>
-<p>另一种可能导致 use-dependent decreases in synaptic strength 的机制是通过对突触后受体的脱敏desensitization。配体门控通道经历一种称为脱敏的过程，类似于电压门控通道的失活。将配体门通道暴露在激动器中会导致通道打开，还可以使部分通道置于无响应状态。通道从这种脱敏状态中恢复可能需要 <strong>几十毫秒甚至几分钟</strong> 的时间。</p>
-<ul>
-<li><p>受体脱敏，</p>
-<p>又称受体向下调节，指长时期使用一种激动药后，组织或细胞对激动药的敏感性和反应性下降的现象。</p>
-<p>当受体长时间的暴露于配体时，大多数受体会失去反应性，即产生脱敏现象。脱敏现象有两种类型：同源脱敏和异源脱敏。同源脱敏是指细胞与其特异配体结合后仅对其配体失去反应性，而仍保持对其他配体的反应性。异源脱敏是指细胞因与其特异配体结合后，对其他配体也失去了反应性</p></li>
-</ul>
-<p>早期工作揭示了胆碱性兴奋和抑制性突触，其中后突触受体脱敏是导致后突触电位抑制的主要过程</p>
-<p><strong>AMPA受体的脱敏已被证明在一些突触的突触转任务中发挥作用。</strong> : <font style="color:red">为什么似乎在讲过的文献中似乎没有讨论这一脱敏,好像都是增强,刺激的pattern什么时候促进什么时候抑制,促进的时候没有发生脱敏是吗</font></p>
-<p>脱敏有助于在听觉神经和小鸡核磁细胞之间的钙化突触的可塑性</p>
-<p>网膜锥体和双极细胞之间的突触,巨大的耳蜗核突触,视网膜突触，也发生脱敏</p>
-<p>脱敏也可能在海马谷性突触推断的量子振幅明显降低中发挥作用</p>
-<ul>
-<li>glutamate 与 脱敏</li>
-<li>inhibitor of desensitization</li>
-<li>AMPA受体脱敏有助于减少在现实活动模式期间的AMPA受体ePSCs</li>
-<li>海马培养物中导致NMDA受体反应抑制与脱敏相关, 由突触后电位调控脱敏程度</li>
-<li>对于乙酰胆碱受体，虽然它们也可以脱敏，在神经肌肉结脱敏对活动列车期间的突触反应幅度影响很小</li>
-</ul>
-<p>AMPA受体对短期可塑性脱敏的程度可能取决于突触的结构、释放概率和传递过程。受体脱敏在短期可塑性中的并非扮演广泛作用</p>
-<p>在chick calycal synapse 和 retinogeniculate synapse , 突触之间挨得很近,导致彼此的连接不是完全一一对应,加之gila包围好几个突触, <font style="color:red">使得包含突触聚合到原生神经元的胶质护套可能允许谷氨酸聚集，并可能有助于发生 AMPA 受体脱敏(没懂) </font></p>
-<p>相比之下，即使攀爬纤维与Purkinje细胞进行数百次突触接触，因为每个突触都由胶质组成，释放位点彼此分离，并且从一个位点释放的谷氨酸没有机会在附近的释放地点去脱敏AMPA受体</p>
-<p><font style="color:red">没有搞懂为什么会脱敏</font></p>
-<h3 id="relief-of-polyamine-block-多肽阻滞的接触">Relief of Polyamine Block 多肽阻滞的接触</h3>
-<p>在大鼠新皮质=第2/3层中，PN与后突触多极中间神经元之间的突触连接揭示了导致短期突触可塑性的另一种后突触机制。此突触电流由 AMPA 受体介导，这些受体被内源多胺(几乎存在于所有细胞中的)阻断(block)。在离体patch中，这种多胺block通过去极化得到缓解。在layer2/3， 多胺block的这种缓解增强 AMPA 受体的反应， 并帮助抵消由另一种机制产生的突触抑制.</p>
-<figure>
-<img src="/2020/08/31/short%20term%20synaptic%20plasticity/site%20of%20regulation%20of%20short%20term%20synaptic%20plasticity.jpg" alt><figcaption>Sites of regulation of short-term synaptic plasticity.</figcaption>
-</figure>
-<h1 id="突触增强中的分子靶点">突触增强中的分子靶点</h1>
-<p>没有看...</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/24/reverberatory/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="epichide">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/user.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eichide's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h0 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/08/24/reverberatory/" itemprop="url">reverberatory</a></h0>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-24T18:19:01+08:00">
-                2020-08-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="reverberation">reverberation</h1>
-<h2 id="cell-assemblies">cell assemblies</h2>
-<p>a interconnected neuronal circuits which recurrent sequential activities to make sure that brain retains information</p>
-<h2 id="small-network-in-vitro">small network in vitro</h2>
-<ul>
-<li>neuron number : 30-100 hippocampus neurons</li>
-<li>scale : diameter 1 mm spot in PDMS</li>
-</ul>
-<h2 id="reverberation-events">reverberation events</h2>
-<p>a brief stimulus given to one glutamatergic neuron could reliably elicit persistent network activity lasting for several seconds. the strings of regular and periodic spikes from first spike to ending of spiking is called reverberation event .</p>
-<p>Generally, a typical reverberation episode consists of multiple bursts of network activity that are interleaved by short silent periods, as we named “reverberation events”.</p>
-<p>one reverberation event include many PSCs.include mant spikes PSCS is periodic and conserved.</p>
-<h2 id="section"></h2>
-<h2 id="normal-network">normal network</h2>
-<p>a brief stimulus given to one glutamatergic neuron could reliably elicit persistent network activity lasting for several seconds.</p>
-<h2 id="weak-network">weak network</h2>
-<p>the same stimuli could only evoke transient polysynaptic activity lasting for tens of milliseconds</p>
-<h3 id="some-time-scale">some time scale</h3>
-<ul>
-<li><p>polysynaptic current (PSC) clusters: tens of milliseconds</p></li>
-<li><p>reverberation event : several seconds, duration &gt; 0.5 s,</p>
-<ul>
-<li>only events passed both the amplitude threshold (5 times s.d. of the baseline noise) and duration threshold (4 frames for δ4F(t) traces)</li>
-</ul></li>
-<li><p>spike timing : a exact time point. Spike inference was applied following a template-matching based method to get an accurate estimation of spike timing</p></li>
-<li><p>paired-pulse stimulation (PPS) with an inter-pulse interval (IPI) of 100 to 300 ms</p></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/12/Igor%20NIDAQ%20tools%20MX%20%E5%87%BD%E6%95%B0%E5%92%8C%E6%93%8D%E4%BD%9C%20(%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="epichide">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/user.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eichide's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h0 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/08/12/Igor%20NIDAQ%20tools%20MX%20%E5%87%BD%E6%95%B0%E5%92%8C%E6%93%8D%E4%BD%9C%20(%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91)/" itemprop="url">Igor NIDAQ tools MX 函数和操作 (中文翻译)</a></h0>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-12T20:40:57+08:00">
-                2020-08-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li><a href="#符号说明">符号说明</a></li>
-<li><a href="#英文词汇含义">英文词汇含义</a></li>
-<li><a href="#默认参数">默认参数</a></li>
-<li><a href="#analog-input">Analog Input</a>
-<ul>
-<li><a href="#fdaqmx_readchan">fDAQmx_ReadChan</a></li>
-<li><a href="#daqmx_ai_setupreader">DAQmx_AI_SetupReader</a></li>
-<li><a href="#fdaqmx_ai_getreader">fDAQmx_AI_GetReader</a></li>
-<li><a href="#daqmx_scan">DAQmx_Scan</a></li>
-<li><a href="#fdaqmx_scanstart">fDAQmx_ScanStart</a></li>
-<li><a href="#fdaqmx_scanwait">fDAQmx_ScanWait</a></li>
-<li><a href="#fdaqmx_scangetavailable">fDAQmx_ScanGetAvailable</a></li>
-<li><a href="#fdaqmx_scanstop">fDAQmx_ScanStop</a></li>
-<li><a href="#fdaqmx_numanaloginputs">fDAQmx_NumAnalogInputs</a></li>
-</ul></li>
-<li><a href="#analog-output">Analog Output</a>
-<ul>
-<li><a href="#fdaqmx_writechan">fDAQmx_WriteChan</a></li>
-<li><a href="#fdaqmx_ao_updateoutputs">fDAQmx_AO_UpdateOutputs</a></li>
-<li><a href="#daqmx_ao_setoutputs">DAQmx_AO_SetOutputs</a></li>
-<li><a href="#daqmx_waveformgen">DAQmx_WaveformGen</a></li>
-<li><a href="#fdaqmx_waveformstart">fDAQmx_WaveformStart</a></li>
-<li><a href="#fdaqmx_waveformstop">fDAQmx_WaveformStop</a></li>
-<li><a href="#fdaqmx_numanalogoutputs">fDAQmx_NumAnalogOutputs</a></li>
-</ul></li>
-<li><a href="#countertimer">Counter/Timer</a>
-<ul>
-<li><a href="#daqmx_ctr_countedges">DAQmx_CTR_CountEdges</a></li>
-<li><a href="#daqmx_ctr_outputpulse">DAQmx_CTR_OutputPulse</a></li>
-<li><a href="#daqmx_ctr_period">DAQmx_CTR_Period</a></li>
-<li><a href="#daqmx_ctr_pulsewidth">DAQmx_CTR_PulseWidth</a></li>
-<li><a href="#fdaqmx_ctr_start">fDAQmx_CTR_Start</a></li>
-<li><a href="#fdaqmx_ctr_readcounter">fDAQmx_CTR_ReadCounter</a></li>
-<li><a href="#fdaqmx_ctr_readwithoptions">fDAQmx_CTR_ReadWithOptions</a></li>
-<li><a href="#fdaqmx_ctr_setpulsefrequency">fDAQmx_CTR_SetPulseFrequency</a></li>
-<li><a href="#fdaqmx_ctr_finished">fDAQmx_CTR_Finished</a></li>
-<li><a href="#fdaqmx_numcounters">fDAQmx_NumCounters</a></li>
-</ul></li>
-<li><a href="#digital-io">Digital I/O</a>
-<ul>
-<li><a href="#daqmx_dio_config">DAQmx_DIO_Config</a></li>
-<li><a href="#fdaqmx_dio_portwidth">fDAQmx_DIO_PortWidth</a></li>
-<li><a href="#fdaqmx_dio_read">fDAQmx_DIO_Read</a></li>
-<li><a href="#fdaqmx_dio_write">fDAQmx_DIO_Write</a></li>
-<li><a href="#daqmx_dio_writenewdata">DAQmx_DIO_WriteNewData</a></li>
-<li><a href="#fdaqmx_dio_finished">fDAQmx_DIO_Finished</a></li>
-<li><a href="#fdaqmx_numdioports">fDAQmx_NumDIOPorts</a></li>
-</ul></li>
-<li><a href="#error-handling">Error Handling</a>
-<ul>
-<li><a href="#fdaqmx_errorstring">fDAQmx_ErrorString</a></li>
-<li><a href="#system-information">System Information</a></li>
-<li><a href="#fdaqmx_devicenames">fDAQmx_DeviceNames</a></li>
-<li><a href="#fdaqmx_numanaloginputs-1">fDAQmx_NumAnalogInputs</a></li>
-<li><a href="#fdaqmx_numanalogoutputs-1">fDAQmx_NumAnalogOutputs</a></li>
-<li><a href="#fdaqmx_numcounters-1">fDAQmx_NumCounters</a></li>
-<li><a href="#fdaqmx_dio_portwidth-1">fDAQmx_DIO_PortWidth</a></li>
-</ul></li>
-<li><a href="#system-control">System Control</a>
-<ul>
-<li><a href="#fdaqmx_resetdevice">fDAQmx_ResetDevice</a></li>
-</ul></li>
-<li><a href="#calibration">Calibration</a>
-<ul>
-<li><a href="#fdaqmx_selfcalibration">fDAQmx_SelfCalibration</a></li>
-<li><a href="#fdaqmx_selfcaldate">fDAQmx_SelfCalDate</a></li>
-<li><a href="#fdaqmx_externalcaldate">fDAQmx_ExternalCalDate</a></li>
-</ul></li>
-</ul>
-<h1 id="符号说明">符号说明</h1>
-<ol type="1">
-<li>operation : 在命令的最前面是NIDAQ 工具箱MX XOP(我不清楚XOP是什么的缩写)的操作. <font style="color:red">和函数的区别不清楚</font></li>
-<li>function : 是普遍的函数形式,会有返回值</li>
-<li>Flags : 以 <code>/sign</code> 的形式, 有时候需要您输入具体的参数值,则为<code>/sign=value</code>的形式</li>
-<li>channel : 设备通常有多个输入/输出通道</li>
-<li>parameter : 通常是必要参数,是需要完成操作必须指定的内容,通常也有可选部分.相同parameter 之间用<code>;</code>作为分割</li>
-</ol>
-<h1 id="英文词汇含义">英文词汇含义</h1>
-<ol type="1">
-<li>generate : 产生一段输出信息,输出</li>
-<li>scan : 扫描一段输入信息,输入</li>
-<li></li>
-</ol>
-<h1 id="默认参数">默认参数</h1>
-<ol type="1">
-<li>min_V,max_V: 如果min_V, max_V未指定 默认-10,+10</li>
-<li>/EDGE = edge : edge=1,上升向(0为下降相)</li>
-</ol>
-<h1 id="analog-input">Analog Input</h1>
-<div class="note info no-icon"><h2 id="fdaqmx_readchan">fDAQmx_ReadChan</h2></div>
-<div class="note info no-icon"><h2 id="daqmx_ai_setupreader">DAQmx_AI_SetupReader</h2>
-<p>设置模拟信号的输入通道,用于接下来读取.</p></div>
-<p><strong>DAQmx_AI_SetupReader /DEV=DeviceNameStr parameterString1 [;parameterString2;parameterString3]</strong></p>
-<ul>
-<li><p><strong>flags</strong> /DEV=DeviceNameStr : DAQ 设备的名字,例如"dev1"<br>
-</p></li>
-<li><p><strong>Parameters</strong> parameterString : 指定通道号(channel number),同时可以添加通道的配置信息(configuration information),形式为<br>
-parameterString [/type , min_V , max_V];</p>
-<ul>
-<li><p><strong>type</strong> : 设置信号模式 Diff: 差分,differential<br>
-RSE: 参考单端,reference single ended<br>
-NRSE: 非参考单端, non-reference single ended<br>
-PDIFF: 伪差分, pseudo-differential</p>
-<p>如果没有设置,默认按照设备出厂的默认设置.有关不同设备的默认设置，您需要查阅NI-DAQmx驱动程序随附的NI-DAQmx帮助。并非所有设备都支持所有类型。</p>
-<p>关于信号模式的解释和选择,请参考<a href="DIFF,RSE,NRSE,PDIFF信号模式">DIFF,RSE,NRSE,PDIFF信号模式</a></p></li>
-<li><p><strong>min_V,max_V</strong></p>
-<p><label style="color:red">控制输出值的范围。如控制输出值在输出范围外，该节点强制转换该值到范围内，并返回强制转换值作为控制输出值。 控制器在指定最小值或最大值饱和时，该节点实现积分抗饱和。</label>(我不确定,<a href="https://www.ni.com/documentation/zhs/labview-comms/latest/analysis-control-node-ref/pid-pid-parallel/" target="_blank" rel="noopener">参考</a>)</p></li>
-</ul></li>
-<li><p><strong>example</strong></p>
-<p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DAQmx_AI_SetupReader /DEV=<span class="string">"dev1"</span> <span class="number">1</span>/DIFF, <span class="number">0</span>, <span class="number">1</span>; <span class="number">3</span>/NRSE, <span class="number">-1</span>, <span class="number">1</span>;</span><br><span class="line"><span class="comment">// 设定dev1设备,通道1为差分模式,范围是[0,1],通道2为非单端参考,范围是[-1,1]</span></span><br></pre></td></tr></table></figure></p></li>
-<li><p><strong>detail</strong></p>
-<p>缺点是DAQmx_AI_SetupReader创建了一个模拟输入任务，该任务占用了模拟输入，因此不能以任何其他方式使用它们。如果通过此操作使用模拟输入的子集，则无法对其他输出执行任何操作，直到使用fDAQmx_ScanStop销毁任务为止</p></li>
-</ul>
-<div class="note info no-icon"><h2 id="fdaqmx_ai_getreader">fDAQmx_AI_GetReader</h2></div>
-<div class="note info no-icon"><h2 id="daqmx_scan">DAQmx_Scan</h2>
-<p>执行输入扫描操作(scan operation),获取数据,存到igor wave 或者 igor FIFO中,您必须WAVES和FIFO选其一,异或选择关系.</p>
-<p>Wave和FIFO通道可以是不超过8bit的任何signed的数字类型。不允许unsigned，也不允许复数的。所有波形或FIFO通道必须具有相同的数字类型。</p>
-<p>如果使用整数的波或FIFO通道，则以原始模式(raw mode)读取数据。也就是说，数据是unscaled的 A / D 转换器计数。</p>
-<p>如果使用浮点的波或FIFO通道，则数据将采用scaled电压的形式。</p>
-<p>对于12位DAQ设备，该值的范围是-4096至+4095； 16位设备将产生从-32768到+32767的值。 (<font style="color:red">不确定和前面的8bit什么关系</font>)</p>
-<p>不允许使用/ AVE标志对整数求平均</p></div>
-<p><strong>DAQmx_Scan /DEV=DeviceNameStr [/AVE=nAverage /BKG[=doBackground] /CLK={clockSpec} /ERRH=ErrorHookStr /EOSH=EndOfScanHookStr /PAUS={pauseTriggerSpec} /RPT[=repeatSpec] /RPTC[=repeatSpec] /RPTH=RepeatHookStr /RTRG={refTrigSpec} /SINT=sampleInterval /STRT[=startSpec] /TRIG={trigspec} [WAVES=WaveParameterString] [FIFO=FIFOParameterString]</strong></p>
-<ul>
-<li><p><strong>waves</strong> 对于长度有限的扫描读取操作(scanning operation)<br>
-使用 WAVES = WaveParameterString , 获取的数据将存储在您命名(WaveParameterString)的waves中. 数的大小由waves 设定的长度决定; 您必须确定号要获取多少数据<br>
-如果多个通道被采集,您必须提供多个波名,以供存储.所有波是统一的长度.采样周期由WaveParameterString中第一个波的wave scaling的dX因子设置. 详见: Analog Input: Waves and Wave Scaling.(<font style="color:red">没有找到链接</font>)</p></li>
-<li><p><strong>FIFO</strong></p>
-<p>对于不确定长度的扫描操作，可以选择将数据流传输到硬盘。<br>
-使用FIFO = FIFOParameterString会使获取的数据存储在参数字符串中命名的Igor FIFO中。连续获取数据，直到使用fDAQmx_ScanStop（）取消操作为止。<br>
-开始采集后，控制权立即返回Igor Pro。 / BKG标志被忽略。原始数据的实际采集是通过后台处理进行的。其他Igor操作，包括将获取的数据的一部分传输到wave，可以在获取数据时进行。 FIFO抯还可以在采集过程中自动将数据存储在磁盘文件中<br>
-扫描速率由您提供的用于接收数据的FIFO的delta T参数控制。请参见《 NIDAQ工具MX指导》 [连续模拟输入到FIFO中]和《 NIDAQ XOP：程序员介绍》 [模拟输入：使用FIFO中]。</p></li>
-<li><p><strong>flag</strong></p>
-<p>/DEV = DeviceNameStr : 字符串,DAQ设备名</p>
-<p>/AVG = nAverage : 使扫描操作获取nAverage连续读数，并对返回的每个数据点取平均值。请注意，这会将实际扫描速率提高了nAverage倍。比如我要获取n个点,实际采集了n*nAverage个点.</p>
-<p>/BKG = doBackground : 如果doBackground为1，则在后台进行传输。如果doBackground为0，则DAQmx_Scan在获取所有数据之前不返回（/ STRT = 0除外，请参见下文）。如果/ BKG标志不存在，则默认/ BKG = 0。</p>
-<p>/CLK = {srcStr,edge} : 1)指定默认时钟以外的采样时钟。您可以将自己的时钟连接到外部引脚，也可以从内部信号（例如计数器的输出）中获取采样时钟。字符串 <strong>srcStr</strong> 命名时钟信号的源端子。通常，这类似于/ devname / pfi0或/ devname / ctr0 内部输出，其中“ devname”与DeviceNameStr的字符串相同。2)时钟脉冲触发扫描的部分由 <strong>edge</strong> 设置。0：下降沿; 1：上升沿. 如果您使用自己的时钟源，则由波形缩放或FIFO设置的扫描速率将被忽略，但NI-DAQmx驱动程序可以使用它来优化扫描操作。</p>
-<p>/ERRH = ErrorHookStr : 如果扫描操作期间发生错误，则包含要执行的命令的字符串。仅在后台扫描期间使用（请参阅/ BKG标志）。</p>
-<p>/EOSH = EndOfScanHookStr : 扫描完成时要执行的命令的字符串。仅在后台扫描期间使用（请参阅/ BKG标志）。</p>
-<p>/PAUS={source, pretrigSamples [, type, edgeslopewhen, level1, level2]} : 设置一个暂停触发器，允许硬件控制扫描操作。就是说，在asserte暂停触发器时暂停扫描，并在未assert暂停触发器时继续从上次中断的地方继续扫描。<br>
-称它为触发器有点误导人. 因为按照数字逻辑来讲,触发器通常与延边(edge)变化有关.在这里的暂停触发器是由电平(level)控制的,而不是边(edge).门(gate)或许是一个更合适的描述.</p>
-<ul>
-<li><p><strong>souce</strong> : 字符串,指定终端源,通常是PFI 输入端.类似于/ devname / pfi1，其中“ devname”与DeviceNameStr使用的字符串相同。没有默认源.</p></li>
-<li><p><strong>type</strong> : 数字，指定要使用的触发器类型: 0: Disable (不设置暂停触发器 pause trigger)<br>
-1: Digital 数字<br>
-2: Analog level 模拟信号电平<br>
-3: Analog window<br>
-Default is type 1.<br>
-</p></li>
-<li><p><strong>edgeslopewhen</strong> : 控制何时暂停扫描操作. 值有: 0: low level (digital), below level1 (analog level) or outside the window (analog window)<br>
-1: high level, above level1, or inside window.<br>
-Default is 1.</p></li>
-<li><p><strong>level1</strong> : 模拟电平触发的电压阈值，或模拟窗口底部的电压。忽略数字触发。默认为0</p></li>
-<li><p><strong>level2</strong> : 在模拟窗口的顶部设置电压。忽略数字触发或模拟电平触发。默认值为0.。<font style="color:red">什么是模拟窗口 analog window</font></p></li>
-</ul>
-<p>/RPT : (仅适用于WAVES关键字）导致在获取所有数据时重新启动扫描操作。再次使用相同的波形，覆盖先前获取的数据。这将导致示波器类型的模式。一次扫描的结束与下一次扫描的开始之间可能会有一些延迟，因为仅在Igor的主偶数循环或调用DoXOPIdle时才检测到扫描的结束。如果扫描操作使用触发器，则每次扫描都使用相同的触发器。注意：这与以前的NIDAQ Tools版本不同。<font style="color:red">不太清楚偶数循环时什么意思</font>.该标志不适用于获取FIFO。</p>
-<p>/RPTC : （仅适用于WAVES关键字）样本将连续采集到波形中。当波被填充时，下一个样本进入波的第零行。如果扫描操作使用触发器，则仅触发第一次扫描。随后的扫描与第一次扫描连续进行。此模式消除了使用/ RPT时两次扫描之间存在的等待时间，但代价是第一次扫描时不使用触发器。此行为与旧版NIDAQ Tools软件包中的fNIDAQ_ScanWavesRepeat相同。该标志不适用于获取FIFO。</p>
-<p>/RPT<br>
-/PRTC = repeatSpec : 如果repeatSpec为1，就像/ RPT或/ RPTC一样。如果repeatSpec为0，就像省略/ RPT一样。</p>
-<p>/RPTH = RepeatHookStr : 字符串命令，重复扫描（请参阅/ RPT标志）完成一次扫描时要执行的命令。请注意，hook命令将在一次扫描完成之后且在下一次扫描开始之前执行。因此，该命令将延迟下一次重复扫描的开始。</p>
-<p>/RTRG={source, pretrigSamples [, type, edgeslopewhen, level1, level2]} : 设置参考或停止触发，以进行预触发采集(pre-trigger acquisition).就是说，扫描持续进行直到触发被assert为止。在那一点上，从已经获取的样本中传输pretrigSamples数据点，并继续扫描直到获取（totalSamples-pretrigSamples）个样本.在采集所有样本之前，NI-DAQmx将不允许任何数据传输。后台扫描仍然有效，但是在扫描期间您不会看到wave更新新数据。不能与连续获取到FIFO一起使用。 source是给出触发信号源端子的字符串。通常，这将是/ devname / pfi1，其中“ devname”是与DeviceNameStr相同的字符串。如果将“”用作信号源，则将使用默认的停止触发输入，通常是PFI1或DAQ设备的I / O连接器上的引脚10。pretrigSamples是从参考触发器到达之前从获取的数据中保存的样本数。</p>
-<ul>
-<li><strong>type</strong> 是一个数字，指定要使用的触发器类型。值有:: 0: Disable triggers (use software start)<br>
-1: Digital<br>
-2: Analog level<br>
-3: Analog window<br>
-Default is type 1.</li>
-<li><strong>edgeslopewhen</strong> 触发用于数字触发的触发脉冲部分，或模拟电平的斜率，或模拟窗口的窗口感。值是：0：下降沿（数字），下降斜率（模拟水平）或离开窗口（模拟窗口）.1：上升沿，上升斜率或进入窗口。</li>
-<li><strong>level1</strong> : 模拟电平触发的电压阈值，或模拟窗口底部的电压。忽略数字触发。默认为0</li>
-<li><strong>level2</strong> : 在模拟窗口的顶部设置电压。忽略数字触发或模拟电平触发。默认值为0.。<font style="color:red">什么是模拟窗口 analog window</font></li>
-</ul>
-<p>/SINT=sampleInterval : 设置一次扫描中连续通道之间的时间间隔，而与一个通道上样本之间的时间间隔（扫描间隔）无关。即，扫描间隔可以是0.01秒，并且采样间隔可以是0.0001秒以近似同时采样。例如：<br>
-DAQmx_Scan /SINT=.0001 wave =“ input1，1; input2，2”<br>
-将采样通道1和2，将数据存储在wave input1和input2中。采样通道1和通道2之间的时间段将设置为0.0001秒。<br>
-将sampleInterval设置为零将选择默认值，通常是扫描间隔除以通道数。<br>
-注意：“采样间隔”和“扫描间隔”是NI在其NI-DAQ Traditional文档中使用的短语。他们现在使用术语“ AI转换率”和“采样率”。</p>
-<p>/STRT = startSpec : 控制是否立即开始扫描操作。如果指定了触发器，则启动与触发器不同。在开始操作之前，即使施加了触发信号也没有任何反应。操作开始后，如果使用/ TRIG或/ RTRG指定了触发，则扫描将一直等到施加触发信号。如果startSpec为零，则不会自动开始扫描操作。在这种情况下，请使用fDAQmx_ScanStart（）函数开始扫描。如果startSpec不为零，则在AQmx_Scan将控制权返回给Igor之前开始扫描操作。如果未使用/ STRT标志，则它类似于/ STRT = 1。</p>
-<p>/ STRT : 在没有startSpec的情况下，/ STRT标志的行为类似于/ STRT = 1。</p>
-<p>/TRIG={source [, type, edgeslopewhen, level1, level2]} : 设置启动触发器。扫描在开始任何扫描之前等待指定的信号。请参阅/ RTRG标志以获取有关source, type, edgeslopewhen, level1 and level2.</p></li>
-<li><p><strong>detail</strong></p>
-<p>什么时候应该使用/ RPT或/ RPTC？</p>
-<p>这些标志要求使用示波器类型的模式，在该模式下，波形会重复填充数据。使用图形来监视某些过程或重复波形非常有用。</p>
-<p>使用/ RPT时，每一次扫描都在最后一次扫描结束后立即开始。它通过停止采集任务，执行重复挂接（/ RPTH，如果有）然后重新启动任务来完成此任务。因为对于每个新的扫描都会重新启动任务，所以如果配置了触发器，则每次扫描都会等待触发信号。如果您有合适的触发信号，这将使扫描与您正在监视的过程保持同步。如果尚未配置触发器，则下一次扫描相对于上一次扫描的结束以未知的延迟开始。此延迟将取决于计算机的速度，执行重复挂接所花费的时间，计算机上可能有多少其他活动以及其他许多因素。</p>
-<p>使用/ RPTC时，每次扫描只是连续采集中的下N个点。采集任务是连续的，该任务不会停止并重新启动。因此，在扫描之间不存在与/ RPT相同的时序问题。但是，如果已配置触发器，则该触发器仅用于启动操作。第一次扫描之后，仅以指定的扫描速率继续扫描</p>
-<p>当您要监视连续过程时，请使用/ RPTC，在该过程中波形以可预测的方式连续不断地重复，并且没有合适的触发信号可用于将扫描与要监视的信号的开始同步。</p></li>
-</ul>
-<div class="note info no-icon"><h2 id="fdaqmx_scanstart">fDAQmx_ScanStart</h2></div>
-<div class="note info no-icon"><h2 id="fdaqmx_scanwait">fDAQmx_ScanWait</h2></div>
-<div class="note info no-icon"><h2 id="fdaqmx_scangetavailable">fDAQmx_ScanGetAvailable</h2></div>
-<div class="note info no-icon"><h2 id="fdaqmx_scanstop">fDAQmx_ScanStop</h2>
-<p>使用此功能可在完成背景扫描操作之前将其停止。这将释放扫描通道以进行其他操作。调用此函数时不会传输任何数据</p></div>
-<p><strong>fDAQmx_ScanStop(Device)</strong></p>
-<ul>
-<li><strong>parameter</strong> device : 字符串,DAQ设备名</li>
-</ul>
-<div class="note info no-icon"><h2 id="fdaqmx_numanaloginputs">fDAQmx_NumAnalogInputs</h2></div>
-<h1 id="analog-output">Analog Output</h1>
-<div class="note info no-icon"><h2 id="fdaqmx_writechan">fDAQmx_WriteChan</h2>
-<p>写入电压一次,到指定的模拟输出通道。指定的电压应立即出现在指定的模拟输出上。</p></div>
-<p><strong>fDAQmx_WriteChan(Device, Channel, Volts, Min_V, Max_V )</strong></p>
-<ul>
-<li><p><strong>parame</strong></p>
-<p>device : 字符串,设备名<br>
-channel : 数值,要读取的模拟输出通道号( <font style="color:red">不清楚为什么一定要读取</font>)。范围是0到n-1，其中n是设备上模拟输入通道的数量。<br>
-Volts : 要输出的电压<br>
-Min_V : 数值,最小输出范围<br>
-Max_V : 数值,最大输出值<br>
-</p></li>
-<li><p><strong>return</strong> : 0为成功</p></li>
-<li><p><strong>detail</strong> NI-DAQmx驱动程序将不接受Min_V = Max_V，也不会接受设备可实现范围之外的Min_V或Max_V。 fDAQmx_ErrorString（）返回的错误消息将告诉您可接受的限制。</p>
-<p>任务的执行过程: 通过创建任务，向任务添加指定的通道，向任务写入值，最后停止并清除任务</p>
-<p><font style="color:red">是否表明它很慢</font></p></li>
-</ul>
-<div class="note info no-icon"><h2 id="fdaqmx_ao_updateoutputs">fDAQmx_AO_UpdateOutputs</h2></div>
-<div class="note info no-icon"><h2 id="daqmx_ao_setoutputs">DAQmx_AO_SetOutputs</h2>
-<p>配置模拟信号的输出通道,并指定输出的电压或电流(如果您的DAQ设备支持的话).<font style="color:red">一次调用设置所有输出</font>.</p></div>
-<p><strong>DAQmx_AO_SetOutputs /DEV=DeviceNameStr [/CRNT=[currentMode]] [/KEEP=[keepTask]] parameterString[;parameterString2;parameterString3]</strong></p>
-<ul>
-<li><p><strong>flag</strong></p>
-<p>/DEV=DeviceNameStr : DAQ 设备的名字,例如"dev1"<br>
-/CRNT[=currentMode] : 如果您的设备支持电流输出,可以使用该flag, 之后指定的min_V和max_V 单位都是安培(A,Amps)<br>
-/KEEP=[=keepTask] : 与任务是否需要destroy相关. 当该flag存在,且keepTask不为0,或者未指定(absent),或者不存在,则操作完成返回igor后,创建的任务会持续存在,不被destroy.</p></li>
-<li><p><strong>parameter</strong></p>
-<p>parameterString : 指定channel,范围从0~您设备的最大通道数.加上额外的最大/最小值信息,是电min_V压还是电流取决于/CRNT的设置.形式为:<br>
-outputSetting, chnnel[,min_V,max_V]</p></li>
-<li><p><strong>example</strong></p>
-<p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">DAQmx_AO_Setoutputs /Dev=<span class="string">"dev1"</span> /CRNT <span class="string">"5.5,0;3.2,1;"</span></span><br><span class="line">DAQmx_AO_Setoutputs /Dev=<span class="string">"dev1"</span> /CRNT <span class="string">"0.005,0,0,0.04;0.035,3,0,0.04;"</span></span><br><span class="line"><span class="comment">// dev1设备输出,电流模式,5mA输出到channel 1, 0.035mA输出到 channel 3</span></span><br></pre></td></tr></table></figure></p></li>
-<li><p><strong>detail</strong></p>
-<p>任务创建和销毁是很耗费时间点的.如果您使/KEEP=1,持久不关闭,与每次输出创建又销毁相比会快500倍.如果您在初始调用DAQmx_AO_SetOutputs 后,使用 fDAQmx_AO_UpdateOutputs(#fDAQmx_AO_UpdateOutputs) 设定模拟信号输出则会更快.<label style="color:red">(但具体延迟是多少还有待查证)</label></p>
-<p>/KEEP=1的坏处是它会占用模拟信号的输出 <label style="color:red">(不确定是否占用其它通道的输出或输入)</label>, 以至于在占用期间不能以其它方式使用.在您使用该函数期间,您不能使用其它任何输出. <label style="color:red">(从字面理解上来讲似乎影响不大</label></p>
-<p>当您要销毁它,有两种方式:</p>
-<ol type="1">
-<li>再次调用该函数,但令/KEEP=0,或不使用/KEEP flag. 这个函数可以让您对DAQ输出最后一次信息后关闭(使得您可以设定一些状态信息)</li>
-<li>调用 fDAQmx_WaveformStop.</li>
-</ol></li>
-</ul>
-<div class="note info no-icon"><h2 id="daqmx_waveformgen">DAQmx_WaveformGen</h2>
-<p>设置并可选地启动任意波形生成操作。波形的形状由您提供的波形数据控制。采样率和采样数由波形缩放比例和波形中数据点的数量设置。您必须为每个通道提供一个波形，但是如果您愿意，可以将相同的波形用于两个通道（但是为什么？）。所有波必须具有相同的长度。波浪中的数据以伏特为单位。</p></div>
-<p><strong>DAQmx_WaveformGen /DEV=DeviceNameStr /CRNT[=currentMode] /CLK={clockSpec} /NPRD=numPeriods /PAUS={pauseTrigSpec} /STRT[=startSpec] /TRIG={trigspec} ParameterString</strong></p>
-<div class="note info no-icon"><h2 id="fdaqmx_waveformstart">fDAQmx_WaveformStart</h2></div>
-<div class="note info no-icon"><h2 id="fdaqmx_waveformstop">fDAQmx_WaveformStop</h2>
-<p>使用该函数停止waveform产生(generate,是output). 您必须使用此功能来停止设置为无限期继续的波形生成。</p></div>
-<p><strong>fDAQmx_WaveformStop(Device)</strong></p>
-<ul>
-<li><p><strong>parameter</strong></p>
-<p>device : 设备名,字符串</p></li>
-<li><p><strong>return</strong></p>
-<p>0 为 succeed, non zero 为 error</p></li>
-</ul>
-<div class="note info no-icon"><h2 id="fdaqmx_numanalogoutputs">fDAQmx_NumAnalogOutputs</h2></div>
-<h1 id="countertimer">Counter/Timer</h1>
-<div class="note info no-icon"><h2 id="daqmx_ctr_countedges">DAQmx_CTR_CountEdges</h2>
-<p>使用板载计数器/计时器(onboard counter/timer)设置并可选地开始边沿计数操作。 使用fDAQmx_CTR_ReadCounter（）或fDAQmx_CTR_ReadWithOptions（）检索当前计数。</p></div>
-<p><strong>DAQmx_CTR_CountEdges /DEV=DeviceNameStr [/EDGE=edge] [/INIT=initialCount] [/DIR=direction] [/CLK=clkSource [/FIFO=fifoName] [/WAVE=waveName /RPT]] /ERRH=ErrorHookStr /EOSH=EndOfScanHookStr /RPTH=RepeatHookStr [/STRT[=startSpec]] [/SRC=sourceTerminal] [/TRIG={trigspec}] [/PAUS={pauseTriggerSpec}] [/OUT=outputTerminal] counter</strong></p>
-<ul>
-<li><p><strong>flag</strong></p>
-<p>/DEV=DeviceNameStr : DAQ 设备名<br>
-/EDGE=edge : 决定计数那种类型的边,0:下降,1:上升<br>
-/INIT=initialCount : 预设计数器内容初始值,默认为0<br>
-/DIR=direction : 设定计数方向,direction是+1,还是-1;如果为0,则方向由外部信号控制,如下表. <text style="color:red">我不知道这里的pin引脚要怎么弄</text>. 这些是通道或者位bit的符号,<a href="NIDAQ%20设备的基本介绍#NI数据采集卡的物理通道">详见</a></p>
-<table>
-<thead>
-<tr class="header">
-<th>DAQ device</th>
-<th>counter 0</th>
-<th>counter 1</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>M-series</td>
-<td>PFI 10</td>
-<td>PFI 11</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>pin 45</td>
-<td>pin 46</td>
-</tr>
-<tr class="odd">
-<td>E- and S-series</td>
-<td>port0/line6</td>
-<td>port0/line7</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>pin 16</td>
-<td>pin 48</td>
-</tr>
-</tbody>
-</table>
-<p>/ERRH = ErrorHookStr : 后台计数到wave或FIFO(first in first out 先进先出)期间发生错误时要执行的命令,字符串形式<br>
-/EOSH= EndOfScanHookStr : 在后台计数完成后要执行的命令,字符串形式.因为FIFO操作永远不会停止,所以仅适用于/WAVE flag.<br>
-/FIFO=fifoName : 用于接收多个读数的Igor FIFO的名称。如果使用/ FIFO，则还必须使用/ CLK指定时钟脉冲源. 该操作不使用板载时基：您必须使用/ CLK标志提供时钟脉冲源。因为使用了外部时钟源，所以由FIFO的deltat设置设置的周期不会设置采样率。但是，采样率仍会传递给NI-DAQmx驱动程序，该驱动程序可使用该信息来优化计数器设置。您应该将deltat设置为期望的最大速率。使用FIFO意味着可以无限期地获取计数器读数<br>
-/RPTH = RepeatHookStr :</p>
-<p>......</p></li>
-</ul>
-<div class="note info no-icon"><h2 id="daqmx_ctr_outputpulse">DAQmx_CTR_OutputPulse</h2></div>
-<div class="note info no-icon"><h2 id="daqmx_ctr_period">DAQmx_CTR_Period</h2></div>
-<div class="note info no-icon"><h2 id="daqmx_ctr_pulsewidth">DAQmx_CTR_PulseWidth</h2></div>
-<div class="note info no-icon"><h2 id="fdaqmx_ctr_start">fDAQmx_CTR_Start</h2></div>
-<div class="note info no-icon"><h2 id="fdaqmx_ctr_readcounter">fDAQmx_CTR_ReadCounter</h2></div>
-<div class="note info no-icon"><h2 id="fdaqmx_ctr_readwithoptions">fDAQmx_CTR_ReadWithOptions</h2></div>
-<div class="note info no-icon"><h2 id="fdaqmx_ctr_setpulsefrequency">fDAQmx_CTR_SetPulseFrequency</h2></div>
-<div class="note info no-icon"><h2 id="fdaqmx_ctr_finished">fDAQmx_CTR_Finished</h2></div>
-<div class="note info no-icon"><h2 id="fdaqmx_numcounters">fDAQmx_NumCounters</h2></div>
-<h1 id="digital-io">Digital I/O</h1>
-<div class="note info no-icon"><h2 id="daqmx_dio_config">DAQmx_DIO_Config</h2></div>
-<div class="note info no-icon"><h2 id="fdaqmx_dio_portwidth">fDAQmx_DIO_PortWidth</h2></div>
-<div class="note info no-icon"><h2 id="fdaqmx_dio_read">fDAQmx_DIO_Read</h2></div>
-<div class="note info no-icon"><h2 id="fdaqmx_dio_write">fDAQmx_DIO_Write</h2></div>
-<div class="note info no-icon"><h2 id="daqmx_dio_writenewdata">DAQmx_DIO_WriteNewData</h2></div>
-<div class="note info no-icon"><h2 id="fdaqmx_dio_finished">fDAQmx_DIO_Finished</h2></div>
-<div class="note info no-icon"><h2 id="fdaqmx_numdioports">fDAQmx_NumDIOPorts</h2></div>
-<h1 id="error-handling">Error Handling</h1>
-<div class="note info no-icon"><h2 id="fdaqmx_errorstring">fDAQmx_ErrorString</h2>
-<p>在执行NIDAQ Tools MX操作或函数期间或在操作的后台处理期间发生错误时，错误信息将存储在堆栈中。此函数以字符串形式返回最近错误的信息。然后，它将信息从堆栈中删除。 后续调用将返回来自先前任何错误的信息，依此类推。堆栈仅限于保留有关最后五个错误的信息。返回的信息将包括错误号和描述性消息。如果发生NI-DAQmx驱动程序错误，该消息可能会很长。这些很长的消息包含非常有用的信息。</p></div>
-<p><strong>fDAQmx_ErrorString()</strong></p>
-<ul>
-<li><strong>return</strong> : 字符串,错误信息。如果没有错误信息可用，则返回一个空字符串。</li>
-</ul>
-<div class="note info no-icon"><h2 id="system-information">System Information</h2></div>
-<div class="note info no-icon"><h2 id="fdaqmx_devicenames">fDAQmx_DeviceNames</h2></div>
-<div class="note info no-icon"><h2 id="fdaqmx_numanaloginputs">fDAQmx_NumAnalogInputs</h2></div>
-<div class="note info no-icon"><h2 id="fdaqmx_numanalogoutputs">fDAQmx_NumAnalogOutputs</h2></div>
-<div class="note info no-icon"><h2 id="fdaqmx_numcounters">fDAQmx_NumCounters</h2></div>
-<div class="note info no-icon"><h2 id="fdaqmx_dio_portwidth">fDAQmx_DIO_PortWidth</h2></div>
-<div class="note info no-icon"><h1 id="system-control">System Control</h1>
-<h2 id="fdaqmx_resetdevice">fDAQmx_ResetDevice</h2>
-<p>对DAQ设备进行硬件复位。结果，该设备上的所有操作将停止(cease)。 参数Device给出DAQ设备名称的字符串。</p></div>
-<p><strong>fDAQmx_ResetDevice（Device)</strong> * <strong>parameter</strong></p>
-<pre><code>device  :   字符串,设备名</code></pre>
-<ul>
-<li><strong>return</strong> : 0 成功</li>
-</ul>
-<h1 id="calibration">Calibration</h1>
-<div class="note info no-icon"><h2 id="fdaqmx_selfcalibration">fDAQmx_SelfCalibration</h2></div>
-<div class="note info no-icon"><h2 id="fdaqmx_selfcaldate">fDAQmx_SelfCalDate</h2></div>
-<div class="note info no-icon"><h2 id="fdaqmx_externalcaldate">fDAQmx_ExternalCalDate</h2></div>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="epichide">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/user.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eichide's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h0 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/" itemprop="url">NIDAQ 设备的基本介绍</a></h0>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-11T22:32:54+08:00">
-                2020-08-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/electronic/" itemprop="url" rel="index">
-                    <span itemprop="name">electronic</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="相关设备">相关设备</h1>
-<h2 id="bnc-connector-bnc-连接器">BNC connector BNC 连接器</h2>
-<p>BNC连接器（英语：Bayonet Neill-Concelman，直译为“尼尔-康塞曼卡口”）是一种很常见的RF端子同轴电缆终结器。BNC电缆连接器由一根中心针、一个外套和卡座组成。它包括BNC连接器基座、外套和探针三部分。BNC连接器得名于其锁定方式和其发明者贝尔实验室的保罗·尼尔（发明了N端子）和安费诺公司的工程师卡尔·康塞曼（发明了C端子）。BNC电缆连接器必须连接到每段电缆的两端</p>
-<p><font style="color:red">用于模拟信号</font></p>
-<figure>
-<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/BNC%20connector.jpg" alt><figcaption>英语：Bayonet Neill-Concelman，直译为“尼尔-康塞曼卡口”</figcaption>
-</figure>
-<h2 id="spring-terminal-block-弹簧式接线端子">Spring terminal block 弹簧式接线端子</h2>
-<p>弹簧式接线端子是弹簧性装置的新型接线端子.</p>
-<p><font style="color:red">用于数字信号</font></p>
-<figure>
-<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/弹簧接线端.jpg" alt><figcaption>spring terminal block</figcaption>
-</figure>
-<h2 id="ni-bnc-2090a-屏蔽机架式bnc连接器">NI BNC-2090A 屏蔽机架式BNC连接器</h2>
-<p>NI BNC-2090A是一款屏蔽、1U、19英寸机架式接线盒，配有22个标有信号标签的BNC连接器，以简化NI数据采集(DAQ)设备上I/O信号的连接。NI BNC-2090A与68针NI X系列的各款DAQ设备兼容。</p>
-<figure>
-<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/BNC_2090A.jpg" alt><figcaption>BNC-2090A</figcaption>
-</figure>
-<ol type="1">
-<li><p>BNC connector(20个)(模拟信号使用)如图①</p>
-<p>它为所有模拟I/O、模拟及数字触发、用于同步的时钟，以及2个自定义信号，提供BNC连接</p>
-<ul>
-<li>16 个模拟输入 (AI,analog input) BNC 接口 . 用于8个差分模式(差分需要两个)或16个单端模式. 如图⑤可以通过一字螺丝刀拨DIFF/SE的方向.</li>
-<li>2 个模拟输出 (AO, analog output) BNC 接口. 是RSE和NRSE两种模式. <font style="color:red">还不清楚这两种模式的优劣</font></li>
-<li>2个用户自定义 BNC 接口 . <font style="color:red">还不清楚功能</font></li>
-<li>1个APFI BNC 接口 . <font style="color:red">还不清楚功能</font></li>
-<li>1个PFI BNC 接口 . <font style="color:red">还不清楚功能</font></li>
-</ul></li>
-<li><p>Spring terminal block(29个弹簧接线端)</p>
-<p>数字I/O信号连接由29个弹簧接线端提供。</p>
-<ul>
-<li>用于数字输入/输出（DIO）和可编程功能接口（PFI）连接</li>
-</ul></li>
-<li><p>68-Position Connectors 68 位连接器</p>
-<p>作为遵守RoHS指令并能替代BNC-2090的设备，BNC-2090A前后两端的68针SCSI连接器，提供了与数据采集设备的连接。</p></li>
-</ol>
-<figure>
-<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/BNC_2090A_Front_Panel_and_Back_of_Enclosure.jpg" alt><figcaption>BNC_2090A_Front_Panel_and_Back_of_Enclosure</figcaption>
-</figure>
-<h2 id="shielded-cable-屏蔽线">Shielded Cable 屏蔽线</h2>
-<p>连接 屏蔽机架式BNC连接器 和 电脑主机中数据采集卡(NIDAQ)的 传输线</p>
-<h2 id="daq-device-daq-设备">DAQ Device DAQ 设备</h2>
-<figure>
-<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/PCI-6229.png" alt><figcaption>PCI-6299 DAQ device</figcaption>
-</figure>
-<h2 id="设备连接关系">设备连接关系</h2>
-<figure>
-<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/Connecting%20the%20bnc2090a%20to%20your%20device.jpg" alt><figcaption>connect BNC_2090A to your PC</figcaption>
-</figure>
-<h1 id="ni-数据采集卡的物理通道">NI 数据采集卡的物理通道</h1>
-<h2 id="设备板卡dev">设备,板卡,dev</h2>
-<p>通常是数据采集卡,使用NII MAX 软件可以检查NIDAQ各种信息,包括设备,channel,引脚等等</p>
-<figure>
-<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/device.jpg" alt><figcaption>device</figcaption>
-</figure>
-<h2 id="channel路通道">channel,路,通道</h2>
-<p>一般数据采集卡的物理通道表示方法由两部分组成:板卡号+通道号 这样,根据物理通道的名称,我们就很容易判断该通道属于哪个板卡(因为可能同时存在多个板卡),该通道是AD,DA,COUNTER 或者IO.</p>
-<p><strong>通道形式</strong> : NI把物理通道分成模拟量输入（AI），模拟量输出（A0），数字量输入（DI），数字量输出（DO） 计数器输入（CI），计数器输出（CO）六个类别 ### AI/AO,CI/CO</p>
-<p><strong>表示形式</strong></p>
-<p>在设备中观察,就是各种接口,如图,由<code>通道形式+通道号</code>表示,由AI(analog input),AO(analog output),USER(我不知道是干嘛的),APFI,PFI(我也不知道是干嘛的).通常从0开始编号.图中没有数字信号</p>
-<p>旁边的DIFF,SE,RSE,NRSE应该和<a href="#DIFF,RSE,NRSE,PDIFF信号模式">信号模式相关</a>,但具体如何控制我也不懂.</p>
-<figure>
-<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/DIDAQ.jpg" alt><figcaption>channel</figcaption>
-</figure>
-<h2 id="port-端口-和-lineposition-bit-线">port 端口 和 line(position ,bit) 线</h2>
-<h3 id="dido">DI/DO</h3>
-<p>其中数字量输出和数字量输入比较特殊，有端口（PORT）和线（LINE）的概念，所谓端口，一般是8位的，读写端口就是同时对端口的8个位（线）同时操作，如果只操作相应端口的某一条线（实际就是某一位），可以通道物理通道控件选择线操作。</p>
-<p><strong>表示形式</strong></p>
-<p><code>端口号/线号</code>或者<code>端口号</code>,比如: PORT1 , PORT1/LINE1</p>
-<h2 id="多通道的表示方法">多通道的表示方法</h2>
-<p>连续方式：（用：分隔） Dev0/ai0:4 或者 Dev0/ai0:Dev0/ai4  表示选择0--4五个AI通道。  </p>
-<p>Dev0/port0:1 或者Dev0/port0:Dev0/Port1 表示同时选择PORT0和1两个端口。</p>
-<p>Dev0/port0/line0:4  表示同时选择PORT0的0--4五个控制位。  </p>
-<p>上面连续选择的方法是可以反向的，比如 </p>
-<p>Dev0/ai4:0   表示选择AI4，AI3，AI2，AI1，AI0五个模拟量采集通道。  </p>
-<p>列表方式：（用 ，分隔）  Dev0/ai1,Dev0/ai4   表示同时选择AI1和AI4两个物理通道。  </p>
-<p>也可以是列表和连续两种方式的混合： Dev0/ai0,Dev0/ai3:5   表示选择0，3，4，5物理通道</p>
-<h3 id="关于pfiapfi">关于PFI，APFI</h3>
-<p><font style="color:red">还不太清楚干嘛用的</font> E系列采集卡,PFI:可编程函数输入还有M系列采集卡的APFI:模拟可编程函数输入 在NI 62xx M系列板上，模拟触发线现在称为APFI（模拟可编程功能输入），而数字触发仍在PFI线上发生。 而对于NI 60xxE E系列板卡，可以通过PFI 0来执行模拟和数字触发。换句话说，对于M系列，PFI 0不再是数字和模拟触发的两倍，就像E系列一样。</p>
-<p>有一些带有两个连接器（例如625x和628x）的M系列设备，两个连接器（APFI 0和APFI 1）上都有一条APFI线路。 APFI 0或APFI 1端子都可用作模拟触发，但不能同时用作模拟触发。 它们都存在于两条线路上，以允许访问两个连接器上的APFI线路。</p>
-<h1 id="信号接地">信号接地</h1>
-<h2 id="信号的参考点">信号的参考点</h2>
-<p>接入数据采集设备的信号根据参考点的不同可以分为接地信号和浮动信号。 ### 1）接地信号 接地信号是信号的一端直接接地的电压信号。它的参考点是系统地（例如大地或建 筑物的地），最常见的接地信号是通过墙上的电源插座接入建筑物地的设备。例如信号 发生器和电源供电设备。 ### 2）浮动信号 浮动信号是不连接到建筑物等参考点的电压信号。浮动信号源常见的例子有电池及 其供电设备、热电偶、变压器、隔离放大器等设备。如果使用 DAQ 板做信号源，它输出 的也是浮动信号。</p>
-<h2 id="接地类型">接地类型</h2>
-<h3 id="根据信号类型分">根据信号类型分</h3>
-<p>除了正确进行接地设计、安装,还要正确进行各种不同信号的接地处理。控制系统中，大致有以下几种地线：   （1）数字地：也叫逻辑地，是各种开关量（数字量）信号的零电位。 </p>
-<p>（2）模拟地：是各种模拟量信号的零电位。 </p>
-<p>（3）信号地：通常为传感器的地。 </p>
-<p>（4）交流地：交流供电电源的地线，这种地通常是产生噪声的地。 </p>
-<p>（5）直流地：直流供电电源的地。 </p>
-<p>（6）屏蔽地：也叫机壳地，为防止静电感应和磁场感应而设。</p>
-<h3 id="根据接地方式分">根据接地方式分</h3>
-<figure>
-<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/接地类型.jpg" alt><figcaption>接地类型</figcaption>
-</figure>
-<h2 id="接地符号--常见的接地符号">接地符号--常见的接地符号 </h2>
-<p>PE,PGND,FG－保护地或机壳；<br>
-BGND或DC-RETURN－直流－48V(+24V)电源（电池）回流；<br>
-GND－工作地；<br>
-DGND－数字地； <br>
-AGND－模拟地；<br>
-LGND－防雷保护地 <br>
-GND在电路里常被定为电压参考基点。 从电气意义上说，GND分为电源地和信号地。PG是 Power Ground（电源地）的缩写。另一个是 Signal Ground（信号地）。实际上它们可能是连在一起的（不一定是混在一起哦！）。两个名称，主要是便于对电路进行分析。 <br>
-进一步说，还有因电路形式不同而必须区分的两种“地”：数字地，模拟地</p>
-<h3 id="几种接地符号">几种接地符号 </h3>
-<p>  <img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/接地符号.jpg" alt="接地符号"></p>
-<p>第1个我用做电源正或数字电路VCC,不用作地.</p>
-<p>第2个我用作数字地或数字模拟公共地.      </p>
-<p>第3个用作模拟地.      </p>
-<p>第4个当然是机箱外壳或外壳接大地了</p>
-<h2 id="建议">建议</h2>
-<p> 以上这些地线处理是系统设计、安装、调试中的一个重要问题。下面就接地问题提出一些看法： </p>
-<p>（1）控制系统宜采用一点接地。一般情况下,高频电路应就近多点接地，低频电路应一点接地。在低频电路中，布线和元件间的电感并不是什么大问题，然而接地形成的环路的干扰影响很大，因此，常以一点作为接地点；但一点接地不适用于高频，因为高频时，地线上具有电感因而增加了地线阻抗，同时各地线之间又产生电感耦合。一般来说，频率在1MHz以下,可用一点接地；高于10MHz时，采用多点接地；在1～10MHz之间可用一点接地，也可用多点接地</p>
-<p>（2）交流地与信号地不能共用。由于在一段电源地线的两点间会有数mV甚至几V电压，对低电平信号电路来说，这是一个非常重要的干扰，因此必须加以隔离和防止。 </p>
-<p>（3）浮地与接地的比较。全机浮空即系统各个部分与大地浮置起来，这种方法简单，但整个系统与大地绝缘电阻不能小于50MΩ。这种方法具有一定的抗干扰能力，但一旦绝缘下降就会带来干扰。还有一种方法，就是将机壳接地，其余部分浮空。这种方法抗干扰能力强，安全可靠，但实现起来比较复杂。 </p>
-<p>（4）模拟地。模拟地的接法十分重要。为了提高抗共模干扰能力，对于模拟信号可采用屏蔽浮技术。对于具体模拟量信号的接地处理要严格按照操作手册上的要求设计。 </p>
-<p>（5）屏蔽地。在控制系统中为了减少信号中电容耦合噪声、准确检测和控制，对信号采用屏蔽措施是十分必要的。根据屏蔽目的不同，屏蔽地的接法也不一样。电场屏蔽解决分布电容问题，一般接大地；电磁场屏蔽主要避免雷达、电台等高频电磁场辐射干扰。利用低阻金属材料高导流而制成，可接大地。磁场屏蔽用以防磁铁、电机、变压器、线圈等磁感应，其屏蔽方法是用高导磁材料使磁路闭合，一般接大地为好。当信号电路是一点接地时，低频电缆的屏蔽层也应一点接地。如果电缆的屏蔽层地点有一个以上时，将产生噪声电流，形成噪声干扰源。当一个电路有一个不接地的信号源与系统中接地的放大器相连时，输入端的屏蔽应接至放大器的公共端；相反，当接地的信号源与系统中不接地的放大器相连时，放大器的输入端也应接到信号源的公共端。 对于电气系统的接地，要按接地的要求和目的分类，不能将不同类接地简单地、任意地连接在一起，而是要分成若干独立的接地子系统，每个子系统都有其共同的接地点或接地干线，最后才连接在一起，实行总接地。</p>
-<h1 id="电源">电源</h1>
-<h2 id="电源符号">电源符号</h2>
-<p>混合电路里面做标示用的,GND表示模拟信号地,<br>
-1. VCC表示模拟信号电源,<br>
-2. VDD表示数字信号电源,<br>
-3. VSS表示数字电源地 ,  </p>
-<p>VCC主要表示Bipolar电路的电源，C表示Collector集电极,电源一般接在NPN的集电极（或PNP的发射极），集成电路刚出现时只有NPN管，后来才有集成进去的PNP管。VDD/VSS一般表示MOS电路的电源和“地”，D/S分别表示MOS管的Drain(漏)/Source(源)。 </p>
-<ul>
-<li>解释 </li>
-</ul>
-<ol type="1">
-<li>VCC：C=circuit 表示电路的意思, 即接入电路的电压；<br>
-</li>
-<li>VDD：D=device 表示器件的意思, 即器件内部的工作电压；<br>
-</li>
-<li>VSS：S=series 表示公共连接的意思，通常指电路公共接地端电压</li>
-</ol>
-<ul>
-<li><p>说明</p>
-<ol type="1">
-<li>对于数字电路来说，VCC是电路的供电电压,VDD是芯片的工作电压（通常Vcc&gt;Vdd），VSS是接地点。   </li>
-<li>有些IC既有VDD引脚又有VCC引脚，说明这种器件自身 带有电压转换功能。   </li>
-<li>在场效应管（或COMS器件）中，VDD为漏极，VSS为源极，VDD和VSS指的是元件引脚，而不表示供电电压。 </li>
-</ol>
-<p>VDD:电源电压（单极器件）；电源电压（4000系列数字电 路）；漏极电压（场效应管）  </p>
-<p>VCC：电源电压（双极器件）；电源电压（74系列数字电路）；声控载波（Voice Controlled Carrier)  </p>
-<p>VSS:地或电源负极  </p>
-<p>VEE：负电压供电；场效应管的源极（S）  </p>
-<p>VPP：编程/擦除电压。  </p>
-<p>详解：  在电子电路中，VCC是电路的供电电压, VDD是芯片的工作电压：  </p>
-<p>VCC：C=circuit 表示电路的意思, 即接入电路的电压， D=device 表示器件的意思, 即器件内部的工作电压，在普通的电子电路中，一般Vcc&gt;Vdd !  </p>
-<p>VSS：S=series 表示公共连接的意思，也就是负极。  </p>
-<p>有些IC 同时有VCC和VDD， 这种器件带有电压转换功能。  在“场效应”即COMS元件中，VDD乃CMOS的漏极引脚，VSS乃CMOS的源极引脚， 这是元件引脚符号，它没有“VCC”的名称，你的问题包含3个符号，VCC / VDD /VSS， 这显然是电路符号</p></li>
-</ul>
-<h1 id="diffrsenrsepdiff信号模式">DIFF,RSE,NRSE,PDIFF信号模式</h1>
-<h2 id="信号的连接方式">信号的连接方式</h2>
-<p>对于大多数模拟输入设备，可以有三种不同的信号连接方式：差分 DIFF （differential）、参考单端 RSE(referenced single-ended)和非参考单端 NRSE(nonreferenced single-ended)。</p>
-<h3 id="差分测试系统diff">1) 差分测试系统（DIFF）</h3>
-<p>在差分测试系统中信号的正负极分别接入两个通道，所有输入信号各自有自己的参 考点。图 2-2 所示是一个 8 通道的差分系统。通常差分系统是一个比较理想的测试系统， 因为它不仅抑制接地回路感应误差，而且在一定程度上抑制拾取了环境噪声。当输入信 号有以下情况下使用差分测试系统。</p>
-<p>i 低电平信号。</p>
-<p>ii 信号电缆比较长或没有屏蔽，环境噪声较大。</p>
-<p>iii 任何一个输入信号要求单独的参考点。</p>
-<p>仪器放大器输入端相对与仪器接地端之间的电压叫共模电压。理想的差分测试系统只读取信号的两极势差，而完全不会测量共模电压。在实际中板卡却限制了差分测量系统抵抗共模电压的能力，数据采集卡的共模电压的范围限制了相对于测量系统地的输入电压的波动范围，而共模电压的范围关系到一个数据采集卡的性能，可以用不同的方式来消除共模电压的影响。如果系统共模电压超过允许范围，需要限制信号地与数据采集卡的地之间的浮地电压，以避免测量数据错误</p>
-<figure>
-<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/电路1.jpg" alt><figcaption>电路</figcaption>
-</figure>
-<h3 id="参考单端测试系统rse">2)参考单端测试系统（RSE）</h3>
-<p>尽管差分测试系统是比较理想的选择，但是单端测试系统可以使用两倍的测试通道.（如图 2-3 所示）。单端测试系统所有信号都参考一个公共参考点即仪器放大极的负极。当输入信号符合以下条件时可以使用单端测试系统。</p>
-<p>i 高电平信号（通常大于 1V）。</p>
-<p>ii 距离比较短（通常小于 5m）或有合适屏蔽的电缆，环境无噪声。</p>
-<p>iii 所有信号共享一个公共参考点。</p>
-<figure>
-<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/电路2.jpg" alt><figcaption>电路</figcaption>
-</figure>
-<h3 id="非参考单端测试系统nrse">3）非参考单端测试系统（NRSE）</h3>
-<p>非参考单端测试系统用于测试接地信号。与参考单端测试系统不同的是因为所有输 入信号都已经接地了，所有信号参考点不需要再接地。图 2-4 所示是一个非参考单端测 试系统。 <img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/电路3.jpg" alt="电路"></p>
-<h3 id="伪差分输入">4)伪差分输入：</h3>
-<p>ADC伪差分输入.为了既有差分输入的优点又有单端输入简单的优点，还有一种伪差分输入，通过把信号地连到ADCIN-端实现一种类似差分的连接。</p>
-<p>伪差分（Pseudo-differential）信号连接方式减小了噪声，并允许在仪器放大器的共模电压范围内与浮动信号连接.在伪差分模式下，信号与输入的正端连接，信号的参考地与输入的负端连接。伪差分输入减小了信号源与设备的参考地电位(地环流)不同所造成的影响，这提高了测量的精度。</p>
-<p>伪差分输入与差分输入在减小地环流和噪声方面是非常相似的，不同的方面在于，差分输入模式下，负端输入是随时间变化的，而在伪差分模式下，负端输入一定仅仅是一个参考。描述伪差分的另外一种方式就是，输入仅仅在打破地的环流这个意义上是差分的，而参考信号(负端输入)不是作为传递信号的，而仅仅是为信号(正端输入)提供一个直流参考点。</p>
-<ul>
-<li>伪差分输入能有效抑制共模噪声吗？</li>
-</ul>
-<p>能部分抑制。由于两线对“大地”阻抗不一致，所以抑制效果有限。</p>
-<ul>
-<li>伪差分输入与差分输入相比有哪些优缺点？</li>
-</ul>
-<p>既然是“伪装”的，原则上没有优点只有缺点。其缺点就是两线不对称，共模抑制效果有限。硬要凑一个优点的话，就是可以勉强将单端输出信号伪装成差分，效果比完全单端连接效果稍好一点（解决两端地的小范围浮动）</p>
-<figure>
-<img src="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/电路4.png" alt><figcaption>电路4</figcaption>
-</figure>
-<h2 id="选择合适的测试系统">选择合适的测试系统</h2>
-<p>两种信号源和三种测量系统一共可以组成六种连接方式，如表 2-1 所示（表中带* 为推荐使用的方式，一般来说选择浮动信号和差动连接方式可能较好，但具体选择哪种 方式还应该视具体情况所定）。</p>
-<p>表 2-1 信号源与测量系统的连接方式</p>
-<table>
-<thead>
-<tr class="header">
-<th>测量系统</th>
-<th>接地信号</th>
-<th>浮动信号</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>DEF</td>
-<td>*</td>
-<td>*</td>
-</tr>
-<tr class="even">
-<td>RSE</td>
-<td></td>
-<td>*</td>
-</tr>
-<tr class="odd">
-<td>NRSE</td>
-<td>*</td>
-<td>*</td>
-</tr>
-</tbody>
-</table>
-<h2 id="reference">reference</h2>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/09/various%20psp%20and%20psc/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="epichide">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/user.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eichide's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h0 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/08/09/various%20psp%20and%20psc/" itemprop="url">varous abbreviation type of electrophysiology wave</a></h0>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-09T19:47:54+08:00">
-                2020-08-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/neuron/" itemprop="url" rel="index">
-                    <span itemprop="name">neuron</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="psc-postsynaptic-currents">PSC: postsynaptic <strong>currents</strong></h1>
-<p>Because current is being recorded here, the experimenter must be in <strong>voltage clamp.</strong></p>
-<h2 id="epsc">EPSC</h2>
-<p>MEPSCs and sEPSCs are both measures that examine the influence of excitatory neurotransmitters on a neuron. Both mEPSCs and sEPSCs are measured in a whole cell recording configuration. The major difference is that in recording mEPSCs, the spontaneous activity of the network is eliminated due to the voltage-gated sodium channel inhibitor tetrodotoxin (TTX).</p>
-<h2 id="mepsc-mini-excitatory-postsynaptic-currents">mEPSC: mini excitatory postsynaptic currents</h2>
-<p>recorded in bath applied tetrodotoxin</p>
-<h2 id="mepsc-的一些参数范围">mEPSC 的一些参数范围</h2>
-<ul>
-<li><p>Simkus, C. R. L., and Stricker, C. (2002a).</p>
-<p><strong>layer II neurones of rat barrel cortex:</strong></p>
-<p>rise_time: 0.2-0.3 ms(fast), 0.6-0.8ms(average)</p></li>
-<li><p>(Zhang et al. 2005)</p>
-<p><strong>CA1 region of the hippocampal slice</strong></p>
-<p>rise_time: 3-5ms, dacay_time: 7-15ms</p></li>
-</ul>
-<h2 id="sepsc-spontaneous-excitatory-post-synaptic-currents">sEPSC: spontaneous excitatory post synaptic currents</h2>
-<p>done in bath applied GABAA inhibitor.</p>
-<h2 id="关于-current-的拟合">关于 current 的拟合</h2>
-<h3 id="简单的双指数最小二乘法拟合tia-et-al.-1996">简单的双指数最小二乘法拟合(Tia et al. 1996)</h3>
-<p><span class="math display">\[{I(t)=I_{0}+I_{f} \operatorname{cxp}\left(-t / \tau_{f}\right)+I_{s} \operatorname{cxp}\left(-t / \tau_{s}\right)}\]</span></p>
-<ol type="1">
-<li><p><em>I<sub>f</sub></em> , <em>I<sub>s</sub></em> : the amplitudes of the fast and slow decay components</p></li>
-<li><p><em>τ<sub>f</sub></em> , <em>τ<sub>s</sub></em> : their respective decay time constants. -&gt; <em>τ<sub>fast</sub></em> , <em>τ<sub>slow</sub></em></p></li>
-<li><p>if baseline current not zero can add I<sub>0</sub> as constant.</p></li>
-<li><p>when t&lt;0, fix I(t)=0</p></li>
-<li><p>slow component:</p>
-<p><span class="math inline">\({I_{f} \operatorname{cxp}\left(-t / \tau_{f}\right)}\)</span></p></li>
-<li><p>fast component:</p>
-<p><span class="math inline">\({I_{s} \operatorname{cxp}\left(-t / \tau_{s}\right)}\)</span></p></li>
-</ol>
-<h4 id="gaba-fit">GABA fit</h4>
-<p><img src="/2020/08/09/various%20psp%20and%20psc/GABA_time_constan.jpg" alt="GABA_time_course"> 注:% fast = fast component(t<sub>peak</sub>)/slow component(t<sub>peak</sub>)</p>
-<h2 id="ipsc-inhibitory-postsynaptic-current">IPSC: inhibitory postsynaptic current</h2>
-<p>Inhibitory events can also be measured in this same way. The release of GABA is called an IPSC. To measure sIPSCs, pharmacological inhibition of excitatory neurotransmitters must be performed, possible with DNQX or CNQX for blockade of AMPA type receptors, and APV for blockade of NMDA type receptors.</p>
-<h1 id="psp-postsynaptic-potentials">psp: postsynaptic potentials</h1>
-<p>Deviations in membrane potential can also be measured in this way. The recording must be performed in a <strong>current clamp</strong> configuration for membrane potential to be measured.</p>
-<h1 id="关于递质释放和通道打开的-model">关于递质释放和通道打开的 model</h1>
-<figure>
-<img src="/2020/08/09/various%20psp%20and%20psc/平衡.jpg" alt><figcaption>动态平衡</figcaption>
-</figure>
-<ol type="1">
-<li><p>X: calcium binding protein , X<sup>*</sup> binding calcium</p></li>
-<li><p>V<sub>e</sub>: transmitter-containing vesicles, V<sub>e</sub><sup>*</sup>: binding X<sup>*</sup></p></li>
-<li><p>nT: n molecules of transmitter T</p></li>
-<li><p><em>k</em>: various rate constants</p>
-<ol type="1">
-<li><p>速率常数的计算:</p>
-<p>某一方向的反应速率只和底物浓度,催化剂,温度有关,和反方向的浓度无关.(或者说净速率是二者带符号相加)</p>
-<p>假设基元反应为： <span class="math display">\[{a A+\beta D=g G+h H}\]</span> 其数学表达式为: <span class="math display">\[{v=k c^{\alpha}(A) c^{\beta}(D)}\]</span></p>
-<p>上式中的 k 称为反应速率常数又称速率常数 k 或 λ 是化学反应速率的量化表示方式，其物理意义使其数值相当于参加反应的物质都处于单位浓度(1 mol·L-1)时的反应速率，故又称为反应的比速率（specific reaction rate）。</p></li>
-<li><p>其中 k<sub>3</sub>是单向的,因为它表示囊泡的释放.</p></li>
-</ol></li>
-<li><p>在 maximal concentration of calcium-binding proteins of <span class="math inline">\(0.001 \mathrm{mM},\)</span>情况下(Destexhe et al., 1994c)</p>
-<ol type="1">
-<li>K<sub>c</sub>: the rate constant for clearance of T</li>
-<li><span class="math inline">\({k_{b}=10^{5} s^{-1} m M^{-4}}\)</span></li>
-<li><span class="math inline">\({k_{u}=100 s^{-1}}\)</span>,</li>
-<li><span class="math inline">\({k_{1}=10^{6} s^{-1} m M^{-1}}\)</span>,</li>
-<li><span class="math inline">\({k_{2}=100 s^{-1}}\)</span></li>
-<li><span class="math inline">\({k_{3}=4000 s^{-1}}\)</span></li>
-<li><span class="math inline">\({V_{e}=0.01 \mathrm{mM}}\)</span></li>
-<li><span class="math inline">\({k_{c}=10^{4} \mathrm{s}^{-1}}\)</span></li>
-<li>the number of transmitter molecules per vesicle was <span class="math inline">\(n=10000\)</span></li>
-</ol></li>
-</ol>
-<h1 id="电生理测量的一些指标">电生理测量的一些指标</h1>
-<blockquote>
-<p>(Tia et al. 1996)</p>
-</blockquote>
-<ul>
-<li>half width: 通常是幅值 50% 两点之间的距离</li>
-<li>peak amplitude: at the absolute maximum of the currcnIs.</li>
-<li>peak time: 最高/最低时间点</li>
-<li>rise time: 通常是上升过程中幅值 10%-90% 点之间的距离.taking into account the noise of the baseline and noise around the peak, rise times were measured ils the time elapsed from IO to 90% of the peak amplitude of the rcsponsc.</li>
-<li>falling/dacay time: 通常是下降过程中幅值 10%-90% 点之间的距离</li>
-</ul>
-<p>参考图 <img src="/2020/08/09/various%20psp%20and%20psc/time_rime.png" alt="measure"> <img src="/2020/08/09/various%20psp%20and%20psc/../various%20psp%20and%20psc/rise_time4.gif" alt="measure2"> <img src="/2020/08/09/various%20psp%20and%20psc/rise_time3.jpg" alt="measure"> <img src="/2020/08/09/various%20psp%20and%20psc/wavefrom.png" alt="measure"></p>
-<h1 id="参考文献">参考文献</h1>
-<p>[1]: Destexhe, A., Mainen, Z. and Sejnowski, T.J. (1994c) Synthesis of mo dels for excitable membranes, synaptic transmission and neuromoulation using a common kinetic formalism. J. Computational Neurosci. 1 : 195-230.</p>
-<p>[2]: Simkus, C. R. L., and Stricker, C. (2002a). Analysis of mEPSCs recorded in layer II neurons of rat barrel cortex. J. Physiol. 545, 509–520. doi: 10.1113/jphysiol. 2002.022095</p>
-<p>[3]:Zhang, Jichuan, Ya Yang, Hongbin Li, Jun Cao, and Lin Xu. 2005. “Amplitude/Frequency of Spontaneous MEPSC Correlates to the Degree of Long-Term Depression in the CA1 Region of the Hippocampal Slice.” Brain Research 1050 (1): 110–17. https://doi.org/10.1016/j.brainres.2005.05.032.</p>
-<p>[4]:Tia, Sutthichai, Jin Feng Wang, Naiphinich Kotchabhakdi, and Stefano Vicini. 1996. “Developmental Changes of Inhibitory Synaptic Currents in Cerebellar Granule Neurons: Role of GABAA Receptor Α6 Subunit.” Journal of Neuroscience 16 (11): 3630–40. https://doi.org/10.1523/JNEUROSCI.16-11-03630.1996.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/06/Static%20Site/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="epichide">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/user.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eichide's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h0 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/08/06/Static%20Site/" itemprop="url">build a bolg or create a document using markdown</a></h0>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-06T13:38:15+08:00">
-                2020-08-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/environment/" itemprop="url" rel="index">
-                    <span itemprop="name">environment</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="首先关于markdown-转为html的用途">首先关于markdown 转为html的用途</h2>
-<ol type="1">
-<li>搭建博客, 主要是文章, 它可能需要好看简洁清爽的界面. 博客龄比较上的人来说, 会有大量的文件需要管理, 所以会比较需要一些归档, 而对复杂文本要求不高.</li>
-<li>编写说明手册, 可能一个开发的程序, 需要说明如何操作, 每个操作的类别(命令行), 还有多种注意事项, 所以文本复杂性, 高级语言比较高, 就像一本可互动可复制的网页版pdf</li>
-</ol>
-<p>关于静态网页所用的不同工具,可以查看<a href="https://www.staticgen.com/" target="_blank" rel="noopener">staticgen.xom</a></p>
-<p>比如几个常见的:(<a href="https://blog.csdn.net/mouday/article/details/83865749" target="_blank" rel="noopener">参考见</a>)</p>
-<table>
-<thead>
-<tr class="header">
-<th>框架</th>
-<th>语言环境</th>
-<th>参考文章</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Jekyll</td>
-<td>Ruby</td>
-<td><a href="https://www.jekyll.com.cn/" target="_blank" rel="noopener">文档</a> 、<a href="https://blog.csdn.net/mouday/article/details/79300135" target="_blank" rel="noopener">博文</a></td>
-</tr>
-<tr class="even">
-<td>Sphinx</td>
-<td>Python</td>
-<td><a href="https://zh-sphinx-doc.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">文档</a> 、<a href="https://blog.csdn.net/mouday/article/details/79388919" target="_blank" rel="noopener">博文</a></td>
-</tr>
-<tr class="odd">
-<td>Hexo</td>
-<td>Node.js</td>
-<td><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">文档</a> 、<a href="https://pengshiyu.blog.csdn.net/article/details/83895553" target="_blank" rel="noopener">博文</a></td>
-</tr>
-<tr class="even">
-<td>mkdocs</td>
-<td>Python</td>
-<td><a href="https://www.mkdocs.org/" target="_blank" rel="noopener">文档</a>、<a href="https://pengshiyu.blog.csdn.net/article/details/103669218" target="_blank" rel="noopener">博文</a></td>
-</tr>
-<tr class="odd">
-<td>docsify</td>
-<td>Node.js</td>
-<td><a href="https://docsify.js.org/#/zh-cn/" target="_blank" rel="noopener">文档</a>、<a href="https://pengshiyu.blog.csdn.net/article/details/107488533" target="_blank" rel="noopener">博文</a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="以-hexo-和-mkdocs-为例">以 hexo 和 mkdocs 为例</h2>
-<ul>
-<li><p>首先可以看这两个的例子</p>
-<ol type="1">
-<li>hexo:
-<ul>
-<li>https://notes.iissnan.com/</li>
-<li>https://haojen.github.io/Claudia-theme-blog/</li>
-</ul></li>
-<li>mkdocs:
-<ul>
-<li>https://squidfunk.github.io/mkdocs-material/getting-started/</li>
-<li>https://mkdocs.zimoapps.com/</li>
-</ul></li>
-</ol></li>
-<li><p>但不是说mkdoc就只能做document,也可以写blog: https://cyent.github.io/markdown-with-mkdocs-material/view/statement/. Hexo 同理, 它们只是ui专注的点不大相同</p></li>
-<li><p>mkdocs 的优势是它的扩展语法,mkdocs-material支持几十种markdown语法: https://squidfunk.github.io/mkdocs-material/reference/admonitions/ ,有高级的标注语言</p></li>
-</ul>
-<h2 id="参考连接">参考连接:</h2>
-<ul>
-<li><p><a href="https://www.crifan.com/document_build_tool_mkdocs_gitbook_other/" target="_blank" rel="noopener">文档制作工具相关：MkDocs Gitbook Hexo等</a></p></li>
-<li><p>Hexo theme 参考: <a href="https://www.zhihu.com/question/24422335" target="_blank" rel="noopener">有关Hexo的主题推荐</a></p></li>
-<li><p>mkdocs上手教程: <a href="https://pengshiyu.blog.csdn.net/article/details/103669218" target="_blank" rel="noopener">mkdocs生成项目文档</a></p></li>
-<li><p>mkdocs 官方教程: <a href="https://www.mkdocs.org/" target="_blank" rel="noopener">MkDocs</a></p></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/06/Probability%20Theory%20and%20Stochastic%20Process%20note/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="epichide">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/user.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eichide's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h0 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/08/06/Probability%20Theory%20and%20Stochastic%20Process%20note/" itemprop="url">概率论与随机过程笔记</a></h0>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-06T01:21:05+08:00">
-                2020-08-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/math/" itemprop="url" rel="index">
-                    <span itemprop="name">math</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="基本概念">基本概念</h1>
-<ol type="1">
-<li>随机试验(试验) experiment E :
-<ol type="1">
-<li>可重复性 : 在相同条件下可以重复</li>
-<li>结果可知性 : 不能知道准确的结果,但事先知道所有可能的结果</li>
-</ol></li>
-<li>样本点 sample point ω :
-<ul>
-<li>随机试验每一个不可分割的结果</li>
-</ul></li>
-<li>样本空间 sample space Ω : ω ∈ Ω
-<ul>
-<li>样本点全体的集合</li>
-</ul>
-<ol type="1">
-<li>离散样本空间
-<ol type="1">
-<li>有限样本空间</li>
-<li>可列样本空间</li>
-</ol></li>
-<li>连续样本空间</li>
-</ol></li>
-<li>随机事件 event A : A ⊂ Ω
-<ul>
-<li>样本空间子集</li>
-<li>表示 : {ω | X(ω) ≤ x } = {X≤x} = X≤x , A = {ω |X(ω) ∈ A } = { X(ω) ∈ A } = X ∈ A</li>
-<li>运算 : 余 A<sup>c</sup> , <span class="math inline">\(\bar{A}\)</span> , 对称差 (仅其一发生) A △ B ,</li>
-</ul>
-<ol type="1">
-<li>互斥事件 AB=∅</li>
-<li>对立事件/逆事件</li>
-</ol></li>
-<li>随机变量 random variable X(ω) , X , ξ , ζ , η
-<ul>
-<li>定义在样本空间的实值函数</li>
-</ul></li>
-<li>极限事件
-<ol type="1">
-<li>上极限事件</li>
-</ol></li>
-</ol>
-<h1 id="公式">公式</h1>
-<h2 id="概率公式">概率公式</h2>
-<ol type="1">
-<li>概率加法Jordan公式 <span class="math display">\[P(A_1\cup A_2...\cup A_n)=\sum_{j=1}P(A_i)-\sum_{1≤i&lt;j≤n}P(A_iA_j)+\ldots +(-1)^{n-1}\sum_{1≤j_1&lt;j_2\ldots &lt;j_n}P(A_{j_1}A_{j_2}\ldots A_{j-n})\]</span></li>
-<li>概率乘法公式 <span class="math display">\[P(A_1A_2...A_n)=P(A_n|A_1 A_2...A_{n-1})P(A_{n-1}|A_1A_2...A_{n-2})\ldots P(A_2|A_1)P(A_1)\]</span></li>
-<li>全概率公式
-<ul>
-<li><span class="math inline">\(B_iB_j=\varnothing, i \neq j\)</span></li>
-<li><span class="math inline">\(A⊂B_1\cup B_2\cup...\cup B_n\)</span> <span class="math inline">\(P(A) = P(A|B_1)P(B_1) + P(A|B_2)P(B_2) + ... + P(A|B_n)P(B_n)\)</span>$</li>
-</ul></li>
-<li>Bayes贝叶斯公式 <span class="math display">\[P(B_i|A) = \frac{P(A|B_i)P(B_i)}{\sum_{j=1}^{n} P(A|B_j)P(B_j)}\]</span></li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/06/java%20proper%20noun%20in%20both%20Chinese%20and%20English/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="epichide">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/user.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eichide's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h0 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/08/06/java%20proper%20noun%20in%20both%20Chinese%20and%20English/" itemprop="url">java proper noun in both Ch-En</a></h0>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-06T01:21:05+08:00">
-                2020-08-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/program/" itemprop="url" rel="index">
-                    <span itemprop="name">program</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li>对象 object</li>
-<li>对象成员 object member</li>
-<li>访问 access</li>
-<li>操作符 operator</li>
-<li>操作数</li>
-<li>操作</li>
-<li>变量 variable</li>
-<li>实例 instance</li>
-<li>调用 calling</li>
-<li>默认 default</li>
-<li>引用 referrence</li>
-<li>引用变量 referrence variable</li>
-<li>静态变量 static variable</li>
-<li>类变量 class variable</li>
-<li>数据域 data field</li>
-<li>匿名对象 annonyous object</li>
-<li>直接量 literal (程序中直接出现的常量值)</li>
-<li>数值型直接量</li>
-<li>引用型直接量</li>
-<li>基本类型变量</li>
-<li>引用类型变量</li>
-<li>垃圾 garbage (没有被引用的对象)</li>
-<li>垃圾回收 garbage collection(java检测垃圾,自动回收)</li>
-<li>API 应用程序编程接口 :application program interface(是一些预定义的函数,提供应用程序或开发人员给予某软件,硬件得以访问一组例程的能力,而无需访问源码)</li>
-<li>界面: interface</li>
-<li>GMT 格林威治时间 Greenwich mean time</li>
-<li>包私有 package-private</li>
-<li>包内访问 package-access</li>
-<li>访问器 accessor</li>
-<li>修改器 mutator</li>
-<li>不可变对象 immutable object</li>
-<li>隐藏 hidden</li>
-<li>隐藏数据域 hidden data field (类中函数由于局部变量与数据域重名,导致部分数据被隐藏)</li>
-<li>重写=覆盖 override (子类修改父类定义的方法的实现)</li>
-<li>方法重写 method overriding</li>
-<li>重载 overloading (使用同样明仔用不同签名来定义多个方法)</li>
-<li>多态 polymorphism (可以使用父类对象的位置,比如参数,对象,都可以使用子对象)</li>
-<li>动态绑定 dynamic binding (声明类型调用某一方法由实际类型决定)</li>
-<li>类抽象 class abstraction(将类的实现与使用分离)</li>
-<li>类的封装 class encapsulation(对用户隐藏类法人实现)</li>
-<li>数据域封装 data field encapsulation(声明一些成员为private 以避免对数据的直接修改)</li>
-<li>ADT 抽象数据类型 abstract data type (类也可称为ADT)</li>
-<li>装箱 boxing (基本类型转换为基本类型的类对象)</li>
-<li>自动装箱：将 基本数据类型 封装为对象类型，来符合java的面向对象的思想。</li>
-<li>自动拆箱：将对象重新转化为基本数据类型。</li>
-<li>声明类型 declear type (一个变量声明为某种类型,一个引用变量声明为某种类的引用)</li>
-<li>实际类型 actual type (被应用变量的实际类型/类)</li>
-<li>对象转换</li>
-<li>隐式转换 implict casting (子类是实例被引用给父类引用变量)</li>
-<li>向上转换 upcasting</li>
-<li>显示转换 explict casting (子类 b =(子类)父类对象,书写方式,把父类转换为子类)</li>
-<li>向下转换 downcasting</li>
-<li>可见性修饰符 visibility modifier</li>
-<li>可访问性修饰符 accessibility modifier</li>
-</ul>
-<h1 id="error-type">error type</h1>
-<ul>
-<li>Null pointer exception : 调用值为null的引用变量</li>
-<li>Arithmetic Exception :异常的运算条件时,抛出此异常。例如,一个整数“除以零”时</li>
-<li>Class cast exception :</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/06/Java%20function%20note/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="epichide">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/user.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eichide's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h0 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/08/06/Java%20function%20note/" itemprop="url">java function note</a></h0>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-06T01:21:05+08:00">
-                2020-08-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/program/" itemprop="url" rel="index">
-                    <span itemprop="name">program</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>!!! garbage</p>
-<h1 id="java-method-note">java method note</h1>
-<ul>
-<li>System.currentTimeMillis() : return current time: millisecongs from GMT(Greenwich Mean Time or Universal Time) 1970.1.1 to now,millis=millisecond</li>
-<li>Integer.parseInt(intString) :intstring is numerical type string,return numerical value</li>
-<li>Double.parseDouble(doubleString);return numerical value from string</li>
-<li>input redirection : java SentineValue &lt;input.txt</li>
-<li>output redirection : java SentieValue &lt;output.txt</li>
-<li>java SentineValue &lt;input.txt &gt;output.txt</li>
-<li>import java.util.*</li>
-</ul>
-<h2 id="scanner-class--dynamic-method">Scanner Class -dynamic method</h2>
-<h3 id="read-value-from-keyboard">read value from keyboard</h3>
-<ul>
-<li><strong>Scanner input =new Scanner(System.in);</strong></li>
-<li>input.nextByte();</li>
-<li>input.nextShort();</li>
-<li>input.nextInt();</li>
-<li>input.nextLong();</li>
-<li>input.nextFloat();</li>
-</ul>
-<h2 id="math-class--static-method">Math Class -static method</h2>
-<h3 id="trigonometric-method"><strong> trigonometric method</strong></h3>
-<ul>
-<li>radians :unit is π ; degree :unit is ° ; a: is numerical value</li>
-<li>sin(radians);cos(radians);tan(radians);</li>
-<li>asin(a);acos(a);atan(a);</li>
-<li>toRadians(degree); --- conversion from degree to radians</li>
-<li>toDegrees(randians); ---conversion from radians to degree</li>
-</ul>
-<h3 id="exponent-method"><strong> exponent method</strong></h3>
-<ul>
-<li>exp(x); --- return e<sup>x</sup>;</li>
-<li>log(x); --- return lnx;</li>
-<li>log10(x); --- return log<sub>10</sub>(x);</li>
-<li>pow(x,y); --- return x<sup>y</sup></li>
-<li>sqart(x); --- return $  (x&gt;0) $</li>
-</ul>
-<h3 id="sevice-method"><strong> sevice method</strong></h3>
-<ul>
-<li>ceil(x); --- return double y=<span class="math inline">\(\lceil x \rceil\)</span> : $ yZ x+1yx $</li>
-<li>floor(x); --- return double y=$x $: $yZ x-1 y x $</li>
-<li>rint(x): --- return double y=$=(x -x x-x ) ? x : x $</li>
-<li>round(x); --- return floor(x),if x is float retun int,if x is double return float</li>
-<li>min(x); max(x); abs(x);</li>
-<li>random(); --- produce a double value (0≤ ＜1)</li>
-</ul>
-<h2 id="character-class">Character Class</h2>
-<ul>
-<li>value is char</li>
-<li>isDigit(ch); --- judge whether ch is digit</li>
-<li>isLetter(ch); --- judge whether ch is letter</li>
-<li>isLetterOrDigit(ch);</li>
-<li>isLowerCase(ch);</li>
-<li>isUpperCase(ch);</li>
-<li>toLowerCase(ch);</li>
-<li>toUpperCase(ch);</li>
-</ul>
-<h2 id="string-class--dynamic-methodinstance-method">String Class -dynamic method(instance method)</h2>
-<ul>
-<li>String s="content";</li>
-<li>length(); --- return number of string</li>
-<li>charAt(index); --- return s[index] value</li>
-<li>concat(s1); --- return s+s1</li>
-<li>toLowerCase(); --- return string with lower letters</li>
-<li>toUpperCase(); --- return string with upper letters</li>
-<li>trim(); --- delete the blank space on both side</li>
-<li>equals(s1); --- if s==s1 return ture</li>
-<li>equalsIgnoreCase(); --- ignore case ,if s==s1 return ture</li>
-<li>compareTo(s1); ---return a value =the first diffent char'distance (former-latter)</li>
-<li>compareToIgnoreCase(s1);--- ignore case,-return a value =the first diffent char'distance (former-latter)</li>
-<li>startWith(prefix);--- judge whethther s starts with s1</li>
-<li>endWith(prfix);--- judge whethther s ends with s1</li>
-<li>contains(s1);--- judge whether s contains s1</li>
-<li>indexOf(ch/s);--- return the index of the <strong>first</strong> s1(index is from the fist char of s),else return -1</li>
-<li>indexOf(ch/s1,fromIndex);--- return the index of the <strong>first</strong> s1 <strong>after</strong> formIndex ,else return -1</li>
-<li>lastindexOf(ch/s1);--- return the index of the <strong>last</strong> s1(index is from the fist char of s1),else return -1</li>
-<li>lastindexOf(ch/s1,fromIndex);--- return the index of the <strong>last</strong> s1 <strong>before</strong> formIndex ,else return -1</li>
-<li>substring(beginIndex); --- return string from beginIndex to end</li>
-<li>substring(beginIndex,endIndex); --- return string from beginindex to endindex</li>
-</ul>
-<h2 id="data-class--dynamic-method">Data Class -dynamic method</h2>
-<ul>
-<li>Date(); --- create current date object</li>
-<li>java.util.Date = new java.util.Date();</li>
-<li>Date(elapeseTime:long); --- create elapeseTime from GMT 1970.1.1 date object</li>
-<li>toString(); --- return time string with pattern : Mon Dec 26 07:00:15 EST 2001</li>
-<li>getTime(); ---- return elapse milliseconds from EST 1970.1.1 to "now"</li>
-<li>setTime(elapseTime:long) ---set elapse time</li>
-</ul>
-<h2 id="random-class--dynamix-method">Random Class -dynamix method</h2>
-<ul>
-<li>Random(); --- current time as seed create object</li>
-<li>random random = new Random();</li>
-<li>Random(seed:long); --- certain value as seed create object</li>
-<li>nextInt(); --- return random value</li>
-<li>nextLong();</li>
-<li>nextDouble();</li>
-<li>nextFloat();</li>
-<li>nextBoolean();</li>
-</ul>
-<h2 id="bigdecimal-class">BigDecimal Class</h2>
-<h3 id="kinds-of-rounding-modes">8 kinds of rounding modes</h3>
-<ol type="1">
-<li><p>Rounding down - <strong>ROUND_FLOOR</strong> <br><br>round down (or take the <strong>floor,</strong> or round towards minus infinity): y is the largest integer that does not exceed x.<br><br>${y= (x)=x=--x} $<br><br></p></li>
-<li><p>Rounding up - <strong>ROUND_FLOOR</strong> <br><br> round up (or take the <strong>ceiling,</strong> or round towards plus infinity): y is the smallest integer that is not less than x. <br><br> ${y= (x)=x=--x} $<br><br></p></li>
-<li><p>Rounding towards zero - <strong>ROUND_DOWN</strong> <br><br> round towards <strong>zero</strong> (or truncate, or round away from infinity): y is the integer part of x, without its fraction digits.<br><br><span class="math inline">\({\displaystyle y=\mathrm {truncate} (x)=\mathrm {sgn}(x)\left\lfloor \left|x\right|\right\rfloor =-\mathrm {sgn}(x)\left\lceil -\left|x\right|\right\rceil }\)</span><br><br></p></li>
-<li><p>Rounding away from zero - <strong>ROUND_UP</strong> round away from zero (or round towards infinity): if x is an integer, y is x; else y is the integer that is closest to 0 and is such that x is between 0 and y.<br><br><span class="math inline">\({\displaystyle y=\mathrm {sgn}(x)\left\lceil \left|x\right|\right\rceil =-\mathrm {sgn}(x)\left\lfloor -\left|x\right|\right\rfloor }\)</span><br><br></p></li>
-<li><p>Round half towards zero - <strong>ROUND_HALF_DOWN 五舍六入</strong> <br><br>One may also round half towards zero (or round half away from infinity) as opposed to the conventional round half away from zero.<br><br><span class="math inline">\({\displaystyle y=\mathrm {sgn}(x)\left\lceil \left|x\right|-0.5\right\rceil =-\mathrm {sgn}(x)\left\lfloor -\left|x\right|+0.5\right\rfloor }\)</span><br><br></p></li>
-<li><p>Round half away from zero - <strong>ROUND_HALF_UP 四舍五入</strong> <br><br>The other tie-breaking method commonly taught and used is the round half away from zero (or round half towards infinity).<br><br>${y=(x)|x|+0.5=-(x)-|x|-0.5} $</p></li>
-</ol>
-<p>Round half to even - <strong>ROUND_HALF_EVEN</strong> <br><br>A tie-breaking rule without positive/negative bias and without bias toward/away from zero is round half to even. By this convention, if the fractional part of x is 0.5, then y is the even integer nearest to x</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/06/The%20PAC%20learning%20Framework/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="epichide">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/user.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eichide's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h0 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/08/06/The%20PAC%20learning%20Framework/" itemprop="url">CH2 :The PAC Learning Framework</a></h0>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-06T01:21:05+08:00">
-                2020-08-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/math/" itemprop="url" rel="index">
-                    <span itemprop="name">math</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>[TOC] 作者: Mehryar Mogri ## 前言 * PAC学习框架,PAC : probably approximately correct learning ## 中英文释义 definition 定义 note 注解,强调,注意 denote 用什么表示什么 instance 实例 non-trivial ### 符号</p>
-<p><span class="math inline">\(\mathcal{X}\)</span> : 所有可能的 examples or instances,input space <span class="math inline">\(\mathcal{Y}\)</span> : 所有可能的 labels or target values,output space c : target concept,类似于映射,从<span class="math inline">\(\mathcal{X}\)</span> 到 <span class="math inline">\(\mathcal{Y}\)</span> mapping,是我们想要研究的目标 <span class="math inline">\(\mathcal{C}\)</span> : concept class ,是一簇我们希望学习的概念.我不知道对不对,可能就是一种对concept的举一反三,扩展模型,没有绝对的边界.比如concept是一个确定角度和边长三角形,concept class就是一个三角形的大概念或者是一个多边形的概念,我们想学习可扩展的concept集合,而不是只用于目前问题的concept 假设assume样例是独立同分布的( independently and identically distributed (i.i.d.))服从于 according to 一个未知分布<span class="math inline">\(\mathcal{D}\)</span> <span class="math inline">\(\mathcal{H}\)</span> : 假设集, hypothesis set,是研究者考虑的可能cencept set,它可能会和<span class="math inline">\(\mathcal{C}\)</span> 一致,也可能不一致,因为我们不知道c和<span class="math inline">\(\mathcal{C}\)</span>是怎样的,只能靠猜测 <span class="math inline">\(\mathcal{S}=(x_1,...,x_m)\)</span> : 样本集,来自于<span class="math inline">\(\mathcal{D}\)</span>,同时标注了label <span class="math inline">\((c(x_1),...,c(x_m))\)</span>,标注了的样本集,叫labeled sample,其中每个可以叫做example/instance <span class="math inline">\(\mathcal{A}\)</span> : 一个算法,algorithm,它依据样本集从<span class="math inline">\(\mathcal{H}\)</span>中选出一个h<sub>s</sub> n : 表示represent任意元素x∈<span class="math inline">\(\mathcal{X}\)</span>所需要的最大计算开销computation cost,比如n维空间需要n个数表示一个元素x size(c) : 表示c的最大计算开销 ## PAC学习模型</p>
-<ul>
-<li>泛化误差 generalization error / risk error/ ture error/ simply error 给定假设h∈<span class="math inline">\(\mathcal{H}\)</span>,h的泛化误差定义为:注意这里x~<span class="math inline">\(\mathcal{D}\)</span> <span class="math inline">\(R(h)=\underset{x \sim D}{\mathbb{P}}[h(x) \neq c(x)]=\underset{x \sim D}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]\)</span></li>
-<li>经验误差 Empirical error/Empirical risk 给定假设h∈<span class="math inline">\(\mathcal{H}\)</span>,h的经验定义为:这里的<span class="math inline">\(\mathcal{S}\)</span>~<span class="math inline">\(\mathcal{D^m}\)</span> <span class="math inline">\(\widehat{R}_{S}(h)=\frac{1}{m} \sum_{i=1}^{m} 1_{h\left(x_{i}\right) \neq c\left(x_{i}\right)}\)</span></li>
-<li>经验误差的期望=泛化误差 <span class="math inline">\(\underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[\widehat{R}_{S}(h)\right]=R(h)\)</span> proof: <span class="math inline">\(\underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[\widehat{R}_{S}(h)\right]=\frac{1}{m} \sum_{i=1}^{m} \underset{S \sim \mathbb{D}^{m}}{\mathbb{E}}\left[1_{h\left(x_{i}\right) \neq c\left(x_{i}\right)}\right]=\frac{1}{m} \sum_{i=1}^{m} \underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]=\underset{S \sim \mathcal{D}^{m}}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]=\underset{x \sim \mathcal{D}}{\mathbb{E}}\left[1_{h(x) \neq c(x)}\right]=R(h)\)</span> ### PAC learning 如果一个<span class="math inline">\(\mathcal{C}\)</span>,存在一个算法<span class="math inline">\(\mathcal{A}\)</span>和一个多元多项式polynominal function poly(1/ε, 1/δ, n, size(c)) ,对于?ε&gt;0,δ&gt;0,<span class="math inline">\(\mathcal{D}\)</span>,c,如果满足: <span class="math inline">\(\underset{S \sim \mathcal{D}^{m}}{\mathbb{P}}\left[R\left(h_{S}\right) \leq \epsilon\right] \geq 1-\delta\)</span> 那么<span class="math inline">\(\mathcal{C}\)</span>就认为是PAC learnable 再如果?算法<span class="math inline">\(\mathcal{A}\)</span>在poly(1/ε, 1/δ, n, size(c))时间内运算完,那么那么<span class="math inline">\(\mathcal{C}\)</span>就认为是efficiently PAC learnable,<span class="math inline">\(\mathcal{A}\)</span>则称为PAC learning 算法
-<ul>
-<li>approximately correct (ε)近似准确,即<span class="math inline">\(h_{S}\)</span>与c之间的误差<span class="math inline">\(R\left(h_{S}\right) \leq \epsilon\)</span></li>
-<li>probability (1-δ) 误差小于epsilon的可能性,即 <span class="math inline">\(\underset{S \sim \mathcal{D}^{m}}{\mathbb{P}}\left[R\left(h_{S}\right) \leq \epsilon\right] \geq 1-\delta\)</span> #### 说明</li>
-<li>PAC框架framwork是distribution-free 模型,对于总体分布没有要求</li>
-<li><font color="red">可以放宽以适应domain adaptation 问题</font></li>
-<li>PAC框架处理概念集<span class="math inline">\(\mathcal{C}\)</span>的可学习问题,而不是特定的c.<font color="red">注意，概念类C是算法已知的，但是目标概念c∈C当然是未知的。</font></li>
-<li>当computational representation没有讨论或比较容易得到straightforward,我们可先忽略n和size(c) ### 例子2.4(学习轴对齐的矩形) 考虑平面plane上点集,<span class="math inline">\(\mathcal{X}=\mathbb{R^2}\)</span>,概念集<span class="math inline">\(\mathcal{C}\)</span>是<span class="math inline">\(\mathbb{R^2}\)</span>中与坐标轴平行的矩形,R表示目标矩形(c)，R'=<span class="math inline">\(R_s\)</span>表示假设矩形(<span class="math inline">\(h_s\)</span>)</li>
-</ul></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&gt;</a>
-  </nav>
-
-
-
-
-
-          </div>
-          
-
-
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/user.gif"
-               alt="epichide" />
-          <p class="site-author-name" itemprop="name">epichide</p>
-           
-              <p class="site-description motion-element" itemprop="description">nothing to remember</p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives/">
-                <span class="site-state-item-count">18</span>
-                <span class="site-state-item-name">posts</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">8</span>
-                <span class="site-state-item-name">categories</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">17</span>
-                <span class="site-state-item-name">tags</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">epichide</span>
-</div>
-
-
-<div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
-</div>
-
-<div class="theme-info">
-  Theme -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
-    NexT.Gemini
-  </a>
-</div>
-
-
-        
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "";
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.remove("show");
   }
 </script>
 
 
+        
+        
+
+<div class='l_main'>
+  
+  <section class="post-list">
+    
+      
+        
+          
+        
+          
+        
+          
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+    
+    
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/09/04/chemogenetic%20and%20optogenetic%20method/">
+        chemogenetic and optogenetic method
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        我们想操纵神经元活动,有哪些方法呢? 在神经本身正常分裂分化表达蛋白的过程是一个类似自组织的过程,不需要外界的干预,也表明外界要想干预,方法都不会很直接.
+最直接的想法是直接给神经元一个刺激, 那么它就是电生理
+较为间接的想法是在神经元中特异表达一些只受人工操作响应的蛋白,它可以是对人为的刺激特异的响应.外界的刺激比较容易想到的就是 光,电,人工药物 .
+光:对应的就是光遗传学,一般细...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-09-04</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/neuron/">neuron</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/09/04/chemogenetic%20and%20optogenetic%20method/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/09/04/Orchestrating%20Opiate-Associated%20Memories%20in%20Thalamic%20Circuits/">
+        Orchestrating Opiate-Associated Memories in Thalamic Circuits
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        Orchestrating Opiate-Associated Memories in Thalamic Circuits
+
+author : Piper C. Keyes, Eliza L. Adams, Zijun Chen, ..., Marc Tessier-Lavigne, Yingjie Zhu, Xiaoke Chen
+publish : Keyes et al., 20...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-09-04</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/paper/">paper</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/09/04/Orchestrating%20Opiate-Associated%20Memories%20in%20Thalamic%20Circuits/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/09/03/Igor%20NIDAQ%20tools%20MX%20%E5%87%BD%E6%95%B0%E5%92%8C%E6%93%8D%E4%BD%9C%20(%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91)/">
+        Igor NIDAQ tools MX 函数和操作 (中文翻译)
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        符号说明
+
+operation : 在命令的最前面是NIDAQ 工具箱MX XOP(我不清楚XOP是什么的缩写)的操作. 和函数的区别不清楚
+function : 是普遍的函数形式,会有返回值
+Flags : 以 /sign 的形式, 有时候需要您输入具体的参数值,则为/sign=value的形式
+channel : 设备通常有多个输入/输出通道
+parameter : 通常是必...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-09-03</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/09/03/Igor%20NIDAQ%20tools%20MX%20%E5%87%BD%E6%95%B0%E5%92%8C%E6%93%8D%E4%BD%9C%20(%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91)/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/09/03/short%20term%20synaptic%20plasticity/">
+        Short-Term Synaptic Plasticity
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        SHORT -TERM SYNAPTIC PLASTICITY
+
+Robert S. Zucker
+Department of Molecular and Cell Biology, University of California, Berkeley,California 94720; e-mail: zucker@socrates.berkeley.edu
+Wade G. Reg...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-09-03</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/nruron/">nruron</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/09/03/short%20term%20synaptic%20plasticity/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/09/03/using%20scipy%20signal/">
+        using scipy singal
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        5
+
+
+
+
+
+
+
+$("#ipynb").load( function() {
+console.log($("#ipynb").contents().find("body").find("#notebook"));
+document.getElementById('ipynb').height=$("#ipynb").contents().find("#notebook"...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-09-03</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/program/">program</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/09/03/using%20scipy%20signal/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/08/24/reverberatory/">
+        reverberatory
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        reverberation
+cell assemblies
+a interconnected neuronal circuits which recurrent sequential activities to make sure that brain retains information
+small network in vitro
+
+neuron number : 30-10...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-08-24</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/08/24/reverberatory/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/">
+        NIDAQ 设备的基本介绍
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        相关设备
+BNC connector BNC 连接器
+BNC连接器（英语：Bayonet Neill-Concelman，直译为“尼尔-康塞曼卡口”）是一种很常见的RF端子同轴电缆终结器。BNC电缆连接器由一根中心针、一个外套和卡座组成。它包括BNC连接器基座、外套和探针三部分。BNC连接器得名于其锁定方式和其发明者贝尔实验室的保罗·尼尔（发明了N端子）和安费诺公司的工程师卡尔·康塞曼（...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-08-11</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/electronic/">electronic</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/08/09/various%20psp%20and%20psc/">
+        varous abbreviation type of electrophysiology wave
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        PSC: postsynaptic currents
+Because current is being recorded here, the experimenter must be in voltage clamp.
+EPSC
+MEPSCs and sEPSCs are both measures that examine the influence of excitatory ne...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-08-09</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/neuron/">neuron</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/08/09/various%20psp%20and%20psc/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/08/06/Static%20Site/">
+        build a bolg or create a document using markdown
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        首先关于markdown 转为html的用途
+
+搭建博客, 主要是文章, 它可能需要好看简洁清爽的界面. 博客龄比较上的人来说, 会有大量的文件需要管理, 所以会比较需要一些归档, 而对复杂文本要求不高.
+编写说明手册, 可能一个开发的程序, 需要说明如何操作, 每个操作的类别(命令行), 还有多种注意事项, 所以文本复杂性, 高级语言比较高, 就像一本可互动可复制的网页版pdf
+...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-08-06</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/environment/">environment</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/08/06/Static%20Site/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/08/06/Probability%20Theory%20and%20Stochastic%20Process%20note/">
+        概率论与随机过程笔记
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        基本概念
+
+随机试验(试验) experiment E :
+
+可重复性 : 在相同条件下可以重复
+结果可知性 : 不能知道准确的结果,但事先知道所有可能的结果
+
+样本点 sample point ω :
+
+随机试验每一个不可分割的结果
+
+样本空间 sample space Ω : ω ∈ Ω
+
+样本点全体的集合
+
+
+离散样本空间
+
+有限样本空间
+可列样本...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-08-06</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/math/">math</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/08/06/Probability%20Theory%20and%20Stochastic%20Process%20note/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+    
+  </section>
+  
+    
+      <br>
+      <div class="prev-next">
+        
+        <p class="current">
+          1 / 3
+        </p>
+        
+          <a class="next" rel="next" href="/page/2/">
+            <section class="post next white-box shadow">
+              &nbsp;Next&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
+            </section>
+          </a>
+        
+      </div>
+    
+  
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+<section class="widget blogger shadow desktop mobile">
+  <div class='content'>
+    
+      
+        <a class='avatar flat-box rectangle' href='/about/'>
+          <img no-lazy src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
+        </a>
+      
+    
+    
+      <div class='text'>
+        
+        
+        
+          <p><span id="jinrishici-sentence">Eichide's Blog</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/atom.xml"
+              class="social fas fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="mailto:me@xxx.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://github.com/volantis-x/"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="/"
+              class="social fas fa-headphones-alt flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+  
+
+  <section class="widget category shadow desktop">
+    
+  <header>
+    
+      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/economy/" href="/categories/economy/"
+            id="categorieseconomy"
+            ><div class='name'>economy</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/electronic/" href="/categories/electronic/"
+            id="categorieselectronic"
+            ><div class='name'>electronic</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/environment/" href="/categories/environment/"
+            id="categoriesenvironment"
+            ><div class='name'>environment</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/math/" href="/categories/math/"
+            id="categoriesmath"
+            ><div class='name'>math</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/neuron/" href="/categories/neuron/"
+            id="categoriesneuron"
+            ><div class='name'>neuron</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/nruron/" href="/categories/nruron/"
+            id="categoriesnruron"
+            ><div class='name'>nruron</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/paper/" href="/categories/paper/"
+            id="categoriespaper"
+            ><div class='name'>paper</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/philosophy/" href="/categories/philosophy/"
+            id="categoriesphilosophy"
+            ><div class='name'>philosophy</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/program/" href="/categories/program/"
+            id="categoriesprogram"
+            ><div class='name'>program</div><div class='badge'>(3)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+  
+
+  
+    
+    
+  
+
+  <section class="widget tagcloud shadow desktop mobile">
+    
+  <header>
+    
+      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <a href="/tags/book/" style="font-size: 14px; color: #999">book</a> <a href="/tags/code/" style="font-size: 14px; color: #999">code</a> <a href="/tags/java/" style="font-size: 17.33px; color: #828282">java</a> <a href="/tags/jottings/" style="font-size: 14px; color: #999">jottings</a> <a href="/tags/machine-learning/" style="font-size: 14px; color: #999">machine_learning</a> <a href="/tags/markdown/" style="font-size: 14px; color: #999">markdown</a> <a href="/tags/math/" style="font-size: 14px; color: #999">math</a> <a href="/tags/neuron/" style="font-size: 14px; color: #999">neuron</a> <a href="/tags/note/" style="font-size: 17.33px; color: #828282">note</a> <a href="/tags/novel/" style="font-size: 20.67px; color: #6c6c6c">novel</a> <a href="/tags/ntechology/" style="font-size: 14px; color: #999">ntechology</a> <a href="/tags/nuron/" style="font-size: 14px; color: #999">nuron</a> <a href="/tags/paper/" style="font-size: 14px; color: #999">paper</a> <a href="/tags/philosophy/" style="font-size: 24px; color: #555">philosophy</a> <a href="/tags/probability/" style="font-size: 14px; color: #999">probability</a> <a href="/tags/psc/" style="font-size: 14px; color: #999">psc</a> <a href="/tags/psp/" style="font-size: 14px; color: #999">psp</a> <a href="/tags/scipy/" style="font-size: 14px; color: #999">scipy</a> <a href="/tags/signal/" style="font-size: 14px; color: #999">signal</a> <a href="/tags/wave/" style="font-size: 14px; color: #999">wave</a>
+    </div>
+  </section>
+
+
+  
+
+  
+
+
+</aside>
+
+
+
+      </div>
+      
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="/atom.xml"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+          
+            
+              <a href="https://github.com/volantis-x/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+              <a href="/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/010-facebook.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/010-facebook.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+              <a href="/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/018-twitter.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/018-twitter.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+              <a href="/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/045-telegram.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/045-telegram.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+              <a href="/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/006-youtube.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/006-youtube.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </div>
+      
+    
+      
+        <div><p>Blog content follows the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+</div>
+      
+    
+      
+        
+          <div><p><span id="lc-sv">本站总访问量为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+</div>
+        
+      
+    
+      
+        Use
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.0.0-rc.2" target="_blank" class="codename">Volantis</a>
+        as theme
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="/">Copyright © 2017-2020 XXX</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+      <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+    </div>
+  </div>
+  <div>
+    <!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      // 背景层
+      var bgDiv = document.createElement("div");
+      $(bgDiv).addClass("bg");
+      if ($(this).attr('bg')) {
+        $(bgDiv).css('background', $(this).attr('bg'));
+      }
+      $(this).wrap(bgDiv); // 背景层
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if($(".md").find("img").not('.inline').not('a img').length+$(".article-entry").find("img").length==0)return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    setTimeout(function() {
+      loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+    }, 1);
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+</script>
+
+
+<!-- internal -->
+
+
+
+
+<!-- optional -->
+
+  <script>
+  
+  var SEARCH_SERVICE = "hexo" || "hexo";
+  var ROOT = "/" || "/";
+  if (!ROOT.endsWith('/')) ROOT += '/';
+</script>
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+  
+    <script>
+      window.FPConfig = {
+        delay: 0,
+        ignoreKeywords: [],
+        maxRPS: 5,
+        hoverDelay: 25
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+  
+
+
+
 
 
 
@@ -3075,7 +1476,93 @@ GND在电路里常被定为电压参考基点。 从电气意义上说，GND�
 
 
   
+  
+<script src="/js/valine.js"></script>
 
+
+<script>
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link'.split(',').filter(function (item) {
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick', 'mail', 'link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function (item) {
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
+
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+
+    let pagePlaceholder = $.trim($('#pjax-comment-placeholder').text()) || "快来评论吧~";
+
+    let path = $.trim($('#pjax-comment-path').text());
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+
+    var valine = new Valine();
+    valine.init({
+      el: '#valine_container',
+      meta: meta,
+      placeholder: pagePlaceholder,
+      path: path,
+      appId: "",
+      appKey: "",
+      pageSize: '10',
+      avatar: 'robohash',
+      lang: 'zh-cn',
+      visitor: 'true',
+      highlight: 'true',
+      mathJax: 'false',
+      enableQQ: 'true',
+      requiredFields: requiredFields,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps
+    })
+  }
+
+  $(function () {
+    pjax_valine();
+  });
+</script>
+
+
+
+
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+
+  
+    
+<script src="/js/search.js"></script>
 
   
 
@@ -3088,121 +1575,332 @@ GND在电路里常被定为电压参考基点。 从电气意义上说，GND�
 
 
 
+  <script defer>
 
+  const LCCounter = {
+    app_id: 'u9j57bwJod4EDmXWdxrwuqQT-MdYXbMMI',
+    app_key: 'jfHtEKVE24j0IVCGHbvuFClp',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://yoursite.com' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://yoursite.com' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://yoursite.com' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              if (pv.getAttribute('data-path') == window.location.pathname) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == window.location.pathname) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+<!-- more -->
+
+
+    
+      
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+<!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
   
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+    <div id="loading-bar-wrapper"><script>NProgress.configure({parent:"#loading-bar-wrapper",trickleSpeed: 100})</script></div>
+    <script>
+      window.ShowLoading = function() {
+        NProgress.start();
+      };
+      window.HideLoading = function() {
+        NProgress.done();
+      }
+    </script>
   
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+</div>
 
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
 
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+    document.addEventListener('pjax:send', function (e) {
+      window.stop(); // 相当于点击了浏览器的停止按钮
 
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
 
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      $.fancybox.close();    // 关闭弹窗
+      $('.l_header .switcher .s-search').removeClass('active'); // 关闭移动端激活的搜索框
+      $('.l_header').removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      $('.wrapper').removeClass('sub'); // 跳转页面时关闭二级导航
 
-  
-  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+      // 解绑事件 避免重复监听
+      $('.s-top').unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      window.ShowLoading();
+    });
 
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+      // 
 
-  
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
 
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+          if (typeof $.fancybox == "undefined") {
+            SCload_fancybox();
+          } else {
+            pjax_fancybox();
+          }
+        
+        
+        
+        
+        
+          pjax_valine();
+        
+        
+        
+        
+        
+      } catch (e) {
+        console.log(e);
+      }
+      window.HideLoading();
+    });
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+    document.addEventListener('pjax:error', function (e) {
+      window.HideLoading();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
-
-
-
-  
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-  
-  
-  
-  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
-
-  
-  
-  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
-  
-
-  <script src="/js/src/algolia-search.js?v=5.1.2"></script>
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
-  
+    
+  </div>
 </body>
 </html>

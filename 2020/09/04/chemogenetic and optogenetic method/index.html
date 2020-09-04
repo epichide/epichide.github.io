@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.0.0-rc.2'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+  <title>chemogenetic and optogenetic method - Eichide&#39;s Blog</title>
+  
+    <meta name="keywords" content="ntechology">
+  
+
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  <!-- import link -->
+  
+
+  
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  <!-- 脚本懒加载函数 -->
+  <script>
+  function loadScript(src, cb) {
+    var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+    var script = document.createElement('script');
+    script.setAttribute('type','text/javascript');
+    if (cb) script.onload = cb;
+    script.setAttribute('src', src);
+    HEAD.appendChild(script);
+  }
+  //https://github.com/filamentgroup/loadCSS
+  !function(c){"use strict";var e=function(e,t,n,r){var o,i=c.document,a=i.createElement("link");if(t)o=t;else{var d=(i.body||i.getElementsByTagName("head")[0]).childNodes;o=d[d.length-1]}var f=i.styleSheets;if(r)for(var l in r)r.hasOwnProperty(l)&&a.setAttribute(l,r[l]);a.rel="stylesheet",a.href=e,a.media="only x",function e(t){if(i.body)return t();setTimeout(function(){e(t)})}(function(){o.parentNode.insertBefore(a,t?o:o.nextSibling)});var s=function(e){for(var t=a.href,n=f.length;n--;)if(f[n].href===t)return e();setTimeout(function(){s(e)})};function u(){a.addEventListener&&a.removeEventListener("load",u),a.media=n||"all"}return a.addEventListener&&a.addEventListener("load",u),(a.onloadcssdefined=s)(u),a};"undefined"!=typeof exports?exports.loadCSS=e:c.loadCSS=e}("undefined"!=typeof global?global:this);
+  </script>
+  <script id="loadcss"></script>
+</head>
+
+<body>
+  <header class="l_header auto shadow blur" style='opacity: 0' >
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+  <div class="l_body">
+    <div class="l_cover">
+
+  
+  
+      <div class='cover-wrapper post dock' style="display: none;">
+        
+          <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg"></div>
+        
+        <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">Volantis</p>
+    
+    
+  </div>
+  <div class='bottom'>
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/v4/getting-started/"
+              
+              
+              id="v4getting-started">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c3.svg'><p>文档</p>
+            </a>
+          
+            <a href="/faqs/"
+              
+              
+              id="faqs">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f516.svg'><p>帮助</p>
+            </a>
+          
+            <a href="/examples/"
+              
+              
+              id="examples">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f396.svg'><p>示例</p>
+            </a>
+          
+            <a href="/contributors/"
+              
+              
+              id="contributors">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f389.svg'><p>社区</p>
+            </a>
+          
+            <a href="/archives/"
+              
+              
+              id="archives">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg'><p>博客</p>
+            </a>
+          
+            <a href="https://github.com/volantis-x/hexo-theme-volantis/"
+              
+              
+              id="https:githubcomvolantis-xhexo-theme-volantis">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f9ec.svg'><p>源码</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+      </div>
+  
+
+</div>
+
+    <div class='safearea'>
+      <div class='body-wrapper' id="pjax-container">
+        
+          <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+
+
+<div id="pjax-data" style="display: none">
+  <div id="pjax-ispage">true</div>
+  <div id="pjax-pageTitle">chemogenetic and optogenetic method</div>
+  <div id="pjax-enable-cover">true</div>
+  <div id="pjax-comment-path"></div>
+  <div id="pjax-comment-placeholder"></div>
+</div>
+
+
+<script>
+  // 处理封面 此时 jquery 还没加载
+  if ("none" == "none") { // 移除封面
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "none";
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
+  } else {
+    if ("none" == "half") { // 半屏
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half');
+      document.getElementsByClassName('scroll-down')[0].style.display = "none";
+    } else if ("none" == "full") { // 全屏
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full');
+      document.getElementsByClassName('scroll-down')[0].style.display = "";
+    }
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "";
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.remove("show");
+  }
+</script>
+
+
+        
+        
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        chemogenetic and optogenetic method
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="https://github.com/volantis-x/" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/apple-touch-icon.png">
+    <p>Volantis Team</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/neuron/">neuron</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Sep 4, 2020</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="chemogenetic and optogenetic method" data-path="/2020/09/04/chemogenetic%20and%20optogenetic%20method/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <p>我们想操纵神经元活动,有哪些方法呢? 在神经本身正常分裂分化表达蛋白的过程是一个类似自组织的过程,不需要外界的干预,也表明外界要想干预,方法都不会很直接.</p>
+<p>最直接的想法是直接给神经元一个刺激, 那么它就是电生理</p>
+<p>较为间接的想法是在神经元中特异表达一些只受人工操作响应的蛋白,它可以是对人为的刺激特异的响应.外界的刺激比较容易想到的就是 光,电,人工药物 .</p>
+<p>光:对应的就是光遗传学,一般细胞对光照射并不起反应,那么如果产生光能够影响人工蛋白反应就可以实现操控了 .</p>
+<p>电: 似乎细胞对电刺激还是敏感的,至少神经细胞是这样</p>
+<p>药物: 很多化学试剂会影响人的生理反应,那么涉及一个人工的药物,细胞不起反应,只有人工蛋白会反应就好了</p>
+<p>那么就产生了两种方案: 光 和 化学 ,因为它们都需要人去设计出可以对这两个刺激响应的蛋白,就涉及到基因工程,就涉及到用转基因小鼠,这是一个遗传学技术,那么就有了 <strong>光遗传学 optogenetic</strong> 和 <strong>化学遗传学chemogenetic</strong> 技术.</p>
+<h1 id="光遗传学">光遗传学</h1>
+<div class="note warning">
+wait for write
+</div>
+<h1 id="化学遗传学">化学遗传学</h1>
+<h3 id="原理">原理</h3>
+<p>化学遗传学是化学药物和基因技术结合的产物，泛指通过基因技术改变生物体蛋白质，然后探索突变蛋白和化学药物分子的相互作用。而DREADD是神经科学家最常用的操纵神经元反应的化学遗传学技术。</p>
+<p>DREADD全称长且拗口，却清晰地表达了它的含义：人工设计的受体只被人工设计的药物激活，Designer Receptor Exclusively Activated by Designer Drugs，英文简称DREADD。</p>
+<p>具体来说，人工设计一种蛋白受体，并通过病毒载体让这种受体在神经元内表达，这种受体只专一地结合特定的人工设计的药物，与之结合后可激活或抑制神经元放电。药物代谢完后，神经元的功能又会恢复。</p>
+<figure>
+<img src="/2020/09/04/chemogenetic%20and%20optogenetic%20method/v2-89044be9191be99a962e62cbbb9276bb_720w.jpg" class="lazyload" data-srcset="/2020/09/04/chemogenetic%20and%20optogenetic%20method/v2-89044be9191be99a962e62cbbb9276bb_720w.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>DREADD原理图。左：内源受体和配体，右：人工突变的受体和药物</figcaption>
+</figure>
+<h2 id="配体">配体</h2>
+<p>CNO全称为氯氮平一氧化氮（clozapine N-oxide），是DREADD系统中人工设计的药物配体。CNO并不能穿过血脑屏障。CNO在生物体内会转化成氯氮平（Clozapine）可以穿过BBB.</p>
+<p>人工设计的药物可以通过简单的方式摄入，比如肌肉、静脉、腹腔或皮下注射，甚至口服。药物进入血液，穿过血脑屏障进入脑组织，最终跟人工设计的蛋白受体结合从而起作用。</p>
+<h3 id="cno和氯氮平的副作用">CNO和氯氮平的副作用</h3>
+<p>高浓度的CNO和氯氮平除了跟hM4Di、hM3Dq结合外，还会跟内源性的配体竞争结合内源性的受体，从而产生副作用。这些内源性受体包括多巴胺D1、D2受体、乙酰胆碱的毒蕈碱M1、M3、M4受体、五羟色胺2A受体等。而副作用在行为上表现通常为动物精神不振、活动减少。</p>
+<ul>
+<li>去氯氯氮平（DCZ）</li>
+</ul>
+<p>2019年，日本科学家Takafumi Minamimoto发现了另外一种药物：去氯氯氮平（简称DCZ）。顾名思义，去掉氯氮平分子中的氯。</p>
+<figure>
+<img src="/2020/09/04/chemogenetic%20and%20optogenetic%20method/DCZ%20and%20Clozapine.jpg" class="lazyload" data-srcset="/2020/09/04/chemogenetic%20and%20optogenetic%20method/DCZ%20and%20Clozapine.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>左：去氯氯氮平，右：氯氮平</figcaption>
+</figure>
+<p>去氯氯氮平和氯氮平结构极其相似，和hM4Di、hM3Dq有更高的亲和力。同时，跟内源性多巴胺受体，乙酰胆碱受体和五羟色胺受体亲和力较弱。也就是说去氯氯氮平的选择性更高，副作用也小，是新一代冉冉升起的明星药物</p>
+<h2 id="受体">受体</h2>
+<p>毒蕈碱型受体是神经递质乙酰胆碱的内源受体，广泛存在于动物体内。毒蕈碱型受体是一种G蛋白偶联受体，当乙酰胆碱和毒蕈碱型受体结合时，受体被激活，构象改变，进一步激活偶联的G蛋白，G蛋白再引发下游反应，最终激活或者抑制神经元。</p>
+<p>毒蕈碱型受体是G蛋白藕连受体，M1，M3，M5型受体激活神经元，M2，M4抑制神经元 乙酰胆碱激活还是抑制神经元则取决于毒蕈碱型受体的具体亚型。如果是M4型毒蕈碱型受体，与之偶联的是Gi蛋白，Gi蛋白的后续反应最终会抑制神经元。如果是M3型，招引来的则是Gq蛋白，Gq蛋白的下游反应最终会激活神经元。</p>
+<p>为了能精准地激活或抑制神经元，人们将毒蕈碱型受体在特定位点进行突变，突变后毒蕈碱型受体不再结合内源的乙酰胆碱，而专一被人工药物CNO激活，激活之后的下游反应不变。</p>
+<h3 id="配体类型">配体类型</h3>
+<p>通常可使用同一配体,方便同时作用,如果要分别作用也可选择其它配体</p>
+<figure>
+<img src="/2020/09/04/chemogenetic%20and%20optogenetic%20method/DREADDFigure2.png" class="lazyload" data-srcset="/2020/09/04/chemogenetic%20and%20optogenetic%20method/DREADDFigure2.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>Figure 2. Designer compounds (CNO, perlapine, Compound 21, SALB) used to activate various DREADDS and their downstream pathways</figcaption>
+</figure>
+<h3 id="受体类型">受体类型</h3>
+<figure>
+<img src="/2020/09/04/chemogenetic%20and%20optogenetic%20method/DREADDFigure1.png" class="lazyload" data-srcset="/2020/09/04/chemogenetic%20and%20optogenetic%20method/DREADDFigure1.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>Categorization of DREADDs according to signal transduction mechanisms that they tether (Gi, Gq, Gs, or β-arrestin)</figcaption>
+</figure>
+<h4 id="gq-dreadd和hm3dq-激活-135">1、Gq-DREADD和hM3Dq： 激活 (1,3,5)</h4>
+<p>　　最初的Gq-DREADD即hM3Dq，改造自人毒蕈碱型乙酰胆碱受体（the human muscarinic acetylcholine receptor，mAchRs）亚型M3（也称为hM3）。在正常生理状况下，hM3和乙酰胆碱结合，然后和Gq类G蛋白耦合受体耦合，作用于磷脂酶C、肌醇三磷酸IP3和胞内钙离子这一信号通路（图3）。</p>
+<p><img src="/2020/09/04/chemogenetic%20and%20optogenetic%20method/Gq.png" class="lazyload" data-srcset="/2020/09/04/chemogenetic%20and%20optogenetic%20method/Gq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="图3. hM3和乙酰胆碱结合，作为信号分子激活Gq耦联的GPCRs信号通路"> 　　 Y3.33和A5.46在不同的人毒蕈碱型乙酰胆碱受体亚型中是保守的,将Y3.33C和A5.46这两个位点突变，就能使hM3受体不能和乙酰胆碱耦合，但是会和纳摩尔浓度级别的CNO结合，这种突变后的hM3受体被命名为hM3Dq (human M3 muscarinic DREADD receptor coupled to Gq)。</p>
+<p>M1和M5也已经被成功改造为Gq-DREADD（hM1Dq和hM5Dq）。但是到目前为止，hM3Dq仍然是应用最多的Gq-DREADD。</p>
+<p>　　在不同的细胞类型中，CNO诱导hM3Dq的结果是不一样的，比如：</p>
+<ol type="1">
+<li>在成熟神经元中，CNO诱导hM3Dq的结果是将神经元去极化（depolarization），加强神经元的兴奋性，这也是hM3Dq最常用的功能，即促使神经元的放电活动；</li>
+<li>在星形胶质细胞中，有人报道CNO诱导hM3Dq的结果是增加星形胶质细胞Ca+的释放，从而改变自主神经系统的生理条件；</li>
+<li>在神经系统以外，也有一些研究，例如在胰腺Β细胞表达hM3Dq，急性CNO处理会促进胰岛素的释放，而慢性CNO处理导致Β细胞数目增加；在肝细胞中，激活hM3Dq会增加血糖水平，也许是因为糖原分解和糖异生作用增加。</li>
+</ol>
+<h4 id="gi-dreadd和hm4di-抑制-24">2. Gi-DREADD和hM4Di: 抑制 (2,4)</h4>
+<p>　　科学家同样突变M2和M4 mAchRs上的Y3.33、A5.46位点，由于M2、M4的下游激活的是Gi通道，于是产生Gi- DREADDs，命名为hM2Di和hM4Di，他们可以激活Gi调节的信号通路（图4）。</p>
+<p>　　Gi耦合的GPCRs可以激活G蛋白内向整流钾通道（GIRK），在CNO的作用下， hM2Di和hM4Di受体被激活可以抑制神经元的放电活动，其中使用最多的Gi-DREADD是hM4Di。也有研究表明，hM4Di可以抑制神经递质的释放，从而达到抑制神经元活动的效果。</p>
+<figure>
+<img src="/2020/09/04/chemogenetic%20and%20optogenetic%20method/Gi.png" class="lazyload" data-srcset="/2020/09/04/chemogenetic%20and%20optogenetic%20method/Gi.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>图4 hM4和乙酰胆碱结合，作为信号分子激活Gi耦联的GPCRs信号通路</figcaption>
+</figure>
+<h4 id="gs-β-arrestin-dreadds">3. Gs-/β-arrestin-DREADDs</h4>
+<p>Gs coupled DREADD 也已经开发。这些受体（称为G<sub>s</sub>D）是turkey erythrocyte β-adrenergic receptor细胞内区域替代到大鼠M3 DREADD构成的嵌合受体[-肾上腺素受体]被[2]。</p>
+<p>在体外,它被证实可以激活β-adrenergic通路,然而，它需要高浓度的CNO，这可能限制它在体内的使用</p>
+<p>Gs偶联受体通过腺苷基环化酶的激活介导信号转导，从而增加第二信使环AMP (cAMP)的水平。cAMP激活蛋白激酶A，导致细胞功能的增强</p>
+<p>Gs-恐惧用于研究昼夜节律 和细胞信号通路，可能涉及成瘾</p>
+<figure>
+<img src="/2020/09/04/chemogenetic%20and%20optogenetic%20method/DREADD%20receptor%20type.png" class="lazyload" data-srcset="/2020/09/04/chemogenetic%20and%20optogenetic%20method/DREADD%20receptor%20type.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>常用的几种DREADDs受体作用原理（Scott M. Sternson &amp; Bryan L. Roth, Annu. Rev. Neurosci., 2014</figcaption>
+</figure>
+<h2 id="病毒表达系统选取">病毒表达系统选取</h2>
+<table>
+<thead>
+<tr class="header">
+<th>病毒表达系统</th>
+<th>腺病毒</th>
+<th>慢病毒</th>
+<th>腺相关病毒</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>system</td>
+<td>(Adenovirus)</td>
+<td>(Lentivirus)</td>
+<td>(Adeno-As sociate virus)</td>
+</tr>
+<tr class="even">
+<td>病毒基因组</td>
+<td>双链DNA病毒</td>
+<td>RNA病毒</td>
+<td>单链DNA病毒</td>
+</tr>
+<tr class="odd">
+<td>复制</td>
+<td>条件复制</td>
+<td>不可复制</td>
+<td>条件复制</td>
+</tr>
+<tr class="even">
+<td>滴度</td>
+<td>最高可达1012pfu/ml</td>
+<td>最高可达109TU/ml</td>
+<td>最高可达1012-13v.g/ml</td>
+</tr>
+<tr class="odd">
+<td>感染细胞类型</td>
+<td>感染分裂和不分裂细胞</td>
+<td>感染分裂和不分裂细胞</td>
+<td>感染分裂不旺盛的细胞</td>
+</tr>
+<tr class="even">
+<td>表达丰度</td>
+<td>高水平表达</td>
+<td>中到高水平表达</td>
+<td>高水平表达</td>
+</tr>
+<tr class="odd">
+<td>表达时间</td>
+<td>快(1-2天)</td>
+<td>慢(2-4天)</td>
+<td>1-2周</td>
+</tr>
+<tr class="even">
+<td>持续表达时间</td>
+<td>病毒基因组游离于宿主基因组外，</td>
+<td>病毒基因组整台于宿主基因组，</td>
+<td>病毒基因组游离于宿主基因组外，</td>
+</tr>
+<tr class="odd">
+<td>持续表达时间</td>
+<td>瞬时表达外源基因</td>
+<td>长时间、稳定表达外源基因</td>
+<td>在分裂旺盛的细胞中可长时间表达</td>
+</tr>
+<tr class="even">
+<td>克隆容量</td>
+<td>适合表达小于5kb的外源片段</td>
+<td>适合表达小于4kb的外源片段</td>
+<td>适合表达小于2.8kb的外源片段</td>
+</tr>
+<tr class="odd">
+<td>免疫原性</td>
+<td>较高免疫原性</td>
+<td>低免疫原性</td>
+<td>低免疫原性</td>
+</tr>
+<tr class="even">
+<td>安全性</td>
+<td>可能会引起一些咳嗽流涕</td>
+<td>暂无发现致病性，已被用于CAR-T治疗作用于人体</td>
+<td>暂无发现致病性，已通过欧盟和FDA许可，用作基因治疗药物的载体</td>
+</tr>
+</tbody>
+</table>
+<h2 id="其它组件">其它组件</h2>
+<ol type="1">
+<li><p>可能我们需要控制时间表达 : loxp-Cre 系统</p></li>
+<li><p>可能我们需要报告是否作用成功 : 不同的 <strong>荧光报告report基因</strong></p></li>
+<li><p>可能我们需要它在特定位置表达 : 特异的 <strong>启动子</strong> ,比如神经元特异性启动子 : hSyn , CaMKⅡ , GAD , ChAT , DAT , ePet（也称为FEV） , DCX : 请参考: <a href="http://www.oobio.com.cn/tool/read/111">神经系统特异性启动子</a></p></li>
+</ol>
+<p>参考</p>
+<p>[1] : https://zhuanlan.zhihu.com/p/98619987?utm_source=com.yinxiang</p>
+<p>[2] : https://www.genechem.com.cn/index/products/product/id/92.html</p>
+<p>[3] : http://www.oobio.cn/kyfw/bd/slcz/188.html</p>
+<p>[4] : https://www.hellobio.com/dreadds-review/</p>
+<h2 id="comparison-of-chemogenetics-and-optogenetics">Comparison of Chemogenetics and Optogenetics</h2>
+<table>
+<colgroup>
+<col style="width: 14%">
+<col style="width: 51%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Features</th>
+<th>Chemogenetics</th>
+<th>Optogenetics</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Method of intervention干涉, 干预</td>
+<td>Inert, small molecule ligands selective for genetically engineered receptors/ion channels</td>
+<td>Light-sensitive ion channels activated by implanted fibre optics</td>
+</tr>
+<tr class="even">
+<td>Is the intervention 'physiological'?是否符合生理</td>
+<td>Yes - uses conserved, intracellular signaling pathways, or changes ion channel conductance, to alter neuronal activity</td>
+<td>No - patterns of excitation/inhibition are artificially synchronized by light stimulation pattern</td>
+</tr>
+<tr class="odd">
+<td>Is the intervention inert?惰性,副作用程度</td>
+<td>Yes - receptors/ion channels lack pharmacological activity without ligands and ligands are pharmacologically inert without specific engineered receptors/ion channels</td>
+<td>No - the fibre optic light source can create heat and bacterial light-sensitive channels used can be antigenic</td>
+</tr>
+<tr class="even">
+<td>Is this method invasive in vivo?</td>
+<td>Minimally to no - ligands can be given by intracerebral infusion, intraperitoneal injection or in drinking water, dependent on specific ligand</td>
+<td>Yes - inherently invasive due to implantation of fibre optics</td>
+</tr>
+<tr class="odd">
+<td>Is specialized equipment required?</td>
+<td>No</td>
+<td>Yes - requires implantable fibre optics as light source</td>
+</tr>
+<tr class="even">
+<td>作用方向</td>
+<td>缓慢,通过调控代谢等作用</td>
+<td>即时,直接看刺激下通道打开的反应</td>
+</tr>
+</tbody>
+</table>
+<p>参考 :</p>
+<p>[1] : https://www.tocris.com/cn/product-type/chemogenetics</p>
+<h1 id="参考文献">参考文献</h1>
+<h2 id="section"></h2>
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://yoursite.com/2020/09/04/chemogenetic%20and%20optogenetic%20method/>http://yoursite.com/2020/09/04/chemogenetic%20and%20optogenetic%20method/</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-04T23:46:12+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Sep 4, 2020</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/ntechology/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>ntechology</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/09/04/chemogenetic%20and%20optogenetic%20method/&title=chemogenetic and optogenetic method - Eichide's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2020/09/04/chemogenetic%20and%20optogenetic%20method/&title=chemogenetic and optogenetic method - Eichide's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/09/04/chemogenetic%20and%20optogenetic%20method/&title=chemogenetic and optogenetic method - Eichide's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2020/09/04/Orchestrating%20Opiate-Associated%20Memories%20in%20Thalamic%20Circuits/'>
+          <p class='title'>Orchestrating Opiate-Associated Memories in Thalamic Circuits<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Orchestrating Opiate-Associated Memories in Thalamic Circuits
+
+author : Piper C. Keyes, Eliza L...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#原理"><span class="toc-text">原理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配体"><span class="toc-text">配体</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#cno和氯氮平的副作用"><span class="toc-text">CNO和氯氮平的副作用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#受体"><span class="toc-text">受体</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配体类型"><span class="toc-text">配体类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#受体类型"><span class="toc-text">受体类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#gq-dreadd和hm3dq-激活-135"><span class="toc-text">1、Gq-DREADD和hM3Dq： 激活 (1,3,5)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gi-dreadd和hm4di-抑制-24"><span class="toc-text">2. Gi-DREADD和hM4Di: 抑制 (2,4)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gs-β-arrestin-dreadds"><span class="toc-text">3. Gs-&#x2F;β-arrestin-DREADDs</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#病毒表达系统选取"><span class="toc-text">病毒表达系统选取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其它组件"><span class="toc-text">其它组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#comparison-of-chemogenetics-and-optogenetics"><span class="toc-text">Comparison of Chemogenetics and Optogenetics</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#section"><span class="toc-text"></span></a>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+      </div>
+      
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="/atom.xml"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+          
+            
+              <a href="https://github.com/volantis-x/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+              <a href="/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/010-facebook.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/010-facebook.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+              <a href="/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/018-twitter.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/018-twitter.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+              <a href="/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/045-telegram.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/045-telegram.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+              <a href="/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/006-youtube.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/006-youtube.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </div>
+      
+    
+      
+        <div><p>Blog content follows the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+</div>
+      
+    
+      
+        
+          <div><p><span id="lc-sv">本站总访问量为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+</div>
+        
+      
+    
+      
+        Use
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.0.0-rc.2" target="_blank" class="codename">Volantis</a>
+        as theme
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="/">Copyright © 2017-2020 XXX</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+      <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+    </div>
+  </div>
+  <div>
+    <!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      // 背景层
+      var bgDiv = document.createElement("div");
+      $(bgDiv).addClass("bg");
+      if ($(this).attr('bg')) {
+        $(bgDiv).css('background', $(this).attr('bg'));
+      }
+      $(this).wrap(bgDiv); // 背景层
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if($(".md").find("img").not('.inline').not('a img').length+$(".article-entry").find("img").length==0)return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    setTimeout(function() {
+      loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+    }, 1);
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+</script>
+
+
+<!-- internal -->
+
+
+
+
+<!-- optional -->
+
+  <script>
+  
+  var SEARCH_SERVICE = "hexo" || "hexo";
+  var ROOT = "/" || "/";
+  if (!ROOT.endsWith('/')) ROOT += '/';
+</script>
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+  
+    <script>
+      window.FPConfig = {
+        delay: 0,
+        ignoreKeywords: [],
+        maxRPS: 5,
+        hoverDelay: 25
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+<script src="/js/valine.js"></script>
+
+
+<script>
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link'.split(',').filter(function (item) {
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick', 'mail', 'link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function (item) {
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
+
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+
+    let pagePlaceholder = $.trim($('#pjax-comment-placeholder').text()) || "快来评论吧~";
+
+    let path = $.trim($('#pjax-comment-path').text());
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+
+    var valine = new Valine();
+    valine.init({
+      el: '#valine_container',
+      meta: meta,
+      placeholder: pagePlaceholder,
+      path: path,
+      appId: "",
+      appKey: "",
+      pageSize: '10',
+      avatar: 'robohash',
+      lang: 'zh-cn',
+      visitor: 'true',
+      highlight: 'true',
+      mathJax: 'false',
+      enableQQ: 'true',
+      requiredFields: requiredFields,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps
+    })
+  }
+
+  $(function () {
+    pjax_valine();
+  });
+</script>
+
+
+
+
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+
+  
+    
+<script src="/js/search.js"></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'u9j57bwJod4EDmXWdxrwuqQT-MdYXbMMI',
+    app_key: 'jfHtEKVE24j0IVCGHbvuFClp',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://yoursite.com' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://yoursite.com' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://yoursite.com' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              if (pv.getAttribute('data-path') == window.location.pathname) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == window.location.pathname) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+<!-- more -->
+
+
+    
+      
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+<!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+    <div id="loading-bar-wrapper"><script>NProgress.configure({parent:"#loading-bar-wrapper",trickleSpeed: 100})</script></div>
+    <script>
+      window.ShowLoading = function() {
+        NProgress.start();
+      };
+      window.HideLoading = function() {
+        NProgress.done();
+      }
+    </script>
+  
+</div>
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      $.fancybox.close();    // 关闭弹窗
+      $('.l_header .switcher .s-search').removeClass('active'); // 关闭移动端激活的搜索框
+      $('.l_header').removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      $('.wrapper').removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      $('.s-top').unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      window.ShowLoading();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+      // 
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+          if (typeof $.fancybox == "undefined") {
+            SCload_fancybox();
+          } else {
+            pjax_fancybox();
+          }
+        
+        
+        
+        
+        
+          pjax_valine();
+        
+        
+        
+        
+        
+      } catch (e) {
+        console.log(e);
+      }
+      window.HideLoading();
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.HideLoading();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+
+    
+  </div>
+</body>
+</html>
