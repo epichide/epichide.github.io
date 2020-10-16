@@ -506,7 +506,7 @@
 
   
   
-  <ol type="1">
+  <ol>
 <li>现实主义</li>
 <li>唯物主义</li>
 <li>物质主义</li>
@@ -525,6 +525,8 @@
 <li>神秘主义</li>
 <li></li>
 <li></li>
+</ol>
+<ol>
 <li>思维 reflection</li>
 <li>感觉 sensation</li>
 <li>感受</li>
@@ -646,22 +648,18 @@
       
         <a class='prev' href='/2020/08/05/%E8%96%9B%E5%85%86%E4%B8%B0%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%8E%9F%E7%90%86%E8%AE%B2%E4%B9%89/'>
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>薛兆丰经济学讲义</p>
-          <p class='content'>此为私人使用的笔记，有关言论只是自己看法，因为还未加密，不承担任何责任。 
-现代经济学始于《国富论》《an inquiry into the nature and cause of the w...</p>
+          <p class='content'>此为私人使用的笔记，有关言论只是自己看法，因为还未加密，不承担任何责任。
+现代经济学始于《国富论》《an inquiry into the nature and cause of the wea...</p>
         </a>
       
       
         <a class='next' href='/2020/08/05/%E8%8B%8F%E8%8F%B2%E7%9A%84%E4%B8%96%E7%95%8C2/'>
           <p class='title'>苏菲的世界2<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>苏菲的世界
-JOSTEIN GAARDER
-两种文化
-
+          <p class='content'>苏菲的世界JOSTEIN GAARDER两种文化
 印欧文化
-
 希腊人，罗马人
 印度，希腊，古代北欧神话是以一种哲学或思索的观点看时间的倾向
-历史是循环的，历史既没有开始，也...</p>
+历史是循环的，历史既没有开始，也没有结束，只不过在无尽的...</p>
         </a>
       
     </div>
@@ -688,6 +686,75 @@ JOSTEIN GAARDER
 </div>
 <aside class='l_side'>
   
+  
+    
+    
+  
+
+  <section class="widget category shadow desktop">
+    
+  <header>
+    
+      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/economy/" href="/categories/economy/"
+            id="categorieseconomy"
+            ><div class='name'>economy</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/electronic/" href="/categories/electronic/"
+            id="categorieselectronic"
+            ><div class='name'>electronic</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/environment/" href="/categories/environment/"
+            id="categoriesenvironment"
+            ><div class='name'>environment</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/math/" href="/categories/math/"
+            id="categoriesmath"
+            ><div class='name'>math</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/neuron/" href="/categories/neuron/"
+            id="categoriesneuron"
+            ><div class='name'>neuron</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/nruron/" href="/categories/nruron/"
+            id="categoriesnruron"
+            ><div class='name'>nruron</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/paper/" href="/categories/paper/"
+            id="categoriespaper"
+            ><div class='name'>paper</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/philosophy/" href="/categories/philosophy/"
+            id="categoriesphilosophy"
+            ><div class='name'>philosophy</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/program/" href="/categories/program/"
+            id="categoriesprogram"
+            ><div class='name'>program</div><div class='badge'>(3)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+  
+
   
     
     
@@ -913,7 +980,11 @@ JOSTEIN GAARDER
 
   <script>
   
-  var SEARCH_SERVICE = "hexo" || "hexo";
+    var ALGOLIA_API_KEY = "ea5127035206f76008aad7a6538cb544";
+    var ALGOLIA_APP_ID = "P3M9LPRE92";
+    var ALGOLIA_INDEX_NAME = "Epichide";
+  
+  var SEARCH_SERVICE = "algolia" || "hexo";
   var ROOT = "/" || "/";
   if (!ROOT.endsWith('/')) ROOT += '/';
 </script>
@@ -1034,7 +1105,7 @@ JOSTEIN GAARDER
       lang: 'zh-cn',
       visitor: 'true',
       highlight: 'true',
-      mathJax: 'false',
+      mathJax: 'true',
       enableQQ: 'true',
       requiredFields: requiredFields,
       emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',

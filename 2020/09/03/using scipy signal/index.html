@@ -506,9 +506,7 @@
 
   
   
-  <h1 id="section">5</h1>
-<script src="https://code.jquery.com/jquery-2.0.0.js"></script>
-
+  <h1 id="5"><a href="#5" class="headerlink" title="5"></a>5</h1><p><script src="https://code.jquery.com/jquery-2.0.0.js"></script><br>
 <iframe id="ipynb" marginheight="0" frameborder="0" width="924px" srcdoc="<!DOCTYPE html>
 <html>
 <head><meta charset='utf-8' />
@@ -13645,33 +13643,36 @@ document.getElementById('ipynb').height=$("#ipynb").contents().find("#notebook")
 })
 </script> 
     
-
-<h2 id="scipy.signal.find_peaks">scipy.signal.find_peaks</h2>
-<div class="note info no-icon"><p><strong>scipy.signal.find_peaks</strong> (x, height=None, threshold=None, distance=None, prominence=None, width=None, wlen=None, rel_height=0.5, plateau_size=None)</p>
+</p>
+<h2 id="scipy-signal-find-peaks"><a href="#scipy-signal-find-peaks" class="headerlink" title="scipy.signal.find_peaks"></a>scipy.signal.find_peaks</h2><div class="note info no-icon"><p><strong>scipy.signal.find_peaks</strong> (x, height=None, threshold=None, distance=None, prominence=None, width=None, wlen=None, rel_height=0.5, plateau_size=None)</p>
 <p>基于峰值属性找到信号中的peaks</p>
 <p>该函数仅限制处理一维(行,不允许列)的信号,通过与周围值简单比较,得到局部最大值.</p>
 <p>可以通过指定properties条件,限定寻找条件</p></div>
-<h1 id="input">input</h1>
-<ol type="1">
+<h1 id="input"><a href="#input" class="headerlink" title="input"></a>input</h1><ol>
 <li><p>x: sequence</p>
-<p>1D 的数据 , 可以是 1×n的array , list ,但不可以是n×1的列数据</p></li>
+<p> 1D 的数据 , 可以是 1×n的array , list ,但不可以是n×1的列数据</p>
+</li>
 <li><p>height : number , 2-element tuple, array , 2-element sequence</p>
-<p>限定检测peak的区间 , 只在y值得 min~max 区间内寻找peak,超出该范围得peak排除</p>
-<p>number : 即一个数, 最小阈值</p>
-<p>tuple : like (min,max) ,介于最小到最大阈值之间的区域</p>
-<p>array : 2*n的数组 ,n 是x的长度 , 第一行是最小值,第二行是最大值 , 比如你只想知道自己划定圆圈范围内的peak,需要用到. 如果只有 1*n ,则指限定最小值</p>
-<p>2-element sequence : like (sequence1,sequence2) : 同 array,</p></li>
+<p> 限定检测peak的区间 , 只在y值得 min~max 区间内寻找peak,超出该范围得peak排除</p>
+<p> number : 即一个数, 最小阈值</p>
+<p> tuple : like (min,max) ,介于最小到最大阈值之间的区域</p>
+<p> array : 2<em>n的数组 ,n 是x的长度 , 第一行是最小值,第二行是最大值 , 比如你只想知道自己划定圆圈范围内的peak,需要用到. 如果只有 1\</em>n ,则指限定最小值</p>
+<p> 2-element sequence : like (sequence1,sequence2) : 同 array,</p>
+</li>
 <li><p>threshold : number , 2-element tuple, array , 2-element sequence</p>
-<p>设定同理height</p>
-<p>与相邻样本的垂直距离, dy[i]=y[i]-y[i-1],dy[i]&gt;0,dy[i+1]&lt;0,可以认为是一个峰值点,但这个峰值点和左右两个点的插值有要求,即:</p>
-<p>left_thresholds =abs(y[i]),</p>
-<p>right_thresholds =abs(y[i+1]),</p>
-<p>threshold = max ( left_thresholds, right_thresholds )</p></li>
+<p> 设定同理height</p>
+<p> 与相邻样本的垂直距离, dy[i]=y[i]-y[i-1],dy[i]&gt;0,dy[i+1]&lt;0,可以认为是一个峰值点,但这个峰值点和左右两个点的插值有要求,即:</p>
+<p> left_thresholds =abs(y[i]), </p>
+<p> right_thresholds =abs(y[i+1]),</p>
+<p> threshold = max ( left_thresholds, right_thresholds )</p>
+</li>
 <li><p>distance : number</p>
-<p>在相邻峰之间的采样中需要最小水平距离(&gt;= 1)。按照prominence从高到低排序, 先删除较小的峰值，直到满足所有剩余峰值的条件。</p></li>
-<li><p>prominence :</p>
+<p> 在相邻峰之间的采样中需要最小水平距离(&gt;= 1)。按照prominence从高到低排序, 先删除较小的峰值，直到满足所有剩余峰值的条件。</p>
+</li>
+<li><p>prominence : </p>
 <p>本质是峰值到低谷的差值,但是不同峰需要怎样选取谷值,通常峰和谷成对存在,存在差一的可能,因为peak算法的需要,谷的个数只会大于峰,所以一个峰可以配一个谷,去除最低的谷,这样可以刚好分配完</p>
-<p>等高线划分区域 , 在各自区域内 , 最低的谷配最高的值</p></li>
+<p> 等高线划分区域 , 在各自区域内 , 最低的谷配最高的值</p>
+</li>
 </ol>
 
   
@@ -13789,17 +13790,14 @@ document.getElementById('ipynb').height=$("#ipynb").contents().find("#notebook")
         <a class='prev' href='/2020/09/03/short%20term%20synaptic%20plasticity/'>
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Short-Term Synaptic Plasticity</p>
           <p class='content'>SHORT -TERM SYNAPTIC PLASTICITY
-
 Robert S. Zucker
-Department of Molecular and Cell Biology, Un...</p>
+  Department of Molecular and Cell Biology, Univ...</p>
         </a>
       
       
         <a class='next' href='/2020/08/24/reverberatory/'>
           <p class='title'>reverberatory<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>reverberation
-cell assemblies
-a interconnected neuronal circuits which recurrent sequential act...</p>
+          <p class='content'>reverberationcell assemblies a interconnected neuronal circuits which recurrent sequential activi...</p>
         </a>
       
     </div>
@@ -13829,6 +13827,75 @@ a interconnected neuronal circuits which recurrent sequential act...</p>
   
     
     
+  
+
+  <section class="widget category shadow desktop">
+    
+  <header>
+    
+      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/economy/" href="/categories/economy/"
+            id="categorieseconomy"
+            ><div class='name'>economy</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/electronic/" href="/categories/electronic/"
+            id="categorieselectronic"
+            ><div class='name'>electronic</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/environment/" href="/categories/environment/"
+            id="categoriesenvironment"
+            ><div class='name'>environment</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/math/" href="/categories/math/"
+            id="categoriesmath"
+            ><div class='name'>math</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/neuron/" href="/categories/neuron/"
+            id="categoriesneuron"
+            ><div class='name'>neuron</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/nruron/" href="/categories/nruron/"
+            id="categoriesnruron"
+            ><div class='name'>nruron</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/paper/" href="/categories/paper/"
+            id="categoriespaper"
+            ><div class='name'>paper</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/philosophy/" href="/categories/philosophy/"
+            id="categoriesphilosophy"
+            ><div class='name'>philosophy</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/program/" href="/categories/program/"
+            id="categoriesprogram"
+            ><div class='name'>program</div><div class='badge'>(3)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+  
+
+  
+    
+    
 
 
 
@@ -13842,7 +13909,7 @@ a interconnected neuronal circuits which recurrent sequential act...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#scipy.signal.find_peaks"><span class="toc-text">scipy.signal.find_peaks</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#5"><span class="toc-number">1.</span> <span class="toc-text">5</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#scipy-signal-find-peaks"><span class="toc-number">1.1.</span> <span class="toc-text">scipy.signal.find_peaks</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#input"><span class="toc-number">2.</span> <span class="toc-text">input</span></a></li></ol>
     </div>
   </section>
 
@@ -14065,7 +14132,11 @@ a interconnected neuronal circuits which recurrent sequential act...</p>
 
   <script>
   
-  var SEARCH_SERVICE = "hexo" || "hexo";
+    var ALGOLIA_API_KEY = "ea5127035206f76008aad7a6538cb544";
+    var ALGOLIA_APP_ID = "P3M9LPRE92";
+    var ALGOLIA_INDEX_NAME = "Epichide";
+  
+  var SEARCH_SERVICE = "algolia" || "hexo";
   var ROOT = "/" || "/";
   if (!ROOT.endsWith('/')) ROOT += '/';
 </script>
@@ -14186,7 +14257,7 @@ a interconnected neuronal circuits which recurrent sequential act...</p>
       lang: 'zh-cn',
       visitor: 'true',
       highlight: 'true',
-      mathJax: 'false',
+      mathJax: 'true',
       enableQQ: 'true',
       requiredFields: requiredFields,
       emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',

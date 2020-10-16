@@ -506,59 +506,56 @@
 
   
   
-  <h1 id="基本概念">基本概念</h1>
-<ol type="1">
-<li>随机试验(试验) experiment E :
-<ol type="1">
+  <h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><ol>
+<li>随机试验(试验) experiment E : <ol>
 <li>可重复性 : 在相同条件下可以重复</li>
 <li>结果可知性 : 不能知道准确的结果,但事先知道所有可能的结果</li>
-</ol></li>
-<li>样本点 sample point ω :
-<ul>
+</ol>
+</li>
+<li>样本点 sample point ω :<ul>
 <li>随机试验每一个不可分割的结果</li>
-</ul></li>
-<li>样本空间 sample space Ω : ω ∈ Ω
-<ul>
-<li>样本点全体的集合</li>
 </ul>
-<ol type="1">
-<li>离散样本空间
-<ol type="1">
+</li>
+<li>样本空间 sample space Ω : ω ∈ Ω<ul>
+<li>样本点全体的集合<ol>
+<li>离散样本空间<ol>
 <li>有限样本空间</li>
 <li>可列样本空间</li>
-</ol></li>
+</ol>
+</li>
 <li>连续样本空间</li>
-</ol></li>
-<li>随机事件 event A : A ⊂ Ω
-<ul>
-<li>样本空间子集</li>
-<li>表示 : {ω | X(ω) ≤ x } = {X≤x} = X≤x , A = {ω |X(ω) ∈ A } = { X(ω) ∈ A } = X ∈ A</li>
-<li>运算 : 余 A<sup>c</sup> , <span class="math inline">\(\bar{A}\)</span> , 对称差 (仅其一发生) A △ B ,</li>
+</ol>
+</li>
 </ul>
-<ol type="1">
+</li>
+<li>随机事件 event A : A ⊂ Ω<ul>
+<li>样本空间子集</li>
+<li>表示 : {ω | X(ω) ≤ x } = {X≤x} = X≤x ,  A  = {ω |X(ω) ∈ A } = { X(ω) ∈ A } = X ∈ A</li>
+<li>运算 : 余 A^c^ , $\bar{A}$ , 对称差 (仅其一发生) A △ B ,<ol>
 <li>互斥事件 AB=∅</li>
 <li>对立事件/逆事件</li>
-</ol></li>
-<li>随机变量 random variable X(ω) , X , ξ , ζ , η
-<ul>
-<li>定义在样本空间的实值函数</li>
-</ul></li>
-<li>极限事件
-<ol type="1">
-<li>上极限事件</li>
-</ol></li>
 </ol>
-<h1 id="公式">公式</h1>
-<h2 id="概率公式">概率公式</h2>
-<ol type="1">
-<li>概率加法Jordan公式 <span class="math display">\[P(A_1\cup A_2...\cup A_n)=\sum_{j=1}P(A_i)-\sum_{1≤i&lt;j≤n}P(A_iA_j)+\ldots +(-1)^{n-1}\sum_{1≤j_1&lt;j_2\ldots &lt;j_n}P(A_{j_1}A_{j_2}\ldots A_{j-n})\]</span></li>
-<li>概率乘法公式 <span class="math display">\[P(A_1A_2...A_n)=P(A_n|A_1 A_2...A_{n-1})P(A_{n-1}|A_1A_2...A_{n-2})\ldots P(A_2|A_1)P(A_1)\]</span></li>
-<li>全概率公式
-<ul>
-<li><span class="math inline">\(B_iB_j=\varnothing, i \neq j\)</span></li>
-<li><span class="math inline">\(A⊂B_1\cup B_2\cup...\cup B_n\)</span> <span class="math inline">\(P(A) = P(A|B_1)P(B_1) + P(A|B_2)P(B_2) + ... + P(A|B_n)P(B_n)\)</span>$</li>
-</ul></li>
-<li>Bayes贝叶斯公式 <span class="math display">\[P(B_i|A) = \frac{P(A|B_i)P(B_i)}{\sum_{j=1}^{n} P(A|B_j)P(B_j)}\]</span></li>
+</li>
+</ul>
+</li>
+<li>随机变量 random variable  X(ω) , X , ξ , ζ , η<ul>
+<li>定义在样本空间的实值函数</li>
+</ul>
+</li>
+<li>极限事件<ol>
+<li>上极限事件</li>
+</ol>
+</li>
+</ol>
+<h1 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h1><h2 id="概率公式"><a href="#概率公式" class="headerlink" title="概率公式"></a>概率公式</h2><ol>
+<li>概率加法Jordan公式<script type="math/tex; mode=display">P(A_1\cup A_2...\cup A_n)=\sum_{j=1}P(A_i)-\sum_{1≤i<j≤n}P(A_iA_j)+\ldots +(-1)^{n-1}\sum_{1≤j_1<j_2\ldots <j_n}P(A_{j_1}A_{j_2}\ldots A_{j-n})</script></li>
+<li>概率乘法公式<script type="math/tex; mode=display">P(A_1A_2...A_n)=P(A_n|A_1 A_2...A_{n-1})P(A_{n-1}|A_1A_2...A_{n-2})\ldots P(A_2|A_1)P(A_1)</script></li>
+<li>全概率公式<ul>
+<li>$B_iB_j=\varnothing, i \neq j$ </li>
+<li>$A⊂B_1\cup B_2\cup…\cup B_n$<br>$P(A) = P(A|B_1)P(B_1) + P(A|B_2)P(B_2) + … + P(A|B_n)P(B_n)$$</li>
+</ul>
+</li>
+<li>Bayes贝叶斯公式<script type="math/tex; mode=display">P(B_i|A) = \frac{P(A|B_i)P(B_i)}{\sum_{j=1}^{n} P(A|B_j)P(B_j)}</script></li>
 </ol>
 
   
@@ -676,8 +673,7 @@
         <a class='prev' href='/2020/08/06/Static%20Site/'>
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>build a bolg or create a document using markdown</p>
           <p class='content'>首先关于markdown 转为html的用途
-
-搭建博客, 主要是文章, 它可能需要好看简洁清爽的界面. 博客龄比较上的人来说, 会有大量的文件需要管理, 所以会比较需要一些归档, 而对复杂...</p>
+搭建博客, 主要是文章\记事\类的, 它可能需要好看简洁清爽的界面. 博客龄比较上的人来说, 会有大量的文件需要管理, 所以会比较需要一些归档\分类...</p>
         </a>
       
       
@@ -688,11 +684,12 @@
 对象成员 object member
 访问 access
 操作符 operator
-操作数
+操作数 
 操作
 变量 variable
 实例 instance
-调用 c...</p>
+调用 calling
+默...</p>
         </a>
       
     </div>
@@ -722,6 +719,75 @@
   
     
     
+  
+
+  <section class="widget category shadow desktop">
+    
+  <header>
+    
+      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/economy/" href="/categories/economy/"
+            id="categorieseconomy"
+            ><div class='name'>economy</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/electronic/" href="/categories/electronic/"
+            id="categorieselectronic"
+            ><div class='name'>electronic</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/environment/" href="/categories/environment/"
+            id="categoriesenvironment"
+            ><div class='name'>environment</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/math/" href="/categories/math/"
+            id="categoriesmath"
+            ><div class='name'>math</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/neuron/" href="/categories/neuron/"
+            id="categoriesneuron"
+            ><div class='name'>neuron</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/nruron/" href="/categories/nruron/"
+            id="categoriesnruron"
+            ><div class='name'>nruron</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/paper/" href="/categories/paper/"
+            id="categoriespaper"
+            ><div class='name'>paper</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/philosophy/" href="/categories/philosophy/"
+            id="categoriesphilosophy"
+            ><div class='name'>philosophy</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/program/" href="/categories/program/"
+            id="categoriesprogram"
+            ><div class='name'>program</div><div class='badge'>(3)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+  
+
+  
+    
+    
 
 
 
@@ -735,7 +801,7 @@
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概率公式"><span class="toc-text">概率公式</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#基本概念"><span class="toc-number">1.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#公式"><span class="toc-number">2.</span> <span class="toc-text">公式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#概率公式"><span class="toc-number">2.1.</span> <span class="toc-text">概率公式</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -958,7 +1024,11 @@
 
   <script>
   
-  var SEARCH_SERVICE = "hexo" || "hexo";
+    var ALGOLIA_API_KEY = "ea5127035206f76008aad7a6538cb544";
+    var ALGOLIA_APP_ID = "P3M9LPRE92";
+    var ALGOLIA_INDEX_NAME = "Epichide";
+  
+  var SEARCH_SERVICE = "algolia" || "hexo";
   var ROOT = "/" || "/";
   if (!ROOT.endsWith('/')) ROOT += '/';
 </script>
@@ -1079,7 +1149,7 @@
       lang: 'zh-cn',
       visitor: 'true',
       highlight: 'true',
-      mathJax: 'false',
+      mathJax: 'true',
       enableQQ: 'true',
       requiredFields: requiredFields,
       emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',

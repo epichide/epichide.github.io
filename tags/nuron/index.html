@@ -467,11 +467,9 @@
   <div class='md'>
     
       <p>!!! note</p>
-<h1 id="neural-encoding-i-firing-rates-and-spike-statistics">1. Neural Encoding I Firing Rates and spike statistics</h1>
-<h2 id="introduction">1.1. introduction</h2>
-<ol type="1">
-<li>neural encode : stimulus --&gt; response</li>
-<li>neural decode : response --&gt; stimulus , need reconstruct stimulus or certain aspects of stimuls</li>
+<h1 id="1-Neural-Encoding-I-Firing-Rates-and-spike-statistics"><a href="#1-Neural-Encoding-I-Firing-Rates-and-spike-statistics" class="headerlink" title="1. Neural Encoding I Firing Rates and spike statistics"></a>1. Neural Encoding I Firing Rates and spike statistics</h1><h2 id="1-1-introduction"><a href="#1-1-introduction" class="headerlink" title="1.1. introduction"></a>1.1. introduction</h2><ol>
+<li>neural encode : stimulus —&gt; response</li>
+<li>neural decode : response —&gt; stimulus , need reconstruct stimulus or certain aspects of stimuls</li>
 </ol>
     
   </div>
@@ -631,7 +629,7 @@
           <li><a class="flat-box"
             title="/categories/paper/" href="/categories/paper/"
             id="categoriespaper"
-            ><div class='name'>paper</div><div class='badge'>(1)</div></a></li>
+            ><div class='name'>paper</div><div class='badge'>(2)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/philosophy/" href="/categories/philosophy/"
@@ -665,7 +663,7 @@
 
 
     <div class='content'>
-      <a href="/tags/book/" style="font-size: 14px; color: #999">book</a> <a href="/tags/code/" style="font-size: 14px; color: #999">code</a> <a href="/tags/java/" style="font-size: 17.33px; color: #828282">java</a> <a href="/tags/jottings/" style="font-size: 14px; color: #999">jottings</a> <a href="/tags/machine-learning/" style="font-size: 14px; color: #999">machine_learning</a> <a href="/tags/markdown/" style="font-size: 14px; color: #999">markdown</a> <a href="/tags/math/" style="font-size: 14px; color: #999">math</a> <a href="/tags/neuron/" style="font-size: 14px; color: #999">neuron</a> <a href="/tags/note/" style="font-size: 17.33px; color: #828282">note</a> <a href="/tags/novel/" style="font-size: 20.67px; color: #6c6c6c">novel</a> <a href="/tags/ntechology/" style="font-size: 14px; color: #999">ntechology</a> <a href="/tags/nuron/" style="font-size: 14px; color: #999">nuron</a> <a href="/tags/paper/" style="font-size: 14px; color: #999">paper</a> <a href="/tags/philosophy/" style="font-size: 24px; color: #555">philosophy</a> <a href="/tags/probability/" style="font-size: 14px; color: #999">probability</a> <a href="/tags/psc/" style="font-size: 14px; color: #999">psc</a> <a href="/tags/psp/" style="font-size: 14px; color: #999">psp</a> <a href="/tags/scipy/" style="font-size: 14px; color: #999">scipy</a> <a href="/tags/signal/" style="font-size: 14px; color: #999">signal</a> <a href="/tags/wave/" style="font-size: 14px; color: #999">wave</a>
+      <a href="/tags/book/" style="font-size: 14px; color: #999">book</a> <a href="/tags/code/" style="font-size: 14px; color: #999">code</a> <a href="/tags/java/" style="font-size: 17.33px; color: #828282">java</a> <a href="/tags/jottings/" style="font-size: 14px; color: #999">jottings</a> <a href="/tags/machine-learning/" style="font-size: 14px; color: #999">machine_learning</a> <a href="/tags/markdown/" style="font-size: 14px; color: #999">markdown</a> <a href="/tags/math/" style="font-size: 14px; color: #999">math</a> <a href="/tags/neuron/" style="font-size: 17.33px; color: #828282">neuron</a> <a href="/tags/note/" style="font-size: 17.33px; color: #828282">note</a> <a href="/tags/novel/" style="font-size: 20.67px; color: #6c6c6c">novel</a> <a href="/tags/ntechology/" style="font-size: 14px; color: #999">ntechology</a> <a href="/tags/nuron/" style="font-size: 14px; color: #999">nuron</a> <a href="/tags/paper/" style="font-size: 14px; color: #999">paper</a> <a href="/tags/philosophy/" style="font-size: 24px; color: #555">philosophy</a> <a href="/tags/probability/" style="font-size: 14px; color: #999">probability</a> <a href="/tags/psc/" style="font-size: 14px; color: #999">psc</a> <a href="/tags/psp/" style="font-size: 14px; color: #999">psp</a> <a href="/tags/scipy/" style="font-size: 14px; color: #999">scipy</a> <a href="/tags/signal/" style="font-size: 14px; color: #999">signal</a> <a href="/tags/wave/" style="font-size: 14px; color: #999">wave</a>
     </div>
   </section>
 
@@ -889,7 +887,11 @@
 
   <script>
   
-  var SEARCH_SERVICE = "hexo" || "hexo";
+    var ALGOLIA_API_KEY = "ea5127035206f76008aad7a6538cb544";
+    var ALGOLIA_APP_ID = "P3M9LPRE92";
+    var ALGOLIA_INDEX_NAME = "Epichide";
+  
+  var SEARCH_SERVICE = "algolia" || "hexo";
   var ROOT = "/" || "/";
   if (!ROOT.endsWith('/')) ROOT += '/';
 </script>
@@ -1010,7 +1012,7 @@
       lang: 'zh-cn',
       visitor: 'true',
       highlight: 'true',
-      mathJax: 'false',
+      mathJax: 'true',
       enableQQ: 'true',
       requiredFields: requiredFields,
       emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',

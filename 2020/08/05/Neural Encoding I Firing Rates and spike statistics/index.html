@@ -23,11 +23,9 @@
 
   
     <meta name="description" content="!!! note
-1. Neural Encoding I Firing Rates and spike statistics
-1.1. introduction
-
-neural encode : stimulus --&gt; response
-neural decode : response --&...">
+1. Neural Encoding I Firing Rates and spike statistics1.1. introduction
+neural encode : stimulus —&gt; response
+neural decode : response —&gt; stimu...">
   
 
   <!-- feed -->
@@ -514,15 +512,12 @@ neural decode : response --&...">
   
   
   <p>!!! note</p>
-<h1 id="neural-encoding-i-firing-rates-and-spike-statistics">1. Neural Encoding I Firing Rates and spike statistics</h1>
-<h2 id="introduction">1.1. introduction</h2>
-<ol type="1">
-<li>neural encode : stimulus --&gt; response</li>
-<li>neural decode : response --&gt; stimulus , need reconstruct stimulus or certain aspects of stimuls</li>
+<h1 id="1-Neural-Encoding-I-Firing-Rates-and-spike-statistics"><a href="#1-Neural-Encoding-I-Firing-Rates-and-spike-statistics" class="headerlink" title="1. Neural Encoding I Firing Rates and spike statistics"></a>1. Neural Encoding I Firing Rates and spike statistics</h1><h2 id="1-1-introduction"><a href="#1-1-introduction" class="headerlink" title="1.1. introduction"></a>1.1. introduction</h2><ol>
+<li>neural encode : stimulus —&gt; response</li>
+<li>neural decode : response —&gt; stimulus , need reconstruct stimulus or certain aspects of stimuls</li>
 </ol>
 <a id="more"></a>
-<h2 id="recording-neuronal-responses">1.2. Recording Neuronal Responses</h2>
-<ul>
+<h2 id="1-2-Recording-Neuronal-Responses"><a href="#1-2-Recording-Neuronal-Responses" class="headerlink" title="1.2. Recording Neuronal Responses"></a>1.2. Recording Neuronal Responses</h2><ul>
 <li>intracellular recording</li>
 </ul>
 <p>the important point that spikes, but not subthreshold potentials, propagate regeneratively down axons.</p>
@@ -531,221 +526,194 @@ neural decode : response --&...">
 <li>extracellular electrodes</li>
 </ul>
 <p>==Such recordings can reveal the action potentials ?red by a neuron, but not its subthreshold membrane potentials.==</p>
-<figure>
-<img src="/2020/08/05/Neural%20Encoding%20I%20Firing%20Rates%20and%20spike%20statistics/three%20simulated%20recoding%20from%20a%20neuron.png" class="lazyload" data-srcset="/2020/08/05/Neural%20Encoding%20I%20Firing%20Rates%20and%20spike%20statistics/three%20simulated%20recoding%20from%20a%20neuron.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>Three simulated recordings from a neuron</figcaption>
-</figure>
-<h2 id="from-stimulus-to-response">1.3. From stimulus to response</h2>
-<p>==Isolating features of the response that encode changes in the stimulus can be dif?cult, especially if the time scale for these changes is of the same order as the average interval between spikes.==</p>
-<h3 id="fire-pattern">1.3.1. fire pattern</h3>
-<ul>
+<p><img src="/2020/08/05/Neural%20Encoding%20I%20Firing%20Rates%20and%20spike%20statistics/three%20simulated%20recoding%20from%20a%20neuron.png" class="lazyload" data-srcset="/2020/08/05/Neural%20Encoding%20I%20Firing%20Rates%20and%20spike%20statistics/three%20simulated%20recoding%20from%20a%20neuron.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt=" Three simulated recordings from a neuron"></p>
+<h2 id="1-3-From-stimulus-to-response"><a href="#1-3-From-stimulus-to-response" class="headerlink" title="1.3. From stimulus to response"></a>1.3. From stimulus to response</h2><p>==Isolating features of the response that encode changes in the stimulus can be dif?cult, especially if the time scale for these changes is of the same order as the average interval between spikes.==</p>
+<h3 id="1-3-1-fire-pattern"><a href="#1-3-1-fire-pattern" class="headerlink" title="1.3.1. fire pattern"></a>1.3.1. fire pattern</h3><ul>
 <li>individual neurons</li>
 <li>population pattern of responding cells</li>
 </ul>
-<h2 id="spike-trains-and-firing-rates">1.4. Spike Trains and Firing Rates</h2>
-<p>==the sequence of action potentials generated may be characterized by <strong>firing rates,</strong> rather than as <strong>specific spike sequences</strong>.==</p>
+<h2 id="1-4-Spike-Trains-and-Firing-Rates"><a href="#1-4-Spike-Trains-and-Firing-Rates" class="headerlink" title="1.4. Spike Trains and Firing Rates"></a>1.4. Spike Trains and Firing Rates</h2><p>==the sequence of action potentials generated may be characterized by <strong>firing rates,</strong> rather than as <strong>specific spike sequences</strong>.==</p>
 <p>计算rate的前提是要先计算出spike发生的时间点,然后再计算spike频率.</p>
 <p>==spike可以认为是wave的每一个peak对应的时间点,也可以认为是AP起始时间点==</p>
 <ul>
 <li><p>neural response function</p>
-<p>n is the total number of spikes in the spike train,t<sub>i</sub> are the times that each spike occurred.</p>
-<p><span class="math display">\[\rho(t)=\sum_{i=1}^{n} \delta\left(t-t_{i}\right)\]</span></p>
-<p><span class="math display">\[\sum_{i=1}^{n} h\left(t-t_{i}\right)=\int_{-\infty}^{\infty}d\tau h(\tau)\rho(t-\tau)\]</span></p></li>
-<li><p>spike count (n) , the number of spikes ?red between times t<sub>1</sub> and t<sub>2</sub></p>
-<p><span class="math display">\[n =\int_{t_{1}}^{t_{2}} \rho(t) d t \]</span> <span class="math display">\[&lt;n&gt; = \int_{t_{1}}^{t_{2}} r(t) d t\]</span></p>
-<hr></li>
+<p>n is the total number of spikes in the spike train,t~i~ are the times that each spike occurred.</p>
+<script type="math/tex; mode=display">\rho(t)=\sum_{i=1}^{n} \delta\left(t-t_{i}\right)</script><script type="math/tex; mode=display">\sum_{i=1}^{n} h\left(t-t_{i}\right)=\int_{-\infty}^{\infty}d\tau h(\tau)\rho(t-\tau)</script></li>
+<li><p>spike count (n) , the number of spikes ?red between times t~1~ and t~2~</p>
+<script type="math/tex; mode=display">n =\int_{t_{1}}^{t_{2}} \rho(t) d t</script><script type="math/tex; mode=display"><n> = \int_{t_{1}}^{t_{2}} r(t) d t</script><hr>
+</li>
 </ul>
-<h3 id="spike-rate">1.4.1. spike rate</h3>
-<ol type="1">
-<li><p>spike-count rate (r) -- <strong>spike-count rate</strong> <span class="math display">\[r=\frac{n}{T}=\frac{1}{T} \int_{0}^{T} d \tau \rho(\tau)\]</span></p>
-<p>ρ(t) the neural response function . 表征T内的spikes 时间分布</p>
-<p>T duration of the trial.</p>
-<p>n fire number during trial</p>
-<p>The spike-count rate can be determined from a single trial, but at the expense of <strong>losing all temporal resolution</strong> about variations in the neural response during the course of the trial.</p></li>
+<h3 id="1-4-1-spike-rate"><a href="#1-4-1-spike-rate" class="headerlink" title="1.4.1. spike rate"></a>1.4.1. spike rate</h3><ol>
+<li><p>spike-count rate (r) — <strong>spike-count rate</strong></p>
+<script type="math/tex; mode=display">r=\frac{n}{T}=\frac{1}{T} \int_{0}^{T} d \tau \rho(\tau)</script><p> ρ(t) the neural response function . 表征T内的spikes 时间分布</p>
+<p> T    duration of the trial.</p>
+<p> n   fire number during trial</p>
+<p> The spike-count rate can be determined from a single trial, but at the expense of <strong>losing all temporal resolution</strong> about variations in the neural response during the course of the trial.</p>
+<hr>
+</li>
+<li><p>time-dependent firing rate r(t) — <strong>instantaneous ?ring rate</strong></p>
+<script type="math/tex; mode=display">r(t)=\frac{1}{\Delta t} \int_{t}^{t+\Delta t} d \tau\langle\rho(\tau)\rangle</script><p>&lt; &gt; trial average . averages over trials that use the same stimulus, so that <z> for any quantity z is the sum of the values of z obtained from many trials involving the same stimulus, divided by the number of trials. The trial-averaged neural response function is denoted by &lt;ρ(t)&gt;</z></p>
+<p>value of Δt <strong>must be large enough</strong> so there are suf?cient numbers of spikes within the interval de?ning r (t) to obtain a reliable estimate of the average.</p>
+<p>a short interval of duration Δt around the time t.</p>
+<hr>
+</li>
+<li><p>average ?ring rate — <strong>average firing rate</strong></p>
+<script type="math/tex; mode=display">\langle r\rangle=\frac{\langle n\rangle}{T}=\frac{1}{T} \int_{0}^{T} d \tau\langle\rho(\tau)\rangle=\frac{1}{T} \int_{0}^{T} d t r(t)</script><p> “firing rate”, “spike-count rate”, and “average firing rate”</p>
+</li>
 </ol>
 <hr>
-<ol start="2" type="1">
-<li>time-dependent firing rate r(t) -- <strong>instantaneous ?ring rate</strong></li>
-</ol>
-<p><span class="math display">\[r(t)=\frac{1}{\Delta t} \int_{t}^{t+\Delta t} d \tau\langle\rho(\tau)\rangle\]</span></p>
-<pre><code>&lt; &gt; trial average . averages over trials that use the same stimulus, so that &lt;z&gt; for any quantity z is the sum of the values of z obtained from many trials involving the same stimulus, divided by the number of trials. The trial-averaged neural response function is denoted by &lt;ρ(t)&gt;
-
-value of Δt **must be large enough** so there are suf?cient numbers of spikes within the interval de?ning r (t) to obtain a reliable estimate of the average.
-
-a short interval of duration Δt around the time t.</code></pre>
-<hr>
-<ol start="3" type="1">
-<li><p>average ?ring rate -- <strong>average firing rate</strong></p>
-<p><span class="math display">\[\langle r\rangle=\frac{\langle n\rangle}{T}=\frac{1}{T} \int_{0}^{T} d \tau\langle\rho(\tau)\rangle=\frac{1}{T} \int_{0}^{T} d t r(t)\]</span></p>
-<h2 id="firing-rate-spike-count-rate-and-average-firing-rate">“firing rate”, “spike-count rate”, and “average firing rate”</h2></li>
-</ol>
-<h3 id="measuring-firing-rates---rt">1.4.2. Measuring Firing Rates --r(t)</h3>
-<figure>
-<img src="/2020/08/05/Neural%20Encoding%20I%20Firing%20Rates%20and%20spike%20statistics/firing%20rates%20approximated%20by%20different%20procedure.png" class="lazyload" data-srcset="/2020/08/05/Neural%20Encoding%20I%20Firing%20Rates%20and%20spike%20statistics/firing%20rates%20approximated%20by%20different%20procedure.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>f</figcaption>
-</figure>
-<ol type="1">
+<h3 id="1-4-2-Measuring-Firing-Rates-—r-t"><a href="#1-4-2-Measuring-Firing-Rates-—r-t" class="headerlink" title="1.4.2. Measuring Firing Rates —r(t)"></a>1.4.2. Measuring Firing Rates —r(t)</h3><p><img src="/2020/08/05/Neural%20Encoding%20I%20Firing%20Rates%20and%20spike%20statistics/firing%20rates%20approximated%20by%20different%20procedure.png" class="lazyload" data-srcset="/2020/08/05/Neural%20Encoding%20I%20Firing%20Rates%20and%20spike%20statistics/firing%20rates%20approximated%20by%20different%20procedure.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="f"></p>
+<ol>
 <li><p>bin method</p>
-<p>divide time into discrete bins of duration Δt, count the number of spikes within each bin,and divide by Δt.</p>
+<p> divide time into discrete bins of duration Δt, count the number of spikes within each bin,and divide by Δt.</p>
 <ul>
-<li><p>对每个bin计算spike-count rate -- r, 构成 r(t) . 因为最小单位是1/Δt,所以是离散值</p></li>
-<li><p>受bin的size和bin的起始位置影响</p></li>
-</ul></li>
-<li><p>slide window -- <strong>sum</strong></p>
-<p>假定n 个spikes的时间分别为t1,t2,...,tn, slide widow 的 width 为 Δt</p>
+<li><p>对每个bin计算spike-count rate — r, 构成 r(t) . 因为最小单位是1/Δt,所以是离散值</p>
+</li>
+<li><p>受bin的size和bin的起始位置影响</p>
+</li>
+</ul>
+</li>
+<li><p>slide window — <strong>sum</strong></p>
+<p>假定n 个spikes的时间分别为t1,t2,…,tn, slide widow 的 width 为 Δt</p>
 <p>那么近似的rate为:</p>
-<p><span class="math display">\[r_{\text {approx }}(t)=\sum_{i=1}^{n} w\left(t-t_{i}\right)\]</span></p>
-<p>其中 window function 为:</p>
-<p><span class="math display">\[w(t)=\left\{\begin{array}{ll}
- 1 / \Delta t &amp; \text { if }-\Delta t / 2 \leq t&lt;\Delta t / 2 \\
- 0 &amp; \text { otherwise }
- \end{array}\right.\]</span></p>
-<ul>
+<script type="math/tex; mode=display">r_{\text {approx }}(t)=\sum_{i=1}^{n} w\left(t-t_{i}\right)</script><p>其中 window function 为:</p>
+<script type="math/tex; mode=display">w(t)=\left\{\begin{array}{ll}
+ 1 / \Delta t & \text { if }-\Delta t / 2 \leq t<\Delta t / 2 \\
+ 0 & \text { otherwise }
+ \end{array}\right.</script><ul>
 <li>不受bin的起始位置影响</li>
 <li>离散的,最小单位1/Δt</li>
 <li>时间分辨率更高,但还是受one bin影响</li>
-</ul></li>
-<li><p>slide window -- <strong>integral</strong></p>
-<p><span class="math display">\[r_{\text {approx }}(t)=\int_{-\infty}^{\infty} d \tau w(\tau) \rho(t-\tau)\]</span> <span class="math display">\[w(\tau)=\frac{1}{\sqrt{2 \pi} \sigma_{w}} \exp \left(-\frac{\tau^{2}}{2 \sigma_{w}^{2}}\right)\]</span></p>
-<p><span class="math inline">\(r_{\text {approx }}(t)\)</span>是linear filter</p>
-<p>window function w 是 filter kernel</p>
-<ol type="1">
-<li>Gaussion function</li>
-</ol>
-<p><span class="math display">\[w(\tau)=\frac{1}{\sqrt{2 \pi} \sigma_{w}} \exp \left(-\frac{\tau^{2}}{2 \sigma_{w}^{2}}\right)\]</span></p>
-<ul>
-<li>得到平滑的rate曲线</li>
-<li><span class="math inline">\(\sigma_{w}\)</span> 控制the temporal resolution of the resulting rate, 类似于Δt . 越小越高</li>
 </ul>
-<ol start="2" type="1">
-<li>alpha window (Casual)</li>
+</li>
+<li><p>slide window — <strong>integral</strong></p>
+<script type="math/tex; mode=display">r_{\text {approx }}(t)=\int_{-\infty}^{\infty} d \tau w(\tau) \rho(t-\tau)</script><script type="math/tex; mode=display">w(\tau)=\frac{1}{\sqrt{2 \pi} \sigma_{w}} \exp \left(-\frac{\tau^{2}}{2 \sigma_{w}^{2}}\right)</script><p> $r_{\text {approx }}(t)$是linear filter</p>
+<p>  window function w 是 filter kernel</p>
+<ol>
+<li><p>Gaussion function</p>
+<script type="math/tex; mode=display">w(\tau)=\frac{1}{\sqrt{2 \pi} \sigma_{w}} \exp \left(-\frac{\tau^{2}}{2 \sigma_{w}^{2}}\right)</script><ul>
+<li>得到平滑的rate曲线</li>
+<li>$\sigma_{w}$ 控制the temporal resolution of the resulting rate, 类似于Δt . 越小越高</li>
+</ul>
+</li>
 </ol>
-<p><span class="math display">\[w(\tau)=\left[\alpha^{2} \tau \exp (-\alpha \tau)\right]_{+}\]</span></p>
-<p><span class="math display">\[[z]_{+}=\left\{\begin{array}{ll}
- z &amp; \text { if } z \geq 0 \\
- 0 &amp; \text { otherwise }
- \end{array}\right.\]</span></p>
-<ul>
+</li>
+</ol>
+<ol>
+<li><p>alpha window (Casual)</p>
+<script type="math/tex; mode=display">w(\tau)=\left[\alpha^{2} \tau \exp (-\alpha \tau)\right]_{+}</script><script type="math/tex; mode=display">[z]_{+}=\left\{\begin{array}{ll}
+z & \text { if } z \geq 0 \\
+0 & \text { otherwise }
+\end{array}\right.</script><ul>
 <li>仅当τ&gt;0 时,考虑进去</li>
 <li>认为在t时刻之后发放的不符合因果关系, 在t时刻之前发放的才考虑进去</li>
-</ul></li>
-</ol>
-<h3 id="turning-curve">1.4.3. turning curve</h3>
-<p>fit with different function</p>
-<h2 id="what-make-a-neuron-fire">1.5. What make a neuron fire</h2>
-<ul>
-<li><p>Weber's law</p></li>
-<li><p>Fechner's law</p>
-<p>https://en.wikipedia.org/wiki/Weber%E2%80%93Fechner_law</p>
-<hr></li>
-<li><p>time average</p></li>
-<li><p>stimuls average</p>
-<hr></li>
-<li><p>fire : firing of an action potential</p></li>
-<li><p>spike :</p></li>
-<li><p>spike train: extracellular spike trains mainly reflect the timing of the occurrence of an action potential.</p>
-<hr></li>
-<li><p>spike target average 平均刺激的波形(不是响应的波形)</p></li>
 </ul>
-<p><span class="math display">\[C(\tau)=\left\langle\frac{1}{n} \sum_{i=1}^{n} s\left(t_{i}-\tau\right)\right\rangle \approx \frac{1}{\langle n\rangle}\left\langle\sum_{i=1}^{n} s\left(t_{i}-\tau\right)\right\rangle\]</span></p>
-<p><span class="math display">\[C(\tau)=\frac{1}{\langle n\rangle} \int_{0}^{T} d t\langle\rho(t)\rangle s(t-\tau)=\frac{1}{\langle n\rangle} \int_{0}^{T} d t r(t) s(t-\tau)\]</span></p>
-<figure>
-<img src="/2020/08/05/Neural%20Encoding%20I%20Firing%20Rates%20and%20spike%20statistics/spike_target_ave9.png" class="lazyload" data-srcset="/2020/08/05/Neural%20Encoding%20I%20Firing%20Rates%20and%20spike%20statistics/spike_target_ave9.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>spike target average</figcaption>
-</figure>
+</li>
+</ol>
+<h3 id="1-4-3-turning-curve"><a href="#1-4-3-turning-curve" class="headerlink" title="1.4.3. turning curve"></a>1.4.3. turning curve</h3><p>fit with different function</p>
+<h2 id="1-5-What-make-a-neuron-fire"><a href="#1-5-What-make-a-neuron-fire" class="headerlink" title="1.5. What make a neuron fire"></a>1.5. What make a neuron fire</h2><ul>
+<li>Weber’s law</li>
+<li><p>Fechner’s law</p>
+<p><a href="https://en.wikipedia.org/wiki/Weber%E2%80%93Fechner_law">https://en.wikipedia.org/wiki/Weber%E2%80%93Fechner_law</a></p>
+<hr>
+</li>
+<li><p>time average</p>
+</li>
+<li><p>stimuls average</p>
+<hr>
+</li>
+<li><p>fire : firing of an action potential</p>
+</li>
+<li>spike :</li>
+<li><p>spike train: extracellular spike trains mainly reflect the timing of the occurrence of an action potential.</p>
+<hr>
+</li>
+<li>spike target average 平均刺激的波形(不是响应的波形)</li>
+</ul>
+<script type="math/tex; mode=display">C(\tau)=\left\langle\frac{1}{n} \sum_{i=1}^{n} s\left(t_{i}-\tau\right)\right\rangle \approx \frac{1}{\langle n\rangle}\left\langle\sum_{i=1}^{n} s\left(t_{i}-\tau\right)\right\rangle</script><script type="math/tex; mode=display">C(\tau)=\frac{1}{\langle n\rangle} \int_{0}^{T} d t\langle\rho(t)\rangle s(t-\tau)=\frac{1}{\langle n\rangle} \int_{0}^{T} d t r(t) s(t-\tau)</script><p><img src="/2020/08/05/Neural%20Encoding%20I%20Firing%20Rates%20and%20spike%20statistics/spike_target_ave9.png" class="lazyload" data-srcset="/2020/08/05/Neural%20Encoding%20I%20Firing%20Rates%20and%20spike%20statistics/spike_target_ave9.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="spike target average"></p>
 <ul>
 <li><strong>correlation function</strong> of the ?ring rate and the stimulus</li>
 </ul>
-<p><span class="math display">\[Q_{\mathrm{rs}}(\tau)=\frac{1}{T} \int_{0}^{T} d t r(t) s(t+\tau)\]</span></p>
-<ul>
-<li>because of : <span class="math inline">\(\langle r\rangle=\langle n\rangle / T\)</span> ,thus:</li>
+<script type="math/tex; mode=display">Q_{\mathrm{rs}}(\tau)=\frac{1}{T} \int_{0}^{T} d t r(t) s(t+\tau)</script><ul>
+<li>because of : $\langle r\rangle=\langle n\rangle / T$ ,thus:</li>
 </ul>
-<p><span class="math display">\[C(\tau)=\frac{1}{\langle r\rangle} Q_{\mathrm{rs}}(-\tau)\]</span></p>
-<ul>
+<script type="math/tex; mode=display">C(\tau)=\frac{1}{\langle r\rangle} Q_{\mathrm{rs}}(-\tau)</script><ul>
 <li><p>white-noise</p>
-<p>随机性: The defining characteristic of a white-noise stimulus is that its value at any one time is uncorrelated with its value at any other time.</p>
-<p>For white noise, the stimulus autocorrelation function is 0 in the range ?T/2 &lt; τ &lt; T/2 except when τ = 0.</p>
-<p><span class="math display">\[Q_{s s}(\tau)=\sigma_{s}^{2} \delta(\tau)\]</span></p>
-<p>==Approximations of white noise that are missing high-frequency components can be used, provided the missing frequencies are well above the sensitivity of the neuron under investigation.==</p>
-<p>==Similarly, the binning of time into discrete intervals of size Δt means that the noise generated has a ?at power spectrum only up to frequencies of order 1/(2Δt).==</p></li>
-<li><p>autocorrelation function -- 刺激与刺激的</p>
-<p><span class="math display">\[Q_{s s}(\tau)=\frac{1}{T} \int_{0}^{T} d t s(t) s(t+\tau)\]</span></p></li>
-<li><p>spike-train autocorrelation function --响应与响应的</p>
-<p><span class="math display">\[Q_{\rho \rho}(\tau)=\frac{1}{T} \int_{0}^{T} d t\langle(\rho(t)-\langle r\rangle)(\rho(t+\tau)-\langle r\rangle)\rangle\]</span></p></li>
+<p> 随机性: The defining characteristic of a white-noise stimulus is that its value at any one time is uncorrelated with its value at any other time.</p>
+<p> For white noise, the stimulus autocorrelation function is 0 in the range ?T/2 &lt; τ &lt; T/2 except when τ = 0.</p>
+<script type="math/tex; mode=display">Q_{s s}(\tau)=\sigma_{s}^{2} \delta(\tau)</script><p> ==Approximations of white noise that are missing high-frequency components can be used, provided the missing frequencies are well above the sensitivity of the neuron under investigation.==</p>
+<p> ==Similarly, the binning of time into discrete intervals of size Δt means that the noise generated has a ?at power spectrum only up to frequencies of order 1/(2Δt).==</p>
+</li>
 </ul>
-<h2 id="spike-train-statistics">1.6. Spike-Train Statistics</h2>
-<h3 id="homogeneous-poisson-process">1.6.1. Homogeneous Poisson Process</h3>
-<p><span class="math display">\[P\left[t_{1}, t_{2}, \ldots, t_{n}\right]=n ! P_{T}[n]\left(\frac{\Delta t}{T}\right)^{n}\]</span></p>
 <ul>
-<li>泊松过程 <span class="math display">\[P\{1 \text { spike during the interval }(t, t+\Delta t)\}=r(t) \Delta t \tag{1.6.1.1}\]</span></li>
+<li><p>autocorrelation function — 刺激与刺激的  </p>
+<script type="math/tex; mode=display">Q_{s s}(\tau)=\frac{1}{T} \int_{0}^{T} d t s(t) s(t+\tau)</script></li>
+<li><p>spike-train autocorrelation function —响应与响应的</p>
+<script type="math/tex; mode=display">Q_{\rho \rho}(\tau)=\frac{1}{T} \int_{0}^{T} d t\langle(\rho(t)-\langle r\rangle)(\rho(t+\tau)-\langle r\rangle)\rangle</script></li>
 </ul>
-<p><span class="math display">\[P\{n \text { spikes during } \Delta t\}=\frac{k !}{(k-n) ! n !} p^{n} q^{k-n}=e^{-r \Delta t} \frac{(r \Delta t)^{n}}{n !}\]</span></p>
-<ul>
+<h2 id="1-6-Spike-Train-Statistics"><a href="#1-6-Spike-Train-Statistics" class="headerlink" title="1.6. Spike-Train Statistics"></a>1.6. Spike-Train Statistics</h2><h3 id="1-6-1-Homogeneous-Poisson-Process"><a href="#1-6-1-Homogeneous-Poisson-Process" class="headerlink" title="1.6.1. Homogeneous Poisson Process"></a>1.6.1. Homogeneous Poisson Process</h3><script type="math/tex; mode=display">P\left[t_{1}, t_{2}, \ldots, t_{n}\right]=n ! P_{T}[n]\left(\frac{\Delta t}{T}\right)^{n}</script><ul>
+<li><p>泊松过程</p>
+<script type="math/tex; mode=display">P\{1 \text { spike during the interval }(t, t+\Delta t)\}=r(t) \Delta t \tag{1.6.1.1}</script><script type="math/tex; mode=display">P\{n \text { spikes during } \Delta t\}=\frac{k !}{(k-n) ! n !} p^{n} q^{k-n}=e^{-r \Delta t} \frac{(r \Delta t)^{n}}{n !}</script></li>
 <li><p>方差</p>
-<p><span class="math display">\[\sigma_{n}^{2}=r \Delta t\]</span></p></li>
-<li><p>Fano factor : mean spike count over a given interval and the spike-count variance</p></li>
+<script type="math/tex; mode=display">\sigma_{n}^{2}=r \Delta t</script></li>
+<li><p>Fano factor : mean spike count over a given interval and the spike-count variance</p>
+<script type="math/tex; mode=display">F=\frac{\sigma_{n}^{2}}{\langle n\rangle}=1</script></li>
+<li><p>interval τ</p>
+<script type="math/tex; mode=display">P\{\text { next spike occurs after } \tau\}=e^{-r \tau}\tag{1.6.1.2}</script><script type="math/tex; mode=display">P\{\text { next spike occurs before } \tau\}=1-e^{-r \tau}</script><script type="math/tex; mode=display">p(\tau)=\frac{d}{d t}\left(1-e^{-r \tau}\right)=r e^{-r \tau}</script><script type="math/tex; mode=display">\langle\tau\rangle=\int_{0}^{\infty} \tau p(\tau) d \tau=\frac{1}{r}</script><script type="math/tex; mode=display">\sigma_{\tau}^{2}=\int_{0}^{\infty} \tau^{2} p(\tau) d \tau-\langle\tau\rangle^{2}=\frac{1}{r^{2}}</script><script type="math/tex; mode=display">C_{V}=\frac{\sigma_{\tau}}{\langle\tau\rangle}=1</script></li>
 </ul>
-<p><span class="math display">\[F=\frac{\sigma_{n}^{2}}{\langle n\rangle}=1\]</span></p>
-<ul>
-<li>interval τ</li>
-</ul>
-<p><span class="math display">\[P\{\text { next spike occurs after } \tau\}=e^{-r \tau}\tag{1.6.1.2}\]</span></p>
-<p><span class="math display">\[P\{\text { next spike occurs before } \tau\}=1-e^{-r \tau}\]</span></p>
-<p><span class="math display">\[p(\tau)=\frac{d}{d t}\left(1-e^{-r \tau}\right)=r e^{-r \tau}\]</span></p>
-<p><span class="math display">\[\langle\tau\rangle=\int_{0}^{\infty} \tau p(\tau) d \tau=\frac{1}{r}\]</span></p>
-<p><span class="math display">\[\sigma_{\tau}^{2}=\int_{0}^{\infty} \tau^{2} p(\tau) d \tau-\langle\tau\rangle^{2}=\frac{1}{r^{2}}\]</span></p>
-<p><span class="math display">\[C_{V}=\frac{\sigma_{\tau}}{\langle\tau\rangle}=1\]</span></p>
-<h3 id="inhomogeneous-poisson-process">1.6.2. Inhomogeneous Poisson Process</h3>
-<p><span class="math display">\[p\left[t_{1}, t_{2}, \ldots, t_{n}\right]=\exp \left(-\int_{0}^{T} d t r(t)\right) \prod_{i=1}^{n} r\left(t_{i}\right)\]</span></p>
-<h3 id="generating-poisson-spike-train">Generating Poisson Spike Train</h3>
-<p><span class="math inline">\({r_{est}}\)</span>是根据stimulus估计的spike rate ,可以由 response turning curve得到</p>
-<h4 id="poisson-spike-generator">poisson spike generator</h4>
-<ol type="1">
-<li><p>ﬁrst approach -- 基于<a href="#161-homogeneous-poisson-process">(1.6.1.1)</a></p>
-<p>Δt足够小,大约1ms,以至于Δt时间内最多只能发生一次spike,即二项分布</p>
-<p><span class="math display">\[P\{1 \text { spike during } \Delta t\} \approx r_{est } \Delta t\]</span></p>
-<p>generate a sequence of random numbers x [ i ], uniformly distributed between 0 and 1. For each interval, if x [ i ] &lt;=rΔt, generate a spike.</p></li>
-<li><p>second approach -- 基于<a href="#161-homogeneous-poisson-process">(1.6.1.2)</a></p>
-<p><span class="math display">\[\tau =-\ln \left(x_{\text {rand }}\right) / r_{est }\]</span></p>
-<p>只适用于r(t)==r 恒定速率</p></li>
-<li><p>third approach --基于方法2</p>
-<p>设定一个最大spike rate 值 r <sub>max</sub> ,用这个值产生的时间间隔比 r(t) 小 ,因此理论上产生的spike数目会偏多,那么就要放弃一些</p>
-<p><span class="math display">\[\tau = -\ln \left(x_{\text {rand }}\right) / r_{\text {max }}\]</span></p>
-<p>再产生一个0-1的随机数,x<sub>rand</sub>[i],如果<span class="math inline">\(r_{\text {est }}\left(t_{i}\right) / r_{\max }&lt;x_{\text {rand }}\left( i\right)\)</span> ,则接受该spike,否则放弃</p>
-<p>感觉很依赖r<sub>max</sub> , 不确定是否准确</p></li>
+<h3 id="1-6-2-Inhomogeneous-Poisson-Process"><a href="#1-6-2-Inhomogeneous-Poisson-Process" class="headerlink" title="1.6.2. Inhomogeneous Poisson Process"></a>1.6.2. Inhomogeneous Poisson Process</h3><script type="math/tex; mode=display">p\left[t_{1}, t_{2}, \ldots, t_{n}\right]=\exp \left(-\int_{0}^{T} d t r(t)\right) \prod_{i=1}^{n} r\left(t_{i}\right)</script><h3 id="Generating-Poisson-Spike-Train"><a href="#Generating-Poisson-Spike-Train" class="headerlink" title="Generating Poisson Spike Train"></a>Generating Poisson Spike Train</h3><p>  ${r_{est}}$是根据stimulus估计的spike rate ,可以由 response turning curve得到</p>
+<h4 id="poisson-spike-generator"><a href="#poisson-spike-generator" class="headerlink" title="poisson spike generator"></a>poisson spike generator</h4><ol>
+<li><p>ﬁrst approach — 基于<a href="#161-homogeneous-poisson-process">(1.6.1.1)</a>  </p>
+<p> Δt足够小,大约1ms,以至于Δt时间内最多只能发生一次spike,即二项分布  </p>
+<script type="math/tex; mode=display">P\{1 \text { spike during } \Delta t\} \approx r_{est } \Delta t</script><p> generate a sequence of random numbers x [ i ], uniformly distributed between 0 and 1. For each interval, if x [ i ] &lt;=rΔt, generate a spike. </p>
+</li>
+<li><p>second approach — 基于<a href="#161-homogeneous-poisson-process">(1.6.1.2)</a></p>
+<script type="math/tex; mode=display">\tau =-\ln \left(x_{\text {rand }}\right) / r_{est }</script><p> 只适用于r(t)==r 恒定速率</p>
+</li>
+<li><p>third approach —基于方法2</p>
+<p> 设定一个最大spike rate 值 r ~max~ ,用这个值产生的时间间隔比 r(t) 小 ,因此理论上产生的spike数目会偏多,那么就要放弃一些</p>
+<script type="math/tex; mode=display">\tau = -\ln \left(x_{\text {rand }}\right) / r_{\text {max }}</script><p> 再产生一个0-1的随机数,x~rand~[i],如果$r<em>{\text {est }}\left(t</em>{i}\right) / r<em>{\max }&lt;x</em>{\text {rand }}\left( i\right)$ ,则接受该spike,否则放弃</p>
+<p> 感觉很依赖r~max~ , 不确定是否准确</p>
+</li>
 </ol>
-<h4 id="comparison-with-data">Comparison with Data</h4>
-<ul>
-<li><p>依据fano factor</p>
-<p>&lt; n &gt; 和 σ<sub>n</sub><sup>2</sup> 是1:1的正比关系 , fitted to the equation <span class="math inline">\(\sigma_{n}^{2}=A\langle n\rangle^{B}\)</span> , A B 在1-1.5之间.如果稳定在1附近可以认为泊松过程是一个合理的近似</p>
-<figure>
-<img src="/2020/08/05/Neural%20Encoding%20I%20Firing%20Rates%20and%20spike%20statistics/fano%20factor.png" class="lazyload" data-srcset="/2020/08/05/Neural%20Encoding%20I%20Firing%20Rates%20and%20spike%20statistics/fano%20factor.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>image</figcaption>
-</figure></li>
-<li><p>依据C<sub>v</sub>(τ)</p>
-<p>C<sub>v</sub>(τ) 通常是在1附近 , 由此可以绘制平均间隔时间τ与C<sub>v</sub>(τ)的关系. 如果在某个时间段, 数值接近于1, 表明这个时间段的τ变动负和泊松过程, 如果接近于0 ,表明这段时间的的间隔变动很固定,是受了某些因素的影响. 比如在间隔时间很短时存在不应期refractory period ,此时就接近0</p>
-<p><img src="/2020/08/05/Neural%20Encoding%20I%20Firing%20Rates%20and%20spike%20statistics/coefficient%20tau.png" class="lazyload" data-srcset="/2020/08/05/Neural%20Encoding%20I%20Firing%20Rates%20and%20spike%20statistics/coefficient%20tau.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image"> The solid curve is the result of a Poisson model with a refractory period. (Adapted from Softky and Koch, 1992.)</p></li>
+<h4 id="Comparison-with-Data"><a href="#Comparison-with-Data" class="headerlink" title="Comparison with Data"></a>Comparison with Data</h4><ul>
+<li><p>依据fano factor </p>
+<p>&lt; n &gt; 和 σ~n~^2^ 是1:1的正比关系 , fitted to the equation $\sigma_{n}^{2}=A\langle n\rangle^{B}$ , A B 在1-1.5之间.如果稳定在1附近可以认为泊松过程是一个合理的近似</p>
+<p><img src="/2020/08/05/Neural%20Encoding%20I%20Firing%20Rates%20and%20spike%20statistics/fano%20factor.png" class="lazyload" data-srcset="/2020/08/05/Neural%20Encoding%20I%20Firing%20Rates%20and%20spike%20statistics/fano%20factor.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image"></p>
+</li>
+<li><p>依据C~v~(τ)</p>
+<p>C~v~(τ) 通常是在1附近 , 由此可以绘制平均间隔时间τ与C~v~(τ)的关系. 如果在某个时间段, 数值接近于1, 表明这个时间段的τ变动负和泊松过程, 如果接近于0 ,表明这段时间的的间隔变动很固定,是受了某些因素的影响. 比如在间隔时间很短时存在不应期refractory period ,此时就接近0</p>
+<p><img src="/2020/08/05/Neural%20Encoding%20I%20Firing%20Rates%20and%20spike%20statistics/coefficient%20tau.png" class="lazyload" data-srcset="/2020/08/05/Neural%20Encoding%20I%20Firing%20Rates%20and%20spike%20statistics/coefficient%20tau.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image"><br>The solid curve is the result of a Poisson model with a refractory period. (Adapted from Softky and Koch, 1992.)</p>
+</li>
 </ul>
-<h3 id="some-concept">1.6.3. some concept</h3>
-<ul>
-<li><p>point process 计数过程</p></li>
-<li><p>renewal process 事件的间隔时间独立同分布,后一个事件发生时间依赖于前一个事件发生时间</p></li>
-<li><p>poisson process 事件发生完全不依赖于之前发生的事件</p></li>
-<li><p>Homogeneous Poisson point process If a Poisson point process has a parameter of the form <span class="math inline">\({\displaystyle \textstyle \Lambda =\nu \lambda }\)</span>, where <span class="math inline">\({\displaystyle \textstyle \nu }\)</span> is Lebesgue measure (that is, it assigns length, area, or volume to sets) and <span class="math inline">\({\displaystyle \textstyle \lambda }\)</span> is a <strong>constant,</strong> then the point process is called a homogeneous or stationary Poisson point process.</p></li>
+<h3 id="1-6-3-some-concept"><a href="#1-6-3-some-concept" class="headerlink" title="1.6.3. some concept"></a>1.6.3. some concept</h3><ul>
+<li>point process 计数过程</li>
+<li>renewal process 事件的间隔时间独立同分布,后一个事件发生时间依赖于前一个事件发生时间</li>
+<li>poisson process 事件发生完全不依赖于之前发生的事件</li>
+<li><p>Homogeneous Poisson point process<br>If a Poisson point process has a parameter of the form ${\displaystyle \textstyle \Lambda =\nu \lambda }$, where ${\displaystyle \textstyle \nu }$ is Lebesgue measure (that is, it assigns length, area, or volume to sets) and ${\displaystyle \textstyle \lambda }$ is a <strong>constant,</strong> then the point process is called a homogeneous or stationary Poisson point process.</p>
+</li>
 <li><p>Homogeneous Poisson point process</p>
-<p>The inhomogeneous or nonhomogeneous Poisson point process (see Terminology) is a Poisson point process with a Poisson parameter set as some location-dependent function in the underlying space on which the Poisson process is defined. For Euclidean space <span class="math inline">\({\displaystyle \textstyle {\textbf {R}}^{d}}\)</span>, this is achieved by introducing a locally integrable positive function <span class="math inline">\({\displaystyle \textstyle \lambda (x)}\)</span> , where <span class="math inline">\({\displaystyle \textstyle x}\)</span> is a <span class="math inline">\({\displaystyle \textstyle d}\)</span> -dimensional point located in <span class="math inline">\({\displaystyle \textstyle {\textbf {R}}^{d}}\)</span>, such that for any bounded region {B}B the (<span class="math inline">\({\displaystyle \textstyle d}\)</span> volume integral of <span class="math inline">\({\displaystyle \textstyle \lambda (x)}\)</span> over region <span class="math inline">\({\displaystyle \textstyle B}\)</span> is finite. In other words, if this integral, denoted by <span class="math inline">\({\displaystyle \textstyle \Lambda (B)}\)</span>, is:</p>
-<p><span class="math display">\[{\displaystyle \Lambda (B)=\int _{B}\lambda (x)\,\mathrm {d} x&lt;\infty ,}\]</span></p>
-<p>where <span class="math inline">\({\displaystyle \textstyle {\mathrm {d} x}}\)</span> is a (<span class="math inline">\({\displaystyle \textstyle d}\)</span>-dimensional) volume element,[d] then for any collection of disjoint bounded Borel measurable sets <span class="math inline">\({\displaystyle \textstyle B_{1},\dots ,B_{k}}\)</span>, an inhomogeneous Poisson process with (intensity) function <span class="math inline">\({\displaystyle \textstyle \lambda (x)}\)</span>) has the finite-dimensional distribution:[75]</p>
-<p><span class="math display">\[{\displaystyle P\{N(B_{i})=n_{i},i=1,\dots ,k\}=\prod _{i=1}^{k}{\frac {(\Lambda (B_{i}))^{n_{i}}}{n_{i}!}}e^{-\Lambda (B_{i})}.}\]</span></p></li>
-<li><p><span class="math inline">\(p\left[t_{1}, t_{2}, \ldots, t_{n}\right] .\)</span></p>
-<p>the probability <span class="math inline">\(P\left[t_{1}, t_{2}, \ldots, t_{n}\right]\)</span> that a sequence of <span class="math inline">\(n\)</span> spikes occurs with spike <span class="math inline">\(i\)</span> falling between times <span class="math inline">\(t_{i}\)</span> and <span class="math inline">\(t_{i}+\Delta t\)</span> for <span class="math inline">\(i=1,2, \ldots, n\)</span> is given in terms of this density by the relation <span class="math inline">\(P\left[t_{1}, t_{2}, \ldots, t_{n}\right]\)</span>=<span class="math inline">\(p\left[t_{1}, t_{2}, \ldots, t_{n}\right]\Delta t^{n})\)</span></p></li>
+<p>The inhomogeneous or nonhomogeneous Poisson point process (see Terminology) is a Poisson point process with a Poisson parameter set as some location-dependent function in the underlying space on which the Poisson process is defined. For Euclidean space ${\displaystyle \textstyle {\textbf {R}}^{d}}$, this is achieved by introducing a locally integrable positive function ${\displaystyle \textstyle \lambda (x)}$ , where ${\displaystyle \textstyle x}$ is a ${\displaystyle \textstyle d}$ -dimensional point located in ${\displaystyle \textstyle {\textbf {R}}^{d}}$, such that for any bounded region {\displaystyle \textstyle B}\textstyle B the (${\displaystyle \textstyle d}$ volume integral of ${\displaystyle \textstyle \lambda (x)}$ over region ${\displaystyle \textstyle B}$ is finite. In other words, if this integral, denoted by ${\displaystyle \textstyle \Lambda (B)}$, is:</p>
+<script type="math/tex; mode=display">{\displaystyle \Lambda (B)=\int _{B}\lambda (x)\,\mathrm {d} x<\infty ,}</script><p>where ${\displaystyle \textstyle {\mathrm {d} x}}$ is a (${\displaystyle \textstyle d}$-dimensional) volume element,[d] then for any collection of disjoint bounded Borel measurable sets ${\displaystyle \textstyle B<em>{1},\dots ,B</em>{k}}$, an inhomogeneous Poisson process with (intensity) function ${\displaystyle \textstyle \lambda (x)}$) has the finite-dimensional distribution:[75]</p>
+<script type="math/tex; mode=display">{\displaystyle P\{N(B_{i})=n_{i},i=1,\dots ,k\}=\prod _{i=1}^{k}{\frac {(\Lambda (B_{i}))^{n_{i}}}{n_{i}!}}e^{-\Lambda (B_{i})}.}</script></li>
+<li><p>$p\left[t<em>{1}, t</em>{2}, \ldots, t_{n}\right] .$</p>
+<p>the probability $P\left[t<em>{1}, t</em>{2}, \ldots, t<em>{n}\right]$ that a sequence of $n$ spikes occurs with spike $i$ falling between times $t</em>{i}$ and $t<em>{i}+\Delta t$ for $i=1,2, \ldots, n$ is given in terms of this density by the relation  $P\left[t</em>{1}, t<em>{2}, \ldots, t</em>{n}\right]$=$p\left[t<em>{1}, t</em>{2}, \ldots, t_{n}\right]\Delta t^{n})$</p>
+</li>
 </ul>
 <p>The nature of the neural code is a topic of intense debate within the neuroscience community. Much of the discussion has focused on whether neurons use <strong>rate coding</strong> or <strong>temporal coding,</strong> often without a clear definition of what these terms mean. We feel that the central issue in neural coding is whether individual action potentials and individual neurons encode independently of each other, or whether correlations between different spikes and different neurons carry significant amounts of information. We therefore contrast independent-spike and independent-neuron codes with cor- relation codes before addressing the issue of temporal coding.</p>
 <ul>
 <li><p>rate code</p>
-<p>r (t) contains all the information about the stimulus that can be extracted from the spike train, and the neural code could reasonably be called a rate code.</p>
+<p>  r (t) contains all the information about the stimulus that can be extracted from the spike train, and the neural code could reasonably be called a rate code.</p>
 <ul>
-<li><p>independent-spike code we will call a code based solely on the time-dependent firing rate independent-spike code. This refers to the fact that the generation of each spike is independent of all the other spikes in the train.</p></li>
+<li><p>independent-spike code<br>we will call a code based solely on the time-dependent firing rate independent-spike code. This refers to the fact that the generation of each spike is independent of all the other spikes in the train.</p>
+</li>
 <li><p>correlation code</p>
-<p>If individual spikes do not encode independently of each other, we call the code a correlation code, because correlations between spike times may carry additional information</p></li>
-</ul></li>
-<li><p>Temporal Codes</p></li>
+<p>If individual spikes do not encode independently of each other, we call the code a correlation code, because correlations between spike times may carry additional information</p>
+</li>
+</ul>
+</li>
+<li><p>Temporal Codes</p>
+</li>
 </ul>
 
   
@@ -807,11 +775,9 @@ a short interval of duration Δt around the time t.</code></pre>
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
           
           href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/08/05/Neural%20Encoding%20I%20Firing%20Rates%20and%20spike%20statistics/&title=Neural Encoding I Firing Rates and spike statistics - Eichide's Blog&summary=!!! note
-1. Neural Encoding I Firing Rates and spike statistics
-1.1. introduction
-
-neural encode : stimulus --&gt; response
-neural decode : response --&gt; stimulus , need reconstruct stimulus or certain aspects of stimuls
+1. Neural Encoding I Firing Rates and spike statistics1.1. introduction
+neural encode : stimulus —&gt; response
+neural decode : response —&gt; stimulus , need reconstruct stimulus or certain aspects of stimuls
 "
           
           >
@@ -825,11 +791,9 @@ neural decode : response --&gt; stimulus , need reconstruct stimulus or certain 
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
           
           href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2020/08/05/Neural%20Encoding%20I%20Firing%20Rates%20and%20spike%20statistics/&title=Neural Encoding I Firing Rates and spike statistics - Eichide's Blog&summary=!!! note
-1. Neural Encoding I Firing Rates and spike statistics
-1.1. introduction
-
-neural encode : stimulus --&gt; response
-neural decode : response --&gt; stimulus , need reconstruct stimulus or certain aspects of stimuls
+1. Neural Encoding I Firing Rates and spike statistics1.1. introduction
+neural encode : stimulus —&gt; response
+neural decode : response —&gt; stimulus , need reconstruct stimulus or certain aspects of stimuls
 "
           
           >
@@ -843,11 +807,9 @@ neural decode : response --&gt; stimulus , need reconstruct stimulus or certain 
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
           
           href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/08/05/Neural%20Encoding%20I%20Firing%20Rates%20and%20spike%20statistics/&title=Neural Encoding I Firing Rates and spike statistics - Eichide's Blog&summary=!!! note
-1. Neural Encoding I Firing Rates and spike statistics
-1.1. introduction
-
-neural encode : stimulus --&gt; response
-neural decode : response --&gt; stimulus , need reconstruct stimulus or certain aspects of stimuls
+1. Neural Encoding I Firing Rates and spike statistics1.1. introduction
+neural encode : stimulus —&gt; response
+neural decode : response —&gt; stimulus , need reconstruct stimulus or certain aspects of stimuls
 "
           
           >
@@ -880,10 +842,8 @@ neural decode : response --&gt; stimulus , need reconstruct stimulus or certain 
       
         <a class='prev' href='/2020/08/05/PuMuMingnote_ch10/'>
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>PuMUming neuron note -- ch10 time keep</p>
-          <p class='content'>Title neural basic of neuron
-Francis Crick : in memory 1907-2004
-consciousness(psdt)
-the havin...</p>
+          <p class='content'>Title neural basic of neuronFrancis Crick : in memory 1907-2004
+consciousness(psdt)the having of ...</p>
         </a>
       
       
@@ -972,6 +932,75 @@ the havin...</p>
   
     
     
+  
+
+  <section class="widget category shadow desktop">
+    
+  <header>
+    
+      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/economy/" href="/categories/economy/"
+            id="categorieseconomy"
+            ><div class='name'>economy</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/electronic/" href="/categories/electronic/"
+            id="categorieselectronic"
+            ><div class='name'>electronic</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/environment/" href="/categories/environment/"
+            id="categoriesenvironment"
+            ><div class='name'>environment</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/math/" href="/categories/math/"
+            id="categoriesmath"
+            ><div class='name'>math</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/neuron/" href="/categories/neuron/"
+            id="categoriesneuron"
+            ><div class='name'>neuron</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/nruron/" href="/categories/nruron/"
+            id="categoriesnruron"
+            ><div class='name'>nruron</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/paper/" href="/categories/paper/"
+            id="categoriespaper"
+            ><div class='name'>paper</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/philosophy/" href="/categories/philosophy/"
+            id="categoriesphilosophy"
+            ><div class='name'>philosophy</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/program/" href="/categories/program/"
+            id="categoriesprogram"
+            ><div class='name'>program</div><div class='badge'>(3)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+  
+
+  
+    
+    
 
 
 
@@ -985,7 +1014,7 @@ the havin...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#introduction"><span class="toc-text">1.1. introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#recording-neuronal-responses"><span class="toc-text">1.2. Recording Neuronal Responses</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#from-stimulus-to-response"><span class="toc-text">1.3. From stimulus to response</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#fire-pattern"><span class="toc-text">1.3.1. fire pattern</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#spike-trains-and-firing-rates"><span class="toc-text">1.4. Spike Trains and Firing Rates</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#spike-rate"><span class="toc-text">1.4.1. spike rate</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#firing-rate-spike-count-rate-and-average-firing-rate"><span class="toc-text">“firing rate”, “spike-count rate”, and “average firing rate”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#measuring-firing-rates---rt"><span class="toc-text">1.4.2. Measuring Firing Rates --r(t)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#turning-curve"><span class="toc-text">1.4.3. turning curve</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#what-make-a-neuron-fire"><span class="toc-text">1.5. What make a neuron fire</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#spike-train-statistics"><span class="toc-text">1.6. Spike-Train Statistics</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#homogeneous-poisson-process"><span class="toc-text">1.6.1. Homogeneous Poisson Process</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#inhomogeneous-poisson-process"><span class="toc-text">1.6.2. Inhomogeneous Poisson Process</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#generating-poisson-spike-train"><span class="toc-text">Generating Poisson Spike Train</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#poisson-spike-generator"><span class="toc-text">poisson spike generator</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#comparison-with-data"><span class="toc-text">Comparison with Data</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#some-concept"><span class="toc-text">1.6.3. some concept</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Neural-Encoding-I-Firing-Rates-and-spike-statistics"><span class="toc-number">1.</span> <span class="toc-text">1. Neural Encoding I Firing Rates and spike statistics</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-introduction"><span class="toc-number">1.1.</span> <span class="toc-text">1.1. introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-Recording-Neuronal-Responses"><span class="toc-number">1.2.</span> <span class="toc-text">1.2. Recording Neuronal Responses</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-From-stimulus-to-response"><span class="toc-number">1.3.</span> <span class="toc-text">1.3. From stimulus to response</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-1-fire-pattern"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.3.1. fire pattern</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-Spike-Trains-and-Firing-Rates"><span class="toc-number">1.4.</span> <span class="toc-text">1.4. Spike Trains and Firing Rates</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-1-spike-rate"><span class="toc-number">1.4.1.</span> <span class="toc-text">1.4.1. spike rate</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-2-Measuring-Firing-Rates-—r-t"><span class="toc-number">1.4.2.</span> <span class="toc-text">1.4.2. Measuring Firing Rates —r(t)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-3-turning-curve"><span class="toc-number">1.4.3.</span> <span class="toc-text">1.4.3. turning curve</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-What-make-a-neuron-fire"><span class="toc-number">1.5.</span> <span class="toc-text">1.5. What make a neuron fire</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6-Spike-Train-Statistics"><span class="toc-number">1.6.</span> <span class="toc-text">1.6. Spike-Train Statistics</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-1-Homogeneous-Poisson-Process"><span class="toc-number">1.6.1.</span> <span class="toc-text">1.6.1. Homogeneous Poisson Process</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-2-Inhomogeneous-Poisson-Process"><span class="toc-number">1.6.2.</span> <span class="toc-text">1.6.2. Inhomogeneous Poisson Process</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generating-Poisson-Spike-Train"><span class="toc-number">1.6.3.</span> <span class="toc-text">Generating Poisson Spike Train</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#poisson-spike-generator"><span class="toc-number">1.6.3.1.</span> <span class="toc-text">poisson spike generator</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Comparison-with-Data"><span class="toc-number">1.6.3.2.</span> <span class="toc-text">Comparison with Data</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-3-some-concept"><span class="toc-number">1.6.4.</span> <span class="toc-text">1.6.3. some concept</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -1208,7 +1237,11 @@ the havin...</p>
 
   <script>
   
-  var SEARCH_SERVICE = "hexo" || "hexo";
+    var ALGOLIA_API_KEY = "ea5127035206f76008aad7a6538cb544";
+    var ALGOLIA_APP_ID = "P3M9LPRE92";
+    var ALGOLIA_INDEX_NAME = "Epichide";
+  
+  var SEARCH_SERVICE = "algolia" || "hexo";
   var ROOT = "/" || "/";
   if (!ROOT.endsWith('/')) ROOT += '/';
 </script>
@@ -1329,7 +1362,7 @@ the havin...</p>
       lang: 'zh-cn',
       visitor: 'true',
       highlight: 'true',
-      mathJax: 'false',
+      mathJax: 'true',
       enableQQ: 'true',
       requiredFields: requiredFields,
       emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',

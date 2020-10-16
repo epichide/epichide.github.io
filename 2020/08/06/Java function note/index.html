@@ -507,19 +507,16 @@
   
   
   <p>!!! garbage</p>
-<h1 id="java-method-note">java method note</h1>
-<ul>
+<h1 id="java-method-note"><a href="#java-method-note" class="headerlink" title="java method note"></a>java method note</h1><ul>
 <li>System.currentTimeMillis() : return current time: millisecongs from GMT(Greenwich Mean Time or Universal Time) 1970.1.1 to now,millis=millisecond</li>
 <li>Integer.parseInt(intString) :intstring is numerical type string,return numerical value</li>
 <li>Double.parseDouble(doubleString);return numerical value from string</li>
 <li>input redirection : java SentineValue &lt;input.txt</li>
 <li>output redirection : java SentieValue &lt;output.txt</li>
-<li>java SentineValue &lt;input.txt &gt;output.txt</li>
+<li>java SentineValue <input.txt>output.txt</input.txt></li>
 <li>import java.util.*</li>
 </ul>
-<h2 id="scanner-class--dynamic-method">Scanner Class -dynamic method</h2>
-<h3 id="read-value-from-keyboard">read value from keyboard</h3>
-<ul>
+<h2 id="Scanner-Class-dynamic-method"><a href="#Scanner-Class-dynamic-method" class="headerlink" title="Scanner Class -dynamic method"></a>Scanner Class -dynamic method</h2><h3 id="read-value-from-keyboard"><a href="#read-value-from-keyboard" class="headerlink" title="read value from keyboard"></a>read value from keyboard</h3><ul>
 <li><strong>Scanner input =new Scanner(System.in);</strong></li>
 <li>input.nextByte();</li>
 <li>input.nextShort();</li>
@@ -527,95 +524,91 @@
 <li>input.nextLong();</li>
 <li>input.nextFloat();</li>
 </ul>
-<h2 id="math-class--static-method">Math Class -static method</h2>
-<h3 id="trigonometric-method"><strong> trigonometric method</strong></h3>
-<ul>
+<h2 id="Math-Class-static-method"><a href="#Math-Class-static-method" class="headerlink" title="Math Class -static method"></a>Math Class -static method</h2><h3 id="emsp-trigonometric-method"><a href="#emsp-trigonometric-method" class="headerlink" title="&emsp;trigonometric method"></a><strong>&emsp;trigonometric method</strong></h3><ul>
 <li>radians :unit is π ; degree :unit is ° ; a: is numerical value</li>
 <li>sin(radians);cos(radians);tan(radians);</li>
 <li>asin(a);acos(a);atan(a);</li>
-<li>toRadians(degree); --- conversion from degree to radians</li>
-<li>toDegrees(randians); ---conversion from radians to degree</li>
+<li>toRadians(degree);   —- conversion from degree to radians</li>
+<li>toDegrees(randians); —-conversion from radians to degree</li>
 </ul>
-<h3 id="exponent-method"><strong> exponent method</strong></h3>
-<ul>
-<li>exp(x); --- return e<sup>x</sup>;</li>
-<li>log(x); --- return lnx;</li>
-<li>log10(x); --- return log<sub>10</sub>(x);</li>
-<li>pow(x,y); --- return x<sup>y</sup></li>
-<li>sqart(x); --- return $  (x&gt;0) $</li>
+<h3 id="emsp-exponent-method"><a href="#emsp-exponent-method" class="headerlink" title="&emsp;exponent method"></a><strong>&emsp;exponent method</strong></h3><ul>
+<li>exp(x); —- return e^x^;</li>
+<li>log(x); —- return lnx;</li>
+<li>log10(x); —- return log~10~(x);</li>
+<li>pow(x,y); —- return x^y^</li>
+<li>sqart(x); —- return  $ \sqrt{x} (x&gt;0) $</li>
 </ul>
-<h3 id="sevice-method"><strong> sevice method</strong></h3>
-<ul>
-<li>ceil(x); --- return double y=<span class="math inline">\(\lceil x \rceil\)</span> : $ yZ x+1yx $</li>
-<li>floor(x); --- return double y=$x $: $yZ x-1 y x $</li>
-<li>rint(x): --- return double y=$=(x -x x-x ) ? x : x $</li>
-<li>round(x); --- return floor(x),if x is float retun int,if x is double return float</li>
+<h3 id="emsp-sevice-method"><a href="#emsp-sevice-method" class="headerlink" title="&emsp;sevice method"></a><strong>&emsp;sevice method</strong></h3><ul>
+<li>ceil(x); —- return double y=$\lceil x \rceil$ : $ y\in Z  \land x+1\geq y\geq x  $</li>
+<li>floor(x); —- return double y=$\lfloor x \rfloor $: $y\in Z \land x-1 \geq y \geq x $</li>
+<li>rint(x): —- return double y=$=(\lceil x \rceil-x \geq x-\lfloor x \rfloor ) ?  \lfloor x \rfloor :  \lceil x \rceil $</li>
+<li>round(x); —- return floor(x),if x is float retun int,if x is double return float</li>
 <li>min(x); max(x); abs(x);</li>
-<li>random(); --- produce a double value (0≤ ＜1)</li>
+<li>random(); —- produce a double value (0≤ ＜1)</li>
 </ul>
-<h2 id="character-class">Character Class</h2>
-<ul>
+<h2 id="Character-Class"><a href="#Character-Class" class="headerlink" title="Character Class"></a>Character Class</h2><ul>
 <li>value is char</li>
-<li>isDigit(ch); --- judge whether ch is digit</li>
-<li>isLetter(ch); --- judge whether ch is letter</li>
+<li>isDigit(ch); —- judge  whether ch is digit</li>
+<li>isLetter(ch); —- judge whether ch is letter</li>
 <li>isLetterOrDigit(ch);</li>
 <li>isLowerCase(ch);</li>
 <li>isUpperCase(ch);</li>
 <li>toLowerCase(ch);</li>
 <li>toUpperCase(ch);</li>
 </ul>
-<h2 id="string-class--dynamic-methodinstance-method">String Class -dynamic method(instance method)</h2>
-<ul>
-<li>String s="content";</li>
-<li>length(); --- return number of string</li>
-<li>charAt(index); --- return s[index] value</li>
-<li>concat(s1); --- return s+s1</li>
-<li>toLowerCase(); --- return string with lower letters</li>
-<li>toUpperCase(); --- return string with upper letters</li>
-<li>trim(); --- delete the blank space on both side</li>
-<li>equals(s1); --- if s==s1 return ture</li>
-<li>equalsIgnoreCase(); --- ignore case ,if s==s1 return ture</li>
-<li>compareTo(s1); ---return a value =the first diffent char'distance (former-latter)</li>
-<li>compareToIgnoreCase(s1);--- ignore case,-return a value =the first diffent char'distance (former-latter)</li>
-<li>startWith(prefix);--- judge whethther s starts with s1</li>
-<li>endWith(prfix);--- judge whethther s ends with s1</li>
-<li>contains(s1);--- judge whether s contains s1</li>
-<li>indexOf(ch/s);--- return the index of the <strong>first</strong> s1(index is from the fist char of s),else return -1</li>
-<li>indexOf(ch/s1,fromIndex);--- return the index of the <strong>first</strong> s1 <strong>after</strong> formIndex ,else return -1</li>
-<li>lastindexOf(ch/s1);--- return the index of the <strong>last</strong> s1(index is from the fist char of s1),else return -1</li>
-<li>lastindexOf(ch/s1,fromIndex);--- return the index of the <strong>last</strong> s1 <strong>before</strong> formIndex ,else return -1</li>
-<li>substring(beginIndex); --- return string from beginIndex to end</li>
-<li>substring(beginIndex,endIndex); --- return string from beginindex to endindex</li>
+<h2 id="String-Class-dynamic-method-instance-method"><a href="#String-Class-dynamic-method-instance-method" class="headerlink" title="String Class -dynamic method(instance method)"></a>String Class -dynamic method(instance method)</h2><ul>
+<li>String s=”content”;</li>
+<li>length();  —- return number of string</li>
+<li>charAt(index);  —- return s[index] value</li>
+<li>concat(s1);  —- return s+s1 </li>
+<li>toLowerCase();  —- return string with lower letters</li>
+<li>toUpperCase();  —- return string with upper letters</li>
+<li>trim();  —- delete the blank space on both side</li>
+<li>equals(s1);  —- if s==s1 return ture</li>
+<li>equalsIgnoreCase();  —- ignore case ,if s==s1 return ture</li>
+<li>compareTo(s1); —-return a value =the first diffent char’distance (former-latter)</li>
+<li>compareToIgnoreCase(s1);—- ignore case,-return a value =the first diffent char’distance (former-latter)</li>
+<li>startWith(prefix);—- judge whethther s starts with s1</li>
+<li>endWith(prfix);—- judge whethther s ends with s1</li>
+<li>contains(s1);—- judge whether s contains s1</li>
+<li>indexOf(ch/s);—- return the index of the <strong>first</strong> s1(index is from the fist char of s),else return -1</li>
+<li>indexOf(ch/s1,fromIndex);—- return the index of the <strong>first</strong> s1 <strong>after</strong> formIndex ,else return -1</li>
+<li>lastindexOf(ch/s1);—- return the index of the <strong>last</strong> s1(index is from the fist char of s1),else return -1</li>
+<li>lastindexOf(ch/s1,fromIndex);—- return the index of the <strong>last</strong> s1 <strong>before</strong> formIndex ,else return -1</li>
+<li>substring(beginIndex); —- return string from beginIndex to end</li>
+<li>substring(beginIndex,endIndex); —- return string from beginindex to endindex</li>
 </ul>
-<h2 id="data-class--dynamic-method">Data Class -dynamic method</h2>
-<ul>
-<li>Date(); --- create current date object</li>
+<h2 id="Data-Class-dynamic-method"><a href="#Data-Class-dynamic-method" class="headerlink" title="Data Class -dynamic method"></a>Data Class -dynamic method</h2><ul>
+<li>Date(); —- create current date object</li>
 <li>java.util.Date = new java.util.Date();</li>
-<li>Date(elapeseTime:long); --- create elapeseTime from GMT 1970.1.1 date object</li>
-<li>toString(); --- return time string with pattern : Mon Dec 26 07:00:15 EST 2001</li>
-<li>getTime(); ---- return elapse milliseconds from EST 1970.1.1 to "now"</li>
-<li>setTime(elapseTime:long) ---set elapse time</li>
+<li>Date(elapeseTime:long); —- create elapeseTime from GMT 1970.1.1  date object</li>
+<li>toString(); —- return time string with pattern : Mon Dec 26 07:00:15 EST 2001</li>
+<li>getTime(); —— return elapse milliseconds from EST 1970.1.1 to “now”</li>
+<li>setTime(elapseTime:long) —-set elapse time</li>
 </ul>
-<h2 id="random-class--dynamix-method">Random Class -dynamix method</h2>
-<ul>
-<li>Random(); --- current time as seed create object</li>
+<h2 id="Random-Class-dynamix-method"><a href="#Random-Class-dynamix-method" class="headerlink" title="Random Class -dynamix method"></a>Random Class -dynamix method</h2><ul>
+<li>Random(); —- current time as seed create object</li>
 <li>random random = new Random();</li>
-<li>Random(seed:long); --- certain value as seed create object</li>
-<li>nextInt(); --- return random value</li>
+<li>Random(seed:long); —- certain value as seed create object</li>
+<li>nextInt(); —- return random value</li>
 <li>nextLong();</li>
 <li>nextDouble();</li>
 <li>nextFloat();</li>
 <li>nextBoolean();</li>
 </ul>
-<h2 id="bigdecimal-class">BigDecimal Class</h2>
-<h3 id="kinds-of-rounding-modes">8 kinds of rounding modes</h3>
-<ol type="1">
-<li><p>Rounding down - <strong>ROUND_FLOOR</strong> <br><br>round down (or take the <strong>floor,</strong> or round towards minus infinity): y is the largest integer that does not exceed x.<br><br>${y= (x)=x=--x} $<br><br></p></li>
-<li><p>Rounding up - <strong>ROUND_FLOOR</strong> <br><br> round up (or take the <strong>ceiling,</strong> or round towards plus infinity): y is the smallest integer that is not less than x. <br><br> ${y= (x)=x=--x} $<br><br></p></li>
-<li><p>Rounding towards zero - <strong>ROUND_DOWN</strong> <br><br> round towards <strong>zero</strong> (or truncate, or round away from infinity): y is the integer part of x, without its fraction digits.<br><br><span class="math inline">\({\displaystyle y=\mathrm {truncate} (x)=\mathrm {sgn}(x)\left\lfloor \left|x\right|\right\rfloor =-\mathrm {sgn}(x)\left\lceil -\left|x\right|\right\rceil }\)</span><br><br></p></li>
-<li><p>Rounding away from zero - <strong>ROUND_UP</strong> round away from zero (or round towards infinity): if x is an integer, y is x; else y is the integer that is closest to 0 and is such that x is between 0 and y.<br><br><span class="math inline">\({\displaystyle y=\mathrm {sgn}(x)\left\lceil \left|x\right|\right\rceil =-\mathrm {sgn}(x)\left\lfloor -\left|x\right|\right\rfloor }\)</span><br><br></p></li>
-<li><p>Round half towards zero - <strong>ROUND_HALF_DOWN 五舍六入</strong> <br><br>One may also round half towards zero (or round half away from infinity) as opposed to the conventional round half away from zero.<br><br><span class="math inline">\({\displaystyle y=\mathrm {sgn}(x)\left\lceil \left|x\right|-0.5\right\rceil =-\mathrm {sgn}(x)\left\lfloor -\left|x\right|+0.5\right\rfloor }\)</span><br><br></p></li>
-<li><p>Round half away from zero - <strong>ROUND_HALF_UP 四舍五入</strong> <br><br>The other tie-breaking method commonly taught and used is the round half away from zero (or round half towards infinity).<br><br>${y=(x)|x|+0.5=-(x)-|x|-0.5} $</p></li>
+<h2 id="BigDecimal-Class"><a href="#BigDecimal-Class" class="headerlink" title="BigDecimal Class"></a>BigDecimal Class</h2><h3 id="8-kinds-of-rounding-modes"><a href="#8-kinds-of-rounding-modes" class="headerlink" title="8 kinds of rounding modes"></a>8 kinds of rounding modes</h3><ol>
+<li><p>Rounding down - <strong>ROUND_FLOOR</strong> <br><br>round down (or take the <strong>floor,</strong> or round towards minus infinity): y is the largest integer that does not exceed x.<br><br>${\displaystyle y=\mathrm {floor} (x)=\left\lfloor x\right\rfloor =-\left\lceil -x\right\rceil } $<br><br></p>
+</li>
+<li><p>Rounding up - <strong>ROUND_FLOOR</strong>  <br><br> round up (or take the <strong>ceiling,</strong> or round towards plus infinity): y is the smallest integer that is not less than x. <br><br> ${\displaystyle y=\mathrm {ceil} (x)=\left\lceil x\right\rceil =-\left\lfloor -x\right\rfloor } $<br><br></p>
+</li>
+<li><p>Rounding towards zero - <strong>ROUND_DOWN</strong> <br><br> round towards <strong>zero</strong> (or truncate, or round away from infinity): y is the integer part of x, without its fraction digits.<br><br>${\displaystyle y=\mathrm {truncate} (x)=\mathrm {sgn}(x)\left\lfloor \left|x\right|\right\rfloor =-\mathrm {sgn}(x)\left\lceil -\left|x\right|\right\rceil }$<br><br></p>
+</li>
+<li><p>Rounding away from zero - <strong>ROUND_UP</strong> round away from zero (or round towards infinity): if x is an integer, y is x; else y is the integer that is closest to 0 and is such that x is between 0 and y.<br><br>${\displaystyle y=\mathrm {sgn}(x)\left\lceil \left|x\right|\right\rceil =-\mathrm {sgn}(x)\left\lfloor -\left|x\right|\right\rfloor }$<br><br></p>
+</li>
+<li><p>Round half towards zero  - <strong>ROUND_HALF_DOWN 五舍六入</strong> <br><br>One may also round half towards zero (or round half away from infinity) as opposed to the conventional round half away from zero.<br><br>${\displaystyle y=\mathrm {sgn}(x)\left\lceil \left|x\right|-0.5\right\rceil =-\mathrm {sgn}(x)\left\lfloor -\left|x\right|+0.5\right\rfloor }$<br><br></p>
+</li>
+<li><p>Round half away from zero - <strong>ROUND_HALF_UP 四舍五入</strong> <br><br>The other tie-breaking method commonly taught and used is the round half away from zero (or round half towards infinity).<br><br>${\displaystyle y=\mathrm {sgn}(x)\left\lfloor \left|x\right|+0.5\right\rfloor =-\mathrm {sgn}(x)\left\lceil -\left|x\right|-0.5\right\rceil } $</p>
+</li>
 </ol>
 <p>Round half to even - <strong>ROUND_HALF_EVEN</strong> <br><br>A tie-breaking rule without positive/negative bias and without bias toward/away from zero is round half to even. By this convention, if the fractional part of x is 0.5, then y is the even integer nearest to x</p>
 
@@ -738,17 +731,20 @@
 对象成员 object member
 访问 access
 操作符 operator
-操作数
+操作数 
 操作
 变量 variable
 实例 instance
-调用 c...</p>
+调用 calling
+默...</p>
         </a>
       
       
         <a class='next' href='/2020/08/06/The%20PAC%20learning%20Framework/'>
           <p class='title'>CH2 :The PAC Learning Framework<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>[TOC] 作者: Mehryar Mogri ## 前言 * PAC学习框架,PAC : probably approximately correct learning ## 中英文释义 de...</p>
+          <p class='content'>[TOC]作者: Mehryar Mogri
+前言
+PAC学习框架,PAC : probably approximately correct learning中英文释义definition 定义...</p>
         </a>
       
     </div>
@@ -778,6 +774,75 @@
   
     
     
+  
+
+  <section class="widget category shadow desktop">
+    
+  <header>
+    
+      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/economy/" href="/categories/economy/"
+            id="categorieseconomy"
+            ><div class='name'>economy</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/electronic/" href="/categories/electronic/"
+            id="categorieselectronic"
+            ><div class='name'>electronic</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/environment/" href="/categories/environment/"
+            id="categoriesenvironment"
+            ><div class='name'>environment</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/math/" href="/categories/math/"
+            id="categoriesmath"
+            ><div class='name'>math</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/neuron/" href="/categories/neuron/"
+            id="categoriesneuron"
+            ><div class='name'>neuron</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/nruron/" href="/categories/nruron/"
+            id="categoriesnruron"
+            ><div class='name'>nruron</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/paper/" href="/categories/paper/"
+            id="categoriespaper"
+            ><div class='name'>paper</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/philosophy/" href="/categories/philosophy/"
+            id="categoriesphilosophy"
+            ><div class='name'>philosophy</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/program/" href="/categories/program/"
+            id="categoriesprogram"
+            ><div class='name'>program</div><div class='badge'>(3)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+  
+
+  
+    
+    
 
 
 
@@ -791,7 +856,7 @@
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#scanner-class--dynamic-method"><span class="toc-text">Scanner Class -dynamic method</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#read-value-from-keyboard"><span class="toc-text">read value from keyboard</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#math-class--static-method"><span class="toc-text">Math Class -static method</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#trigonometric-method"><span class="toc-text"> trigonometric method</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#exponent-method"><span class="toc-text"> exponent method</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sevice-method"><span class="toc-text"> sevice method</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#character-class"><span class="toc-text">Character Class</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#string-class--dynamic-methodinstance-method"><span class="toc-text">String Class -dynamic method(instance method)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#data-class--dynamic-method"><span class="toc-text">Data Class -dynamic method</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#random-class--dynamix-method"><span class="toc-text">Random Class -dynamix method</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bigdecimal-class"><span class="toc-text">BigDecimal Class</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#kinds-of-rounding-modes"><span class="toc-text">8 kinds of rounding modes</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#java-method-note"><span class="toc-number">1.</span> <span class="toc-text">java method note</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Scanner-Class-dynamic-method"><span class="toc-number">1.1.</span> <span class="toc-text">Scanner Class -dynamic method</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#read-value-from-keyboard"><span class="toc-number">1.1.1.</span> <span class="toc-text">read value from keyboard</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Math-Class-static-method"><span class="toc-number">1.2.</span> <span class="toc-text">Math Class -static method</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#emsp-trigonometric-method"><span class="toc-number">1.2.1.</span> <span class="toc-text">&amp;emsp;trigonometric method</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#emsp-exponent-method"><span class="toc-number">1.2.2.</span> <span class="toc-text">&amp;emsp;exponent method</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#emsp-sevice-method"><span class="toc-number">1.2.3.</span> <span class="toc-text">&amp;emsp;sevice method</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Character-Class"><span class="toc-number">1.3.</span> <span class="toc-text">Character Class</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#String-Class-dynamic-method-instance-method"><span class="toc-number">1.4.</span> <span class="toc-text">String Class -dynamic method(instance method)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Data-Class-dynamic-method"><span class="toc-number">1.5.</span> <span class="toc-text">Data Class -dynamic method</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Random-Class-dynamix-method"><span class="toc-number">1.6.</span> <span class="toc-text">Random Class -dynamix method</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BigDecimal-Class"><span class="toc-number">1.7.</span> <span class="toc-text">BigDecimal Class</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-kinds-of-rounding-modes"><span class="toc-number">1.7.1.</span> <span class="toc-text">8 kinds of rounding modes</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -1014,7 +1079,11 @@
 
   <script>
   
-  var SEARCH_SERVICE = "hexo" || "hexo";
+    var ALGOLIA_API_KEY = "ea5127035206f76008aad7a6538cb544";
+    var ALGOLIA_APP_ID = "P3M9LPRE92";
+    var ALGOLIA_INDEX_NAME = "Epichide";
+  
+  var SEARCH_SERVICE = "algolia" || "hexo";
   var ROOT = "/" || "/";
   if (!ROOT.endsWith('/')) ROOT += '/';
 </script>
@@ -1135,7 +1204,7 @@
       lang: 'zh-cn',
       visitor: 'true',
       highlight: 'true',
-      mathJax: 'false',
+      mathJax: 'true',
       enableQQ: 'true',
       requiredFields: requiredFields,
       emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',

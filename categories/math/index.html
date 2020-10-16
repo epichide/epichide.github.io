@@ -470,25 +470,28 @@
     
       
         基本概念
-
-随机试验(试验) experiment E :
-
+随机试验(试验) experiment E : 
 可重复性 : 在相同条件下可以重复
 结果可知性 : 不能知道准确的结果,但事先知道所有可能的结果
 
-样本点 sample point ω :
 
+样本点 sample point ω :
 随机试验每一个不可分割的结果
 
+
 样本空间 sample space Ω : ω ∈ Ω
-
 样本点全体的集合
-
-
 离散样本空间
-
 有限样本空间
-可列样本...
+可列样本空间
+
+
+连续样本空间
+
+
+
+
+随机事件 ev...
       
     
   </div>
@@ -534,8 +537,11 @@
   <div class='md'>
     
       
-        [TOC] 作者: Mehryar Mogri ## 前言 * PAC学习框架,PAC : probably approximately correct learning ## 中英文释义 definition 定义 note 注解,强调,注意 denote 用什么表示什么 instance 实例 non-trivial ### 符号
-\(\mathcal{X}\) : 所有可能的 exa...
+        [TOC]作者: Mehryar Mogri
+前言
+PAC学习框架,PAC : probably approximately correct learning中英文释义definition 定义note 注解,强调,注意denote 用什么表示什么instance 实例non-trivial符号
+
+$\mathcal{X}$ : 所有可能的 examples or instances,inp...
       
     
   </div>
@@ -695,7 +701,7 @@
           <li><a class="flat-box"
             title="/categories/paper/" href="/categories/paper/"
             id="categoriespaper"
-            ><div class='name'>paper</div><div class='badge'>(1)</div></a></li>
+            ><div class='name'>paper</div><div class='badge'>(2)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/philosophy/" href="/categories/philosophy/"
@@ -729,7 +735,7 @@
 
 
     <div class='content'>
-      <a href="/tags/book/" style="font-size: 14px; color: #999">book</a> <a href="/tags/code/" style="font-size: 14px; color: #999">code</a> <a href="/tags/java/" style="font-size: 17.33px; color: #828282">java</a> <a href="/tags/jottings/" style="font-size: 14px; color: #999">jottings</a> <a href="/tags/machine-learning/" style="font-size: 14px; color: #999">machine_learning</a> <a href="/tags/markdown/" style="font-size: 14px; color: #999">markdown</a> <a href="/tags/math/" style="font-size: 14px; color: #999">math</a> <a href="/tags/neuron/" style="font-size: 14px; color: #999">neuron</a> <a href="/tags/note/" style="font-size: 17.33px; color: #828282">note</a> <a href="/tags/novel/" style="font-size: 20.67px; color: #6c6c6c">novel</a> <a href="/tags/ntechology/" style="font-size: 14px; color: #999">ntechology</a> <a href="/tags/nuron/" style="font-size: 14px; color: #999">nuron</a> <a href="/tags/paper/" style="font-size: 14px; color: #999">paper</a> <a href="/tags/philosophy/" style="font-size: 24px; color: #555">philosophy</a> <a href="/tags/probability/" style="font-size: 14px; color: #999">probability</a> <a href="/tags/psc/" style="font-size: 14px; color: #999">psc</a> <a href="/tags/psp/" style="font-size: 14px; color: #999">psp</a> <a href="/tags/scipy/" style="font-size: 14px; color: #999">scipy</a> <a href="/tags/signal/" style="font-size: 14px; color: #999">signal</a> <a href="/tags/wave/" style="font-size: 14px; color: #999">wave</a>
+      <a href="/tags/book/" style="font-size: 14px; color: #999">book</a> <a href="/tags/code/" style="font-size: 14px; color: #999">code</a> <a href="/tags/java/" style="font-size: 17.33px; color: #828282">java</a> <a href="/tags/jottings/" style="font-size: 14px; color: #999">jottings</a> <a href="/tags/machine-learning/" style="font-size: 14px; color: #999">machine_learning</a> <a href="/tags/markdown/" style="font-size: 14px; color: #999">markdown</a> <a href="/tags/math/" style="font-size: 14px; color: #999">math</a> <a href="/tags/neuron/" style="font-size: 17.33px; color: #828282">neuron</a> <a href="/tags/note/" style="font-size: 17.33px; color: #828282">note</a> <a href="/tags/novel/" style="font-size: 20.67px; color: #6c6c6c">novel</a> <a href="/tags/ntechology/" style="font-size: 14px; color: #999">ntechology</a> <a href="/tags/nuron/" style="font-size: 14px; color: #999">nuron</a> <a href="/tags/paper/" style="font-size: 14px; color: #999">paper</a> <a href="/tags/philosophy/" style="font-size: 24px; color: #555">philosophy</a> <a href="/tags/probability/" style="font-size: 14px; color: #999">probability</a> <a href="/tags/psc/" style="font-size: 14px; color: #999">psc</a> <a href="/tags/psp/" style="font-size: 14px; color: #999">psp</a> <a href="/tags/scipy/" style="font-size: 14px; color: #999">scipy</a> <a href="/tags/signal/" style="font-size: 14px; color: #999">signal</a> <a href="/tags/wave/" style="font-size: 14px; color: #999">wave</a>
     </div>
   </section>
 
@@ -953,7 +959,11 @@
 
   <script>
   
-  var SEARCH_SERVICE = "hexo" || "hexo";
+    var ALGOLIA_API_KEY = "ea5127035206f76008aad7a6538cb544";
+    var ALGOLIA_APP_ID = "P3M9LPRE92";
+    var ALGOLIA_INDEX_NAME = "Epichide";
+  
+  var SEARCH_SERVICE = "algolia" || "hexo";
   var ROOT = "/" || "/";
   if (!ROOT.endsWith('/')) ROOT += '/';
 </script>
@@ -1074,7 +1084,7 @@
       lang: 'zh-cn',
       visitor: 'true',
       highlight: 'true',
-      mathJax: 'false',
+      mathJax: 'true',
       enableQQ: 'true',
       requiredFields: requiredFields,
       emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',

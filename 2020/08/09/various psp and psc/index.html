@@ -506,73 +506,67 @@
 
   
   
-  <h1 id="psc-postsynaptic-currents">PSC: postsynaptic <strong>currents</strong></h1>
-<p>Because current is being recorded here, the experimenter must be in <strong>voltage clamp.</strong></p>
-<h2 id="epsc">EPSC</h2>
-<p>MEPSCs and sEPSCs are both measures that examine the influence of excitatory neurotransmitters on a neuron. Both mEPSCs and sEPSCs are measured in a whole cell recording configuration. The major difference is that in recording mEPSCs, the spontaneous activity of the network is eliminated due to the voltage-gated sodium channel inhibitor tetrodotoxin (TTX).</p>
-<h2 id="mepsc-mini-excitatory-postsynaptic-currents">mEPSC: mini excitatory postsynaptic currents</h2>
-<p>recorded in bath applied tetrodotoxin</p>
-<h2 id="mepsc-的一些参数范围">mEPSC 的一些参数范围</h2>
-<ul>
+  <h1 id="PSC-postsynaptic-currents"><a href="#PSC-postsynaptic-currents" class="headerlink" title="PSC: postsynaptic currents"></a>PSC: postsynaptic <strong>currents</strong></h1><p>Because current is being recorded here, the experimenter must be in <strong>voltage clamp.</strong></p>
+<h2 id="EPSC"><a href="#EPSC" class="headerlink" title="EPSC"></a>EPSC</h2><p>MEPSCs and sEPSCs are both measures that examine the influence of excitatory neurotransmitters on a neuron. Both mEPSCs and sEPSCs are measured in a whole cell recording configuration. The major difference is that in recording mEPSCs, the spontaneous activity of the network is eliminated due to the voltage-gated sodium channel inhibitor tetrodotoxin (TTX).</p>
+<h2 id="mEPSC-mini-excitatory-postsynaptic-currents"><a href="#mEPSC-mini-excitatory-postsynaptic-currents" class="headerlink" title="mEPSC: mini excitatory postsynaptic currents"></a>mEPSC: mini excitatory postsynaptic currents</h2><p>recorded in bath applied tetrodotoxin</p>
+<h2 id="mEPSC-的一些参数范围"><a href="#mEPSC-的一些参数范围" class="headerlink" title="mEPSC 的一些参数范围"></a>mEPSC 的一些参数范围</h2><ul>
 <li><p>Simkus, C. R. L., and Stricker, C. (2002a).</p>
 <p><strong>layer II neurones of rat barrel cortex:</strong></p>
-<p>rise_time: 0.2-0.3 ms(fast), 0.6-0.8ms(average)</p></li>
+<p>rise_time: 0.2-0.3 ms(fast), 0.6-0.8ms(average)</p>
+</li>
 <li><p>(Zhang et al. 2005)</p>
 <p><strong>CA1 region of the hippocampal slice</strong></p>
-<p>rise_time: 3-5ms, dacay_time: 7-15ms</p></li>
+<p>rise_time: 3-5ms, dacay_time: 7-15ms</p>
+</li>
 </ul>
-<h2 id="sepsc-spontaneous-excitatory-post-synaptic-currents">sEPSC: spontaneous excitatory post synaptic currents</h2>
-<p>done in bath applied GABAA inhibitor.</p>
-<h2 id="关于-current-的拟合">关于 current 的拟合</h2>
-<h3 id="简单的双指数最小二乘法拟合tia-et-al.-1996">简单的双指数最小二乘法拟合(Tia et al. 1996)</h3>
-<p><span class="math display">\[{I(t)=I_{0}+I_{f} \operatorname{cxp}\left(-t / \tau_{f}\right)+I_{s} \operatorname{cxp}\left(-t / \tau_{s}\right)}\]</span></p>
-<ol type="1">
-<li><p><em>I<sub>f</sub></em> , <em>I<sub>s</sub></em> : the amplitudes of the fast and slow decay components</p></li>
-<li><p><em>τ<sub>f</sub></em> , <em>τ<sub>s</sub></em> : their respective decay time constants. -&gt; <em>τ<sub>fast</sub></em> , <em>τ<sub>slow</sub></em></p></li>
-<li><p>if baseline current not zero can add I<sub>0</sub> as constant.</p></li>
-<li><p>when t&lt;0, fix I(t)=0</p></li>
-<li><p>slow component:</p>
-<p><span class="math inline">\({I_{f} \operatorname{cxp}\left(-t / \tau_{f}\right)}\)</span></p></li>
-<li><p>fast component:</p>
-<p><span class="math inline">\({I_{s} \operatorname{cxp}\left(-t / \tau_{s}\right)}\)</span></p></li>
+<h2 id="sEPSC-spontaneous-excitatory-post-synaptic-currents"><a href="#sEPSC-spontaneous-excitatory-post-synaptic-currents" class="headerlink" title="sEPSC: spontaneous excitatory post synaptic currents"></a>sEPSC: spontaneous excitatory post synaptic currents</h2><p>done in bath applied GABAA inhibitor.</p>
+<h2 id="关于-current-的拟合"><a href="#关于-current-的拟合" class="headerlink" title="关于 current 的拟合"></a>关于 current 的拟合</h2><h3 id="简单的双指数最小二乘法拟合-Tia-et-al-1996"><a href="#简单的双指数最小二乘法拟合-Tia-et-al-1996" class="headerlink" title="简单的双指数最小二乘法拟合(Tia et al. 1996)"></a>简单的双指数最小二乘法拟合(Tia et al. 1996)</h3><script type="math/tex; mode=display">{I(t)=I_{0}+I_{f} \operatorname{cxp}\left(-t / \tau_{f}\right)+I_{s} \operatorname{cxp}\left(-t / \tau_{s}\right)}</script><ol>
+<li><em>I~f~</em> , <em>I~s~</em> : the amplitudes of the fast and slow decay components</li>
+<li><em>τ~f~</em> , <em>τ~s~</em> : their  respective  decay  time  constants. -&gt; <em>τ~fast~</em> , <em>τ~slow~</em></li>
+<li>if baseline current not zero can add I~0~ as constant.</li>
+<li>when t&lt;0, fix I(t)=0</li>
+<li><p>slow component: </p>
+<p>   ${I<em>{f} \operatorname{cxp}\left(-t / \tau</em>{f}\right)}$</p>
+</li>
+<li><p>fast component: </p>
+<p>   ${I<em>{s} \operatorname{cxp}\left(-t / \tau</em>{s}\right)}$</p>
+</li>
 </ol>
-<h4 id="gaba-fit">GABA fit</h4>
-<p><img src="/2020/08/09/various%20psp%20and%20psc/GABA_time_constan.jpg" class="lazyload" data-srcset="/2020/08/09/various%20psp%20and%20psc/GABA_time_constan.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="GABA_time_course"> 注:% fast = fast component(t<sub>peak</sub>)/slow component(t<sub>peak</sub>)</p>
-<h2 id="ipsc-inhibitory-postsynaptic-current">IPSC: inhibitory postsynaptic current</h2>
-<p>Inhibitory events can also be measured in this same way. The release of GABA is called an IPSC. To measure sIPSCs, pharmacological inhibition of excitatory neurotransmitters must be performed, possible with DNQX or CNQX for blockade of AMPA type receptors, and APV for blockade of NMDA type receptors.</p>
-<h1 id="psp-postsynaptic-potentials">psp: postsynaptic potentials</h1>
-<p>Deviations in membrane potential can also be measured in this way. The recording must be performed in a <strong>current clamp</strong> configuration for membrane potential to be measured.</p>
-<h1 id="关于递质释放和通道打开的-model">关于递质释放和通道打开的 model</h1>
-<figure>
-<img src="/2020/08/09/various%20psp%20and%20psc/平衡.jpg" class="lazyload" data-srcset="/2020/08/09/various%20psp%20and%20psc/平衡.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>动态平衡</figcaption>
-</figure>
-<ol type="1">
-<li><p>X: calcium binding protein , X<sup>*</sup> binding calcium</p></li>
-<li><p>V<sub>e</sub>: transmitter-containing vesicles, V<sub>e</sub><sup>*</sup>: binding X<sup>*</sup></p></li>
-<li><p>nT: n molecules of transmitter T</p></li>
+<h4 id="GABA-fit"><a href="#GABA-fit" class="headerlink" title="GABA fit"></a>GABA fit</h4><p><img src="/2020/08/09/various%20psp%20and%20psc/GABA_time_constan.jpg" class="lazyload" data-srcset="/2020/08/09/various%20psp%20and%20psc/GABA_time_constan.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="GABA_time_course"><br>注:% fast = fast component(t~peak~)/slow component(t~peak~)</p>
+<h2 id="IPSC-inhibitory-postsynaptic-current"><a href="#IPSC-inhibitory-postsynaptic-current" class="headerlink" title="IPSC: inhibitory postsynaptic current"></a>IPSC: inhibitory postsynaptic current</h2><p>Inhibitory events can also be measured in this same way. The release of GABA is called an IPSC. To measure sIPSCs, pharmacological inhibition of excitatory neurotransmitters must be performed, possible with DNQX or CNQX for blockade of AMPA type receptors, and APV for blockade of NMDA type receptors.</p>
+<h1 id="psp-postsynaptic-potentials"><a href="#psp-postsynaptic-potentials" class="headerlink" title="psp: postsynaptic potentials"></a>psp: postsynaptic potentials</h1><p>Deviations in membrane potential can also be measured in this way. The recording must be performed in a <strong>current clamp</strong> configuration for membrane potential to be measured.</p>
+<h1 id="关于递质释放和通道打开的-model"><a href="#关于递质释放和通道打开的-model" class="headerlink" title="关于递质释放和通道打开的 model"></a>关于递质释放和通道打开的 model</h1><p><img src="/2020/08/09/various%20psp%20and%20psc/平衡.jpg" class="lazyload" data-srcset="/2020/08/09/various%20psp%20and%20psc/平衡.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="动态平衡"></p>
+<ol>
+<li>X: calcium binding protein , X^*^ binding calcium</li>
+<li>V~e~: transmitter-containing vesicles, V~e~^*^: binding X^*^</li>
+<li>nT: n molecules of transmitter T</li>
 <li><p><em>k</em>: various rate constants</p>
-<ol type="1">
+<ol>
 <li><p>速率常数的计算:</p>
 <p>某一方向的反应速率只和底物浓度,催化剂,温度有关,和反方向的浓度无关.(或者说净速率是二者带符号相加)</p>
-<p>假设基元反应为： <span class="math display">\[{a A+\beta D=g G+h H}\]</span> 其数学表达式为: <span class="math display">\[{v=k c^{\alpha}(A) c^{\beta}(D)}\]</span></p>
-<p>上式中的 k 称为反应速率常数又称速率常数 k 或 λ 是化学反应速率的量化表示方式，其物理意义使其数值相当于参加反应的物质都处于单位浓度(1 mol·L-1)时的反应速率，故又称为反应的比速率（specific reaction rate）。</p></li>
-<li><p>其中 k<sub>3</sub>是单向的,因为它表示囊泡的释放.</p></li>
-</ol></li>
-<li><p>在 maximal concentration of calcium-binding proteins of <span class="math inline">\(0.001 \mathrm{mM},\)</span>情况下(Destexhe et al., 1994c)</p>
-<ol type="1">
-<li>K<sub>c</sub>: the rate constant for clearance of T</li>
-<li><span class="math inline">\({k_{b}=10^{5} s^{-1} m M^{-4}}\)</span></li>
-<li><span class="math inline">\({k_{u}=100 s^{-1}}\)</span>,</li>
-<li><span class="math inline">\({k_{1}=10^{6} s^{-1} m M^{-1}}\)</span>,</li>
-<li><span class="math inline">\({k_{2}=100 s^{-1}}\)</span></li>
-<li><span class="math inline">\({k_{3}=4000 s^{-1}}\)</span></li>
-<li><span class="math inline">\({V_{e}=0.01 \mathrm{mM}}\)</span></li>
-<li><span class="math inline">\({k_{c}=10^{4} \mathrm{s}^{-1}}\)</span></li>
-<li>the number of transmitter molecules per vesicle was <span class="math inline">\(n=10000\)</span></li>
-</ol></li>
+<p>假设基元反应为：</p>
+<script type="math/tex; mode=display">{a A+\beta D=g G+h H}</script><p>其数学表达式为:</p>
+<script type="math/tex; mode=display">{v=k c^{\alpha}(A) c^{\beta}(D)}</script><p>上式中的 k 称为反应速率常数又称速率常数 k 或 λ 是化学反应速率的量化表示方式，其物理意义使其数值相当于参加反应的物质都处于单位浓度(1 mol·L-1)时的反应速率，故又称为反应的比速率（specific reaction rate）。</p>
+</li>
+<li><p>其中 k~3~是单向的,因为它表示囊泡的释放.</p>
+</li>
 </ol>
-<h1 id="电生理测量的一些指标">电生理测量的一些指标</h1>
-<blockquote>
+</li>
+<li><p>在 maximal concentration of calcium-binding proteins of $0.001 \mathrm{mM},$情况下(Destexhe et al., 1994c)</p>
+<ol>
+<li>K~c~: the rate constant for clearance of T</li>
+<li>${k_{b}=10^{5} s^{-1} m M^{-4}}$</li>
+<li>${k_{u}=100 s^{-1}}$,</li>
+<li>${k_{1}=10^{6} s^{-1} m M^{-1}}$,</li>
+<li>${k_{2}=100 s^{-1}}$</li>
+<li>${k_{3}=4000 s^{-1}}$</li>
+<li>${V_{e}=0.01 \mathrm{mM}}$</li>
+<li>${k_{c}=10^{4} \mathrm{s}^{-1}}$</li>
+<li>the number of transmitter molecules per vesicle was $n=10000$</li>
+</ol>
+</li>
+</ol>
+<h1 id="电生理测量的一些指标"><a href="#电生理测量的一些指标" class="headerlink" title="电生理测量的一些指标"></a>电生理测量的一些指标</h1><blockquote>
 <p>(Tia et al. 1996)</p>
 </blockquote>
 <ul>
@@ -582,12 +576,11 @@
 <li>rise time: 通常是上升过程中幅值 10%-90% 点之间的距离.taking into account the noise of the baseline and noise around the peak, rise times were measured ils the time elapsed from IO to 90% of the peak amplitude of the rcsponsc.</li>
 <li>falling/dacay time: 通常是下降过程中幅值 10%-90% 点之间的距离</li>
 </ul>
-<p>参考图 <img src="/2020/08/09/various%20psp%20and%20psc/time_rime.png" class="lazyload" data-srcset="/2020/08/09/various%20psp%20and%20psc/time_rime.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="measure"> <img src="/2020/08/09/various%20psp%20and%20psc/../various%20psp%20and%20psc/rise_time4.gif" class="lazyload" data-srcset="/2020/08/09/various%20psp%20and%20psc/../various%20psp%20and%20psc/rise_time4.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="measure2"> <img src="/2020/08/09/various%20psp%20and%20psc/rise_time3.jpg" class="lazyload" data-srcset="/2020/08/09/various%20psp%20and%20psc/rise_time3.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="measure"> <img src="/2020/08/09/various%20psp%20and%20psc/wavefrom.png" class="lazyload" data-srcset="/2020/08/09/various%20psp%20and%20psc/wavefrom.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="measure"></p>
-<h1 id="参考文献">参考文献</h1>
-<p>[1]: Destexhe, A., Mainen, Z. and Sejnowski, T.J. (1994c) Synthesis of mo dels for excitable membranes, synaptic transmission and neuromoulation using a common kinetic formalism. J. Computational Neurosci. 1 : 195-230.</p>
+<p>参考图<br><img src="/2020/08/09/various%20psp%20and%20psc/time_rime.png" class="lazyload" data-srcset="/2020/08/09/various%20psp%20and%20psc/time_rime.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="measure"><br><img src="/2020/08/09/various%20psp%20and%20psc/../various%20psp%20and%20psc/rise_time4.gif" class="lazyload" data-srcset="/2020/08/09/various%20psp%20and%20psc/../various%20psp%20and%20psc/rise_time4.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="measure2"><br><img src="/2020/08/09/various%20psp%20and%20psc/rise_time3.jpg" class="lazyload" data-srcset="/2020/08/09/various%20psp%20and%20psc/rise_time3.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="measure"><br><img src="/2020/08/09/various%20psp%20and%20psc/wavefrom.png" class="lazyload" data-srcset="/2020/08/09/various%20psp%20and%20psc/wavefrom.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="measure"></p>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1]: Destexhe, A., Mainen, Z. and Sejnowski, T.J. (1994c) Synthesis of mo dels for excitable membranes, synaptic transmission and neuromoulation using a common kinetic formalism. J. Computational Neurosci. 1 : 195-230.</p>
 <p>[2]: Simkus, C. R. L., and Stricker, C. (2002a). Analysis of mEPSCs recorded in layer II neurons of rat barrel cortex. J. Physiol. 545, 509–520. doi: 10.1113/jphysiol. 2002.022095</p>
-<p>[3]:Zhang, Jichuan, Ya Yang, Hongbin Li, Jun Cao, and Lin Xu. 2005. “Amplitude/Frequency of Spontaneous MEPSC Correlates to the Degree of Long-Term Depression in the CA1 Region of the Hippocampal Slice.” Brain Research 1050 (1): 110–17. https://doi.org/10.1016/j.brainres.2005.05.032.</p>
-<p>[4]:Tia, Sutthichai, Jin Feng Wang, Naiphinich Kotchabhakdi, and Stefano Vicini. 1996. “Developmental Changes of Inhibitory Synaptic Currents in Cerebellar Granule Neurons: Role of GABAA Receptor Α6 Subunit.” Journal of Neuroscience 16 (11): 3630–40. https://doi.org/10.1523/JNEUROSCI.16-11-03630.1996.</p>
+<p>[3]:Zhang, Jichuan, Ya Yang, Hongbin Li, Jun Cao, and Lin Xu. 2005. “Amplitude/Frequency of Spontaneous MEPSC Correlates to the Degree of Long-Term Depression in the CA1 Region of the Hippocampal Slice.” Brain Research 1050 (1): 110–17. <a href="https://doi.org/10.1016/j.brainres.2005.05.032">https://doi.org/10.1016/j.brainres.2005.05.032</a>.</p>
+<p>[4]:Tia, Sutthichai, Jin Feng Wang, Naiphinich Kotchabhakdi, and Stefano Vicini. 1996. “Developmental Changes of Inhibitory Synaptic Currents in Cerebellar Granule Neurons: Role of GABAA Receptor Α6 Subunit.” Journal of Neuroscience 16 (11): 3630–40. <a href="https://doi.org/10.1523/JNEUROSCI.16-11-03630.1996">https://doi.org/10.1523/JNEUROSCI.16-11-03630.1996</a>.</p>
 
   
   
@@ -703,17 +696,14 @@
       
         <a class='prev' href='/2020/08/11/NIDAQ%20%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/'>
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>NIDAQ 设备的基本介绍</p>
-          <p class='content'>相关设备
-BNC connector BNC 连接器
-BNC连接器（英语：Bayonet Neill-Concelman，直译为“尼尔-康塞曼卡口”）是一种很常见的RF端子同轴电缆终结器。B...</p>
+          <p class='content'>相关设备BNC connector BNC 连接器BNC连接器（英语：Bayonet Neill-Concelman，直译为“尼尔-康塞曼卡口”）是一种很常见的RF端子同轴电缆终结器。BNC电缆...</p>
         </a>
       
       
         <a class='next' href='/2020/08/06/Static%20Site/'>
           <p class='title'>build a bolg or create a document using markdown<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>首先关于markdown 转为html的用途
-
-搭建博客, 主要是文章, 它可能需要好看简洁清爽的界面. 博客龄比较上的人来说, 会有大量的文件需要管理, 所以会比较需要一些归档, 而对复杂...</p>
+搭建博客, 主要是文章\记事\类的, 它可能需要好看简洁清爽的界面. 博客龄比较上的人来说, 会有大量的文件需要管理, 所以会比较需要一些归档\分类...</p>
         </a>
       
     </div>
@@ -743,6 +733,75 @@ BNC连接器（英语：Bayonet Neill-Concelman，直译为“尼尔-康塞曼�
   
     
     
+  
+
+  <section class="widget category shadow desktop">
+    
+  <header>
+    
+      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/economy/" href="/categories/economy/"
+            id="categorieseconomy"
+            ><div class='name'>economy</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/electronic/" href="/categories/electronic/"
+            id="categorieselectronic"
+            ><div class='name'>electronic</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/environment/" href="/categories/environment/"
+            id="categoriesenvironment"
+            ><div class='name'>environment</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/math/" href="/categories/math/"
+            id="categoriesmath"
+            ><div class='name'>math</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/neuron/" href="/categories/neuron/"
+            id="categoriesneuron"
+            ><div class='name'>neuron</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/nruron/" href="/categories/nruron/"
+            id="categoriesnruron"
+            ><div class='name'>nruron</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/paper/" href="/categories/paper/"
+            id="categoriespaper"
+            ><div class='name'>paper</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/philosophy/" href="/categories/philosophy/"
+            id="categoriesphilosophy"
+            ><div class='name'>philosophy</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/program/" href="/categories/program/"
+            id="categoriesprogram"
+            ><div class='name'>program</div><div class='badge'>(3)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+  
+
+  
+    
+    
 
 
 
@@ -756,7 +815,7 @@ BNC连接器（英语：Bayonet Neill-Concelman，直译为“尼尔-康塞曼�
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#epsc"><span class="toc-text">EPSC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mepsc-mini-excitatory-postsynaptic-currents"><span class="toc-text">mEPSC: mini excitatory postsynaptic currents</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mepsc-的一些参数范围"><span class="toc-text">mEPSC 的一些参数范围</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sepsc-spontaneous-excitatory-post-synaptic-currents"><span class="toc-text">sEPSC: spontaneous excitatory post synaptic currents</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于-current-的拟合"><span class="toc-text">关于 current 的拟合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#简单的双指数最小二乘法拟合tia-et-al.-1996"><span class="toc-text">简单的双指数最小二乘法拟合(Tia et al. 1996)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#gaba-fit"><span class="toc-text">GABA fit</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ipsc-inhibitory-postsynaptic-current"><span class="toc-text">IPSC: inhibitory postsynaptic current</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#PSC-postsynaptic-currents"><span class="toc-number">1.</span> <span class="toc-text">PSC: postsynaptic currents</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#EPSC"><span class="toc-number">1.1.</span> <span class="toc-text">EPSC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mEPSC-mini-excitatory-postsynaptic-currents"><span class="toc-number">1.2.</span> <span class="toc-text">mEPSC: mini excitatory postsynaptic currents</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mEPSC-的一些参数范围"><span class="toc-number">1.3.</span> <span class="toc-text">mEPSC 的一些参数范围</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sEPSC-spontaneous-excitatory-post-synaptic-currents"><span class="toc-number">1.4.</span> <span class="toc-text">sEPSC: spontaneous excitatory post synaptic currents</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于-current-的拟合"><span class="toc-number">1.5.</span> <span class="toc-text">关于 current 的拟合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#简单的双指数最小二乘法拟合-Tia-et-al-1996"><span class="toc-number">1.5.1.</span> <span class="toc-text">简单的双指数最小二乘法拟合(Tia et al. 1996)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#GABA-fit"><span class="toc-number">1.5.1.1.</span> <span class="toc-text">GABA fit</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IPSC-inhibitory-postsynaptic-current"><span class="toc-number">1.6.</span> <span class="toc-text">IPSC: inhibitory postsynaptic current</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#psp-postsynaptic-potentials"><span class="toc-number">2.</span> <span class="toc-text">psp: postsynaptic potentials</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#关于递质释放和通道打开的-model"><span class="toc-number">3.</span> <span class="toc-text">关于递质释放和通道打开的 model</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#电生理测量的一些指标"><span class="toc-number">4.</span> <span class="toc-text">电生理测量的一些指标</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考文献"><span class="toc-number">5.</span> <span class="toc-text">参考文献</span></a></li></ol>
     </div>
   </section>
 
@@ -979,7 +1038,11 @@ BNC连接器（英语：Bayonet Neill-Concelman，直译为“尼尔-康塞曼�
 
   <script>
   
-  var SEARCH_SERVICE = "hexo" || "hexo";
+    var ALGOLIA_API_KEY = "ea5127035206f76008aad7a6538cb544";
+    var ALGOLIA_APP_ID = "P3M9LPRE92";
+    var ALGOLIA_INDEX_NAME = "Epichide";
+  
+  var SEARCH_SERVICE = "algolia" || "hexo";
   var ROOT = "/" || "/";
   if (!ROOT.endsWith('/')) ROOT += '/';
 </script>
@@ -1100,7 +1163,7 @@ BNC连接器（英语：Bayonet Neill-Concelman，直译为“尼尔-康塞曼�
       lang: 'zh-cn',
       visitor: 'true',
       highlight: 'true',
-      mathJax: 'false',
+      mathJax: 'true',
       enableQQ: 'true',
       requiredFields: requiredFields,
       emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',

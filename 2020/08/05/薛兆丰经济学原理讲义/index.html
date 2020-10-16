@@ -508,7 +508,7 @@
 
   
   
-  <p>此为私人使用的笔记，有关言论只是自己看法，因为还未加密，不承担任何责任。 <a id="more"></a></p>
+  <p>此为私人使用的笔记，有关言论只是自己看法，因为还未加密，不承担任何责任。<br><a id="more"></a></p>
 <p>现代经济学始于《国富论》《an inquiry into the nature and cause of the weath ofnations》Adam Smith</p>
 <p>Leonard e.read 《i,pencil》</p>
 <p>《知识在社会中的运用》哈耶克</p>
@@ -523,15 +523,11 @@
 <p>嗯，好像是这样的。</p>
 <blockquote>
 <p>零和游戏，整个社会总的幸福度没有提高</p>
-</blockquote>
-<blockquote>
 <p>受价者，price tacker，不完全竞争者，觅价者，price searcher。</p>
 </blockquote>
 <p>书的递进和逻辑关系很清晰，不会给人到处乱跳的感觉，读起来较为轻松，如果不去深究的话。</p>
 <blockquote>
 <p>当老板三准则。哪种资源更容易被他人滥用，这资源的所有者当老板;第二个准则是区分企业的通用资源和专用资源，专用资源所有者当老板;固定工资与剩余索取，剩余索取放参与管理。</p>
-</blockquote>
-<blockquote>
 <p>人们在需要承担代价的时候就会变得理性，在不需要承受代价的时候就会放纵自己的无知，就会放纵自己的感情和偏见，让自己错误的观念不负责的观念对别人造成影响，产生巨大外部负效应</p>
 </blockquote>
 <p>后面的几讲，让人阅读得很舒适，基本赞同他的观点，并有收获。所以是什么方面存在矛盾，我不知道。我不懂经济学，只是感觉罢了。</p>
@@ -655,7 +651,7 @@
 丛林法则：丛林法则是自然界里生物学方面的物竞天择、优胜劣汰、弱肉强食的规律法则。
   它包括两个方面的基本属性：
 
-  * 一是它的自然属性；自然属性是受大自然的客观影响，不受人性、社...</p>
+  * 一是它的自然属性；自然属性是受大自然的客观影响，不受人性、社会性的因...</p>
         </a>
       
       
@@ -677,7 +673,12 @@
 泛神论
 无神论
 多神论
-神秘主义...</p>
+神秘主义
+
+
+
+
+思维 reflecti...</p>
         </a>
       
     </div>
@@ -704,6 +705,75 @@
 </div>
 <aside class='l_side'>
   
+  
+    
+    
+  
+
+  <section class="widget category shadow desktop">
+    
+  <header>
+    
+      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/economy/" href="/categories/economy/"
+            id="categorieseconomy"
+            ><div class='name'>economy</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/electronic/" href="/categories/electronic/"
+            id="categorieselectronic"
+            ><div class='name'>electronic</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/environment/" href="/categories/environment/"
+            id="categoriesenvironment"
+            ><div class='name'>environment</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/math/" href="/categories/math/"
+            id="categoriesmath"
+            ><div class='name'>math</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/neuron/" href="/categories/neuron/"
+            id="categoriesneuron"
+            ><div class='name'>neuron</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/nruron/" href="/categories/nruron/"
+            id="categoriesnruron"
+            ><div class='name'>nruron</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/paper/" href="/categories/paper/"
+            id="categoriespaper"
+            ><div class='name'>paper</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/philosophy/" href="/categories/philosophy/"
+            id="categoriesphilosophy"
+            ><div class='name'>philosophy</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/program/" href="/categories/program/"
+            id="categoriesprogram"
+            ><div class='name'>program</div><div class='badge'>(3)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+  
+
   
     
     
@@ -929,7 +999,11 @@
 
   <script>
   
-  var SEARCH_SERVICE = "hexo" || "hexo";
+    var ALGOLIA_API_KEY = "ea5127035206f76008aad7a6538cb544";
+    var ALGOLIA_APP_ID = "P3M9LPRE92";
+    var ALGOLIA_INDEX_NAME = "Epichide";
+  
+  var SEARCH_SERVICE = "algolia" || "hexo";
   var ROOT = "/" || "/";
   if (!ROOT.endsWith('/')) ROOT += '/';
 </script>
@@ -1050,7 +1124,7 @@
       lang: 'zh-cn',
       visitor: 'true',
       highlight: 'true',
-      mathJax: 'false',
+      mathJax: 'true',
       enableQQ: 'true',
       requiredFields: requiredFields,
       emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',

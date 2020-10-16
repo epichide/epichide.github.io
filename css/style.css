@@ -17,8 +17,14 @@
   box-shadow: 0 2px 4px 0px rgba(0,0,0,0.1), 0 4px 8px 0px rgba(0,0,0,0.1), 0 8px 16px 0px rgba(0,0,0,0.1);
 }
 @font-face {
-  font-family: 'UbuntuMono';
+  font-family: 'Microsoft YaHei';
   src: url("https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf");
+  font-weight: 'normal';
+  font-style: 'normal';
+}
+@font-face {
+  font-family: 'Monaco';
+  src: url("https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/Monaco/Monaco.ttf");
   font-weight: 'normal';
   font-style: 'normal';
 }
@@ -71,7 +77,7 @@ html >::-webkit-scrollbar-track-piece {
 html >::-webkit-scrollbar-thumb {
   background: #44d7b6;
   cursor: pointer;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 html >::-webkit-scrollbar-thumb:hover {
   background: #ff5722;
@@ -103,22 +109,23 @@ body.modal-active {
   background: rgba(33,150,243,0.2);
 }
 h1 {
-  font-size: 1.5rem;
+  font-size: 32px;
 }
 h2 {
-  font-size: 1.5rem;
+  font-size: 20px;
+  font-family: ui-monospace;
 }
 h3 {
-  font-size: 1.25rem;
+  font-size: 16px;
 }
 h4 {
-  font-size: 1.125rem;
+  font-size: 16px;
 }
 h5 {
-  font-size: 1rem;
+  font-size: 16px;
 }
 h6 {
-  font-size: 1rem;
+  font-size: 16px;
 }
 h1,
 h2,
@@ -218,8 +225,9 @@ dfn {
   font-style: italic;
 }
 h1 {
-  font-size: 2em;
+  font-size: 24px;
   margin: 0.67em 0;
+  font-family: sans-serif;
 }
 mark {
   background: #ff0;
@@ -1537,7 +1545,7 @@ div.note.blue::before {
 p.p.subtitle {
   font-weight: bold;
   color: #44b299;
-  font-size: 1rem !important;
+  font-size: 16px !important;
   padding-top: 2em;
 }
 p.p.subtitle:first-child {
@@ -1609,32 +1617,32 @@ p.p.h2 {
 }
 span.p.h1,
 p.p.h1 {
-  font-size: 1.5rem;
+  font-size: 32px;
   color: var(--color-h1);
   padding-top: 2em;
 }
 span.p.h2,
 p.p.h2 {
-  font-size: 1.5rem;
+  font-size: 20px;
   color: var(--color-h2);
   padding-top: 2em;
   border-bottom: 1px solid rgba(68,68,68,0.1);
 }
 span.p.h3,
 p.p.h3 {
-  font-size: 1.25rem;
+  font-size: 16px;
   color: var(--color-h3);
   padding-top: 2em;
 }
 span.p.h4,
 p.p.h4 {
-  font-size: 1.125rem;
+  font-size: 16px;
   color: var(--color-h4);
   padding-top: 2em;
 }
 span.p.h5,
 p.p.h5 {
-  font-size: 1rem;
+  font-size: 16px;
   color: var(--color-h5);
   padding-top: 1.5em;
 }
@@ -2805,7 +2813,7 @@ article#comments #valine_container .vcount {
 }
 article#comments #valine_container .vcount .vnum {
   color: var(--color-p);
-  font-size: 1.5rem;
+  font-size: 20px;
 }
 article#comments #valine_container button {
   border: none;
@@ -3132,7 +3140,7 @@ article#tag .all-tags ul li span:before {
   margin-top: 48px;
 }
 .article h2 {
-  text-align: left;
+  text-align: justify;
   color: var(--color-h2);
   margin-top: 48px;
 }
@@ -4179,8 +4187,6 @@ footer.footer .copyright p {
 }
 .l_body {
   position: relative;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 .l_body div.loading {
   margin: 16px 0;
@@ -4339,11 +4345,12 @@ footer.footer .copyright p {
   }
 }
 .l_main .post h1.title {
-  font-size: 1.5rem;
+  font-size: 32px;
   margin: 0;
   border-bottom: none;
   padding-bottom: 4px;
   border-bottom: none;
+  text-align: center;
 }
 .l_main .post .article-meta {
   color: var(--color-meta);
@@ -4577,7 +4584,7 @@ footer.footer .copyright p {
 article#comments .article p[ct] {
   margin-top: 0;
   margin-bottom: 1em;
-  font-size: 1.125rem;
+  font-size: 16px;
   color: var(--color-text);
 }
 article#comments .article p[cst] {
@@ -4847,7 +4854,7 @@ img.lazyload:not(.placeholder).loaded {
   flex-shrink: 0;
   line-height: 64px;
   padding: 0 24px;
-  font-size: 1.25rem;
+  font-size: 16px;
   font-family: "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Helvetica, monospace;
 }
 .l_header .wrapper .nav-main .title img {
@@ -5384,7 +5391,7 @@ ul.list-v >li>a:hover {
 }
 .l_main .article .prev-next >a p.title {
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 16px;
 }
 .l_main .article .prev-next >a p.title >i {
   width: 1rem;
@@ -5815,7 +5822,7 @@ ul.list-v >li>a:hover {
   white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 1.125rem;
+  font-size: 16px;
 }
 #u-search .modal-body .modal-results .result .digest {
   display: block;

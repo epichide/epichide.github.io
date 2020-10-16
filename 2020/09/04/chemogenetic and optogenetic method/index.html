@@ -506,79 +506,55 @@
 
   
   
-  <p>我们想操纵神经元活动,有哪些方法呢? 在神经本身正常分裂分化表达蛋白的过程是一个类似自组织的过程,不需要外界的干预,也表明外界要想干预,方法都不会很直接.</p>
+  <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>我们想操纵神经元活动,有哪些方法呢? 在神经本身正常分裂分化表达蛋白的过程是一个类似自组织的过程,不需要外界的干预,也表明外界要想干预,方法都不会很直接. </p>
 <p>最直接的想法是直接给神经元一个刺激, 那么它就是电生理</p>
-<p>较为间接的想法是在神经元中特异表达一些只受人工操作响应的蛋白,它可以是对人为的刺激特异的响应.外界的刺激比较容易想到的就是 光,电,人工药物 .</p>
-<p>光:对应的就是光遗传学,一般细胞对光照射并不起反应,那么如果产生光能够影响人工蛋白反应就可以实现操控了 .</p>
+<p>较为间接的想法是在神经元中特异表达一些只受人工操作响应的蛋白,它可以是对人为的刺激特异的响应.外界的刺激比较容易想到的就是 光,电,人工药物 . </p>
+<p>光:对应的就是光遗传学,一般细胞对光照射并不起反应,那么如果产生光能够影响人工蛋白反应就可以实现操控了 . </p>
 <p>电: 似乎细胞对电刺激还是敏感的,至少神经细胞是这样</p>
 <p>药物: 很多化学试剂会影响人的生理反应,那么涉及一个人工的药物,细胞不起反应,只有人工蛋白会反应就好了</p>
 <p>那么就产生了两种方案: 光 和 化学 ,因为它们都需要人去设计出可以对这两个刺激响应的蛋白,就涉及到基因工程,就涉及到用转基因小鼠,这是一个遗传学技术,那么就有了 <strong>光遗传学 optogenetic</strong> 和 <strong>化学遗传学chemogenetic</strong> 技术.</p>
-<h1 id="光遗传学">光遗传学</h1>
-<div class="note warning">
-wait for write
-</div>
-<h1 id="化学遗传学">化学遗传学</h1>
-<h3 id="原理">原理</h3>
-<p>化学遗传学是化学药物和基因技术结合的产物，泛指通过基因技术改变生物体蛋白质，然后探索突变蛋白和化学药物分子的相互作用。而DREADD是神经科学家最常用的操纵神经元反应的化学遗传学技术。</p>
+<h1 id="光遗传学"><a href="#光遗传学" class="headerlink" title="光遗传学"></a>光遗传学</h1><div class="note warning"> wait for write </div>
+
+<h1 id="化学遗传学"><a href="#化学遗传学" class="headerlink" title="化学遗传学"></a>化学遗传学</h1><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>化学遗传学是化学药物和基因技术结合的产物，泛指通过基因技术改变生物体蛋白质，然后探索突变蛋白和化学药物分子的相互作用。而DREADD是神经科学家最常用的操纵神经元反应的化学遗传学技术。</p>
 <p>DREADD全称长且拗口，却清晰地表达了它的含义：人工设计的受体只被人工设计的药物激活，Designer Receptor Exclusively Activated by Designer Drugs，英文简称DREADD。</p>
 <p>具体来说，人工设计一种蛋白受体，并通过病毒载体让这种受体在神经元内表达，这种受体只专一地结合特定的人工设计的药物，与之结合后可激活或抑制神经元放电。药物代谢完后，神经元的功能又会恢复。</p>
-<figure>
-<img src="/2020/09/04/chemogenetic%20and%20optogenetic%20method/v2-89044be9191be99a962e62cbbb9276bb_720w.jpg" class="lazyload" data-srcset="/2020/09/04/chemogenetic%20and%20optogenetic%20method/v2-89044be9191be99a962e62cbbb9276bb_720w.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>DREADD原理图。左：内源受体和配体，右：人工突变的受体和药物</figcaption>
-</figure>
-<h2 id="配体">配体</h2>
-<p>CNO全称为氯氮平一氧化氮（clozapine N-oxide），是DREADD系统中人工设计的药物配体。CNO并不能穿过血脑屏障。CNO在生物体内会转化成氯氮平（Clozapine）可以穿过BBB.</p>
+<p><img src="/2020/09/04/chemogenetic%20and%20optogenetic%20method/v2-89044be9191be99a962e62cbbb9276bb_720w.jpg" class="lazyload" data-srcset="/2020/09/04/chemogenetic%20and%20optogenetic%20method/v2-89044be9191be99a962e62cbbb9276bb_720w.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="DREADD原理图。左：内源受体和配体，右：人工突变的受体和药物"></p>
+<h2 id="配体"><a href="#配体" class="headerlink" title="配体"></a>配体</h2><p>CNO全称为氯氮平一氧化氮（clozapine N-oxide），是DREADD系统中人工设计的药物配体。CNO并不能穿过血脑屏障。CNO在生物体内会转化成氯氮平（Clozapine）可以穿过BBB. </p>
 <p>人工设计的药物可以通过简单的方式摄入，比如肌肉、静脉、腹腔或皮下注射，甚至口服。药物进入血液，穿过血脑屏障进入脑组织，最终跟人工设计的蛋白受体结合从而起作用。</p>
-<h3 id="cno和氯氮平的副作用">CNO和氯氮平的副作用</h3>
-<p>高浓度的CNO和氯氮平除了跟hM4Di、hM3Dq结合外，还会跟内源性的配体竞争结合内源性的受体，从而产生副作用。这些内源性受体包括多巴胺D1、D2受体、乙酰胆碱的毒蕈碱M1、M3、M4受体、五羟色胺2A受体等。而副作用在行为上表现通常为动物精神不振、活动减少。</p>
+<h3 id="CNO和氯氮平的副作用"><a href="#CNO和氯氮平的副作用" class="headerlink" title="CNO和氯氮平的副作用"></a>CNO和氯氮平的副作用</h3><p>高浓度的CNO和氯氮平除了跟hM4Di、hM3Dq结合外，还会跟内源性的配体竞争结合内源性的受体，从而产生副作用。这些内源性受体包括多巴胺D1、D2受体、乙酰胆碱的毒蕈碱M1、M3、M4受体、五羟色胺2A受体等。而副作用在行为上表现通常为动物精神不振、活动减少。</p>
 <ul>
 <li>去氯氯氮平（DCZ）</li>
 </ul>
 <p>2019年，日本科学家Takafumi Minamimoto发现了另外一种药物：去氯氯氮平（简称DCZ）。顾名思义，去掉氯氮平分子中的氯。</p>
-<figure>
-<img src="/2020/09/04/chemogenetic%20and%20optogenetic%20method/DCZ%20and%20Clozapine.jpg" class="lazyload" data-srcset="/2020/09/04/chemogenetic%20and%20optogenetic%20method/DCZ%20and%20Clozapine.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>左：去氯氯氮平，右：氯氮平</figcaption>
-</figure>
+<p><img src="/2020/09/04/chemogenetic%20and%20optogenetic%20method/DCZ%20and%20Clozapine.jpg" class="lazyload" data-srcset="/2020/09/04/chemogenetic%20and%20optogenetic%20method/DCZ%20and%20Clozapine.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="左：去氯氯氮平，右：氯氮平"></p>
 <p>去氯氯氮平和氯氮平结构极其相似，和hM4Di、hM3Dq有更高的亲和力。同时，跟内源性多巴胺受体，乙酰胆碱受体和五羟色胺受体亲和力较弱。也就是说去氯氯氮平的选择性更高，副作用也小，是新一代冉冉升起的明星药物</p>
-<h2 id="受体">受体</h2>
-<p>毒蕈碱型受体是神经递质乙酰胆碱的内源受体，广泛存在于动物体内。毒蕈碱型受体是一种G蛋白偶联受体，当乙酰胆碱和毒蕈碱型受体结合时，受体被激活，构象改变，进一步激活偶联的G蛋白，G蛋白再引发下游反应，最终激活或者抑制神经元。</p>
-<p>毒蕈碱型受体是G蛋白藕连受体，M1，M3，M5型受体激活神经元，M2，M4抑制神经元 乙酰胆碱激活还是抑制神经元则取决于毒蕈碱型受体的具体亚型。如果是M4型毒蕈碱型受体，与之偶联的是Gi蛋白，Gi蛋白的后续反应最终会抑制神经元。如果是M3型，招引来的则是Gq蛋白，Gq蛋白的下游反应最终会激活神经元。</p>
+<h2 id="受体"><a href="#受体" class="headerlink" title="受体"></a>受体</h2><p>毒蕈碱型受体是神经递质乙酰胆碱的内源受体，广泛存在于动物体内。毒蕈碱型受体是一种G蛋白偶联受体，当乙酰胆碱和毒蕈碱型受体结合时，受体被激活，构象改变，进一步激活偶联的G蛋白，G蛋白再引发下游反应，最终激活或者抑制神经元。</p>
+<p>毒蕈碱型受体是G蛋白藕连受体，M1，M3，M5型受体激活神经元，M2，M4抑制神经元<br>乙酰胆碱激活还是抑制神经元则取决于毒蕈碱型受体的具体亚型。如果是M4型毒蕈碱型受体，与之偶联的是Gi蛋白，Gi蛋白的后续反应最终会抑制神经元。如果是M3型，招引来的则是Gq蛋白，Gq蛋白的下游反应最终会激活神经元。</p>
 <p>为了能精准地激活或抑制神经元，人们将毒蕈碱型受体在特定位点进行突变，突变后毒蕈碱型受体不再结合内源的乙酰胆碱，而专一被人工药物CNO激活，激活之后的下游反应不变。</p>
-<h3 id="配体类型">配体类型</h3>
-<p>通常可使用同一配体,方便同时作用,如果要分别作用也可选择其它配体</p>
-<figure>
-<img src="/2020/09/04/chemogenetic%20and%20optogenetic%20method/DREADDFigure2.png" class="lazyload" data-srcset="/2020/09/04/chemogenetic%20and%20optogenetic%20method/DREADDFigure2.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>Figure 2. Designer compounds (CNO, perlapine, Compound 21, SALB) used to activate various DREADDS and their downstream pathways</figcaption>
-</figure>
-<h3 id="受体类型">受体类型</h3>
-<figure>
-<img src="/2020/09/04/chemogenetic%20and%20optogenetic%20method/DREADDFigure1.png" class="lazyload" data-srcset="/2020/09/04/chemogenetic%20and%20optogenetic%20method/DREADDFigure1.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>Categorization of DREADDs according to signal transduction mechanisms that they tether (Gi, Gq, Gs, or β-arrestin)</figcaption>
-</figure>
-<h4 id="gq-dreadd和hm3dq-激活-135">1、Gq-DREADD和hM3Dq： 激活 (1,3,5)</h4>
-<p>　　最初的Gq-DREADD即hM3Dq，改造自人毒蕈碱型乙酰胆碱受体（the human muscarinic acetylcholine receptor，mAchRs）亚型M3（也称为hM3）。在正常生理状况下，hM3和乙酰胆碱结合，然后和Gq类G蛋白耦合受体耦合，作用于磷脂酶C、肌醇三磷酸IP3和胞内钙离子这一信号通路（图3）。</p>
-<p><img src="/2020/09/04/chemogenetic%20and%20optogenetic%20method/Gq.png" class="lazyload" data-srcset="/2020/09/04/chemogenetic%20and%20optogenetic%20method/Gq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="图3. hM3和乙酰胆碱结合，作为信号分子激活Gq耦联的GPCRs信号通路"> 　　 Y3.33和A5.46在不同的人毒蕈碱型乙酰胆碱受体亚型中是保守的,将Y3.33C和A5.46这两个位点突变，就能使hM3受体不能和乙酰胆碱耦合，但是会和纳摩尔浓度级别的CNO结合，这种突变后的hM3受体被命名为hM3Dq (human M3 muscarinic DREADD receptor coupled to Gq)。</p>
+<h3 id="配体类型"><a href="#配体类型" class="headerlink" title="配体类型"></a>配体类型</h3><p>通常可使用同一配体,方便同时作用,如果要分别作用也可选择其它配体</p>
+<p><img src="/2020/09/04/chemogenetic%20and%20optogenetic%20method/DREADDFigure2.png" class="lazyload" data-srcset="/2020/09/04/chemogenetic%20and%20optogenetic%20method/DREADDFigure2.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Figure 2. Designer compounds (CNO, perlapine, Compound 21, SALB) used to activate various DREADDS and their downstream pathways"></p>
+<h3 id="受体类型"><a href="#受体类型" class="headerlink" title="受体类型"></a>受体类型</h3><p><img src="/2020/09/04/chemogenetic%20and%20optogenetic%20method/DREADDFigure1.png" class="lazyload" data-srcset="/2020/09/04/chemogenetic%20and%20optogenetic%20method/DREADDFigure1.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Categorization of DREADDs according to signal transduction mechanisms that they tether (Gi, Gq, Gs, or β-arrestin)"></p>
+<h4 id="1、Gq-DREADD和hM3Dq：-激活-1-3-5"><a href="#1、Gq-DREADD和hM3Dq：-激活-1-3-5" class="headerlink" title="1、Gq-DREADD和hM3Dq： 激活 (1,3,5)"></a>1、Gq-DREADD和hM3Dq： 激活 (1,3,5)</h4><p>　　最初的Gq-DREADD即hM3Dq，改造自人毒蕈碱型乙酰胆碱受体（the human muscarinic acetylcholine receptor，mAchRs）亚型M3（也称为hM3）。在正常生理状况下，hM3和乙酰胆碱结合，然后和Gq类G蛋白耦合受体耦合，作用于磷脂酶C、肌醇三磷酸IP3和胞内钙离子这一信号通路（图3）。</p>
+<p><img src="/2020/09/04/chemogenetic%20and%20optogenetic%20method/Gq.png" class="lazyload" data-srcset="/2020/09/04/chemogenetic%20and%20optogenetic%20method/Gq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="图3. hM3和乙酰胆碱结合，作为信号分子激活Gq耦联的GPCRs信号通路"><br>　　<br>Y3.33和A5.46在不同的人毒蕈碱型乙酰胆碱受体亚型中是保守的,将Y3.33C和A5.46这两个位点突变，就能使hM3受体不能和乙酰胆碱耦合，但是会和纳摩尔浓度级别的CNO结合，这种突变后的hM3受体被命名为hM3Dq (human M3 muscarinic DREADD receptor coupled to Gq)。</p>
 <p>M1和M5也已经被成功改造为Gq-DREADD（hM1Dq和hM5Dq）。但是到目前为止，hM3Dq仍然是应用最多的Gq-DREADD。</p>
 <p>　　在不同的细胞类型中，CNO诱导hM3Dq的结果是不一样的，比如：</p>
-<ol type="1">
+<ol>
 <li>在成熟神经元中，CNO诱导hM3Dq的结果是将神经元去极化（depolarization），加强神经元的兴奋性，这也是hM3Dq最常用的功能，即促使神经元的放电活动；</li>
 <li>在星形胶质细胞中，有人报道CNO诱导hM3Dq的结果是增加星形胶质细胞Ca+的释放，从而改变自主神经系统的生理条件；</li>
 <li>在神经系统以外，也有一些研究，例如在胰腺Β细胞表达hM3Dq，急性CNO处理会促进胰岛素的释放，而慢性CNO处理导致Β细胞数目增加；在肝细胞中，激活hM3Dq会增加血糖水平，也许是因为糖原分解和糖异生作用增加。</li>
 </ol>
-<h4 id="gi-dreadd和hm4di-抑制-24">2. Gi-DREADD和hM4Di: 抑制 (2,4)</h4>
-<p>　　科学家同样突变M2和M4 mAchRs上的Y3.33、A5.46位点，由于M2、M4的下游激活的是Gi通道，于是产生Gi- DREADDs，命名为hM2Di和hM4Di，他们可以激活Gi调节的信号通路（图4）。</p>
+<h4 id="2-Gi-DREADD和hM4Di-抑制-2-4"><a href="#2-Gi-DREADD和hM4Di-抑制-2-4" class="headerlink" title="2. Gi-DREADD和hM4Di: 抑制 (2,4)"></a>2. Gi-DREADD和hM4Di: 抑制 (2,4)</h4><p>　　科学家同样突变M2和M4 mAchRs上的Y3.33、A5.46位点，由于M2、M4的下游激活的是Gi通道，于是产生Gi- DREADDs，命名为hM2Di和hM4Di，他们可以激活Gi调节的信号通路（图4）。</p>
 <p>　　Gi耦合的GPCRs可以激活G蛋白内向整流钾通道（GIRK），在CNO的作用下， hM2Di和hM4Di受体被激活可以抑制神经元的放电活动，其中使用最多的Gi-DREADD是hM4Di。也有研究表明，hM4Di可以抑制神经递质的释放，从而达到抑制神经元活动的效果。</p>
-<figure>
-<img src="/2020/09/04/chemogenetic%20and%20optogenetic%20method/Gi.png" class="lazyload" data-srcset="/2020/09/04/chemogenetic%20and%20optogenetic%20method/Gi.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>图4 hM4和乙酰胆碱结合，作为信号分子激活Gi耦联的GPCRs信号通路</figcaption>
-</figure>
-<h4 id="gs-β-arrestin-dreadds">3. Gs-/β-arrestin-DREADDs</h4>
-<p>Gs coupled DREADD 也已经开发。这些受体（称为G<sub>s</sub>D）是turkey erythrocyte β-adrenergic receptor细胞内区域替代到大鼠M3 DREADD构成的嵌合受体[-肾上腺素受体]被[2]。</p>
+<p><img src="/2020/09/04/chemogenetic%20and%20optogenetic%20method/Gi.png" class="lazyload" data-srcset="/2020/09/04/chemogenetic%20and%20optogenetic%20method/Gi.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="图4 hM4和乙酰胆碱结合，作为信号分子激活Gi耦联的GPCRs信号通路"></p>
+<h4 id="3-Gs-β-arrestin-DREADDs"><a href="#3-Gs-β-arrestin-DREADDs" class="headerlink" title="3. Gs-/β-arrestin-DREADDs"></a>3. Gs-/β-arrestin-DREADDs</h4><p>Gs coupled DREADD 也已经开发。这些受体（称为G~s~D）是turkey erythrocyte β-adrenergic receptor细胞内区域替代到大鼠M3 DREADD构成的嵌合受体[-肾上腺素受体]被[2]。</p>
 <p>在体外,它被证实可以激活β-adrenergic通路,然而，它需要高浓度的CNO，这可能限制它在体内的使用</p>
 <p>Gs偶联受体通过腺苷基环化酶的激活介导信号转导，从而增加第二信使环AMP (cAMP)的水平。cAMP激活蛋白激酶A，导致细胞功能的增强</p>
-<p>Gs-恐惧用于研究昼夜节律 和细胞信号通路，可能涉及成瘾</p>
-<figure>
-<img src="/2020/09/04/chemogenetic%20and%20optogenetic%20method/DREADD%20receptor%20type.png" class="lazyload" data-srcset="/2020/09/04/chemogenetic%20and%20optogenetic%20method/DREADD%20receptor%20type.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt><figcaption>常用的几种DREADDs受体作用原理（Scott M. Sternson &amp; Bryan L. Roth, Annu. Rev. Neurosci., 2014</figcaption>
-</figure>
-<h2 id="病毒表达系统选取">病毒表达系统选取</h2>
+<p>Gs-恐惧用于研究昼夜节律 和细胞信号通路，可能涉及成瘾 </p>
+<p><img src="/2020/09/04/chemogenetic%20and%20optogenetic%20method/DREADD%20receptor%20type.png" class="lazyload" data-srcset="/2020/09/04/chemogenetic%20and%20optogenetic%20method/DREADD%20receptor%20type.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="常用的几种DREADDs受体作用原理（Scott M. Sternson &amp; Bryan L. Roth, Annu. Rev. Neurosci., 2014"></p>
+<h2 id="病毒表达系统选取"><a href="#病毒表达系统选取" class="headerlink" title="病毒表达系统选取"></a>病毒表达系统选取</h2><div class="table-container">
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>病毒表达系统</th>
 <th>腺病毒</th>
 <th>慢病毒</th>
@@ -586,73 +562,73 @@ wait for write
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>system</td>
 <td>(Adenovirus)</td>
 <td>(Lentivirus)</td>
 <td>(Adeno-As sociate virus)</td>
 </tr>
-<tr class="even">
+<tr>
 <td>病毒基因组</td>
 <td>双链DNA病毒</td>
 <td>RNA病毒</td>
 <td>单链DNA病毒</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>复制</td>
 <td>条件复制</td>
 <td>不可复制</td>
 <td>条件复制</td>
 </tr>
-<tr class="even">
+<tr>
 <td>滴度</td>
 <td>最高可达1012pfu/ml</td>
 <td>最高可达109TU/ml</td>
 <td>最高可达1012-13v.g/ml</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>感染细胞类型</td>
 <td>感染分裂和不分裂细胞</td>
 <td>感染分裂和不分裂细胞</td>
 <td>感染分裂不旺盛的细胞</td>
 </tr>
-<tr class="even">
+<tr>
 <td>表达丰度</td>
 <td>高水平表达</td>
 <td>中到高水平表达</td>
 <td>高水平表达</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>表达时间</td>
 <td>快(1-2天)</td>
 <td>慢(2-4天)</td>
 <td>1-2周</td>
 </tr>
-<tr class="even">
+<tr>
 <td>持续表达时间</td>
 <td>病毒基因组游离于宿主基因组外，</td>
 <td>病毒基因组整台于宿主基因组，</td>
 <td>病毒基因组游离于宿主基因组外，</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>持续表达时间</td>
 <td>瞬时表达外源基因</td>
 <td>长时间、稳定表达外源基因</td>
 <td>在分裂旺盛的细胞中可长时间表达</td>
 </tr>
-<tr class="even">
+<tr>
 <td>克隆容量</td>
 <td>适合表达小于5kb的外源片段</td>
 <td>适合表达小于4kb的外源片段</td>
 <td>适合表达小于2.8kb的外源片段</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>免疫原性</td>
 <td>较高免疫原性</td>
 <td>低免疫原性</td>
 <td>低免疫原性</td>
 </tr>
-<tr class="even">
+<tr>
 <td>安全性</td>
 <td>可能会引起一些咳嗽流涕</td>
 <td>暂无发现致病性，已被用于CAR-T治疗作用于人体</td>
@@ -660,69 +636,66 @@ wait for write
 </tr>
 </tbody>
 </table>
-<h2 id="其它组件">其它组件</h2>
-<ol type="1">
-<li><p>可能我们需要控制时间表达 : loxp-Cre 系统</p></li>
-<li><p>可能我们需要报告是否作用成功 : 不同的 <strong>荧光报告report基因</strong></p></li>
-<li><p>可能我们需要它在特定位置表达 : 特异的 <strong>启动子</strong> ,比如神经元特异性启动子 : hSyn , CaMKⅡ , GAD , ChAT , DAT , ePet（也称为FEV） , DCX : 请参考: <a href="http://www.oobio.com.cn/tool/read/111">神经系统特异性启动子</a></p></li>
+</div>
+<h2 id="其它组件"><a href="#其它组件" class="headerlink" title="其它组件"></a>其它组件</h2><ol>
+<li><p>可能我们需要控制时间表达 : loxp-Cre 系统 </p>
+</li>
+<li><p>可能我们需要报告是否作用成功 : 不同的 <strong>荧光报告report基因</strong></p>
+</li>
+<li><p>可能我们需要它在特定位置表达 : 特异的 <strong>启动子</strong> ,比如神经元特异性启动子 : hSyn , CaMKⅡ , GAD , ChAT , DAT , ePet（也称为FEV） , DCX : 请参考:<br><a href="http://www.oobio.com.cn/tool/read/111">神经系统特异性启动子</a></p>
+</li>
 </ol>
 <p>参考</p>
-<p>[1] : https://zhuanlan.zhihu.com/p/98619987?utm_source=com.yinxiang</p>
-<p>[2] : https://www.genechem.com.cn/index/products/product/id/92.html</p>
-<p>[3] : http://www.oobio.cn/kyfw/bd/slcz/188.html</p>
-<p>[4] : https://www.hellobio.com/dreadds-review/</p>
-<h2 id="comparison-of-chemogenetics-and-optogenetics">Comparison of Chemogenetics and Optogenetics</h2>
+<p>[1] :  <a href="https://zhuanlan.zhihu.com/p/98619987?utm_source=com.yinxiang">https://zhuanlan.zhihu.com/p/98619987?utm_source=com.yinxiang</a></p>
+<p>[2] : <a href="https://www.genechem.com.cn/index/products/product/id/92.html">https://www.genechem.com.cn/index/products/product/id/92.html</a></p>
+<p>[3] : <a href="http://www.oobio.cn/kyfw/bd/slcz/188.html">http://www.oobio.cn/kyfw/bd/slcz/188.html</a></p>
+<p>[4] : <a href="https://www.hellobio.com/dreadds-review/">https://www.hellobio.com/dreadds-review/</a></p>
+<h2 id="Comparison-of-Chemogenetics-and-Optogenetics"><a href="#Comparison-of-Chemogenetics-and-Optogenetics" class="headerlink" title="Comparison of Chemogenetics and Optogenetics"></a>Comparison of Chemogenetics and Optogenetics</h2><div class="table-container">
 <table>
-<colgroup>
-<col style="width: 14%">
-<col style="width: 51%">
-<col style="width: 34%">
-</colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th>Features</th>
 <th>Chemogenetics</th>
 <th>Optogenetics</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Method of intervention干涉, 干预</td>
 <td>Inert, small molecule ligands selective for genetically engineered receptors/ion channels</td>
 <td>Light-sensitive ion channels activated by implanted fibre optics</td>
 </tr>
-<tr class="even">
-<td>Is the intervention 'physiological'?是否符合生理</td>
+<tr>
+<td>Is the intervention ‘physiological’?是否符合生理</td>
 <td>Yes - uses conserved, intracellular signaling pathways, or changes ion channel conductance, to alter neuronal activity</td>
 <td>No - patterns of excitation/inhibition are artificially synchronized by light stimulation pattern</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Is the intervention inert?惰性,副作用程度</td>
 <td>Yes - receptors/ion channels lack pharmacological activity without ligands and ligands are pharmacologically inert without specific engineered receptors/ion channels</td>
 <td>No - the fibre optic light source can create heat and bacterial light-sensitive channels used can be antigenic</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Is this method invasive in vivo?</td>
 <td>Minimally to no - ligands can be given by intracerebral infusion, intraperitoneal injection or in drinking water, dependent on specific ligand</td>
 <td>Yes - inherently invasive due to implantation of fibre optics</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Is specialized equipment required?</td>
 <td>No</td>
 <td>Yes - requires implantable fibre optics as light source</td>
 </tr>
-<tr class="even">
+<tr>
 <td>作用方向</td>
 <td>缓慢,通过调控代谢等作用</td>
 <td>即时,直接看刺激下通道打开的反应</td>
 </tr>
 </tbody>
 </table>
-<p>参考 :</p>
-<p>[1] : https://www.tocris.com/cn/product-type/chemogenetics</p>
-<h1 id="参考文献">参考文献</h1>
-<h2 id="section"></h2>
-
+</div>
+<p>参考 : </p>
+<p>[1] : <a href="https://www.tocris.com/cn/product-type/chemogenetics">https://www.tocris.com/cn/product-type/chemogenetics</a></p>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>
   
   
     
@@ -756,10 +729,10 @@ wait for write
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-04T23:46:12+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-10T20:36:56+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Sep 4, 2020</p>
+    <p>更新于：Sep 10, 2020</p>
   </a>
 </div>
 
@@ -835,12 +808,17 @@ wait for write
   
     <div class="prev-next">
       
+        <a class='prev' href='/2020/10/16/A%20Central%20Catecholaminergic%20Circuit%20Controls%20Blood%20Glucose%20Levels%20during%20Stress/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>A Central Catecholaminergic Circuit Controls Blood Glucose Levels during Stress</p>
+          <p class='content'>theme : stress response for promoting blood glucose levelsrelation brain area:
+hindbrain :  catec...</p>
+        </a>
+      
       
         <a class='next' href='/2020/09/04/Orchestrating%20Opiate-Associated%20Memories%20in%20Thalamic%20Circuits/'>
           <p class='title'>Orchestrating Opiate-Associated Memories in Thalamic Circuits<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>Orchestrating Opiate-Associated Memories in Thalamic Circuits
-
-author : Piper C. Keyes, Eliza L...</p>
+author : Piper C. Keyes, Eliza L. A...</p>
         </a>
       
     </div>
@@ -870,6 +848,75 @@ author : Piper C. Keyes, Eliza L...</p>
   
     
     
+  
+
+  <section class="widget category shadow desktop">
+    
+  <header>
+    
+      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/economy/" href="/categories/economy/"
+            id="categorieseconomy"
+            ><div class='name'>economy</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/electronic/" href="/categories/electronic/"
+            id="categorieselectronic"
+            ><div class='name'>electronic</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/environment/" href="/categories/environment/"
+            id="categoriesenvironment"
+            ><div class='name'>environment</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/math/" href="/categories/math/"
+            id="categoriesmath"
+            ><div class='name'>math</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/neuron/" href="/categories/neuron/"
+            id="categoriesneuron"
+            ><div class='name'>neuron</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/nruron/" href="/categories/nruron/"
+            id="categoriesnruron"
+            ><div class='name'>nruron</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/paper/" href="/categories/paper/"
+            id="categoriespaper"
+            ><div class='name'>paper</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/philosophy/" href="/categories/philosophy/"
+            id="categoriesphilosophy"
+            ><div class='name'>philosophy</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/program/" href="/categories/program/"
+            id="categoriesprogram"
+            ><div class='name'>program</div><div class='badge'>(3)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+  
+
+  
+    
+    
 
 
 
@@ -883,7 +930,7 @@ author : Piper C. Keyes, Eliza L...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#原理"><span class="toc-text">原理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配体"><span class="toc-text">配体</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#cno和氯氮平的副作用"><span class="toc-text">CNO和氯氮平的副作用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#受体"><span class="toc-text">受体</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配体类型"><span class="toc-text">配体类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#受体类型"><span class="toc-text">受体类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#gq-dreadd和hm3dq-激活-135"><span class="toc-text">1、Gq-DREADD和hM3Dq： 激活 (1,3,5)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gi-dreadd和hm4di-抑制-24"><span class="toc-text">2. Gi-DREADD和hM4Di: 抑制 (2,4)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gs-β-arrestin-dreadds"><span class="toc-text">3. Gs-&#x2F;β-arrestin-DREADDs</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#病毒表达系统选取"><span class="toc-text">病毒表达系统选取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其它组件"><span class="toc-text">其它组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#comparison-of-chemogenetics-and-optogenetics"><span class="toc-text">Comparison of Chemogenetics and Optogenetics</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#section"><span class="toc-text"></span></a>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#光遗传学"><span class="toc-number">2.</span> <span class="toc-text">光遗传学</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#化学遗传学"><span class="toc-number">3.</span> <span class="toc-text">化学遗传学</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原理"><span class="toc-number">3.1.</span> <span class="toc-text">原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配体"><span class="toc-number">3.2.</span> <span class="toc-text">配体</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CNO和氯氮平的副作用"><span class="toc-number">3.2.1.</span> <span class="toc-text">CNO和氯氮平的副作用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#受体"><span class="toc-number">3.3.</span> <span class="toc-text">受体</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配体类型"><span class="toc-number">3.3.1.</span> <span class="toc-text">配体类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#受体类型"><span class="toc-number">3.3.2.</span> <span class="toc-text">受体类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、Gq-DREADD和hM3Dq：-激活-1-3-5"><span class="toc-number">3.3.2.1.</span> <span class="toc-text">1、Gq-DREADD和hM3Dq： 激活 (1,3,5)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-Gi-DREADD和hM4Di-抑制-2-4"><span class="toc-number">3.3.2.2.</span> <span class="toc-text">2. Gi-DREADD和hM4Di: 抑制 (2,4)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-Gs-β-arrestin-DREADDs"><span class="toc-number">3.3.2.3.</span> <span class="toc-text">3. Gs-&#x2F;β-arrestin-DREADDs</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#病毒表达系统选取"><span class="toc-number">3.4.</span> <span class="toc-text">病毒表达系统选取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其它组件"><span class="toc-number">3.5.</span> <span class="toc-text">其它组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Comparison-of-Chemogenetics-and-Optogenetics"><span class="toc-number">3.6.</span> <span class="toc-text">Comparison of Chemogenetics and Optogenetics</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考文献"><span class="toc-number">4.</span> <span class="toc-text">参考文献</span></a></li></ol>
     </div>
   </section>
 
@@ -1106,7 +1153,11 @@ author : Piper C. Keyes, Eliza L...</p>
 
   <script>
   
-  var SEARCH_SERVICE = "hexo" || "hexo";
+    var ALGOLIA_API_KEY = "ea5127035206f76008aad7a6538cb544";
+    var ALGOLIA_APP_ID = "P3M9LPRE92";
+    var ALGOLIA_INDEX_NAME = "Epichide";
+  
+  var SEARCH_SERVICE = "algolia" || "hexo";
   var ROOT = "/" || "/";
   if (!ROOT.endsWith('/')) ROOT += '/';
 </script>
@@ -1227,7 +1278,7 @@ author : Piper C. Keyes, Eliza L...</p>
       lang: 'zh-cn',
       visitor: 'true',
       highlight: 'true',
-      mathJax: 'false',
+      mathJax: 'true',
       enableQQ: 'true',
       requiredFields: requiredFields,
       emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
